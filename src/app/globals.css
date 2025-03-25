@@ -1,0 +1,10 @@
+body{
+
+    margin: 0px;
+    background-color: black;
+
+    overflow: hidden; /* Hide scrollbars */
+
+    /* cursor: wait; Add after Preloader*/
+
+}
