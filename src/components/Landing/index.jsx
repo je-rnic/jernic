@@ -33,12 +33,12 @@ export default function Home() {
                 fill={true}
                 src="/images/background.jpg"
                 alt="image"
+                draggable="false"
             ></Image>
 
             <div className={styles.sliderContainer}>
                 <div className={styles.slider}>
                     <p ref={firstText}>Fullstack Developer -</p>
-                    <p ref={secondText}>Fullstack Developer -</p>
                     <p ref={secondText}>Fullstack Developer -</p>
                 </div>
             </div>
