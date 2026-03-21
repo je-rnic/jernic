@@ -6,14 +6,14 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
 	const roles = [
+        "Barista",
 		"Software Engineer",
-		"UX Designer",
+		"Dancer",
 		"Product Manager",
 		"Videographer",
+		"UX Designer",
 		"Artist",
-		"Dancer",
 		"Storyteller",
-		"Barista",
 	];
 	const loopedRoles = [...roles, roles[0]];
 	const [activeIndex, setActiveIndex] = useState(0);
@@ -95,13 +95,12 @@ export default function Home() {
 						design, and product.
 					</h1>
 					<p className={styles.supportingText}>
-						Software engineer by craft, UX designer by empathy, and product
-						manager by perspective.
+						An engineer by day, an artist by night.
 					</p>
 				</div>
 
 				<div className={styles.identityRow}>
-					<p>I am a</p>
+					<p>I am also a</p>
 					<div
 						className={styles.tickerWindow}
 						aria-live="polite"

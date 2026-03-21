@@ -8,25 +8,23 @@
 
 .main img {
 	object-fit: cover;
+	object-position: 5% center;
 }
 
 .overlay {
 	position: absolute;
 	inset: 0;
 	z-index: 1;
-	background:
-		radial-gradient(
-			circle at 18% 28%,
-			rgba(16, 14, 10, 0.08) 0%,
-			rgba(16, 14, 10, 0.6) 56%,
-			rgba(8, 8, 8, 0.86) 100%
-		),
-		linear-gradient(
-			180deg,
-			rgba(6, 6, 6, 0.2) 0%,
-			rgba(6, 6, 6, 0.64) 66%,
-			rgba(6, 6, 6, 0.9) 100%
-		);
+	background: linear-gradient(
+		90deg,
+		rgba(0, 0, 0, 0.75) 0%,
+		rgba(0, 0, 0, 0.65) 24%,
+		rgba(0, 0, 0, 0.48) 42%,
+		rgba(0, 0, 0, 0.24) 58%,
+		rgba(0, 0, 0, 0.08) 72%,
+		rgba(0, 0, 0, 0) 86%,
+		rgba(0, 0, 0, 0) 100%
+	);
 }
 
 .content {
@@ -130,6 +128,10 @@
 }
 
 @media (max-width: 900px) {
+	.main img {
+		object-position: 20% center;
+	}
+
 	.introduction {
 		margin-top: clamp(52px, 10vh, 120px);
 	}
@@ -146,6 +148,10 @@
 }
 
 @media (max-width: 520px) {
+	.main img {
+		object-position: 35% center;
+	}
+
 	.content {
 		padding: 20px;
 	}
