@@ -1,48 +1,106 @@
-'use client'
+"use client";
 
-import styles from './style.module.scss'
-import Image from 'next/image'
-import gsap from 'gsap';
-import { useEffect, useRef } from 'react';
+import styles from "./style.module.scss";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+	const roles = [
+		"Software Engineer",
+		"UX Designer",
+		"Product Manager",
+		"Videographer",
+		"Artist",
+		"Dancer",
+		"Storyteller",
+		"Barista",
+	];
+	const [activeIndex, setActiveIndex] = useState(0);
+	const [isLoaded, setIsLoaded] = useState(false);
+	const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
-    const firstText = useRef(null);
-    const secondText = useRef(null);
-    let xPercent = 0;
-    let direction = -1;
+	useEffect(() => {
+		const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+		const updateMotionPreference = () =>
+			setPrefersReducedMotion(mediaQuery.matches);
+		updateMotionPreference();
 
-    useEffect( () => {
-        requestAnimationFrame(animation);
-    },[])
+		if (mediaQuery.addEventListener) {
+			mediaQuery.addEventListener("change", updateMotionPreference);
+		} else {
+			mediaQuery.addListener(updateMotionPreference);
+		}
 
-    const animation = () => {
-        if (xPercent <= -100){
-            xPercent = 0;
-        }
-        gsap.set(firstText.current, {xPercent: xPercent})
-        gsap.set(secondText.current, {xPercent,xPercent})
-        xPercent += 0.05 * direction;
-        requestAnimationFrame(animation);
+		const loadTimer = setTimeout(() => {
+			setIsLoaded(true);
+		}, 80);
 
-    }
+		return () => {
+			clearTimeout(loadTimer);
+			if (mediaQuery.removeEventListener) {
+				mediaQuery.removeEventListener("change", updateMotionPreference);
+			} else {
+				mediaQuery.removeListener(updateMotionPreference);
+			}
+		};
+	}, []);
 
-    return (
-        <main className={styles.main}>
-            <Image
-                fill={true}
-                src="/images/background.jpg"
-                alt="image"
-                draggable="false"
-            ></Image>
+	useEffect(() => {
+		if (prefersReducedMotion) {
+			return;
+		}
 
-            <div className={styles.sliderContainer}>
-                <div className={styles.slider}>
-                    <p ref={firstText}>Fullstack Developer -</p>
-                    <p ref={secondText}>Fullstack Developer -</p>
-                </div>
-            </div>
-            
-        </main>
-    )
+		const rotationTimer = setInterval(() => {
+			setActiveIndex((previous) => (previous + 1) % roles.length);
+		}, 2500);
+
+		return () => clearInterval(rotationTimer);
+	}, [prefersReducedMotion, roles.length]);
+
+	return (
+		<main className={`${styles.main} ${isLoaded ? styles.loaded : ""}`}>
+			<Image
+				fill={true}
+				src="/images/background.jpg"
+				alt="Portrait background"
+				draggable="false"
+			></Image>
+
+			<div className={styles.overlay}></div>
+
+			<div className={styles.content}>
+				<div className={styles.introduction}>
+					<p className={styles.kicker}>Hello, I am Jernic.</p>
+					<h1>
+						I build thoughtful digital experiences at the intersection of code,
+						design, and product.
+					</h1>
+					<p className={styles.supportingText}>
+						Software engineer by craft, UX designer by empathy, and product
+						manager by perspective.
+					</p>
+				</div>
+
+				<div className={styles.identityRow}>
+					<p>I am a</p>
+					<div
+						className={styles.tickerWindow}
+						aria-live="polite"
+						aria-atomic="true"
+					>
+						<div
+							className={styles.tickerTrack}
+							style={{ transform: `translateY(-${activeIndex * 100}%)` }}
+						>
+							{roles.map((role) => (
+								<span key={role} className={styles.tickerItem}>
+									{role}
+								</span>
+							))}
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	);
 }
