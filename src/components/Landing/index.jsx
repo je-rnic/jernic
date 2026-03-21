@@ -10,7 +10,9 @@ export default function Home() {
 		"Software Engineer",
 		"Dancer",
 		"Product Manager",
+        "Interior Design Enthusiast",
 		"Videographer",
+        "B-boy",
 		"UX Designer",
 		"Artist",
 		"Storyteller",
@@ -100,7 +102,7 @@ export default function Home() {
 				</div>
 
 				<div className={styles.identityRow}>
-					<p>I am also a</p>
+					<p>I am also a/an</p>
 					<div
 						className={styles.tickerWindow}
 						aria-live="polite"

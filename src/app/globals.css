@@ -1,10 +1,9 @@
-body{
-
-    margin: 0px;
+html,
+body {
+    margin: 0;
     background-color: black;
-
-    overflow: hidden; /* Hide scrollbars */
+    overflow-x: hidden;
+    overflow-y: auto;
 
     /* cursor: wait; Add after Preloader*/
-
 }
