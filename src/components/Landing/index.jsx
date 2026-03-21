@@ -15,7 +15,9 @@ export default function Home() {
 		"Storyteller",
 		"Barista",
 	];
+	const loopedRoles = [...roles, roles[0]];
 	const [activeIndex, setActiveIndex] = useState(0);
+	const [isResetting, setIsResetting] = useState(false);
 	const [isLoaded, setIsLoaded] = useState(false);
 	const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
@@ -51,11 +53,28 @@ export default function Home() {
 		}
 
 		const rotationTimer = setInterval(() => {
-			setActiveIndex((previous) => (previous + 1) % roles.length);
+			setActiveIndex((previous) => previous + 1);
 		}, 2500);
 
 		return () => clearInterval(rotationTimer);
-	}, [prefersReducedMotion, roles.length]);
+	}, [prefersReducedMotion]);
+
+	useEffect(() => {
+		if (prefersReducedMotion || activeIndex !== roles.length) {
+			return;
+		}
+
+		const resetTimer = setTimeout(() => {
+			setIsResetting(true);
+			setActiveIndex(0);
+
+			requestAnimationFrame(() => {
+				setIsResetting(false);
+			});
+		}, 500);
+
+		return () => clearTimeout(resetTimer);
+	}, [activeIndex, prefersReducedMotion, roles.length]);
 
 	return (
 		<main className={`${styles.main} ${isLoaded ? styles.loaded : ""}`}>
@@ -89,11 +108,13 @@ export default function Home() {
 						aria-atomic="true"
 					>
 						<div
-							className={styles.tickerTrack}
-							style={{ transform: `translateY(-${activeIndex * 100}%)` }}
+							className={`${styles.tickerTrack} ${isResetting ? styles.noTransition : ""}`}
+							style={{
+								transform: `translateY(calc(-1 * ${activeIndex} * var(--ticker-step)))`,
+							}}
 						>
-							{roles.map((role) => (
-								<span key={role} className={styles.tickerItem}>
+							{loopedRoles.map((role, index) => (
+								<span key={`${role}-${index}`} className={styles.tickerItem}>
 									{role}
 								</span>
 							))}

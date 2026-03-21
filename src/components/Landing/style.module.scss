@@ -83,8 +83,9 @@
 }
 
 .tickerWindow {
+	--ticker-step: 1.2em;
 	position: relative;
-	height: 1.2em;
+	height: var(--ticker-step);
 	overflow: hidden;
 	min-width: min(18ch, 78vw);
 }
@@ -95,8 +96,12 @@
 	transition: transform 460ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+.noTransition {
+	transition: none;
+}
+
 .tickerItem {
-	height: 1.2em;
+	height: var(--ticker-step);
 	display: flex;
 	align-items: center;
 	color: #ffffff;
