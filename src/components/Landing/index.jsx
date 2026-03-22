@@ -5,19 +5,40 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function Home() {
+	const workStatus = {
+		/* "Open" or "Employed" */
+		mode: "Open",
+		company: "Company Name",
+	};
+
+	const statusContent =
+		workStatus.mode === "Open"
+			? {
+					label: "Open to Work",
+					detail: "Available for Full-Time Opportunities",
+					bubbleClass: styles.statusOpen,
+				}
+			: {
+					label: `Software Engineer at ${workStatus.company}`,
+					detail: "Not actively looking right now",
+					bubbleClass: styles.statusEmployed,
+				};
+
 	const roles = [
-        "Barista",
+		"Barista",
 		"Software Engineer",
 		"Dancer",
 		"Product Manager",
-        "Interior Design Enthusiast",
+		"Interior Design Enthusiast",
 		"Videographer",
-        "B-boy",
+		"B-boy",
 		"UX Designer",
 		"Artist",
 		"Storyteller",
 	];
 	const loopedRoles = [...roles, roles[0]];
+	const TICKER_ROTATION_MS = 2500;
+	const TICKER_TRANSITION_MS = 460;
 	const [activeIndex, setActiveIndex] = useState(0);
 	const [isResetting, setIsResetting] = useState(false);
 	const [isLoaded, setIsLoaded] = useState(false);
@@ -54,28 +75,26 @@ export default function Home() {
 			return;
 		}
 
-		const rotationTimer = setInterval(() => {
-			setActiveIndex((previous) => previous + 1);
-		}, 2500);
+		if (activeIndex === roles.length) {
+			const resetTimer = setTimeout(() => {
+				setIsResetting(true);
+				setActiveIndex(0);
 
-		return () => clearInterval(rotationTimer);
-	}, [prefersReducedMotion]);
+				requestAnimationFrame(() => {
+					requestAnimationFrame(() => {
+						setIsResetting(false);
+					});
+				});
+			}, TICKER_TRANSITION_MS);
 
-	useEffect(() => {
-		if (prefersReducedMotion || activeIndex !== roles.length) {
-			return;
+			return () => clearTimeout(resetTimer);
 		}
 
-		const resetTimer = setTimeout(() => {
-			setIsResetting(true);
-			setActiveIndex(0);
+		const rotationTimer = setTimeout(() => {
+			setActiveIndex((previous) => previous + 1);
+		}, TICKER_ROTATION_MS);
 
-			requestAnimationFrame(() => {
-				setIsResetting(false);
-			});
-		}, 500);
-
-		return () => clearTimeout(resetTimer);
+		return () => clearTimeout(rotationTimer);
 	}, [activeIndex, prefersReducedMotion, roles.length]);
 
 	return (
@@ -91,14 +110,25 @@ export default function Home() {
 
 			<div className={styles.content}>
 				<div className={styles.introduction}>
-					<p className={styles.kicker}>Hello, I am Jernic.</p>
-					<h1>
-						I build thoughtful digital experiences at the intersection of code,
-						design, and product.
+					<p className={styles.kicker}>Hello, I am Jernic</p>
+					<h1 className={styles.heroTitle}>
+						<span className={styles.heroLead}>I build</span>
+						<span className={styles.heroStrong}>
+							thoughtful digital experiences
+						</span>
+						<span className={styles.heroSub}>
+							at the intersection of code, design, and product.
+						</span>
 					</h1>
-					<p className={styles.supportingText}>
-						An engineer by day, an artist by night.
-					</p>
+					<div
+						className={`${styles.statusBubble} ${statusContent.bubbleClass}`}
+					>
+						<span className={styles.statusDot} aria-hidden="true"></span>
+						<div className={styles.statusTextWrap}>
+							<p className={styles.statusLabel}>{statusContent.label}</p>
+							<p className={styles.statusDetail}>{statusContent.detail}</p>
+						</div>
+					</div>
 				</div>
 
 				<div className={styles.identityRow}>
@@ -121,6 +151,19 @@ export default function Home() {
 							))}
 						</div>
 					</div>
+				</div>
+
+				<div className={styles.scrollIndicator} aria-hidden="true">
+					{/* <div className={styles.scrollDots}>
+						<span className={styles.scrollDot}></span>
+						<span className={styles.scrollDot}></span>
+						<span className={styles.scrollDot}></span>
+					</div> */}
+					<div className={styles.scrollLabelGroup}>
+						<span className={styles.scrollLabel}>projects</span>
+						<span className={styles.scrollChevron}>⌄</span>
+					</div>
+					
 				</div>
 			</div>
 		</main>

@@ -13,21 +13,21 @@ export default function Home() {
 			subtitle: "LLM-Enabled News Analysis Platform",
 			src: "c2montreal.png",
 			color: "#000000",
-			type:'Design & Development',
+			type: "Design & Development",
 		},
 		{
 			title: "WFH Tracking System",
 			subtitle: "Facilitating Communications between Employees and Managers",
 			src: "officestudio.png",
 			color: "#8C8C8C",
-			type:'Development',
+			type: "Development",
 		},
 		{
 			title: "FoodForGood",
 			subtitle: "Bridging the Gap in Food Donation Drives",
 			src: "locomotive.png",
 			color: "#EFE8D3",
-			type:'Design',
+			type: "Design",
 		},
 	];
 
