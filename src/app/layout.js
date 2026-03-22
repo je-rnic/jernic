@@ -23,7 +23,7 @@ const jnCustomFont = localFont({
 
 export const metadata = {
 	title: "Home",
-	description: "An Archive of Me.",
+	description: "An Archive of Me",
 };
 
 export default function RootLayout({ children }) {
