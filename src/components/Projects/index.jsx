@@ -1,5 +1,5 @@
 import styles from "./style.module.scss";
-import Project from "./components/project";
+import ProjectsAccordion from "./ProjectsAccordion";
 import { getAllProjects } from "../../lib/projects";
 
 export default async function Home() {
@@ -7,19 +7,7 @@ export default async function Home() {
 
 	return (
 		<main className={styles.main}>
-			<div className={styles.body}>
-				{projects.map((project) => {
-					return (
-						<Project
-							key={project.slug}
-							slug={project.slug}
-							title={project.title}
-							subtitle={project.subtitle}
-							role={project.role}
-						/>
-					);
-				})}
-			</div>
+			<ProjectsAccordion projects={projects} />
 		</main>
 	);
 }

@@ -28,13 +28,13 @@ export default function Home() {
 		"Barista",
 		"Software Engineer",
 		"Dancer",
+		"AI Solutions Architect",
 		"Product Manager",
 		"Interior Design Enthusiast",
 		"Videographer",
-		"B-boy",
+		"B-Boy",
 		"UX Designer",
 		"Artist",
-		"Storyteller",
 	];
 	const loopedRoles = [...roles, roles[0]];
 	const TICKER_ROTATION_MS = 2500;

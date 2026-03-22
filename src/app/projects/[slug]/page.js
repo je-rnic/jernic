@@ -8,7 +8,7 @@ function renderAwardText(award, awardLink) {
 		return award;
 	}
 
-	const linkedText = "Champion";
+	const linkedText = "Cloud Native Experience Award";
 	const linkedIndex = award.indexOf(linkedText);
 	if (linkedIndex === -1) {
 		return award;
