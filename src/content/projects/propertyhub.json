@@ -2,6 +2,7 @@
 	"title": "PropertyHub",
 	"subtitle": "Web app for homeowner-homebuyer bidding and negotiation",
 	"role": "Software Developer (IS216 Web Application Development II Group Project)",
+	"roleShort": "Software Developer",
 	"timeline": "Aug 2023 - Nov 2023",
 	"technologies": [
 		"HTML",
@@ -18,6 +19,13 @@
 	"coverImage": null,
 	"featured": false,
 	"award": null,
+	"sections": [
+		{
+			"type": "text",
+			"title": "Project Overview",
+			"body": "PropertyHub streamlines homeowner and buyer interactions through direct negotiation, bidding workflows, and integrated payment/mapping capabilities."
+		}
+	],
 	"highlights": [
 		"Developed a responsive web application enabling direct bidding and negotiation between homeowners and homebuyers.",
 		"Built dynamic interfaces with HTML/CSS, JavaScript, and Vue.",

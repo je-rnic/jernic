@@ -1,18 +1,26 @@
 {
 	"title": "SolarScape",
-	"subtitle": "Site Analysis of Potential Solar Farm Locations",
-	"role": "Geospatial Analyst, Developer (SMT201 Geographic Information Systems Group Project)",
+	"subtitle": "Site Analysis of Potential Solar Farm Locations within Singapore",
+	"role": "Geospatial Data Analyst, Web Developer (SMT201 Geographic Information Systems Group Project)",
+	"roleShort": "Geospatial Data Analyst, Web Developer",
 	"timeline": "Jan 2025 - May 2025",
-	"technologies": ["GIS", "MCDA", "Quarto", "Netlify", "GitHub"],
+	"technologies": ["QGIS", "MCDA", "Quarto", "Netlify", "GitHub"],
 	"link": "https://solarscape.netlify.app",
 	"slug": "solarscape",
 	"order": 2,
 	"coverImage": null,
 	"featured": false,
 	"award": null,
+	"sections": [
+		{
+			"type": "text",
+			"title": "Project Overview",
+			"body": "SolarScape uses GIS and MCDA methods to evaluate and rank potential solar farm locations in Singapore based on practical environmental and infrastructure constraints."
+		}
+	],
 	"highlights": [
-		"Conducted geospatial MCDA to identify optimal solar farm locations in Singapore using land, temperature, and infrastructure data.",
+		"Conducted geospatial analysis using Multi-Criteria Decision Analysis techniques to identify optimal solar farm locations in Singapore, with respect to measured land, temperature, and infrastructure data.",
 		"Built and maintained project documentation website using Quarto and Netlify.",
-		"Managed collaborative development workflows through GitHub version control."
+		"Spearheaded collaborative development workflows through GitHub version control."
 	]
 }

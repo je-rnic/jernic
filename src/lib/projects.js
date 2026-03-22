@@ -3,6 +3,13 @@ import path from "path";
 
 const PROJECTS_DIR = path.join(process.cwd(), "src/content/projects");
 
+function deriveRoleShort(role) {
+	return role
+		.replace(/\s*\([^)]*\)/g, "")
+		.replace(/\s{2,}/g, " ")
+		.trim();
+}
+
 function assertString(project, field, sourceFile) {
 	if (typeof project[field] !== "string" || !project[field].trim()) {
 		throw new Error(
@@ -39,11 +46,56 @@ function normalizeProject(project, sourceFile) {
 		typeof project.awardLink === "string" && project.awardLink.trim()
 			? project.awardLink.trim()
 			: null;
+	const sections = Array.isArray(project.sections)
+		? project.sections
+				.filter((section) => section && typeof section === "object")
+				.map((section) => ({
+					type: typeof section.type === "string" ? section.type.trim() : "",
+					title:
+						typeof section.title === "string" && section.title.trim()
+							? section.title.trim()
+							: null,
+					body:
+						typeof section.body === "string" && section.body.trim()
+							? section.body.trim()
+							: null,
+					items: Array.isArray(section.items)
+						? section.items.filter(
+								(item) => typeof item === "string" && item.trim(),
+							)
+						: [],
+					src:
+						typeof section.src === "string" && section.src.trim()
+							? section.src.trim()
+							: null,
+					poster:
+						typeof section.poster === "string" && section.poster.trim()
+							? section.poster.trim()
+							: null,
+					alt:
+						typeof section.alt === "string" && section.alt.trim()
+							? section.alt.trim()
+							: null,
+					caption:
+						typeof section.caption === "string" && section.caption.trim()
+							? section.caption.trim()
+							: null,
+					autoplay: section.autoplay !== false,
+					loop: section.loop !== false,
+					muted: section.muted !== false,
+					controls: Boolean(section.controls),
+				}))
+		: [];
+	const roleShort =
+		typeof project.roleShort === "string" && project.roleShort.trim()
+			? project.roleShort.trim()
+			: deriveRoleShort(project.role.trim());
 
 	return {
 		title: project.title.trim(),
 		subtitle: project.subtitle.trim(),
 		role: project.role.trim(),
+		roleShort,
 		timeline: project.timeline.trim(),
 		technologies,
 		link,
@@ -60,6 +112,7 @@ function normalizeProject(project, sourceFile) {
 				: null,
 		awardLink,
 		highlights,
+		sections,
 	};
 }
 
