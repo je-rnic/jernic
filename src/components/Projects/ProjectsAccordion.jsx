@@ -230,10 +230,19 @@ export default function ProjectsAccordion({ projects }) {
 											<h4>Technologies</h4>
 											<div className={styles.techRow}>
 												{project.technologies.map((technology) => (
-													<div key={technology} className={styles.techItem} title={technology}>
+													<div
+														key={technology}
+														className={styles.techItem}
+														title={technology}
+													>
 														{(() => {
 															const Icon = getTechnologyIcon(technology);
-															return <Icon className={styles.techIcon} aria-hidden="true" />;
+															return (
+																<Icon
+																	className={styles.techIcon}
+																	aria-hidden="true"
+																/>
+															);
 														})()}
 														<span>{technology}</span>
 													</div>

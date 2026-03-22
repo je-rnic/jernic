@@ -6,7 +6,7 @@ export default async function Home() {
 	const projects = await getAllProjects();
 
 	return (
-		<main className={styles.main}>
+		<main id="projects" className={styles.main}>
 			<ProjectsAccordion projects={projects} />
 		</main>
 	);

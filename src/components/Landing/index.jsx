@@ -42,40 +42,19 @@ export default function Home() {
 	const [activeIndex, setActiveIndex] = useState(0);
 	const [isResetting, setIsResetting] = useState(false);
 	const [isLoaded, setIsLoaded] = useState(false);
-	const [isJnCustomReady, setIsJnCustomReady] = useState(false);
 	const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
-	useEffect(() => {
-		if (typeof document === "undefined" || !document.fonts) {
+	const scrollToProjects = () => {
+		const projectsSection = document.getElementById("projects");
+		if (!projectsSection) {
 			return;
 		}
 
-		const customFontFamily = getComputedStyle(document.body)
-			.getPropertyValue("--font-jn-custom")
-			.trim()
-			.replace(/^"|"$/g, "");
-
-		if (!customFontFamily) {
-			return;
-		}
-
-		const fontQuery = `16px "${customFontFamily}"`;
-		if (document.fonts.check(fontQuery)) {
-			setIsJnCustomReady(true);
-			return;
-		}
-
-		let isMounted = true;
-		document.fonts.load(fontQuery).then(() => {
-			if (isMounted && document.fonts.check(fontQuery)) {
-				setIsJnCustomReady(true);
-			}
+		projectsSection.scrollIntoView({
+			behavior: prefersReducedMotion ? "auto" : "smooth",
+			block: "start",
 		});
-
-		return () => {
-			isMounted = false;
-		};
-	}, []);
+	};
 
 	useEffect(() => {
 		const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -144,11 +123,7 @@ export default function Home() {
 
 			<div className={styles.content}>
 				<div className={styles.introduction}>
-					<p
-						className={`${styles.kicker} ${isJnCustomReady ? styles.kickerJnLoaded : ""}`}
-					>
-						Hello, I am Jernic
-					</p>
+					<p className={styles.kicker}>Hello, I am Jernic</p>
 					<h1 className={styles.heroTitle}>
 						<span className={styles.heroLead}>I build</span>
 						<span className={styles.heroStrong}>
@@ -169,39 +144,45 @@ export default function Home() {
 					</div>
 				</div>
 
-				<div className={styles.identityRow}>
-					<p>I am also a/an</p>
-					<div
-						className={styles.tickerWindow}
-						aria-live="polite"
-						aria-atomic="true"
-					>
+				<div className={styles.footerRow}>
+					<div className={styles.identityRow}>
+						<p>I am also a/an</p>
 						<div
-							className={`${styles.tickerTrack} ${isResetting ? styles.noTransition : ""}`}
-							style={{
-								transform: `translateY(calc(-1 * ${activeIndex} * var(--ticker-step)))`,
-							}}
+							className={styles.tickerWindow}
+							aria-live="polite"
+							aria-atomic="true"
 						>
-							{loopedRoles.map((role, index) => (
-								<span key={`${role}-${index}`} className={styles.tickerItem}>
-									
-									{role}
-								</span>
-							))}
+							<div
+								className={`${styles.tickerTrack} ${isResetting ? styles.noTransition : ""}`}
+								style={{
+									transform: `translateY(calc(-1 * ${activeIndex} * var(--ticker-step)))`,
+								}}
+							>
+								{loopedRoles.map((role, index) => (
+									<span key={`${role}-${index}`} className={styles.tickerItem}>
+										{role}
+									</span>
+								))}
+							</div>
 						</div>
 					</div>
-				</div>
 
-				<div className={styles.scrollIndicator} aria-hidden="true">
-					{/* <div className={styles.scrollDots}>
-						<span className={styles.scrollDot}></span>
-						<span className={styles.scrollDot}></span>
-						<span className={styles.scrollDot}></span>
-					</div> */}
-					<div className={styles.scrollLabelGroup}>
-						<span className={styles.scrollLabel}>projects</span>
-						<span className={styles.scrollChevron}>⌄</span>
-					</div>
+					<button
+						type="button"
+						className={styles.scrollIndicator}
+						onClick={scrollToProjects}
+						aria-label="Scroll to projects section"
+					>
+						{/* <div className={styles.scrollDots}>
+							<span className={styles.scrollDot}></span>
+							<span className={styles.scrollDot}></span>
+							<span className={styles.scrollDot}></span>
+						</div> */}
+						<div className={styles.scrollLabelGroup}>
+							<span className={styles.scrollLabel}>projects</span>
+							<span className={styles.scrollChevron}>⌄</span>
+						</div>
+					</button>
 				</div>
 			</div>
 		</main>
