@@ -154,7 +154,7 @@ export default function Home() {
 							thoughtful digital experiences
 						</span>
 						<span className={styles.heroSub}>
-							at the intersection of code, design, and product.
+							with the intention of code, design, and product.
 						</span>
 					</h1>
 					<div
@@ -200,7 +200,6 @@ export default function Home() {
 						<span className={styles.scrollLabel}>projects</span>
 						<span className={styles.scrollChevron}>⌄</span>
 					</div>
-					
 				</div>
 			</div>
 		</main>

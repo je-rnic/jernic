@@ -10,7 +10,13 @@ const gloriaHallelujah = Gloria_Hallelujah({
 	variable: "--font-gloria-hallelujah",
 });
 const jnCustomFont = localFont({
-	src: [{ path: "../../public/fonts/Jn_font_1-Regular.otf", weight: "400", style: "normal" }],
+	src: [
+		{
+			path: "../../public/fonts/Jn_font_1-Regular.otf",
+			weight: "400",
+			style: "normal",
+		},
+	],
 	variable: "--font-jn-custom",
 	display: "swap",
 });
