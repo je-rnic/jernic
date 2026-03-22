@@ -113,6 +113,28 @@
 	display: inline-flex;
 	align-items: center;
 	gap: 10px;
+	transition: opacity 0.4s;
+}
+
+.statusStack {
+	display: inline-flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.statusStack:hover .statusBubble {
+		opacity: 0.5;
+	}
+
+	.statusStack:hover .statusTextWrap {
+		transform: translateX(6px);
+	}
+
+	.statusStack:hover .statusContact {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 .statusOpen {
@@ -141,6 +163,29 @@
 	display: flex;
 	flex-direction: column;
 	gap: 2px;
+	transition: transform 0.4s;
+}
+
+.statusContact {
+	margin: 8px 0 0;
+	padding-left: 42px;
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	font-size: clamp(12px, 1.1vw, 15px);
+	letter-spacing: 0.02em;
+	color: rgba(247, 243, 236, 0.92);
+	opacity: 0;
+	transform: translateY(-6px);
+	pointer-events: none;
+	transition:
+		opacity 0.24s ease,
+		transform 0.24s ease;
+}
+
+.statusContactIcon {
+	font-size: 1.02em;
+	opacity: 0.92;
 }
 
 .statusLabel,

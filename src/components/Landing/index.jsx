@@ -3,6 +3,7 @@
 import styles from "./style.module.scss";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { MdOutlineMail } from "react-icons/md";
 
 export default function Home() {
 	const workStatus = {
@@ -133,14 +134,23 @@ export default function Home() {
 							centred around code, design, and product.
 						</span>
 					</h1>
-					<div
-						className={`${styles.statusBubble} ${statusContent.bubbleClass}`}
-					>
-						<span className={styles.statusDot} aria-hidden="true"></span>
-						<div className={styles.statusTextWrap}>
-							<p className={styles.statusLabel}>{statusContent.label}</p>
-							<p className={styles.statusDetail}>{statusContent.detail}</p>
+					<div className={styles.statusStack}>
+						<div
+							className={`${styles.statusBubble} ${statusContent.bubbleClass}`}
+						>
+							<span className={styles.statusDot} aria-hidden="true"></span>
+							<div className={styles.statusTextWrap}>
+								<p className={styles.statusLabel}>{statusContent.label}</p>
+								<p className={styles.statusDetail}>{statusContent.detail}</p>
+							</div>
 						</div>
+						<p className={styles.statusContact}>
+							<MdOutlineMail
+								className={styles.statusContactIcon}
+								aria-hidden="true"
+							/>
+							<span>yeojernic@gmail.com</span>
+						</p>
 					</div>
 				</div>
 
