@@ -42,7 +42,40 @@ export default function Home() {
 	const [activeIndex, setActiveIndex] = useState(0);
 	const [isResetting, setIsResetting] = useState(false);
 	const [isLoaded, setIsLoaded] = useState(false);
+	const [isJnCustomReady, setIsJnCustomReady] = useState(false);
 	const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+
+	useEffect(() => {
+		if (typeof document === "undefined" || !document.fonts) {
+			return;
+		}
+
+		const customFontFamily = getComputedStyle(document.body)
+			.getPropertyValue("--font-jn-custom")
+			.trim()
+			.replace(/^"|"$/g, "");
+
+		if (!customFontFamily) {
+			return;
+		}
+
+		const fontQuery = `16px "${customFontFamily}"`;
+		if (document.fonts.check(fontQuery)) {
+			setIsJnCustomReady(true);
+			return;
+		}
+
+		let isMounted = true;
+		document.fonts.load(fontQuery).then(() => {
+			if (isMounted && document.fonts.check(fontQuery)) {
+				setIsJnCustomReady(true);
+			}
+		});
+
+		return () => {
+			isMounted = false;
+		};
+	}, []);
 
 	useEffect(() => {
 		const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -110,7 +143,11 @@ export default function Home() {
 
 			<div className={styles.content}>
 				<div className={styles.introduction}>
-					<p className={styles.kicker}>Hello, I am Jernic</p>
+					<p
+						className={`${styles.kicker} ${isJnCustomReady ? styles.kickerJnLoaded : ""}`}
+					>
+						Hello, I am Jernic
+					</p>
 					<h1 className={styles.heroTitle}>
 						<span className={styles.heroLead}>I build</span>
 						<span className={styles.heroStrong}>
