@@ -220,13 +220,13 @@
 
 .footerRow {
 	display: flex;
-	align-items: center;
+	align-items: baseline;
 	justify-content: space-between;
 	gap: clamp(16px, 2.5vw, 36px);
 }
 
 .tickerWindow {
-	--ticker-step: 1.8em; /* Increased from 1.5em */
+	--ticker-step: 1.8em;
 	position: relative;
 	height: var(--ticker-step);
 	overflow: hidden;
