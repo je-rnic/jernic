@@ -26,7 +26,7 @@ export default function Home() {
 				};
 
 	const roles = [
-		"Barista",
+		"Coffee Barista",
 		"Software Engineer",
 		"Pianist",
 		"Dancer",
