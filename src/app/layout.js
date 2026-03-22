@@ -1,4 +1,5 @@
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 import localFont from "next/font/local";
 import { Gloria_Hallelujah, Inter } from "next/font/google";
 /* import Header from '../components/Header'; */
@@ -22,7 +23,7 @@ const jnCustomFont = localFont({
 });
 
 export const metadata = {
-	title: "Home",
+	title: "Portfolio",
 	description: "An Archive of Me",
 };
 
