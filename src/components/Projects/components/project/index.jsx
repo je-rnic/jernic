@@ -1,5 +1,5 @@
-"use client";
 import React from "react";
+import Link from "next/link";
 import styles from "./style.module.scss";
 
 /* <div onMouseEnter={() => {setModal({active: true, index})}} onMouseLeave={() => {setModal({active: false, index})}} className={styles.project}>
@@ -7,22 +7,14 @@ import styles from "./style.module.scss";
             <p>Design & Development</p>
         </div> */
 
-export default function index({ index, title, subtitle, type, setModal }) {
+export default function index({ slug, title, subtitle, role }) {
 	return (
-		<div
-			onMouseEnter={() => {
-				setModal({ active: true, index });
-			}}
-			onMouseLeave={() => {
-				setModal({ active: false, index });
-			}}
-			className={styles.project}
-		>
-			<div>
-				<h2>{title}</h2>
-				<p>{subtitle}</p>
+		<Link href={`/projects/${slug}`} className={styles.project}>
+			<div className={styles.leftContent}>
+				<h2 className={styles.title}>{title}</h2>
+				<p className={styles.subtitle}>{subtitle}</p>
 			</div>
-			<p>{type}</p>
-		</div>
+			<p className={styles.role}>{role}</p>
+		</Link>
 	);
 }

@@ -1,38 +1,87 @@
 .project {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px 100px;
-    border-top: 1px solid rgb(201, 201, 201);
-    cursor: cell;
-    transition: all 0.2s;
+	display: grid;
+	grid-template-columns: minmax(0, 75%) minmax(0, 25%);
+	column-gap: clamp(18px, 3vw, 40px);
+	width: 100%;
+	align-items: start;
+	padding: 50px 100px;
+	border-top: 1px solid rgb(201, 201, 201);
+	cursor: cell;
+	transition: all 0.2s;
+	color: inherit;
+	text-decoration: none;
 
-    &:last-of-type {
-        border-bottom: 1px solid rgb(201, 201, 201);
-    }
+	&:last-of-type {
+		border-bottom: 1px solid rgb(201, 201, 201);
+	}
 
-    &:hover {
-        opacity: 0.5;
+	&:hover {
+		opacity: 0.5;
 
-        h2 {
-            transform: translateX(-10px);
-        }
+		.title {
+			transform: translateX(-10px);
+		}
 
-        p {
-            transform: translateX(10px);
-        }
-    }
+		.role {
+			transform: translateX(10px);
+		}
+	}
 
-    h2 {
-        font-size: 60px;
-        margin: 0;
-        font-weight: 400;
-        transition: all 0.4s;
-    }
+	@media (max-width: 980px) {
+		grid-template-columns: 1fr;
+		row-gap: 14px;
+		padding: 34px 24px;
+	}
+}
 
-    p {
-        transition: all 0.4s;
-        font-weight: 300;
-    }
+.leftContent {
+	min-width: 0;
+	text-align: left;
+}
+
+.title {
+	font-size: 60px;
+	margin: 0;
+	font-weight: 400;
+	line-height: 1.02;
+	transition: all 0.4s;
+	text-align: left;
+	word-break: break-word;
+}
+
+.subtitle {
+	margin: 14px 0 0;
+	max-width: 100%;
+	font-weight: 300;
+	line-height: 1.35;
+	text-align: left;
+	transition: all 0.4s;
+}
+
+.role {
+	margin: 4px 0 0;
+	width: 100%;
+	max-width: 100%;
+	font-weight: 300;
+	line-height: 1.35;
+	text-align: right;
+	justify-self: end;
+	overflow-wrap: anywhere;
+	transition: all 0.4s;
+
+	@media (max-width: 980px) {
+		text-align: left;
+		justify-self: start;
+		margin-top: 0;
+	}
+}
+
+@media (max-width: 980px) {
+	.title {
+		font-size: clamp(38px, 9vw, 54px);
+	}
+
+	.subtitle {
+		margin-top: 10px;
+	}
 }

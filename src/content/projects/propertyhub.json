@@ -1,0 +1,26 @@
+{
+	"title": "PropertyHub",
+	"subtitle": "Web app for homeowner-homebuyer bidding and negotiation",
+	"role": "Software Developer (IS216 Web Application Development II Group Project)",
+	"timeline": "Aug 2023 - Nov 2023",
+	"technologies": [
+		"HTML",
+		"CSS",
+		"JavaScript",
+		"Vue",
+		"Firebase",
+		"Stripe",
+		"Google Maps API"
+	],
+	"link": "https://propertyhubsite.netlify.app",
+	"slug": "propertyhub",
+	"order": 3,
+	"coverImage": null,
+	"featured": false,
+	"award": null,
+	"highlights": [
+		"Developed a responsive web application enabling direct bidding and negotiation between homeowners and homebuyers.",
+		"Built dynamic interfaces with HTML/CSS, JavaScript, and Vue.",
+		"Integrated Firebase, Stripe, and Google Maps API for data, payments, and mapping features."
+	]
+}

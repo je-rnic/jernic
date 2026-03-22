@@ -1,0 +1,31 @@
+{
+	"title": "CheckMate",
+	"subtitle": "AI-Powered News Analysis Tool. Awarded 1st place in the Cloud Native Experience Award hosted by Dell Technologies.",
+	"role": "Software Developer (IS483 Final Year Project)",
+	"timeline": "Jul 2024 - May 2025",
+	"technologies": [
+		"React",
+		"JavaScript",
+		"Tailwind CSS",
+		"Python",
+		"Hugging Face",
+		"REST APIs",
+		"Figma",
+		"Git",
+		"Confluence"
+	],
+	"link": "https://www.canva.com/design/DAGmvHFVSlI/9JBcei4bfFkFX9PQCFd-ZA/view?utm_content=DAGmvHFVSlI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h587f9e7ba2",
+	"slug": "checkmate",
+	"order": 1,
+	"coverImage": null,
+	"featured": true,
+	"award": "Champion",
+	"awardLink": "https://www.linkedin.com/posts/jernicyeo_started-this-week-with-the-dell-technologies-activity-7325886544425160704-xAUs",
+	"highlights": [
+		"Integrated three Hugging Face NLP models via REST APIs through a Python microservices backend with an ingress controller.",
+		"Engineered a responsive, user-centric web platform using React, JavaScript, and Tailwind CSS.",
+		"Designed end-to-end UI/UX in Figma across web app, Chrome extension, and Telegram bot.",
+		"Validated usability with 30 participants, reaching 0% drop-off and 80% satisfaction.",
+		"Standardized Git and Confluence workflows across a 5-person team."
+	]
+}
