@@ -140,6 +140,7 @@ export default function Home() {
 			></Image>
 
 			<div className={styles.overlay}></div>
+			<div className={styles.bottomFade}></div>
 
 			<div className={styles.content}>
 				<div className={styles.introduction}>
@@ -154,7 +155,7 @@ export default function Home() {
 							thoughtful digital experiences
 						</span>
 						<span className={styles.heroSub}>
-							with the intention of code, design, and product.
+							centred around code, design, and product.
 						</span>
 					</h1>
 					<div
@@ -183,6 +184,7 @@ export default function Home() {
 						>
 							{loopedRoles.map((role, index) => (
 								<span key={`${role}-${index}`} className={styles.tickerItem}>
+									
 									{role}
 								</span>
 							))}
