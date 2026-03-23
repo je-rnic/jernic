@@ -9,14 +9,6 @@ export default function Home() {
 	return (
 		<main className={`smooth-scroll ${styles.main}`}>
 			<SmoothScrollInitializer />
-			{/* <AnimatePresence mode='wait'>
-        {isLoading && <Preloader />}
-      </AnimatePresence>
-      
-      <Description />
-
-      <SlidingImages />
-      <Contact /> */}
 			<Landing />
 			<Projects />
 			<Experience />
