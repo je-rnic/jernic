@@ -8,6 +8,12 @@ export default async function Home() {
 	return (
 		<main id="projects" className={styles.main}>
 			<ProjectsAccordion projects={projects} />
+			<a href="#experience" className={styles.nextSectionCue}>
+				<span className={styles.cueLabel}>experience</span>
+				<span className={styles.cueChevron} aria-hidden="true">
+					⌄
+				</span>
+			</a>
 		</main>
 	);
 }
