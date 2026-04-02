@@ -106,6 +106,7 @@ function normalizeProject(project, sourceFile) {
 				? project.coverImage.trim()
 				: null,
 		featured: Boolean(project.featured),
+		visible: project.visible !== false,
 		award:
 			typeof project.award === "string" && project.award.trim()
 				? project.award.trim()
@@ -129,15 +130,17 @@ export async function getAllProjects() {
 		}),
 	);
 
+	const visibleProjects = projects.filter((project) => project.visible);
+
 	const slugSet = new Set();
-	for (const project of projects) {
+	for (const project of visibleProjects) {
 		if (slugSet.has(project.slug)) {
 			throw new Error(`Duplicate project slug found: '${project.slug}'.`);
 		}
 		slugSet.add(project.slug);
 	}
 
-	return projects.sort(
+	return visibleProjects.sort(
 		(a, b) => a.order - b.order || a.title.localeCompare(b.title),
 	);
 }

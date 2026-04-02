@@ -15,11 +15,11 @@
 		"Git",
 		"Confluence"
 	],
-	"link": "https://www.canva.com/design/DAGmvHFVSlI/9JBcei4bfFkFX9PQCFd-ZA/view?utm_content=DAGmvHFVSlI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h587f9e7ba2",
 	"slug": "checkmate",
 	"order": 1,
 	"coverImage": null,
 	"featured": true,
+	"visible": true,
 	"award": "Cloud Native Experience Award - Dell Technologies",
 	"awardLink": "https://www.linkedin.com/posts/jernicyeo_started-this-week-with-the-dell-technologies-activity-7325886544425160704-xAUs",
 	"sections": [
