@@ -1,23 +1,17 @@
 {
 	"title": "Code::XtremeApps",
 	"subtitle": "AI hackathon project that classifies recyclable materials from camera images and identifies products via barcode decoding.",
-	"role": "AI Developer (Code::XtremeApps 2019 AI Hackathon)",
+	"role": "Machine Learning Developer (Code::XtremeApps 2019 AI Hackathon)",
+	"roleShort": "Machine Learning Developer",
 	"timeline": "Aug 2019",
 	"link": "https://www.youtube.com/watch?v=J_G4z7z_3mk",
 	"technologies": ["Python", "TensorFlow"],
 	"slug": "cxa",
-	"order": 4,
+	"order": 3,
 	"coverImage": null,
 	"featured": false,
 	"visible": true,
 	"award": "Certificate of Achievement, IMDA",
-	"sections": [
-		{
-			"type": "text",
-			"title": "Project Overview",
-			"body": "Trained and fine-tuned a Python/TensorFlow transfer-learning model to classify recyclable materials from camera images, with barcode decoding for product identification. Built and demonstrated an end-to-end IoT prototype on Raspberry Pi with camera capture, remote inference, and a points-based user flow in 24 hours."
-		}
-	],
 	"highlights": [
 		"Trained and fine-tuned a transfer-learning model in Python/TensorFlow to classify recyclable materials from camera images.",
 		"Integrated barcode decoding for product identification alongside the image classification pipeline.",

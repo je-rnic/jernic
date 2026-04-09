@@ -1,8 +1,8 @@
 {
 	"title": "CheckMate",
 	"subtitle": "AI-Powered News Analysis Tool. Awarded 1st place in the Cloud Native Experience Award hosted by Dell Technologies.",
-	"role": "Software Developer (IS483 Final Year Group Project)",
-	"roleShort": "Software Developer",
+	"role": "Software Engineer (IS483 Final Year Group Project)",
+	"roleShort": "Software Engineer",
 	"timeline": "Jul 2024 - May 2025",
 	"technologies": [
 		"React",

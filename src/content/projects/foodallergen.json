@@ -1,0 +1,36 @@
+{
+	"title": "Food Allergen Assistant",
+	"subtitle": "A Telegram food-allergen assistant that combines MCP tools and RAG to provide fast, concise safety verdicts",
+	"role": "AI Software Engineer (IS489 Group Project)",
+	"roleShort": "AI Software Engineer",
+	"timeline": "Jan 2026 - Apr 2026",
+	"technologies": ["Python", "Ollama", "Github"],
+	"slug": "foodallergen",
+	"order": 2,
+	"coverImage": null,
+	"featured": true,
+	"visible": true,
+	"award": null,
+	"sections": [
+		{
+			"type": "text",
+			"title": "Project Overview",
+			"body": "This project is an MCP-enabled food-allergen assistant that delivers concise risk verdicts by combining recipe and medical evidence retrieval, optional menu-image OCR, and cross-provider LLM inference across CLI and Telegram, with an evaluation pipeline comparing performance with versus without tool use."
+		},
+		{
+			"type": "video",
+			"title": "Interface Walkthrough",
+			"src": "/media/food-allergen-walkthrough.mp4",
+			"poster": null,
+			"autoplay": true,
+			"loop": true,
+			"muted": true,
+			"controls": true
+		}
+	],
+	"highlights": [
+		"Engineered a Python-based allergen risk assistant using MCP tool orchestration, combining ChromaDB-backed recipe retrieval and medical evidence search, OCR-based menu parsing, and policy-constrained LLM decision logic in a unified text-and-image inference pipeline",
+		"Built a multi-interface RAG system (CLI and Telegram) with persistent user allergen profiles and dynamic provider/model routing",
+		"Designed and ran a four-configuration evaluation harness, where tool-augmented inference improved baseline accuracy by 16.6% and recall by 21.2%"
+	]
+}
