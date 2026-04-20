@@ -1,16 +1,15 @@
 .main {
 	position: relative;
 	min-height: 100vh;
-	padding: 44px 0 80px;
+	padding: clamp(72px, 9vh, 110px) clamp(20px, 5vw, 72px)
+		clamp(90px, 10vh, 120px);
 	color: #1a1918;
 	background: #f5f3f0;
 }
 
 .body {
 	margin: 0 auto;
-	width: min(1240px, 98vw);
-	padding-inline: 100px;
-	box-sizing: border-box;
+	width: min(1260px, 100%);
 	display: grid;
 	gap: clamp(26px, 4vh, 44px);
 }
@@ -147,7 +146,6 @@
 
 @media (max-width: 900px) {
 	.body {
-		padding-inline: 24px;
 		gap: 24px;
 	}
 

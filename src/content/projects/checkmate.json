@@ -1,8 +1,8 @@
 {
 	"title": "CheckMate",
 	"subtitle": "AI-Powered News Analysis Tool. Awarded 1st place in the Cloud Native Experience Award hosted by Dell Technologies.",
-	"role": "Software Engineer (IS483 Final Year Group Project)",
-	"roleShort": "Software Engineer",
+	"role": "Frontend Software Engineer (IS483 Final Year Group Project)",
+	"roleShort": "Frontend Engineer",
 	"timeline": "Jul 2024 - May 2025",
 	"technologies": [
 		"React",
@@ -40,10 +40,9 @@
 		}
 	],
 	"highlights": [
-		"Integrated 3 Hugging Face NLP models (sentiment, emotion, propaganda detection) into a scalable Python microservices backend with Kubernetes ingress routing for real-time ML inference.",
-		"Engineered a responsive, user-centric web platform using React, JavaScript, and Tailwind CSS.",
-		"Designed end-to-end UI/UX in Figma across Web Application, Chrome extension, and Telegram bot interfaces.",
-		"Validated product-market fit with 30 participants across institutions, achieving 0% drop-off and 80% satisfaction scores.",
-		"Led cross-functional requirements gathering and sprint planning for a 5-person team using Confluence, ensuring stakeholder alignment throughout development."
+		"Engineered a high-performance React frontend featuring route-based lazy loading and client-side API response caching to ensure smooth user experience during real-time machine learning inference and sentiment analysis",
+		"Bridged design and development by translating high-fidelity Figma prototypes into a fully responsive web application, Chrome extension and Telegram bot interface, maintaining a consistent component library and Tailwind CSS utility patterns across three distinct platforms",
+		"Validated product-market fit through Maze testing with 30 institutional participants, iterating on interaction flows to achieve a 0% task drop-off rate and 80% user satisfaction score",
+		"Facilitated cross-platform feature delivery by collaborating with Python/ML engineers to define API payload structures for Hugging Face models"
 	]
 }
