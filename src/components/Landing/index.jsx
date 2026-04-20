@@ -186,11 +186,6 @@ export default function Home() {
 						onClick={scrollToProjects}
 						aria-label="Scroll to projects section"
 					>
-						{/* <div className={styles.scrollDots}>
-							<span className={styles.scrollDot}></span>
-							<span className={styles.scrollDot}></span>
-							<span className={styles.scrollDot}></span>
-						</div> */}
 						<div className={styles.scrollLabelGroup}>
 							<span className={styles.scrollLabel}>projects</span>
 							<span className={styles.scrollChevron}>⌄</span>
