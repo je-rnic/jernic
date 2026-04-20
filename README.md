@@ -1,5 +1,4 @@
-# insert link here
+# [Portfolio](https://jnic.vercel.app/)
  
-work in progress sumimasen 
-
-in the meantime, head over to https://www.linkedin.com/in/jernicyeo for a polished version (guaranteed)
+A digital archive of me.
+Work in progress as I'm always learning 🌱
