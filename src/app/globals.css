@@ -4,6 +4,7 @@ body {
     background-color: black;
     overflow-x: hidden;
     overflow-y: auto;
+    box-sizing: border-box;
 
     /* cursor: wait; Add after Preloader*/
 }
