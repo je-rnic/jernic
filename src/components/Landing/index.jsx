@@ -26,19 +26,14 @@ export default function Home() {
 				};
 
 	const roles = [
-		"Coffee Barista",
+		"Barista",
 		"Software Engineer",
 		"Pianist",
 		"Nature Lover",
-		"AI Solutions Architect",
 		"Electric Guitarist",
-		"Product Manager",
-		"Interior Design Enthusiast",
 		"Videographer",
-		"B Boy",
+		"Dancer",
 		"UX Designer",
-		"Artist",
-		"Human",
 	];
 	const loopedRoles = [...roles, roles[0]];
 	const TICKER_ROTATION_MS = 2500;
