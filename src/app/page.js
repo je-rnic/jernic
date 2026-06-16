@@ -11,7 +11,6 @@ export default function Home() {
 			<SmoothScrollInitializer />
 			<Landing />
 			<Projects />
-			<Experience />
 			<Footer />
 		</main>
 	);
