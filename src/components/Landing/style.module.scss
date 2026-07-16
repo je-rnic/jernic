@@ -106,22 +106,23 @@
 }
 
 .statusBubble {
-	margin-top: clamp(18px, 2.2vh, 26px);
 	max-width: min(560px, 95%);
 	padding: clamp(10px, 1.5vh, 14px) clamp(12px, 2vw, 18px);
 	border-radius: 14px;
 	border: 1px solid rgba(255, 255, 255, 0.72);
 	background: rgba(255, 255, 255, 0.24);
-	display: inline-flex;
+	display: flex;
 	align-items: center;
 	gap: 10px;
 	transition: opacity 0.4s;
 }
 
 .statusStack {
-	display: inline-flex;
+	margin-top: clamp(18px, 2.2vh, 26px);
+	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
+	gap: 8px;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -169,7 +170,7 @@
 }
 
 .statusContact {
-	margin: 8px 0 0;
+	margin: 0;
 	padding-left: 42px;
 	display: inline-flex;
 	align-items: center;
