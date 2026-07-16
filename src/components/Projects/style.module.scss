@@ -122,11 +122,48 @@
 }
 
 .primaryLink {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
 	align-self: flex-start;
-	padding: 10px 14px;
-	border: 1px solid rgba(247, 243, 236, 0.5);
-	border-radius: 10px;
 	text-decoration: none;
+	letter-spacing: 0.08em;
+	text-transform: lowercase;
+	transition: opacity 0.3s ease;
+
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			opacity: 0.55;
+
+			.primaryLinkLabel {
+				transform: translateX(-2px);
+			}
+
+			.primaryLinkChevron {
+				transform: translateY(-1px) translateX(2px);
+			}
+		}
+	}
+
+	&:focus-visible {
+		outline: 2px solid rgba(247, 243, 236, 0.7);
+		outline-offset: 4px;
+	}
+}
+
+.primaryLinkLabel {
+	display: block;
+	transition: transform 0.3s ease;
+}
+
+.primaryLinkChevron {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 1;
+	transform: translateY(-1px);
+	color: rgba(247, 243, 236, 0.72);
+	transition: transform 0.3s ease;
 }
 
 .nextSectionCue {

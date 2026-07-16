@@ -1,17 +1,17 @@
 {
 	"title": "CheckMate",
-	"subtitle": "AI-Powered News Analysis Tool. Awarded 1st place in the Cloud Native Experience Award hosted by Dell Technologies.",
-	"role": "Frontend Software Engineer (IS483 Final Year Group Project)",
-	"roleShort": "Frontend Engineer",
-	"timeline": "Jul 2024 - May 2025",
+	"subtitle": "How can we make critical news literacy more accessible and educational for our youths today?",
+	"role": "Frontend Software Engineer, UI/UX Designer",
+	"roleShort": "Frontend Engineer, Designer",
+	"timeline": "Jul 2024 - May 2025 (IS483 Final Year Group Project)",
 	"technologies": [
+		"Figma",
 		"React",
 		"JavaScript",
 		"Tailwind CSS",
 		"Python",
 		"Hugging Face",
 		"REST APIs",
-		"Figma",
 		"Git",
 		"Confluence"
 	],
@@ -20,13 +20,13 @@
 	"coverImage": null,
 	"featured": true,
 	"visible": true,
-	"award": "Cloud Native Experience Award - Dell Technologies",
+	"award": "1st Place at Cloud Native Experience Award - Dell Technologies",
 	"awardLink": "https://www.linkedin.com/posts/jernicyeo_started-this-week-with-the-dell-technologies-activity-7325886544425160704-xAUs",
 	"sections": [
 		{
 			"type": "text",
 			"title": "Project Overview",
-			"body": "CheckMate is an AI-powered news analysis platform that helps users evaluate news sentiments, detect propaganda techniques, and understand article tones quickly through multiple intuitive interfaces."
+			"body": "CheckMate is an AI-powered news analysis platform that helps users evaluate news sentiments, detect propaganda techniques, and understand article tones quickly through multiple intuitive interfaces. By Team CtrlAltElite 2025."
 		},
 		{
 			"type": "video",
@@ -39,10 +39,5 @@
 			"controls": true
 		}
 	],
-	"highlights": [
-		"Engineered a high-performance React frontend featuring route-based lazy loading and client-side API response caching to ensure smooth user experience during real-time machine learning inference and sentiment analysis",
-		"Bridged design and development by translating high-fidelity Figma prototypes into a fully responsive web application, Chrome extension and Telegram bot interface, maintaining a consistent component library and Tailwind CSS utility patterns across three distinct platforms",
-		"Validated product-market fit through Maze testing with 30 institutional participants, iterating on interaction flows to achieve a 0% task drop-off rate and 80% user satisfaction score",
-		"Facilitated cross-platform feature delivery by collaborating with Python/ML engineers to define API payload structures for Hugging Face models"
-	]
+	"link": "/"
 }

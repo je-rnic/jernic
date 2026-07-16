@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import styles from "./style.module.scss";
-import Project from "./components/project";
+import Project from "./ProjectsComponent/ProjectItem";
 import {
 	SiConfluence,
 	SiCss,
@@ -269,7 +269,13 @@ export default function ProjectsAccordion({ projects }) {
 											target="_blank"
 											rel="noreferrer"
 										>
-											Visit project link
+											<span className={styles.primaryLinkLabel}>Read More</span>
+											<span
+												className={styles.primaryLinkChevron}
+												aria-hidden="true"
+											>
+												&gt;
+											</span>
 										</a>
 									)}
 								</div>

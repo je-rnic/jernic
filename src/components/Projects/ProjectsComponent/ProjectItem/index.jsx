@@ -1,11 +1,6 @@
 import React from "react";
 import styles from "./style.module.scss";
 
-/* <div onMouseEnter={() => {setModal({active: true, index})}} onMouseLeave={() => {setModal({active: false, index})}} className={styles.project}>
-            <h2>{title}</h2>
-            <p>Design & Development</p>
-        </div> */
-
 export default function index({ title, subtitle, role, isActive, onToggle }) {
 	return (
 		<button

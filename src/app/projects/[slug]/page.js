@@ -92,16 +92,6 @@ export default async function ProjectDetailPage({ params }) {
 					</ul>
 				</section>
 
-				{project.link && (
-					<a
-						className={styles.externalLink}
-						href={project.link}
-						target="_blank"
-						rel="noreferrer"
-					>
-						Visit project link
-					</a>
-				)}
 			</div>
 		</main>
 	);
