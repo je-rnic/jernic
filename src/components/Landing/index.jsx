@@ -9,7 +9,8 @@ export default function Home() {
 	const workStatus = {
 		/* "Open" or "Employed" */
 		mode: "Open",
-		company: "Company Name",
+		company: "Accenture",
+		role: "Business Architecture Analyst"
 	};
 
 	const statusContent =
@@ -20,7 +21,7 @@ export default function Home() {
 					bubbleClass: styles.statusOpen,
 				}
 			: {
-					label: `Software Engineer at ${workStatus.company}`,
+					label: `${workStatus.role} at ${workStatus.company}`,
 					detail: "Not actively looking right now",
 					bubbleClass: styles.statusEmployed,
 				};
@@ -124,12 +125,12 @@ export default function Home() {
 				<div className={styles.introduction}>
 					<p className={styles.kicker}>Hello, I am Jernic</p>
 					<h1 className={styles.heroTitle}>
-						<span className={styles.heroLead}>I build</span>
+						<span className={styles.heroLead}>I build intuitive</span>
 						<span className={styles.heroStrong}>
-							thoughtful digital products
+							digital products
 						</span>
 						<span className={styles.heroSub}>
-							centred around code, design, and product.
+							centred around <b>data</b>, <b>design</b>, and <b>accessibility</b>.
 						</span>
 					</h1>
 					<div className={styles.statusStack}>
