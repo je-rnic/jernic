@@ -8,27 +8,16 @@ function renderAwardText(award, awardLink) {
 		return award;
 	}
 
-	const linkedText = "Cloud Native Experience Award";
-	const linkedIndex = award.indexOf(linkedText);
-	if (linkedIndex === -1) {
-		return award;
-	}
-
-	const before = award.slice(0, linkedIndex);
-	const after = award.slice(linkedIndex + linkedText.length);
-
 	return (
 		<>
-			{before}
 			<a
 				href={awardLink}
 				target="_blank"
 				rel="noreferrer"
 				className={styles.inlineAwardLink}
 			>
-				{linkedText}
+				{award}
 			</a>
-			{after}
 		</>
 	);
 }

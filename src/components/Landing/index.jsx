@@ -126,7 +126,7 @@ export default function Home() {
 					<h1 className={styles.heroTitle}>
 						<span className={styles.heroLead}>I build</span>
 						<span className={styles.heroStrong}>
-							thoughtful digital experiences
+							thoughtful digital products
 						</span>
 						<span className={styles.heroSub}>
 							centred around code, design, and product.
