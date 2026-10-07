@@ -123,11 +123,11 @@ export default function Home() {
 
 			<div className={styles.content}>
 				<div className={styles.introduction}>
-					<p className={styles.kicker}>Hello, I am Jernic</p>
+					<p className={styles.kicker}>hello, I'm Jernic</p>
 					<h1 className={styles.heroTitle}>
-						<span className={styles.heroLead}>I build intuitive</span>
+						<span className={styles.heroLead}>a &lt;business analyst&gt; turned product designer that builds </span>
 						<span className={styles.heroStrong}>
-							digital products
+							intuitive user experiences
 						</span>
 						<span className={styles.heroSub}>
 							centred around <b>data</b>, <b>design</b>, and <b>accessibility</b>.
