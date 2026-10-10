@@ -1,1 +1,404 @@
-body { margin: 0; font-family: system-ui, sans-serif; }
+/* ==========================================================================
+   globals.css — the only stylesheet in this project.
+   Order: fonts → tokens → reset → base → type → layout → components
+   Rule of thumb: no hex codes or font sizes outside the TOKENS block.
+   ========================================================================== */
+
+@layer reset, tokens, base, type, layout, components;
+
+
+/* ---------- Fonts (self-hosted) ------------------------------------------ */
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-latin-wght-normal.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-latin-wght-italic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Jn Font 175scaled";
+  src: url("/fonts/Jn_font_175scaled-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* ==========================================================================
+   TOKENS
+   ========================================================================== */
+@layer tokens {
+  :root {
+    /* Light follows the OS until the visitor picks a theme.
+       The inline script in layout.tsx then pins data-theme on <html>. */
+    color-scheme: light dark;
+
+    /* --- Colour: light-dark(LIGHT, DARK) ------------------------------- */
+    --paper: light-dark(#F5F3EF, #111110);
+    --ink: light-dark(#1B1B19, #F2F0EA);
+    --rule: light-dark(#D9D6CF, #30302D);
+    --toggle: light-dark(#E6E3DB, #262623);
+    /* Brief: muted ink = rule colour. Contrast is ~1.4:1 (dark) / ~1.3:1 (light),
+       so keep it off real text until this is revisited (see handover notes). */
+    --ink-muted: var(--rule);
+
+    /* --- Families ------------------------------------------------------ */
+    --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --font-serif: Georgia, "Times New Roman", Times, serif; /* placeholder for Bespoke Serif */
+    --font-hand: "Jn Font 175scaled", var(--font-sans);
+
+    /* --- Weights ------------------------------------------------------- */
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-bold: 700;
+
+    /* --- Type scale (fluid: phone ≈390 → tablet ≈810 → desktop ≥1200) --- */
+    --fs-display: clamp(2.25rem, 1.75rem + 2vw, 3.25rem);       /* 36 → 44 → 52 */
+    --fs-title: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);         /* 20 → 22 → 24 */
+    --fs-subtitle: clamp(1.125rem, 1.05rem + 0.3vw, 1.25rem);   /* 18 → 19 → 20 */
+    --fs-eyebrow: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);       /* 20 → 22 → 24 */
+    --fs-body: 1rem;                                            /* 16, never smaller */
+    --fs-small: 1rem;
+
+    --lh-display: 1.05;
+    --lh-title: 1.2;
+    --lh-subtitle: 1.3;
+    --lh-eyebrow: 1.2;
+    --lh-body: 1.55;
+    --lh-small: 1.45;
+
+    --ls-display: -0.03em;
+    --ls-title: -0.02em;
+    --ls-subtitle: -0.015em;
+    --ls-eyebrow: -0.02em;
+    --ls-body: -0.01em;
+    --ls-small: 0;
+
+    /* --- Spacing: 4px base, rem so it scales with user font size -------- */
+    --space-1: 0.25rem;  /*   4 */
+    --space-2: 0.5rem;   /*   8 */
+    --space-3: 0.75rem;  /*  12 */
+    --space-4: 1rem;     /*  16 */
+    --space-5: 1.5rem;   /*  24 */
+    --space-6: 2rem;     /*  32 */
+    --space-7: 3rem;     /*  48 */
+    --space-8: 4rem;     /*  64 */
+    --space-9: 6rem;     /*  96 */
+    --space-10: 8rem;    /* 128 */
+
+    /* --- Layout -------------------------------------------------------- */
+    --gutter: clamp(1.25rem, 0.4rem + 3.5vw, 3rem);  /* 20 → ~35 → 48 */
+    --content-max: 84rem;                            /* 1344 = 1440 frame − 2×48 */
+    --header-h: 5rem;
+    --hero-media-width: 37%;
+    --rule-width: 1px;
+    --radius-pill: 9999px;
+
+    /* --- Theme toggle -------------------------------------------------- */
+    --toggle-size: 1.75rem;  /* 28 */
+    --toggle-pad: 0.125rem;  /*  2 */
+    --theme-fade: 220ms ease;
+  }
+
+  :root[data-theme="light"] { color-scheme: light; }
+  :root[data-theme="dark"] { color-scheme: dark; }
+}
+
+
+/* ==========================================================================
+   RESET
+   ========================================================================== */
+@layer reset {
+  *, *::before, *::after { box-sizing: border-box; }
+  * { margin: 0; }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  img, svg, video { display: block; max-width: 100%; }
+  button { font: inherit; color: inherit; background: none; border: 0; padding: 0; }
+  ul { list-style: none; padding: 0; }
+  /* Headings carry meaning, not size — size comes from the .type-* classes. */
+  h1, h2, h3, h4 { font: inherit; }
+}
+
+
+/* ==========================================================================
+   BASE
+   ========================================================================== */
+@layer base {
+  body {
+    min-height: 100vh;
+    min-height: 100svh;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-regular);
+    line-height: var(--lh-body);
+    letter-spacing: var(--ls-body);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  strong { font-weight: var(--fw-bold); }
+  em { font-style: italic; }
+
+  :focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+
+    /* Colour fade on theme change. `theme-ready` is added after first paint
+       so the page doesn't animate in from the wrong theme on load. */
+    html.theme-ready *,
+    html.theme-ready *::before,
+    html.theme-ready *::after {
+      transition:
+        background-color var(--theme-fade),
+        color var(--theme-fade),
+        border-color var(--theme-fade);
+    }
+  }
+}
+
+
+/* ==========================================================================
+   TYPE — one class per Framer text style
+   ========================================================================== */
+@layer type {
+  .type-display {
+    font-family: var(--font-sans);
+    font-size: var(--fs-display);
+    font-weight: var(--fw-bold);
+    line-height: var(--lh-display);
+    letter-spacing: var(--ls-display);
+  }
+  .type-title {
+    font-family: var(--font-sans);
+    font-size: var(--fs-title);
+    font-weight: var(--fw-medium);
+    line-height: var(--lh-title);
+    letter-spacing: var(--ls-title);
+  }
+  .type-subtitle {
+    font-family: var(--font-sans);
+    font-size: var(--fs-subtitle);
+    font-weight: var(--fw-regular);
+    line-height: var(--lh-subtitle);
+    letter-spacing: var(--ls-subtitle);
+  }
+  .type-eyebrow {
+    font-family: var(--font-hand);
+    font-size: var(--fs-eyebrow);
+    font-weight: var(--fw-regular);
+    line-height: var(--lh-eyebrow);
+    letter-spacing: var(--ls-eyebrow);
+    font-synthesis: none;
+  }
+  .type-body {
+    font-family: var(--font-sans);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-regular);
+    line-height: var(--lh-body);
+    letter-spacing: var(--ls-body);
+  }
+  .type-small {
+    font-family: var(--font-serif);
+    font-size: var(--fs-small);
+    font-weight: var(--fw-regular);
+    line-height: var(--lh-small);
+    letter-spacing: var(--ls-small);
+    color: var(--ink-muted);
+  }
+}
+
+
+/* ==========================================================================
+   LAYOUT
+   ========================================================================== */
+@layer layout {
+  .container {
+    width: min(100% - 2 * var(--gutter), var(--content-max));
+    margin-inline: auto;
+  }
+
+  /* First screen: hero centred between the header and the bottom bar. */
+  .landing {
+    min-height: calc(100vh - var(--header-h));
+    min-height: calc(100svh - var(--header-h));
+    display: flex;
+    flex-direction: column;
+  }
+  .landing > .hero { margin-block: auto; }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-7);
+    padding-block: var(--space-7);
+  }
+  .hero__text { min-width: 0; }
+  .hero__media {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    position: relative;
+    overflow: hidden;
+  }
+
+  @media (min-width: 48rem) {
+    .hero {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-6);
+    }
+    .hero__text { flex: 1 1 auto; }
+    .hero__media { flex: 0 0 var(--hero-media-width); width: var(--hero-media-width); }
+  }
+}
+
+
+/* ==========================================================================
+   COMPONENTS
+   ========================================================================== */
+@layer components {
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .skip-link {
+    position: absolute;
+    top: var(--space-3);
+    left: var(--gutter);
+    z-index: 10;
+    padding: var(--space-2) var(--space-4);
+    background: var(--ink);
+    color: var(--paper);
+    transform: translateY(-200%);
+  }
+  .skip-link:focus-visible { transform: none; }
+
+  /* --- Header -------------------------------------------------------- */
+  .site-header { block-size: var(--header-h); }
+  .site-header__inner {
+    block-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .site-header__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+  }
+  .nav-list {
+    display: flex;
+    gap: var(--space-4);
+  }
+  .nav-link {
+    font-family: var(--font-serif);
+    font-size: var(--fs-small);
+    line-height: var(--lh-small);
+    color: var(--ink);
+  }
+  .nav-link:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.25em;
+  }
+  @media (min-width: 48rem) {
+    .site-header__actions { gap: var(--space-5); }
+    .nav-list { gap: var(--space-5); }
+  }
+
+  /* --- Hero ---------------------------------------------------------- */
+  .hero__eyebrow { margin-bottom: var(--space-6); }
+  .hero__title { display: grid; gap: var(--space-1); }
+  .hero__title > span { display: block; }
+
+  .hero__placeholder {
+    position: absolute;
+    inset: 0;
+    background: var(--rule);
+  }
+  .hero__media img { width: 100%; height: 100%; object-fit: cover; }
+
+  /* --- Bottom bar ---------------------------------------------------- */
+  .landing__bar {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-4);
+    padding-block: var(--space-5);
+    border-top: var(--rule-width) solid var(--rule);
+  }
+  .landing__bar-link { display: inline-flex; gap: var(--space-2); }
+
+  /* --- Theme toggle -------------------------------------------------- */
+  .theme-toggle {
+    --knob: calc(var(--toggle-size) - 2 * (var(--toggle-pad) + var(--rule-width)));
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    inline-size: calc(var(--toggle-size) * 1.95);
+    block-size: var(--toggle-size);
+    padding: var(--toggle-pad);
+    border: var(--rule-width) solid var(--rule);
+    border-radius: var(--radius-pill);
+    background: var(--paper);
+    color: var(--ink);
+    cursor: pointer;
+  }
+  .theme-toggle__knob {
+    position: relative;
+    display: grid;
+    place-items: center;
+    inline-size: var(--knob);
+    block-size: var(--knob);
+    border-radius: var(--radius-pill);
+    background: var(--toggle);
+  }
+  .theme-toggle__icon {
+    position: absolute;
+    inline-size: 60%;
+    block-size: 60%;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .theme-toggle__icon--moon { opacity: 0; }
+
+  :root[data-theme="dark"] .theme-toggle__icon--sun { opacity: 0; }
+  :root[data-theme="dark"] .theme-toggle__icon--moon { opacity: 1; }
+  :root[data-theme="dark"] .theme-toggle__knob {
+    transform: translateX(calc(var(--toggle-size) * 0.95));
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .theme-toggle__knob {
+      transition: transform 220ms ease, background-color var(--theme-fade);
+    }
+    .theme-toggle__icon {
+      transition: opacity 220ms ease, stroke var(--theme-fade);
+    }
+  }
+}
