@@ -2,18 +2,15 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import SiteHeader from "@/components/SiteHeader";
 import { site } from "@/content/site";
+
 import "./globals.css";
+import { themeInit } from "./themeInit";
+
 
 export const metadata: Metadata = {
 	title: site.title,
 	description: site.description,
 };
-
-/**
- * Runs before first paint: pin the saved (or OS) theme on <html> so there's
- * no flash of the wrong colours. Same storage key as ThemeToggle.tsx.
- */
-const themeInit = `(function(){var t;try{t=localStorage.getItem("jernic-theme")}catch(e){}if(t!=="light"&&t!=="dark"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t})();`;
 
 export default function RootLayout({
 	children,

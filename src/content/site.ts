@@ -17,15 +17,14 @@ export const site = {
   ],
 } as const;
 
-/**
- * Hero photo. Leave as `null` to show a placeholder block.
- * To use a real photo: put the file in /public/images and fill this in, e.g.
- *   { src: "/images/hero.jpg", alt: "…", width: 3089, height: 2048 }
- * (Export it ~2400px wide first — next/image will serve smaller sizes.)
- */
 export const heroImage: {
   src: string;
   alt: string;
-  width: number;
+  width: 2400;
   height: number;
-} | null = null;
+} = {
+  src: "/images/background.jpg",
+  alt: "Background image",
+  width: 2400,
+  height: 1600,
+};
