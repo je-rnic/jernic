@@ -1,0 +1,106 @@
+{/*
+  CASE STUDY TEMPLATE
+  Copy to <slug>.mdx (same slug as the entry in works.ts).
+
+  The title, summary, role, timeline and cover image come from works.ts, so the
+  header is not written here. Everything below is the story.
+
+  Available blocks (no imports needed):
+    <Statement label>      full-width inverted band: the goal / the question
+    <Section label>        titled block; write normal Markdown inside
+    <Split>                two columns: text on one side, an artefact on the other
+    <Callout label>        bordered box for one metric, insight or decision
+    <Cards><Card title>    grid of equal cards
+    <Figure>               image + caption (omit src to hold a place)
+    <Video>                video + caption
+
+  Inside a Section: ### for sub-headings, - for bullets, > for a quote.
+  Blank line between a tag and the Markdown inside it, or it won't render as Markdown.
+  Don't use the characters { or < in running text.
+
+  Ownership rule: say what I did ("I designed"), what we did together
+  ("I worked with the developer to") and what the team did ("the team"). 
+*/}
+
+<Statement label="The goal">
+[One sentence: the question or goal the project set out to answer.]
+</Statement>
+
+<Section label="Context">
+
+[What was the project, who was it for, and what was happening around it? Two or three sentences.]
+
+</Section>
+
+<Section label="My role">
+
+[What I actually owned. Then, separately, what I did with others and what the team did.]
+
+</Section>
+
+<Section label="Problem">
+
+[What was not working, and for whom? Concrete: what did the person try to do, and what happened?]
+
+<Cards>
+<Card title="[First problem]">
+[One or two sentences.]
+</Card>
+<Card title="[Second problem]">
+[One or two sentences.]
+</Card>
+<Card title="[Third problem]">
+[One or two sentences.]
+</Card>
+</Cards>
+
+</Section>
+
+<Section label="Understanding the problem">
+
+[How I found out: interviews, observation, tickets, usability tests, data. Only what really happened.]
+
+<Figure caption="[Artefact to add: research notes, affinity map, workflow diagram ...]" aspect="16/9" />
+
+</Section>
+
+<Section label="What I did">
+
+[The important decisions and why I made them.]
+
+<Split>
+<div>
+
+### [A decision]
+
+[What the options were and why I chose one.]
+
+</div>
+<Callout label="[Metric or insight]">
+[Only a number I can evidence. Keep any uncertainty in the wording.]
+</Callout>
+</Split>
+
+<Figure caption="[Artefact to add: wireframes, screens, before and after ...]" aspect="16/9" />
+
+{/* <Video src="/media/your-file.mp4" label="What the video shows" caption="..." /> */}
+
+</Section>
+
+<Section label="Iteration">
+
+[What changed after feedback from users, stakeholders or engineers, and who was involved.]
+
+</Section>
+
+<Section label="Outcome">
+
+[What happened after the work. If there is no measured result, say what is known.]
+
+</Section>
+
+<Section label="Reflection">
+
+[What this taught me, especially about product and UX.]
+
+</Section>

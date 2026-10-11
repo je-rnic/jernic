@@ -7,7 +7,7 @@ type Theme = "light" | "dark";
 const STORAGE_KEY = "jernic-theme";
 const DARK_QUERY = "(prefers-color-scheme: dark)";
 
-/** The theme currently pinned on <html> (set by the inline script in layout.tsx). */
+/** The theme currently pinned on <html> by the beforeInteractive theme script. */
 function currentTheme(): Theme {
   return document.documentElement.dataset.theme === "dark" ? "dark" : "light";
 }

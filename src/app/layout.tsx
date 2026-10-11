@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import SiteHeader from "@/components/SiteHeader";
 import { site } from "@/content/site";
 
 import "./globals.css";
-import { themeInit } from "./themeInit";
-
 
 export const metadata: Metadata = {
-	title: site.title,
+	title: { default: site.title, template: `%s — ${site.name}` },
 	description: site.description,
 };
 
@@ -20,7 +19,7 @@ export default function RootLayout({
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<head>
-				<script dangerouslySetInnerHTML={{ __html: themeInit }} />
+				<Script src="/theme-init.js" strategy="beforeInteractive" />
 				<link
 					rel="preload"
 					href="/fonts/Inter-latin-wght-normal.woff2"
