@@ -40,7 +40,7 @@
 		color-scheme: light dark;
 
 		/* --- Colour: light-dark(LIGHT, DARK) ------------------------------- */
-		--paper: light-dark(#FFFFFF, #111110);
+		--paper: light-dark(#FAFAFA, #111110);
 		--ink: light-dark(#1b1b19, #f2f0ea);
 		--rule: light-dark(#666666, #666666);
 		--toggle: light-dark(#e6e3db, #262623);
@@ -443,6 +443,38 @@
 	.landing__bar-link {
 		display: inline-flex;
 		gap: var(--space-2);
+	}
+	.landing__ticker-window {
+		--ticker-inset: 0.2rem;
+		--ticker-step: calc(
+			var(--fs-eyebrow) * var(--lh-eyebrow) + 2 * var(--ticker-inset)
+		);
+		display: inline-block;
+		overflow: hidden;
+		height: var(--ticker-step);
+		margin-inline-start: 0.35rem;
+		padding-inline: 0.15rem;
+		vertical-align: middle;
+	}
+	.landing__ticker-track {
+		display: flex;
+		flex-direction: column;
+		transition: transform 460ms ease;
+	}
+	.landing__ticker-track--reset {
+		transition: none;
+	}
+	.landing__ticker-item {
+		display: flex;
+		align-items: center;
+		height: var(--ticker-step);
+		line-height: var(--lh-eyebrow);
+		white-space: nowrap;
+	}
+	@media (prefers-reduced-motion: reduce) {
+		.landing__ticker-track {
+			transition: none;
+		}
 	}
 
 	/* --- Theme toggle -------------------------------------------------- */
