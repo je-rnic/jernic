@@ -35,7 +35,7 @@ export default function Figure({
         ) : null}
       </div>
       {caption && (
-        <figcaption className="figure__caption type-serif">{caption}</figcaption>
+        <figcaption className="figure__caption type-small">{caption}</figcaption>
       )}
     </figure>
   );

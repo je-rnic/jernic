@@ -29,6 +29,8 @@ export type Work = {
   end?: YearMonth | "present";
   /** Optional cover shown in the case-study header. No width/height needed. */
   cover?: { src: string; alt: string };
+  /** Optional preview shown on work-list rows. */
+  overview?: { src: string; alt: string };
 };
 
 /*

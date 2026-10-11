@@ -20,7 +20,7 @@ export default function CaseStudyHeader({ work }: { work: Work }) {
         <dl className="case-meta">
           <div>
             <dt className="type-body">Role</dt>
-            <dd className="type-serif">
+            <dd className="type-small">
               <ul>
                 {work.roles.map((role) => (
                   <li key={role}>{role}</li>
@@ -30,12 +30,12 @@ export default function CaseStudyHeader({ work }: { work: Work }) {
           </div>
           <div>
             <dt className="type-body">Timeline</dt>
-            <dd className="type-serif">{formatPeriod(work)}</dd>
+            <dd className="type-small">{formatPeriod(work)}</dd>
           </div>
           {work.scope && (
             <div>
               <dt className="type-body">Scope</dt>
-              <dd className="type-serif">
+              <dd className="type-small">
                 <ul>
                   {work.scope.map((item) => (
                     <li key={item}>{item}</li>

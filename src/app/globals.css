@@ -42,8 +42,9 @@
 		/* --- Colour: light-dark(LIGHT, DARK) ------------------------------- */
 		--paper: light-dark(#f5f3ef, #111110);
 		--ink: light-dark(#1b1b19, #f2f0ea);
-		--rule: light-dark(#d9d6cf, #30302d);
+		--rule: light-dark(#666666, #666666);
 		--toggle: light-dark(#e6e3db, #262623);
+		--divider: light-dark(#AEACAA, #404040);
 
 		/* --- Families ------------------------------------------------------ */
 		--font-sans:
@@ -435,7 +436,7 @@
 		justify-content: space-between;
 		gap: var(--space-4);
 		padding-block: var(--space-5);
-		border-top: var(--rule-width) solid var(--rule);
+		border-top: var(--rule-width) solid var(--divider);
 	}
 	.landing__bar-link {
 		display: inline-flex;
@@ -534,14 +535,13 @@
 	.work-list {
 		list-style: none;
 		padding: 0;
-		border-bottom: var(--rule-width) solid var(--rule);
 	}
 	.work-row {
 		display: grid;
 		grid-template-columns: var(--work-marker-w) minmax(0, 1fr);
 		gap: var(--space-2) var(--space-3);
 		padding-block: var(--space-5);
-		border-top: var(--rule-width) solid var(--rule);
+		border-top: var(--rule-width) solid var(--divider);
 	}
 	.work-row__marker {
 		grid-column: 1;
@@ -553,11 +553,21 @@
 		min-width: 0;
 	}
 	.work-row__roles {
-		grid-column: 2;
+		color: var(--rule);
 	}
 	.work-row__summary {
 		display: block;
 		max-width: var(--measure);
+	}
+	.work-row__overview {
+		grid-column: 2;
+		position: relative;
+		aspect-ratio: 16 / 9;
+		overflow: hidden;
+		background: var(--rule);
+	}
+	.work-row__overview img {
+		object-fit: cover;
 	}
 	.work-row:hover .work-row__title,
 	.work-row:focus-visible .work-row__title {
@@ -571,8 +581,10 @@
 			align-items: baseline;
 			gap: var(--space-5);
 		}
-		.work-row__roles {
+		.work-row__overview {
 			grid-column: 3;
+			grid-row: 1;
+			align-self: stretch;
 		}
 	}
 
@@ -581,11 +593,10 @@
 		padding-block: var(--space-9) var(--space-8);
 	}
 	.selected-work__inner {
-		border-top: var(--rule-width) solid var(--rule);
 		padding-top: var(--space-5);
 	}
 	.selected-work .work-list {
-		margin-top: var(--space-7);
+		margin-top: var(--space-5);
 	}
 	.selected-work__footer {
 		display: flex;
@@ -611,7 +622,7 @@
 		gap: var(--space-5) var(--space-6);
 		margin-top: var(--space-6);
 		padding-top: var(--space-5);
-		border-top: var(--rule-width) solid var(--rule);
+		border-top: var(--rule-width) solid var(--divider);
 	}
 	.case-meta dt {
 		font-weight: var(--fw-medium);
@@ -628,7 +639,7 @@
 	/* --- Case study: body blocks (the MDX components) ------------------- */
 	.section__inner {
 		padding-block: var(--space-7) var(--space-8);
-		border-top: var(--rule-width) solid var(--rule);
+		border-top: var(--rule-width) solid var(--divider);
 	}
 	.statement + .section .section__inner {
 		border-top: 0;
@@ -718,7 +729,7 @@
 	.card {
 		--flow-space: var(--space-2);
 		padding: var(--space-5);
-		border: var(--rule-width) solid var(--rule);
+		border: var(--rule-width) solid var(--divider);
 	}
 
 	.figure__media {
