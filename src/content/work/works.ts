@@ -15,22 +15,24 @@
 export type YearMonth = `${number}-${number}`;
 
 export type Work = {
-  /** URL segment and MDX filename: /work/<slug> <-> content/work/<slug>.mdx */
-  slug: string;
-  title: string;
-  /** One or two sentences. Shown in the lists and under the case-study title. */
-  summary: string;
-  /** What I actually did on this project. Be exact; see ownership rules. */
-  roles: readonly string[];
-  /** Optional bullet list of activities (research, wireframing, handoff ...). */
-  scope?: readonly string[];
-  start: YearMonth;
-  /** Omit for a single-month project. "present" for ongoing work. */
-  end?: YearMonth | "present";
-  /** Optional cover shown in the case-study header. No width/height needed. */
-  cover?: { src: string; alt: string };
-  /** Optional preview shown on work-list rows. */
-  overview?: { src: string; alt: string };
+	/** URL segment and MDX filename: /work/<slug> <-> content/work/<slug>.mdx */
+	slug: string;
+	/** Optional path to the story when it is nested under a project folder. */
+	storyPath?: string;
+	title: string;
+	/** One or two sentences. Shown in the lists and under the case-study title. */
+	summary: string;
+	/** What I actually did on this project. Be exact; see ownership rules. */
+	roles: readonly string[];
+	/** Optional bullet list of activities (research, wireframing, handoff ...). */
+	scope?: readonly string[];
+	start: YearMonth;
+	/** Omit for a single-month project. "present" for ongoing work. */
+	end?: YearMonth | "present";
+	/** Optional cover shown in the case-study header. No width/height needed. */
+	cover?: { src: string; alt: string };
+	/** Optional preview shown on work-list rows. */
+	overview?: { src: string; alt: string };
 };
 
 /*
@@ -39,35 +41,50 @@ export type Work = {
  * Titles, summaries and roles are copied from the Framer design.
  */
 export const works: readonly Work[] = [
-  {
-    slug: "project-cumulus",
-    title: "Project Cumulus",
-    summary:
-      "Reframing a complex internal workflow into a shared product language, clearer decision moments, and a more reliable operating rhythm.",
-    roles: ["Product Consultant"],
-    start: "2000-01",
-  },
-  {
-    slug: "checkmate",
-    title: "CheckMate: AI-Supported News Platform",
-    summary:
-      "A service design initiative that connected fragmented journeys into one legible, practical system for people on the move.",
-    roles: ["UX Designer", "Frontend Engineer"],
-    start: "2000-02",
-  },
-  {
-    slug: "project-maple",
-    title: "Project Maple: Optimising a Real Estate Management System",
-    summary:
-      "Designing a flexible workflow layer for teams coordinating hundreds of small, time-sensitive operational decisions each day.",
-    roles: ["Business Analyst", "Frontend Engineer"],
-    start: "2000-03",
-  },
+	{
+		slug: "project-c-accenture",
+		title: "Enterprise Human Capital Management Platform",
+		summary:
+			"Improving HR processes for a large-scale Cloud-based ERP within the Health & Public Sector",
+		roles: ["Product Consultant | Accenture"],
+		start: "2026-08",
+	},
+	{
+		slug: "checkmate",
+		title: "CheckMate: AI-Powered News Platform",
+		summary:
+			"A capstone project on making news literacy more accessible and educational for our youth today. Team emerged 1st for the Dell Cloud Native Experience Award 2025",
+		roles: ["UI/UX Designer", "Frontend Engineer"],
+		start: "2024-06",
+		end: "2025-06",
+	},
+	{
+		slug: "project-m-accenture",
+		title: "Real Estate Management System",
+		summary:
+			"Optimising the User Experience for Search Feature Enhancements on a low-code REMS within the Public Service",
+		roles: ["Software Engineer Intern | Accenture"],
+		start: "2024-05",
+		end: "2024-08",
+	},
+	{
+		slug: "2023-05-barbequeue-google-ux-certificate",
+		storyPath:
+			"2023-05-barbequeue-google-ux-certificate/2023-05-barbequeue-google-ux-certificate",
+		title: "BarbeQueue",
+		summary:
+			"My first dive into UI/UX. A mobile application POC to improve on the user journey when dining / ordering takeaway from a BBQ restaurant",
+		roles: ["Solo Designer | Google UX Design Certification"],
+		start: "2023-05",
+		end: "2023-08",
+		overview: { src: "/images/background-cropped.jpg", alt: "" },
+	},
 ];
 
 /** Slugs shown in "Selected work" on the home page, in this order. */
 export const featuredSlugs: readonly string[] = [
-  "project-cumulus",
-  "checkmate",
-  "project-maple",
+	"project-c-accenture",
+	"checkmate",
+	"project-m-accenture",
+	"2023-05-barbequeue-google-ux-certificate",
 ];

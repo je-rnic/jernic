@@ -18,7 +18,7 @@ export const site = {
 
 export const worksPage = {
 	title: "All work",
-	intro: "A selection of projects across product design, service design and frontend development.",
+	intro: "A selection of projects across product design, project management and frontend development.",
 } as const;
 
 export const heroImage: {

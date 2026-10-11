@@ -24,10 +24,13 @@ export default async function CaseStudyPage({ params }: Props) {
   const work = getWork(slug);
   if (!work) notFound();
 
-  // The story: content/work/<slug>.mdx. A registry entry without a file is a 404.
+  // The story defaults to content/work/<slug>.mdx, with an optional nested path
+  // for projects that keep their story and assets together.
   let Story: React.ComponentType;
   try {
-    ({ default: Story } = await import(`@/content/work/${slug}.mdx`));
+    ({ default: Story } = await import(
+      `@/content/work/${work.storyPath ?? slug}.mdx`
+    ));
   } catch {
     notFound();
   }
