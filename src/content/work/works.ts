@@ -77,7 +77,8 @@ export const works: readonly Work[] = [
 		roles: ["Solo Designer | Google UX Design Certification"],
 		start: "2023-05",
 		end: "2023-08",
-		overview: { src: "/images/background-cropped.jpg", alt: "" },
+		overview: { src: "/images/work/2023-05-barbequeue-google-ux-certificate/assets/Hero.png", alt: "BarbeQueue application concept" },
+		cover: { src: "/images/work/2023-05-barbequeue-google-ux-certificate/assets/Hero.png", alt: "BarbeQueue application concept" },
 	},
 ];
 

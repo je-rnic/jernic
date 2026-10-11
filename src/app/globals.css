@@ -40,7 +40,7 @@
 		color-scheme: light dark;
 
 		/* --- Colour: light-dark(LIGHT, DARK) ------------------------------- */
-		--paper: light-dark(#f5f3ef, #111110);
+		--paper: light-dark(#FFFFFF, #111110);
 		--ink: light-dark(#1b1b19, #f2f0ea);
 		--rule: light-dark(#666666, #666666);
 		--toggle: light-dark(#e6e3db, #262623);
@@ -50,7 +50,7 @@
 		--font-sans:
 			"Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 		--font-serif:
-			Georgia, "Times New Roman", Times, serif; /* placeholder for Bespoke Serif */
+			Georgia, "Times New Roman", Times, serif;
 		--font-hand: "Jn Font 175scaled", var(--font-sans);
 
 		/* --- Weights ------------------------------------------------------- */
@@ -101,6 +101,8 @@
 		--hero-media-width: 50%;
 		--rule-width: 1px;
 		--radius-pill: 9999px;
+		--radius-media: 0.75rem;
+		--shadow-media: 0 0.5rem 1.5rem rgb(0 0 0 / 0.14);
 
 		/* --- Theme toggle -------------------------------------------------- */
 		--toggle-size: 1.75rem; /* 28 */
@@ -612,6 +614,14 @@
 	.case-header__back {
 		margin-bottom: var(--space-6);
 	}
+	.case-header .hero__media {
+		aspect-ratio: 16 / 9;
+		border-radius: var(--radius-media);
+		box-shadow: var(--shadow-media);
+	}
+	.case-header .hero__media img {
+		border-radius: var(--radius-media);
+	}
 	.case-header__summary {
 		margin-top: var(--space-5);
 		max-width: var(--measure);
@@ -736,6 +746,11 @@
 		position: relative;
 		overflow: hidden;
 		background: var(--rule);
+		border-radius: var(--radius-media);
+		box-shadow: var(--shadow-media);
+	}
+	.figure__media img {
+		border-radius: var(--radius-media);
 	}
 	.figure__video {
 		width: 100%;

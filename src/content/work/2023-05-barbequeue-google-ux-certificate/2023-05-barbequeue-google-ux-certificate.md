@@ -14,7 +14,7 @@ tags:
 ---
 # BarbeQueue
 
-![[HERO.png]]
+![[Hero.png]]
 
 BarbeQueue *(Pun not intended) was a mobile application concept intended to make ordering from BBQ restaurants more convenient. 
 
@@ -51,19 +51,19 @@ The completed research presentation grouped the study around four questions:
 3. Could they order and customise their order?
 4. Could they complete checkout and input their payment options?
 
-![[user-study-research-plan.png]]
+![[UserStudyResearchPlan.png]]
 
 ---
 ## Paper Storyboarding
 
-Concurrently, I started mapping out the possible to-be user experience by sketching out the process of a user going to order from a BBQ restaura![[lofi-prototype-screens.png]]nt.
+Concurrently, I started mapping out the possible to-be user experience by sketching out the process of a user going to order from a BBQ restaura![[LofiPrototypeScreens.png]]nt.
 
 ### The Big Picture:  "Jeff", our user queuing 
-![[Storyboard 2.png]]
+![[Storyboard2.png]]
 
 
 ### Close-up: "Jeff", our user on his phone
-![[Storyboard 1.png]]
+![[Storyboard1.png]]
 
 ---
 # 03 — Testing
@@ -72,14 +72,14 @@ Concurrently, I started mapping out the possible to-be user experience by sketch
 
 These led to the creation of the first wireframes. I tested the low-fidelity BarbeQueue prototype through a remote usability study, where users were sent links to a [wireframe walkthrough](https://www.figma.com/proto/ZWlw38KEgVMGpagVrjnA2n/Course-3-Week-3?type=design&node-id=106-367&t=r6MTjZIvF4FuMuIt-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=106%3A367) designed on Figma. Rather than only asking participants whether they liked the interface, I gave them tasks to complete and looked at what they did when the interface stopped making sense.
 
-![[lofi-prototype-flow.png]]
+![[LofiPrototypeFlow.png]]
  
- ![[lofi-prototype-screens.png]]
+ ![[LofiPrototypeScreens.png]]
 ---
 
 ## Insights from Participants
 
-![[research-plan.png]]
+![[ResearchPlan.png]]
 - Sample Participant Response
 
 The usability sessions exposed problems that were difficult to see from the prototype alone.
@@ -88,13 +88,13 @@ One participant did not immediately understand what the **Catering** and **Dine-
 
 > “I don't think i would know what these 2 labels meant, if I dont really know the context of the app.”
 
-![[participants-insights-1.png]]
+![[ParticipantsInsights1.png]]
 
 The ordering flow revealed another issue. After selecting a food item, the participant could not easily return to add more menu options:
 
 > “This is annoying, I'm not here just to order 1 satay only.”
 
-![[wireframe-participant-insight-2.png]]
+![[WireframeParticipantInsight2.png]]
 
 ## Overall Theme of Responses
 
@@ -147,26 +147,26 @@ A customer who already knows where they want to order from should not have to se
 
 **Design direction:** Introduce a way to save favourite restaurants and make them easier to access from the profile, thus resulting in faster time to order.
 
-![[revision-savedrestaurants.png]]
+![[RevisionSavedRestaurants.png]]
 ### B) Let customers build an actual order
 The original prototype made the ordering flow feel closer to selecting one item than building a meal.
 
 **Design direction:** Introduce an updatable cart where customers can add multiple items and review their order before checkout.
 
-![[revision-buildingorder.png]]
+![[RevisionBuildingOrder.png]]
 ### C) Make payment choices more flexible
 
 The research showed a strong preference for cash on delivery.
 
 **Design direction:** Make cash payment an explicit checkout option rather than assuming online payment is the only route.
 
-![[revision-checkout.png]]
+![[RevisionCheckout.png]]
 
 ---
 
 # 05 — Takeaways
 
-![[Key Screens.png]]A key gap in the project was that the course stopped at one round of research and one revision, so I never got to re-test the redesigned flow.
+![[KeyScreens.png]]A key gap in the project was that the course stopped at one round of research and one revision, so I never got to re-test the redesigned flow.
 
 However, I took away a lot in seeing how UX problems connected. A confusing label, a hard-to-find button and no way to add a second item looked like three separate issues yet they all came from the same core issue: the app didn't follow the order people expected. Instead of simply making individual screens look clearer, I learnt to think about the whole journey from the user's perspective.
 
