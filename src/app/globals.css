@@ -408,6 +408,47 @@
 		}
 	}
 
+	/* --- Footer -------------------------------------------------------- */
+	.site-footer {
+		padding-block: var(--space-9) var(--space-8);
+		background: var(--paper);
+		color: var(--ink);
+		border: var(--rule-width) solid var(--divider);
+	}
+	.site-footer__inner {
+		display: grid;
+		justify-items: start;
+	}
+	.site-footer__eyebrow {
+		color: var(--rule);
+		opacity: 0.65;
+	}
+	.site-footer__title {
+		margin-top: var(--space-3);
+	}
+	.site-footer__title span {
+		display: block;
+	}
+	.site-footer__links {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--space-3);
+		margin-top: var(--space-6);
+	}
+	.site-footer__link {
+		display: inline-flex;
+		align-items: center;
+		min-block-size: 3rem;
+		padding-inline: var(--space-5);
+		border: var(--rule-width) solid var(--divider);
+		border-radius: var(--radius-pill);
+	}
+	.site-footer__link:hover,
+	.site-footer__link:focus-visible {
+		background: var(--ink);
+		color: var(--paper);
+	}
+
 	/* --- Hero ---------------------------------------------------------- */
 	.hero__eyebrow {
 		margin-bottom: var(--space-6);

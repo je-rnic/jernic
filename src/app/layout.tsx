@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 import { site } from "@/content/site";
 
 import "./globals.css";
@@ -41,6 +42,7 @@ export default function RootLayout({
 				</a>
 				<SiteHeader />
 				{children}
+				<SiteFooter />
 				<Analytics />
 			</body>
 		</html>
