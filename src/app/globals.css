@@ -94,6 +94,8 @@
 		/* --- Layout -------------------------------------------------------- */
 		--gutter: clamp(1.25rem, 0.4rem + 3.5vw, 3rem); /* 20 → ~35 → 48 */
 		--content-max: 84rem; /* 1344 = 1440 frame − 2×48 */
+		--measure: 65ch;
+		--work-marker-w: 2rem;
 		--header-h: 5rem;
 		--hero-media-width: 50%;
 		--rule-width: 1px;
