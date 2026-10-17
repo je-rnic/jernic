@@ -25,6 +25,8 @@ export type Work = {
 	/** What I actually did on this project. Be exact; see ownership rules. */
 	roles: readonly string[];
 	/** Optional bullet list of activities (research, wireframing, handoff ...). */
+	productType?: string;
+	/** Optional adjective describing whether it's a concept or a shipped product. */
 	scope?: readonly string[];
 	start: YearMonth;
 	/** Omit for a single-month project. "present" for ongoing work. */
