@@ -1,6 +1,6 @@
 /**
  * Work registry: one entry per project. This is the ONLY place that lists
- * projects. The home page, the Works page, the case-study header and the
+ * projects. The home page, the all works page, the individual work page and the
  * "next project" link all read from here.
  *
  * The story itself lives in `<slug>.mdx` next to this file.

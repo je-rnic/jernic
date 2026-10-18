@@ -2,7 +2,7 @@ import { featuredSlugs, works, type Work, type YearMonth } from "./works";
 
 export type Order = "newest-first" | "oldest-first";
 
-/** Change this one constant to flip the Works page. */
+/** Change this one constant to flip the all works page. */
 export const WORKS_ORDER: Order = "newest-first";
 
 export function getWork(slug: string): Work | undefined {
@@ -20,7 +20,7 @@ export function getFeaturedWorks(): Work[] {
     .filter((work): work is Work => work !== undefined);
 }
 
-/** The project after `slug` in the Works order, wrapping round at the end. */
+/** The work after `slug` in the all works order, wrapping round at the end. */
 export function getNextWork(slug: string): Work | undefined {
   const list = getWorksByDate();
   if (list.length < 2) return undefined;

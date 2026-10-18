@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { Work } from "@/content/work/works";
 import { formatPeriod } from "@/content/work/queries";
-import ArrowLink from "../ArrowLink";
+import BackButton from "../BackButton";
 
 /** Top of a case study. Reuses the home hero layout; all data comes from the registry. */
 export default function CaseStudyHeader({ work }: { work: Work }) {
@@ -9,9 +9,7 @@ export default function CaseStudyHeader({ work }: { work: Work }) {
     <header className="hero case-header container">
       <div className="hero__text">
         <div className="case-header__back">
-          <ArrowLink href="/works" direction="back">
-            all works
-          </ArrowLink>
+          <BackButton />
         </div>
 
         <h1 className="type-display">{work.title}</h1>

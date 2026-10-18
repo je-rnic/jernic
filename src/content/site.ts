@@ -16,7 +16,7 @@ export const site = {
 	],
 } as const;
 
-export const worksPage = {
+export const allWorksPage = {
 	title: "All Works",
 	intro: "A gallery of projects across product design, project management and frontend development.",
 } as const;

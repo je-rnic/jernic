@@ -585,6 +585,7 @@
 	.arrow-link {
 		display: inline-flex;
 		gap: var(--space-2);
+		cursor: pointer;
 	}
 	.arrow-link:hover,
 	.arrow-link:focus-visible {
@@ -606,7 +607,7 @@
 		}
 	}
 
-	/* --- Project lists: home "Selected work", Works page, "Next project" -- */
+	/* --- Work lists: selected work, all works, and next work ------------ */
 	.work-list {
 		list-style: none;
 		padding: 0;
@@ -679,7 +680,7 @@
 		padding-top: var(--space-5);
 	}
 
-	.works-list {
+	.all-works-list {
 		padding-bottom: var(--space-9);
 	}
 

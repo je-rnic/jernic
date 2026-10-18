@@ -29,7 +29,7 @@ export default function SelectedWork() {
         </ol>
 
         <div className="selected-work__footer">
-          <ArrowLink href="/works">all works</ArrowLink>
+          <ArrowLink href="/all-works">all works</ArrowLink>
         </div>
       </div>
     </section>
