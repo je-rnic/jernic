@@ -752,6 +752,10 @@
 	.prose > :is(p, ul, ol, blockquote, h3, h4) {
 		max-width: var(--measure);
 	}
+	.prose > .figure {
+		width: 100%;
+		max-width: var(--measure);
+	}
 	.prose > * + h3 {
 		margin-top: var(--space-6);
 	}

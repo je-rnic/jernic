@@ -1,174 +1,96 @@
+
 <Statement label="The goal">
 
-Could the ordering journey be made clear and quick enough that customers could find a restaurant that they want, build an order, and check out, all from the same app?
+How could I make it easier for customers to find a BBQ restaurant, build an order, and check out within a single app?
 
 </Statement>
 
 <Section label="Context">
 
-BarbeQueue *(Pun not intended) was a mobile application concept intended to make ordering from BBQ restaurants more convenient.
+BarbeQueue was a mobile ordering concept I designed as a solo UX course project over two months.
 
-The concept combined two use cases:
-- **Dine-in / pre-queuing** for customers visiting a restaurant
-- **Catering** for customers ordering food from the same restaurant
+The idea was to bring BBQ restaurant discovery and ordering into one place, supporting both dine-in/pre-queuing and catering orders.
 
-This course-based project was worked on soley by me within a period of 2 months, which saw the iteration progress through research planning, usability testing, synthesis, and the early design of the solution.
+I explored the initial ordering experience through wireframing, prototyping, usability testing, and one round of design revisions.
 
-<Figure src="/images/work/2023-05-barbequeue-google-ux-certificate/assets/Hero.png" alt="BarbeQueue application concept" caption="BarbeQueue" aspect="16/9" />
+<Figure src="/images/work/2023-05-barbequeue-google-ux-certificate/assets/KeyScreens.png" alt="BarbeQueue application concept" caption="BarbeQueue — a mobile BBQ ordering concept" aspect="16/9" />
 
 </Section>
 
-<Section label="My role">
+<Section label="Testing the first ordering flow">
 
-This course-based project was worked on soley by me. I created the research plan, planned and conducted the remote usability study, consolidated the observations into recurring themes, translated those themes into design requirements, and created the early design of the solution.
+I started with the assumption that customers would benefit from being able to browse restaurants and prepare orders without switching between individual restaurant apps.
 
-</Section>
+To explore how that might work, I mapped out the ordering journey and built a low-fidelity prototype in Figma.
 
-<Section label="Problem">
+I then conducted a remote usability study with **7 participants**, asking them to work through restaurant selection, food ordering, and checkout.
 
-The existing ordering experience at barbecue restaurants came with several points of friction. Customers could face:
+I wanted to understand not just whether participants could navigate the screens, but where the flow stopped matching their expectations.
 
-<Cards>
-<Card title="Long queues during peak hours">
-Limited ability to plan their orders ahead of time. Specifically to barbecuing, meats often had a high preparation and cooking time which led to longer turnover time on-premise.
-</Card>
-<Card title="Individual in-house apps">
-Where online ordering was available, many BBQ restaurants relied on individual in-house apps, making it inconvenient for customers who wanted to discover, compare, or order from different restaurants in one place.
-</Card>
-<Card title="A fragmented ordering journey">
-BarbeQueue therefore aimed to bring these steps together into a more seamless ordering experience.
-</Card>
-</Cards>
+<Figure src="/images/work/2023-05-barbequeue-google-ux-certificate/assets/LofiPrototypeFlow.png" alt="Initial low-fidelity ordering flow" caption="The initial prototype used during usability testing" aspect="16/9" />
 
 </Section>
 
-<Section label="Understanding the problem">
+<Section label="What I learned and changed">
 
-I created a research plan around the main tasks a customer would need to complete. Participants would work through the prototype and then complete a questionnaire about their experience. The plan covered restaurant selection, ordering, checkout, and open-ended feedback.
+The study surfaced several gaps between the flow I had designed and how participants expected to place an order.
 
-The completed research presentation grouped the study around four questions:
+Three findings shaped the next iteration.
 
-1. What would users understand from **“Catering and Dine-In”**?
-2. Could they find a suitable restaurant?
-3. Could they order and customise their order?
-4. Could they complete checkout and input their payment options?
+### 01 — Ordering more than one item was frustrating
 
-<Figure src="/images/work/2023-05-barbequeue-google-ux-certificate/assets/UserStudyResearchPlan.png" alt="User study research plan" caption="User study research plan" aspect="16/9" />
+> "This is annoying, I'm not here just to order 1 satay only."
 
-Concurrently, I started mapping out the possible to-be user experience by sketching out the process of a user going to order from a BBQ restaurant.
+One participant struggled to return to the menu after selecting an item. The flow had been designed around individual selections rather than building a complete order.
 
-<Figure src="/images/work/2023-05-barbequeue-google-ux-certificate/assets/LofiPrototypeScreens.png" alt="Low-fidelity prototype screens" caption="Low-fidelity prototype screens" aspect="16/9" />
+<Figure src="/images/work/2023-05-barbequeue-google-ux-certificate/assets/WireframeParticipantInsight2.png" alt="Revised ordering experience with cart" caption="The original ordering flow in the Lofi Prototype" aspect="16/9" />
 
-### The Big Picture: "Jeff", our user queuing
+**4 of 7 participants** wanted to order multiple menu items, and 3 of those participants also wanted a cart to save their selections. By placing the order automatically, it meant users couldn't have a chance to reverse on what they had selected initially, or they could not stack up multiple orders before carting out.
 
-<Figure src="/images/work/2023-05-barbequeue-google-ux-certificate/assets/Storyboard2.png" alt="Storyboard showing Jeff queuing" caption="The big picture: Jeff, our user queuing" aspect="16/9" />
+**What I changed:** I revised the ordering experience to include an updatable cart where customers could add multiple items and review their selections before checkout.
 
-### Close-up: "Jeff", our user on his phone
+<Figure src="/images/work/2023-05-barbequeue-google-ux-certificate/assets/RevisionBuildingOrder.png" alt="Revised ordering experience with cart" caption="Revising the flow to support multi-item orders" aspect="16/9" />
 
-<Figure src="/images/work/2023-05-barbequeue-google-ux-certificate/assets/Storyboard1.png" alt="Storyboard showing Jeff on his phone" caption="Close-up: Jeff, our user on his phone" aspect="16/9" />
+### 02 — Returning customers wanted a faster route to ordering
 
-</Section>
+**5 of 7 participants** expressed a preference for completing their order in under five minutes, while **4 of 7** wanted the ability to favourite restaurants.
 
-<Section label="What I did">
+One participant also questioned why they couldn't save their previous order for next time.
 
-These led to the creation of the first wireframes. I tested the low-fidelity BarbeQueue prototype through a remote usability study, where users were sent links to a [wireframe walkthrough](https://www.figma.com/proto/ZWlw38KEgVMGpagVrjnA2n/Course-3-Week-3?type=design&node-id=106-367&t=r6MTjZIvF4FuMuIt-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=106%3A367) designed on Figma. Rather than only asking participants whether they liked the interface, I gave them tasks to complete and looked at what they did when the interface stopped making sense.
+This suggested that repeat customers shouldn't need to start from restaurant discovery every time.
 
-<Figure src="/images/work/2023-05-barbequeue-google-ux-certificate/assets/LofiPrototypeFlow.png" alt="Low-fidelity prototype flow" caption="Low-fidelity prototype flow" aspect="16/9" />
+**What I changed:** I lessened the whitespace on the home screen and added a way for customers to save their favourite restaurants, while making it accessible from their profile.
 
-<Figure src="/images/work/2023-05-barbequeue-google-ux-certificate/assets/LofiPrototypeScreens.png" alt="Low-fidelity prototype screens" caption="Low-fidelity prototype screens" aspect="16/9" />
+<Figure src="/images/work/2023-05-barbequeue-google-ux-certificate/assets/RevisionSavedRestaurants.png" alt="Saved restaurant feature" caption="Giving returning customers easier access to favourite restaurants" aspect="16/9" />
 
-## Insights from Participants
+### 03 — Checkout needed more payment flexibility
 
-The usability sessions exposed problems that were difficult to see from the prototype alone.
+**6 of 7 participants** wanted the option to pay cash on delivery.
 
-One participant did not immediately understand what the **Catering** and **Dine-In** choices meant:
+The initial checkout experience did not sufficiently account for this preference.
 
-> “I don't think i would know what these 2 labels meant, if I dont really know the context of the app.”
+**What I changed:** I revised the checkout design to make cash on delivery an explicit payment option.
 
-<Figure src="/images/work/2023-05-barbequeue-google-ux-certificate/assets/ResearchPlan.png" alt="Sample participant response" caption="Sample participant response" aspect="16/9" />
-
-The ordering flow revealed another issue. After selecting a food item, the participant could not easily return to add more menu options:
-
-> “This is annoying, I'm not here just to order 1 satay only.”
-
-<Figure src="/images/work/2023-05-barbequeue-google-ux-certificate/assets/ParticipantsInsights1.png" alt="Participant insights" caption="Participant insights" aspect="16/9" />
-
-<Figure src="/images/work/2023-05-barbequeue-google-ux-certificate/assets/WireframeParticipantInsight2.png" alt="Wireframe participant insight" caption="Wireframe participant insight" aspect="16/9" />
-
-## Overall Theme of Responses
-
-After the usability study, I consolidated the observations into three recurring themes:
-
-### A - People want to order quickly
-
-**5 out of 7 participants** wanted to order from their chosen restaurant in under five minutes. **4 out of 7** also expressed a desire to favourite their go-to restaurants.
-
-One participant described the problem directly:
-
-> “I like the profile feature, but it’s strange that there’s no way to store my order so I can order it again next time.”
-
-The finding suggested that returning customers should not have to repeat the same restaurant-discovery process every time they wanted to order.
-
-### B - People want more customisation
-
-**4 out of 7 participants** wanted the ability to order more than one menu option. **3 of those participants** also wanted an option to save items into their cart.
-
-This connected directly with the observed difficulty during testing: the prototype made it harder than expected to build a multi-item order.
-
-### C - People want payment-on-delivery
-
-**6 out of 7 participants** wanted an option to pay cash on delivery. The finding suggested that the checkout experience should not assume that every customer will use an online payment method.
-
-</Section>
-
-<Section label="Iteration">
-
-The research became more useful once I translated each theme into something the product could actually respond to.
-
-At this stage, the project shifted from asking **“What is confusing?”** to **“What should the next version do differently?”**
-
-The research did not point toward adding features for their own sake. Instead, it highlighted three parts of the journey that needed to change.
-
-### A) Saved Restaurants
-
-A customer who already knows where they want to order from should not have to search for the same restaurant again.
-
-**Design direction:** Introduce a way to save favourite restaurants and make them easier to access from the profile, thus resulting in faster time to order.
-
-<Figure src="/images/work/2023-05-barbequeue-google-ux-certificate/assets/RevisionSavedRestaurants.png" alt="Saved restaurants revision" caption="Saved restaurants" aspect="16/9" />
-
-### B) Let customers build an actual order
-
-The original prototype made the ordering flow feel closer to selecting one item than building a meal.
-
-**Design direction:** Introduce an updatable cart where customers can add multiple items and review their order before checkout.
-
-<Figure src="/images/work/2023-05-barbequeue-google-ux-certificate/assets/RevisionBuildingOrder.png" alt="Building an order revision" caption="Let customers build an actual order" aspect="16/9" />
-
-### C) Make payment choices more flexible
-
-The research showed a strong preference for cash on delivery.
-
-**Design direction:** Make cash payment an explicit checkout option rather than assuming online payment is the only route.
-
-<Figure src="/images/work/2023-05-barbequeue-google-ux-certificate/assets/RevisionCheckout.png" alt="Checkout revision" caption="Make payment choices more flexible" aspect="16/9" />
+<Figure src="/images/work/2023-05-barbequeue-google-ux-certificate/assets/RevisionCheckout.png" alt="Revised payment selection" caption="Making cash on delivery visible during checkout" aspect="16/9" />
 
 </Section>
 
 <Section label="Outcome">
 
-The course stopped at one round of research and one revision, so I never got to re-test the redesigned flow.
+The revised concept responded to three recurring needs from testing: building multi-item orders, returning to favourite restaurants, and having more choice at checkout.
 
-<Figure src="/images/work/2023-05-barbequeue-google-ux-certificate/assets/KeyScreens.png" alt="BarbeQueue key screens" caption="Key screens" aspect="16/9" />
+The project concluded after one usability study and one round of revisions. I did not conduct a second test, so I couldn't verify whether these changes made the ordering experience faster or easier to complete.
 
 </Section>
 
 <Section label="Reflection">
 
-A key gap in the project was that the course stopped at one round of research and one revision, so I never got to re-test the redesigned flow.
+One of the more useful lessons from this project was realising that individual screens could make sense on their own while the overall journey still felt frustrating.
 
-However, I took away a lot in seeing how UX problems connected. A confusing label, a hard-to-find button and no way to add a second item looked like three separate issues yet they all came from the same core issue: the app didn't follow the order people expected. Instead of simply making individual screens look clearer, I learnt to think about the whole journey from the user's perspective.
+I had designed a way to select food, but hadn't properly accounted for how someone would build an entire meal.
 
-This project was my first touchpoint moving into UI UX design during my Information Systems curricular, and it taught me the value of **designing around real user needs rather than assumptions**. More importantly, it gave me my first opportunity to connect research, usability testing, and design decisions into one full process.
+If I continued the project, I'd test the revised multi-item ordering flow and revisit the distinction between "Catering" and "Dine-In", which had also caused confusion during the first study.
+
+BarbeQueue was my first experience connecting user feedback directly to design revisions. It changed how I thought about a prototype: not just as a way to present an idea, but as something that could reveal where my assumptions were wrong.
 
 </Section>
