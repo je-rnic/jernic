@@ -25,6 +25,8 @@ export type Work = {
 	/** What I actually did on this project. Be exact; see ownership rules. */
 	roles: readonly string[];
 	/** Optional bullet list of activities (research, wireframing, handoff ...). */
+	productType?: string;
+	/** Optional adjective describing whether it's a concept or a shipped product. */
 	scope?: readonly string[];
 	start: YearMonth;
 	/** Omit for a single-month project. "present" for ongoing work. */
@@ -73,8 +75,9 @@ export const works: readonly Work[] = [
 			"2023-05-barbequeue-google-ux-certificate/2023-05-barbequeue-google-ux-certificate",
 		title: "BarbeQueue",
 		summary:
-			"My first dive into UI/UX. A mobile application POC to improve on the user journey when dining / ordering takeaway from a BBQ restaurant",
+			"My first dive into UI/UX.",
 		roles: ["Solo Designer | Google UX Design Certification"],
+		productType: "Concept",
 		start: "2023-05",
 		end: "2023-08",
 		overview: { src: "/images/work/2023-05-barbequeue-google-ux-certificate/assets/Hero.png", alt: "BarbeQueue application concept" },
