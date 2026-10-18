@@ -36,7 +36,7 @@ export default function Video({
 				Your browser can&apos;t play this video.
 			</video>
 			{caption && (
-				<figcaption className="figure__caption type-small">
+				<figcaption className="figure__caption type-meta">
 					{caption}
 				</figcaption>
 			)}

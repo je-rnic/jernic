@@ -6,5 +6,5 @@ import type { ReactNode } from "react";
  * Wrap each side in a <div> in MDX.
  */
 export default function Split({ children }: { children: ReactNode }) {
-  return <div className="split-2">{children}</div>;
+  return <div className="content-grid">{children}</div>;
 }

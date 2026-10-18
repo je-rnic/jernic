@@ -12,7 +12,7 @@ export default function CaseStudyHeader({ work }: { work: Work }) {
           <BackButton />
         </div>
 
-        <p className="case-header__eyebrow type-small">
+        <p className="case-header__eyebrow type-meta">
           UX CASE STUDY · {yearOf(work)}
         </p>
         <h1 className="type-display">{work.title}</h1>
@@ -21,7 +21,7 @@ export default function CaseStudyHeader({ work }: { work: Work }) {
         <dl className="case-meta">
           <div>
             <dt className="type-body">Role</dt>
-            <dd className="type-small">
+            <dd className="type-meta">
               <ul>
                 {work.roles.map((role) => (
                   <li key={role}>{role}</li>
@@ -31,12 +31,12 @@ export default function CaseStudyHeader({ work }: { work: Work }) {
           </div>
           <div>
             <dt className="type-body">Timeline</dt>
-            <dd className="type-small">{formatPeriod(work)}</dd>
+            <dd className="type-meta">{formatPeriod(work)}</dd>
           </div>
           {work.scope && (
             <div>
               <dt className="type-body">Scope</dt>
-              <dd className="type-small">
+              <dd className="type-meta">
                 <ul>
                   {work.scope.map((item) => (
                     <li key={item}>{item}</li>
