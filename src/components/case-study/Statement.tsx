@@ -6,13 +6,15 @@ import type { ReactNode } from "react";
  */
 export default function Statement({
   label,
+  tone = "dark",
   children,
 }: {
   label: string;
+  tone?: "dark" | "light";
   children: ReactNode;
 }) {
   return (
-    <section className="statement">
+    <section className={`statement statement--${tone}`}>
       <div className="statement__inner split container">
         <h2 className="statement__label type-eyebrow">{label}</h2>
         <div className="statement__text type-title flow">{children}</div>

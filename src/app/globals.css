@@ -719,6 +719,12 @@
 		list-style: none;
 		padding: 0;
 	}
+	@media (min-width: 48rem) {
+		.case-meta > div + div {
+			padding-inline-start: var(--space-5);
+			border-inline-start: var(--rule-width) solid var(--divider);
+		}
+	}
 
 	/* --- Case study: body blocks (the MDX components) ------------------- */
 	.section__inner {
@@ -733,6 +739,10 @@
 		background: var(--ink);
 		color: var(--paper);
 	}
+	.statement--light {
+		background: var(--paper);
+		color: var(--ink);
+	}
 	.statement__inner {
 		padding-block: var(--space-8);
 		align-items: baseline;
@@ -745,6 +755,183 @@
 	}
 	.statement__text {
 		max-width: var(--measure);
+	}
+
+	.case-header__eyebrow,
+	.editorial-eyebrow {
+		color: var(--rule);
+		font-size: 0.75rem;
+		font-weight: var(--fw-medium);
+		letter-spacing: 0.08em;
+		line-height: var(--lh-small);
+		text-transform: uppercase;
+	}
+	.case-header__eyebrow {
+		margin-bottom: var(--space-3);
+	}
+
+	.editorial-section {
+		width: min(100% - 2 * var(--gutter), 80rem);
+		margin-inline: auto;
+		padding-block: clamp(5rem, 8vw, 8rem);
+
+	}
+	.editorial-section__intro {
+		max-width: 30rem;
+	}
+	.editorial-section__intro > * + * {
+		margin-top: var(--space-4);
+	}
+	.editorial-section__intro h2 {
+		max-width: 24rem;
+	}
+	.editorial-section__intro p:not(.editorial-eyebrow) {
+		max-width: 34rem;
+	}
+	.editorial-quote {
+		max-width: 24rem;
+		margin-top: var(--space-6);
+		padding-inline-start: var(--space-4);
+		border-inline-start: 2px solid currentColor;
+		font-family: var(--font-serif);
+		line-height: var(--lh-small);
+	}
+	.editorial-section__visual {
+		margin-top: var(--space-7);
+	}
+	.editorial-section .figure {
+		width: 100%;
+		max-width: none;
+	}
+	.editorial-section .figure__media {
+		box-shadow: none;
+	}
+	.editorial-section .figure__caption {
+		max-width: 34rem;
+	}
+	.problem-cards {
+		display: grid;
+		gap: var(--space-3);
+		margin-top: var(--space-7);
+	}
+	.problem-card {
+		min-height: 12rem;
+		padding: var(--space-5);
+		border: var(--rule-width) solid var(--divider);
+		border-radius: var(--space-4);
+	}
+	.problem-card__number {
+		display: block;
+		margin-bottom: var(--space-7);
+		color: var(--rule);
+		font-family: var(--font-serif);
+	}
+	.problem-card h3 {
+		max-width: 18rem;
+	}
+	.problem-card p {
+		margin-top: var(--space-3);
+		color: var(--rule);
+	}
+	.solution-list {
+		display: grid;
+		gap: clamp(5rem, 10vw, 9rem);
+		margin-top: clamp(4rem, 8vw, 7rem);
+	}
+	.solution {
+		display: grid;
+		gap: var(--space-6);
+		align-items: center;
+	}
+	.solution__copy {
+		max-width: 24rem;
+		order: 1;
+	}
+	.solution__copy > * + * {
+		margin-top: var(--space-4);
+	}
+	.solution__copy h3 {
+		max-width: 20rem;
+	}
+	.solution .figure {
+		order: 2;
+	}
+	.editorial-section__note {
+		color: var(--rule);
+	}
+	.outcome-list,
+	.takeaway-list {
+		display: grid;
+		gap: var(--space-4);
+		margin-top: var(--space-7);
+		padding: 0;
+		list-style: none;
+	}
+	.outcome-list li,
+	.takeaway-list li {
+		display: grid;
+		grid-template-columns: 2.5rem minmax(0, 1fr);
+		gap: var(--space-3);
+		align-items: baseline;
+		padding-top: var(--space-3);
+		border-top: var(--rule-width) solid var(--divider);
+	}
+	.outcome-list span,
+	.takeaway-list span {
+		color: var(--rule);
+		font-family: var(--font-serif);
+	}
+	@media (min-width: 48rem) {
+		.editorial-section {
+			display: grid;
+			grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+			gap: clamp(3rem, 8vw, 8rem);
+			align-items: start;
+		}
+		.editorial-section__visual,
+		.problem-cards,
+		.solution-list,
+		.outcome-list,
+		.takeaway-list {
+			margin-top: 0;
+		}
+		.editorial-section--overview .editorial-section__visual {
+			grid-column: 2;
+		}
+		.problem-cards {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+			grid-column: 2;
+		}
+		.problem-card {
+			min-height: 20rem;
+		}
+		.solution-list {
+			grid-column: 2;
+		}
+		.solution {
+			grid-template-columns: minmax(10rem, 1fr) minmax(0, 2fr);
+			gap: var(--space-6);
+		}
+		.solution--reverse {
+			grid-template-columns: minmax(0, 2fr) minmax(10rem, 1fr);
+		}
+		.solution--reverse .solution__copy {
+			grid-column: 2;
+			grid-row: 1;
+		}
+		.solution--reverse .figure {
+			grid-column: 1;
+			grid-row: 1;
+		}
+		.editorial-section--outcome .outcome-list,
+		.editorial-section--reflection .takeaway-list {
+			padding-top: var(--space-1);
+		}
+	}
+	@media (max-width: 47.99rem) {
+		.editorial-section {
+			padding-block: var(--space-8);
+		}
 	}
 
 	.prose {

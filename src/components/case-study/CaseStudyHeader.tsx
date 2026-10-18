@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { Work } from "@/content/work/works";
-import { formatPeriod } from "@/content/work/queries";
+import { formatPeriod, yearOf } from "@/content/work/queries";
 import BackButton from "../BackButton";
 
 /** Top of a case study. Reuses the home hero layout; all data comes from the registry. */
@@ -12,6 +12,9 @@ export default function CaseStudyHeader({ work }: { work: Work }) {
           <BackButton />
         </div>
 
+        <p className="case-header__eyebrow type-small">
+          UX CASE STUDY · {yearOf(work)}
+        </p>
         <h1 className="type-display">{work.title}</h1>
         <p className="case-header__summary type-subtitle">{work.summary}</p>
 

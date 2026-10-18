@@ -1,90 +1,128 @@
-
-<Statement label="The goal">
+<Statement label="The challenge" tone="light">
 
 How could I make it easier for customers to find a BBQ restaurant, build an order, and check out within a single app?
 
 </Statement>
 
-<Section label="Context">
+<section className="editorial-section editorial-section--overview">
+  <div className="editorial-section__intro">
+    <p className="editorial-eyebrow">01. Overview</p>
+    <h2 className="type-title">A mobile ordering experience designed for BBQ lovers.</h2>
+    <p>BarbeQueue was a mobile ordering concept designed as a solo UX course project. The idea was to bring BBQ restaurant discovery and ordering into one place, supporting dine-in, pre-queue, and catering orders.</p>
+    <p>I explored the initial experience through wireframing, prototyping, usability testing, and one round of design revisions.</p>
+  </div>
+  <div className="editorial-section__visual">
+    <Figure
+      src="/images/work/2023-05-barbequeue-google-ux-certificate/assets/KeyScreens.png"
+      alt="BarbeQueue restaurant discovery, ordering, and checkout screens"
+      caption="A single experience for discovering restaurants, building an order, and checking out."
+      aspect="16/9"
+    />
+  </div>
+</section>
 
-BarbeQueue was a mobile ordering concept I designed as a solo UX course project over two months.
+<section className="editorial-section editorial-section--problem">
+  <div className="editorial-section__intro">
+    <p className="editorial-eyebrow">02. The problem</p>
+    <h2 className="type-title">Three friction points in the ordering experience.</h2>
+    <p>User research and usability testing highlighted three opportunities to make ordering more convenient.</p>
+    <blockquote className="editorial-quote">“This is annoying, I'm not here just to order 1 satay only.”</blockquote>
+  </div>
+  <div className="problem-cards">
+    <article className="problem-card">
+      <span className="problem-card__number">01</span>
+      <h3 className="type-subtitle">Ordering multiple items was frustrating.</h3>
+      <p>Participants struggled to build a complete meal when the flow focused on individual selections. 4 of 7 participants wanted to order multiple menu items, and 3 of them also wanted a cart.</p>
+    </article>
+    <article className="problem-card">
+      <span className="problem-card__number">02</span>
+      <h3 className="type-subtitle">Returning customers wanted a faster route to ordering.</h3>
+      <p>Repeat customers wanted to reach familiar restaurants without starting from discovery each time. 5 of 7 participants prioritised completing an order in under five minutes, while 4 wanted to favourite restaurants.</p>
+    </article>
+    <article className="problem-card">
+      <span className="problem-card__number">03</span>
+      <h3 className="type-subtitle">Checkout needed more payment flexibility.</h3>
+      <p>Participants expected cash on delivery to be available as a way to complete their order. 6 of 7 participants wanted that option.</p>
+    </article>
+  </div>
+</section>
 
-The idea was to bring BBQ restaurant discovery and ordering into one place, supporting both dine-in/pre-queuing and catering orders.
+<section className="editorial-section editorial-section--solutions">
+  <div className="editorial-section__intro">
+    <p className="editorial-eyebrow">03. Design solutions</p>
+    <h2 className="type-title">Small changes, more convenient ordering.</h2>
+    <p>Three focused design decisions addressed the issues uncovered during testing.</p>
+  </div>
 
-I explored the initial ordering experience through wireframing, prototyping, usability testing, and one round of design revisions.
+  <div className="solution-list">
+    <article className="solution">
+      <div className="solution__copy">
+        <p className="editorial-eyebrow">Feature 01</p>
+        <h3 className="type-title">Making it easier to build an order.</h3>
+        <p>An editable cart lets customers add and review multiple items before checking out.</p>
+      </div>
+      <Figure
+        src="/images/work/2023-05-barbequeue-google-ux-certificate/assets/RevisionBuildingOrder.png"
+        alt="Revised BarbeQueue ordering experience with an editable cart"
+        caption="The revised flow gives customers room to build and review a multi-item order."
+        aspect="16/9"
+      />
+    </article>
 
-<Figure src="/images/work/2023-05-barbequeue-google-ux-certificate/assets/KeyScreens.png" alt="BarbeQueue application concept" caption="BarbeQueue — a mobile BBQ ordering concept" aspect="16/9" />
+    <article className="solution solution--reverse">
+      <div className="solution__copy">
+        <p className="editorial-eyebrow">Feature 02</p>
+        <h3 className="type-title">A quicker route for returning customers.</h3>
+        <p>Saved restaurants help repeat customers return to familiar places without starting their search again.</p>
+      </div>
+      <Figure
+        src="/images/work/2023-05-barbequeue-google-ux-certificate/assets/RevisionSavedRestaurants.png"
+        alt="BarbeQueue saved restaurants design"
+        caption="Favourite restaurants make a familiar starting point available from the profile."
+        aspect="16/9"
+      />
+    </article>
 
-</Section>
+    <article className="solution">
+      <div className="solution__copy">
+        <p className="editorial-eyebrow">Feature 03</p>
+        <h3 className="type-title">More flexibility at checkout.</h3>
+        <p>Adding cash on delivery gave customers another way to complete their order.</p>
+      </div>
+      <Figure
+        src="/images/work/2023-05-barbequeue-google-ux-certificate/assets/RevisionCheckout.png"
+        alt="Revised BarbeQueue checkout with cash on delivery"
+        caption="Cash on delivery becomes an explicit payment option during checkout."
+        aspect="16/9"
+      />
+    </article>
+  </div>
+</section>
 
-<Section label="Problem">
+<section className="editorial-section editorial-section--outcome">
+  <div className="editorial-section__intro">
+    <p className="editorial-eyebrow">04. Outcome</p>
+    <h2 className="type-title">A more flexible ordering experience.</h2>
+    <p>The revised concept responded to the usability feedback by introducing a multi-item cart, saved restaurants, and another payment option.</p>
+    <p className="type-small editorial-section__note">The project concluded after one usability study and one round of revisions. I did not conduct a second test, so these improvements were not verified through follow-up testing.</p>
+  </div>
+  <ul className="outcome-list">
+    <li><span>01</span><strong>Easier multi-item ordering</strong></li>
+    <li><span>02</span><strong>Faster access to favourite restaurants</strong></li>
+    <li><span>03</span><strong>More flexible payment choices</strong></li>
+  </ul>
+</section>
 
-The study surfaced several gaps between the flow I had designed and how participants expected to place an order.
-
-<Cards>
-<Card title="Long queues during peak hours">
-Limited ability to plan their orders ahead of time. Specifically to barbecuing, meats often had a high preparation and cooking time which led to longer turnover time on-premise.
-</Card>
-<Card title="Individual in-house apps">
-Where online ordering was available, many BBQ restaurants relied on individual in-house apps, making it inconvenient for customers who wanted to discover, compare, or order from different restaurants in one place.
-</Card>
-</Cards>
-BarbeQueue therefore aimed to bring these steps together into a more seamless ordering experience.
-
-### 01 — Ordering more than one item was frustrating
-
-> "This is annoying, I'm not here just to order 1 satay only."
-
-One participant struggled to return to the menu after selecting an item. The flow had been designed around individual selections rather than building a complete order.
-
-<Figure src="/images/work/2023-05-barbequeue-google-ux-certificate/assets/WireframeParticipantInsight2.png" alt="Revised ordering experience with cart" caption="The original ordering flow in the Lofi Prototype" aspect="16/9" />
-
-**4 of 7 participants** wanted to order multiple menu items, and 3 of those participants also wanted a cart to save their selections. By placing the order automatically, it meant users couldn't have a chance to reverse on what they had selected initially, or they could not stack up multiple orders before carting out.
-
-**What I changed:** I revised the ordering experience to include an updatable cart where customers could add multiple items and review their selections before checkout.
-
-<Figure src="/images/work/2023-05-barbequeue-google-ux-certificate/assets/RevisionBuildingOrder.png" alt="Revised ordering experience with cart" caption="Revising the flow to support multi-item orders" aspect="16/9" />
-
-### 02 — Returning customers wanted a faster route to ordering
-
-**5 of 7 participants** expressed a preference for completing their order in under five minutes, while **4 of 7** wanted the ability to favourite restaurants.
-
-One participant also questioned why they couldn't save their previous order for next time.
-
-This suggested that repeat customers shouldn't need to start from restaurant discovery every time.
-
-**What I changed:** I lessened the whitespace on the home screen and added a way for customers to save their favourite restaurants, while making it accessible from their profile.
-
-<Figure src="/images/work/2023-05-barbequeue-google-ux-certificate/assets/RevisionSavedRestaurants.png" alt="Saved restaurant feature" caption="Giving returning customers easier access to favourite restaurants" aspect="16/9" />
-
-### 03 — Checkout needed more payment flexibility
-
-**6 of 7 participants** wanted the option to pay cash on delivery.
-
-The initial checkout experience did not sufficiently account for this preference.
-
-**What I changed:** I revised the checkout design to make cash on delivery an explicit payment option.
-
-<Figure src="/images/work/2023-05-barbequeue-google-ux-certificate/assets/RevisionCheckout.png" alt="Revised payment selection" caption="Making cash on delivery visible during checkout" aspect="16/9" />
-
-</Section>
-
-<Section label="Outcome">
-
-The revised concept responded to three recurring needs from testing: building multi-item orders, returning to favourite restaurants, and having more choice at checkout.
-
-The project concluded after one usability study and one round of revisions. I did not conduct a second test, so I couldn't verify whether these changes made the ordering experience faster or easier to complete.
-
-</Section>
-
-<Section label="Reflection">
-
-One of the more useful lessons from this project was realising that individual screens could make sense on their own while the overall journey still felt frustrating.
-
-I had designed a way to select food, but hadn't properly accounted for how someone would build an entire meal.
-
-If I continued the project, I'd test the revised multi-item ordering flow and revisit the distinction between "Catering" and "Dine-In", which had also caused confusion during the first study.
-
-BarbeQueue was my first experience connecting user feedback directly to design revisions. It changed how I thought about a prototype: not just as a way to present an idea, but as something that could reveal where my assumptions were wrong.
-
-</Section>
+<section className="editorial-section editorial-section--reflection">
+  <div className="editorial-section__intro">
+    <p className="editorial-eyebrow">05. Reflection</p>
+    <h2 className="type-title">What I took away.</h2>
+    <p>This project gave me experience in taking a mobile app concept through research, prototyping, usability testing, and design iteration. It also showed me how individual usability issues can influence the overall ordering experience.</p>
+    <p>If I continued the project, I would test the revised multi-item ordering flow and revisit the distinction between “Catering” and “Dine-In”, which also caused confusion during the first study.</p>
+  </div>
+  <ol className="takeaway-list">
+    <li><span>01</span><strong>Design around actual user behaviour.</strong></li>
+    <li><span>02</span><strong>Use testing to challenge initial assumptions.</strong></li>
+    <li><span>03</span><strong>Consider different needs and preferences in checkout design.</strong></li>
+  </ol>
+</section>

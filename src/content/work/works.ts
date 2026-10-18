@@ -75,7 +75,7 @@ export const works: readonly Work[] = [
 			"2023-05-barbequeue-google-ux-certificate/2023-05-barbequeue-google-ux-certificate",
 		title: "BarbeQueue",
 		summary:
-			"My first dive into UI/UX.",
+			"A mobile UX case study for simplifying BBQ food ordering.",
 		roles: ["Solo Designer | Google UX Design Certification"],
 		productType: "Concept",
 		start: "2023-05",
