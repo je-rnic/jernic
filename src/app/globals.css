@@ -40,17 +40,16 @@
 		color-scheme: light dark;
 
 		/* --- Colour: light-dark(LIGHT, DARK) ------------------------------- */
-		--paper: light-dark(#FAFAFA, #111110);
+		--paper: light-dark(#fafafa, #111110);
 		--ink: light-dark(#1b1b19, #f2f0ea);
 		--rule: light-dark(#666666, #666666);
 		--toggle: light-dark(#e6e3db, #262623);
-		--divider: light-dark(#AEACAA, #404040);
+		--divider: light-dark(#aeacaa, #404040);
 
 		/* --- Families ------------------------------------------------------ */
 		--font-sans:
 			"Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-		--font-serif:
-			Georgia, "Times New Roman", Times, serif;
+		--font-serif: Georgia, "Times New Roman", Times, serif;
 		--font-hand: "Jn Font 175scaled", var(--font-sans);
 
 		/* --- Weights ------------------------------------------------------- */
@@ -745,8 +744,22 @@
 		color: var(--ink);
 	}
 	.statement__inner {
+		width: min(75%, var(--content-max));
 		padding-block: var(--space-8);
-		align-items: baseline;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+	.statement__text {
+		order: -1;
+	}
+	.statement__label::before {
+		display: block;
+		width: 100%;
+		margin-block-end: var(--space-2);
+		border-top: 1px solid #ed795d;
+		content: "";
 	}
 	/* MDX paragraphs carry .type-body; inside these blocks they follow the block. */
 	.statement__text p,
@@ -795,6 +808,15 @@
 	}
 	.editorial-section__visual {
 		margin-top: var(--space-7);
+	}
+	.research-visuals,
+	.research-evidence {
+		display: grid;
+		gap: var(--space-5);
+		margin-top: var(--space-7);
+	}
+	.research-evidence .editorial-quote {
+		margin-top: 0;
 	}
 	.editorial-section .figure {
 		width: 100%;
@@ -869,6 +891,9 @@
 		color: var(--rule);
 		font-family: var(--font-serif);
 	}
+	.requirements-list {
+		margin-top: var(--space-7);
+	}
 	@media (min-width: 48rem) {
 		.editorial-section {
 			display: grid;
@@ -879,7 +904,10 @@
 		.editorial-section__visual,
 		.problem-cards,
 		.solution-list,
-		.numbered-list {
+		.numbered-list,
+		.research-visuals,
+		.research-evidence,
+		.requirements-list {
 			margin-top: 0;
 		}
 		.editorial-section--overview .editorial-section__visual {
@@ -893,6 +921,10 @@
 			min-height: 20rem;
 		}
 		.solution-list {
+			grid-column: 2;
+		}
+		.research-visuals,
+		.research-evidence {
 			grid-column: 2;
 		}
 		.solution {
