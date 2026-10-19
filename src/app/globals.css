@@ -45,6 +45,7 @@
 		--rule: light-dark(#666666, #666666);
 		--toggle: light-dark(#e6e3db, #262623);
 		--divider: light-dark(#aeacaa, #404040);
+		--accent: #ed795d;
 
 		/* --- Families ------------------------------------------------------ */
 		--font-sans:
@@ -765,7 +766,7 @@
 		display: block;
 		width: 4rem;
 		margin: 0 auto var(--space-3);
-		border-top: 2px solid #ed795d;
+		border-top: 2px solid var(--accent);
 		content: "";
 	}
 	/* MDX paragraphs carry .type-body; inside these blocks they follow the block. */
@@ -811,6 +812,9 @@
 		width: min(100% - 2 * var(--gutter), var(--editorial-max));
 		margin-inline: auto;
 		padding-block: clamp(5rem, 8vw, 8rem);
+	}
+	.editorial-section:not(.editorial-section--overview) {
+		border-top: 2px solid var(--accent);
 	}
 	.editorial-section__intro {
 		max-width: 30rem;
