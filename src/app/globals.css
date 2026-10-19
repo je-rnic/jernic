@@ -825,6 +825,15 @@
 	.editorial-section__intro p:not(.editorial-eyebrow) {
 		max-width: 34rem;
 	}
+	.research-task-list {
+		max-width: 34rem;
+		margin-top: var(--space-3);
+		padding-inline-start: var(--space-5);
+		list-style: disc;
+	}
+	.research-task-list li + li {
+		margin-top: var(--space-1);
+	}
 	.editorial-section--outcome
 		.editorial-section__intro--storyboards
 		+ .editorial-section__intro--storyboards {
