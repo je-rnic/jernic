@@ -6,6 +6,9 @@ import { works } from "@/content/work/works";
 import { getNextWork, getWork, yearOf } from "@/content/work/queries";
 
 type Props = { params: Promise<{ slug: string }> };
+type CaseStudyStyle = React.CSSProperties & {
+  "--accent"?: string;
+};
 
 /** Pre-build one page per registry entry. Unknown slugs fall through to notFound(). */
 export function generateStaticParams() {
@@ -36,10 +39,15 @@ export default async function CaseStudyPage({ params }: Props) {
   }
 
   const next = getNextWork(slug);
+  const caseStudyStyle: CaseStudyStyle = {
+    ["--accent"]: `light-dark(${work.accent?.light ?? "#5267b2"}, ${
+      work.accent?.dark ?? "#a1b0f0"
+    })`,
+  };
 
   return (
     <main id="main">
-      <article>
+      <article style={caseStudyStyle}>
         <CaseStudyHeader work={work} />
         <Story />
       </article>

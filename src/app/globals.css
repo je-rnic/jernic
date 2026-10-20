@@ -45,7 +45,7 @@
 		--rule: light-dark(#666666, #666666);
 		--toggle: light-dark(#e6e3db, #262623);
 		--divider: light-dark(#aeacaa, #404040);
-		--accent: #ed795d;
+		--accent: light-dark(#5267b2, #a1b0f0);
 
 		/* --- Families ------------------------------------------------------ */
 		--font-sans:
@@ -60,6 +60,7 @@
 
 		/* --- Type scale (fluid: phone ≈390 → tablet ≈810 → desktop ≥1200) --- */
 		--fs-display: clamp(2.25rem, 1.75rem + 2vw, 3.25rem); /* 36 → 44 → 52 */
+		--fs-statement: clamp(1.75rem, 1.25rem + 1.5vw, 2.75rem);
 		--fs-title: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem); /* 20 → 22 → 24 */
 		--fs-subtitle: clamp(1.125rem, 1.05rem + 0.3vw, 1.25rem); /* 18 → 19 → 20 */
 		--fs-eyebrow: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem); /* 20 → 22 → 24 */
@@ -226,6 +227,13 @@
 		font-weight: var(--fw-bold);
 		line-height: var(--lh-display);
 		letter-spacing: var(--ls-display);
+	}
+	.type-statement {
+		font-family: var(--font-sans);
+		font-size: var(--fs-statement);
+		font-weight: var(--fw-regular);
+		line-height: var(--lh-title);
+		letter-spacing: var(--ls-title);
 	}
 	.type-title {
 		font-family: var(--font-sans);
@@ -760,13 +768,17 @@
 	}
 	.statement__text {
 		max-width: 60rem;
-		font-weight: var(--fw-medium);
+	}
+	.statement__text strong {
+		font-size: var(--fs-display);
+		font-weight: var(--fw-bold);
+		line-height: var(--lh-display);
+		letter-spacing: var(--ls-display);
 	}
 	.statement__label::before {
 		display: block;
 		width: 4rem;
 		margin: 0 auto var(--space-3);
-		border-top: 2px solid var(--accent);
 		content: "";
 	}
 	/* MDX paragraphs carry .type-body; inside these blocks they follow the block. */
@@ -781,17 +793,21 @@
 	@media (min-width: 48rem) {
 		.statement__inner {
 			display: grid;
-			grid-template-columns: minmax(8rem, 1fr) minmax(0, 3fr);
+			grid-template-columns: minmax(0, 3fr) minmax(0, 7fr);
 			gap: clamp(2rem, 6vw, 7rem);
-			align-items: start;
-			text-align: start;
+			align-items: stretch;
+		}
+		.statement__label {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding-inline-end: clamp(2rem, 4vw, 4rem);
+			border-inline-end: 2px solid var(--accent);
+			text-align: center;
 		}
 		.statement__text {
 			order: 0;
-		}
-		.statement__label::before {
-			width: 100%;
-			margin: var(--space-2) 0 var(--space-4);
+			text-align: start;
 		}
 	}
 

@@ -13,6 +13,10 @@
 
 /** "YYYY-MM". Used for sorting and for the "Nov – Dec 2023" display. */
 export type YearMonth = `${number}-${number}`;
+export type Accent = {
+	light: `#${string}`;
+	dark: `#${string}`;
+};
 
 export type Work = {
 	/** URL segment and MDX filename: /work/<slug> <-> content/work/<slug>.mdx */
@@ -35,6 +39,8 @@ export type Work = {
 	cover?: { src: string; alt: string };
 	/** Optional preview shown on work-list rows. */
 	overview?: { src: string; alt: string };
+	/** Light and dark accent colours used by the case-study editorial styling. */
+	accent?: Accent;
 };
 
 /*
@@ -49,6 +55,10 @@ export const works: readonly Work[] = [
 		summary:
 			"Improving recruitment workflows for an Enterprise Platform within the Public Sector",
 		roles: ["Product Analyst | Accenture"],
+		accent: {
+			light: "#A100FF",
+			dark: "#C875FF",
+		},
 		start: "2026-08",
 		end:"present",
 	},
@@ -79,6 +89,10 @@ export const works: readonly Work[] = [
 			"A mobile UX case study for simplifying BBQ food ordering.",
 		roles: ["Solo Designer | Google UX Design Certification"],
 		productType: "Concept",
+		accent: {
+			light: "#ed795d",
+			dark: "#FF947C",
+		},
 		start: "2023-05",
 		end: "2023-08",
 		overview: { src: "/images/work/2023-05-barbequeue-google-ux-certificate/assets/Hero.png", alt: "BarbeQueue application concept" },
