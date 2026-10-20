@@ -1,84 +1,234 @@
-{/* See _template.mdx for the available blocks. TODO: write the story. */}
 
-<Statement label="The goal">
-[One sentence: the question or goal the project set out to answer.]
+
+{/* Portfolio note: Use generic actors and sample data for all diagrams. Do not publish client screenshots, agency names, system IDs, or internal documents. */}
+
+<Statement label="The Challenge" tone="dark">
+  How do you improve an existing enterprise <strong>product</strong> without disrupting the <strong>people, data and processes</strong> already relying on it?
 </Statement>
 
-<Section label="Context">
+<section className="editorial-section editorial-section--overview">
+  <div className="editorial-section__intro flow">
+    <p className="editorial-eyebrow">01. Overview</p>
+    <h2 className="type-title">Designing improvements within a live HR ecosystem.</h2>
+    <p>At Accenture, I worked on change requests for an enterprise HR platform serving multiple public-sector organisations. Unlike an academic project, this was not a product I could design from scratch. Every improvement had to coexist with established workflows, existing records and different user groups.</p>
+    <p>Two enhancements shaped how I think about product design: enabling reference checks to progress alongside another screening process, and ensuring users see only the job profiles relevant to their organisation.</p>
+    <p><strong>My role:</strong> investigating requirements and existing behaviour, translating needs into functional solutions, coordinating with client and technical stakeholders, and designing positive, negative and regression test coverage.</p>
+  </div>
+  <div className="editorial-section__visual">
+    <Figure
+      src="/images/work/project-c-accenture/assets/EnterpriseEcosystemPlaceholder.png"
+      alt="Placeholder for an anonymised diagram of users, workflows, organisational data and reporting within an enterprise HR platform"
+      caption="Visual placeholder — a simplified ecosystem showing how one user-facing change touches multiple layers."
+      aspect="16/9"
+    />
+  </div>
+</section>
 
-[What was the project, who was it for, and what was happening around it? Two or three sentences.]
+<section className="editorial-section editorial-section--research">
+  <div className="editorial-section__intro flow">
+    <p className="editorial-eyebrow">02. My approach</p>
+    <h2 className="type-title">The visible problem was rarely the whole problem.</h2>
+    <p>Across both requests, I worked backwards from the experience users needed to the data and rules that made that experience possible. The goal was not only to deliver the immediate change, but to keep the solution understandable and maintainable for the teams inheriting it.</p>
+  </div>
+  <div className="research-visuals">
+    <Figure
+      src="/images/work/project-c-accenture/assets/DesignForDataPlaceholder.png"
+      alt="Placeholder for a five-stage diagram from user need to data and rules, dependencies, exceptions and validation"
+      caption="Visual placeholder — User need → Data and rules → Dependencies → Edge cases → Validation."
+      aspect="16/9"
+    />
+  </div>
+  <div className="editorial-section__intro flow">
+    <h2 className="type-title">Designing for data meant thinking beyond delivery.</h2>
+    <p>I looked for reusable logic rather than one-off fixes, considered how existing records would behave after a change, and made exceptions explicit so that future maintainers could understand why different users followed different paths.</p>
+  </div>
+</section>
 
-</Section>
+<section className="editorial-section editorial-section--research-evidence">
+  <div className="editorial-section__intro flow">
+    <p className="editorial-eyebrow">03. Feature one — parallel reference checks</p>
+    <h2 className="type-title">Turning a fragmented screening process into a coordinated workflow.</h2>
+    <p>Recruiters could collect referee details in the platform, but the reference-check process still relied heavily on manual outreach and separate records. Meanwhile, a related screening activity could take place independently. The opportunity was to make reference checks easier to initiate, track and complete without forcing the two activities into a single sequence.</p>
+  </div>
+  <div className="research-evidence">
+    <div className="research-evidence__primary">
+      <Figure
+        src="/images/work/project-c-accenture/assets/ReferenceBeforePlaceholder.png"
+        alt="Placeholder for a simplified before diagram showing manual reference outreach outside the HR platform"
+        caption="Before — referee information existed in the system, while follow-up work happened elsewhere."
+        aspect="16/9"
+      />
+      <Figure
+        src="/images/work/project-c-accenture/assets/ReferenceAfterPlaceholder.png"
+        alt="Placeholder for a simplified after diagram showing two screening activities proceeding in parallel"
+        caption="After — an eligible reference check could run alongside the other screening activity."
+        aspect="16/9"
+      />
+    </div>
+  </div>
+  <div className="editorial-section__intro flow">
+    <h2 className="type-title">The harder part was inheriting the work.</h2>
+    <p>I took over this enhancement from a senior team member with the understanding that the solution was largely complete and could be used as a reference. As I investigated, I found that important parts still needed to be worked through. I had to reconstruct the intended behaviour from the documentation available, establish what was actually ready, and help move the work forward.</p>
+    <p>That gap between expectations and reality created difficult stakeholder conversations. Working as an almost individual contributor within a lean, stretched team, I partnered closely with an HRIS analyst on the client side to revisit the requirements and rebuild a workable solution.</p>
+    <blockquote className="editorial-quote">
+      <em>
+        In an established product, taking ownership can mean first untangling
+        what has already been promised, built and assumed.
+      </em>
+    </blockquote>
+  </div>
+  <div className="research-visuals">
+    <Figure
+      src="/images/work/project-c-accenture/assets/RecoveryProcessPlaceholder.png"
+      alt="Placeholder for an ownership and recovery timeline from handover through investigation, redesign and validation"
+      caption="Visual placeholder — Handover → Gap assessment → Client collaboration → Revised solution → Testing."
+      aspect="16/9"
+    />
+  </div>
+  <div className="editorial-section__intro flow">
+    <h2 className="type-title">A workflow designed around eligibility, actors and exceptions.</h2>
+    <p>Instead of enabling the new process universally, we had to define which candidate and organisation contexts qualified, while preserving the existing journey for others. I considered the experience across candidates, recruiters and external referees, including the cases where a referee did not respond digitally.</p>
+  </div>
+  <div className="problem-cards">
+    <article className="card problem-card flow">
+      <span className="problem-card__number">01</span>
+      <h3 className="type-subtitle">The right entry point.</h3>
+      <p>Only eligible candidates and participating organisations should enter the new workflow. Everyone else needed a predictable existing path.</p>
+    </article>
+    <article className="card problem-card flow">
+      <span className="problem-card__number">02</span>
+      <h3 className="type-subtitle">Less manual coordination.</h3>
+      <p>Candidates provide referee details, recruiters review them, and referees receive a direct questionnaire link without needing an internal account.</p>
+    </article>
+    <article className="card problem-card flow">
+      <span className="problem-card__number">03</span>
+      <h3 className="type-subtitle">Support for real-world exceptions.</h3>
+      <p>Recruiters still need ways to correct details, resend requests or record responses gathered offline.</p>
+    </article>
+  </div>
+</section>
 
-<Section label="My role">
+<section className="editorial-section editorial-section--solutions">
+  <div className="editorial-section__intro flow">
+    <p className="editorial-eyebrow">04. Feature one — design decisions</p>
+    <h2 className="type-title">A process that could move independently, without losing control.</h2>
+    <p>The solution was more than an online form. It had to coordinate several actors, maintain the right candidate record and make progress visible to recruiters.</p>
+  </div>
+  <div className="solution-list">
+    <article className="solution">
+      <div className="solution__copy flow">
+        <p className="editorial-eyebrow">Decision 01</p>
+        <h3 className="type-title">Separate the workflows, preserve their relationship.</h3>
+        <p>Reference checks could begin while another screening process was still underway. Completing one should not accidentally complete or interrupt the other.</p>
+      </div>
+      <Figure
+        src="/images/work/project-c-accenture/assets/ParallelFlowPlaceholder.png"
+        alt="Placeholder for parallel screening workflow diagram"
+        caption="Visual placeholder — parallel states and independent completion."
+        aspect="16/9"
+      />
+    </article>
+    <article className="solution solution--reverse">
+      <div className="solution__copy flow">
+        <p className="editorial-eyebrow">Decision 02</p>
+        <h3 className="type-title">Design for people outside the system.</h3>
+        <p>External referees needed a low-friction way to respond. Direct questionnaire access reduced dependence on account creation, while recruiter review preserved oversight before requests were sent.</p>
+      </div>
+      <Figure
+        src="/images/work/project-c-accenture/assets/ActorJourneyPlaceholder.png"
+        alt="Placeholder for candidate, recruiter and referee interaction diagram"
+        caption="Visual placeholder — candidate → recruiter → referee → recorded response."
+        aspect="16/9"
+      />
+    </article>
+    <article className="solution">
+      <div className="solution__copy flow">
+        <p className="editorial-eyebrow">Decision 03</p>
+        <h3 className="type-title">Test who should not see the feature.</h3>
+        <p>I designed scenarios for eligible and ineligible users, notifications, missing responses and existing screening behaviour. A conditional feature is only correct when its exclusions work too.</p>
+      </div>
+      <Figure
+        src="/images/work/project-c-accenture/assets/EligibilityMatrixPlaceholder.png"
+        alt="Placeholder for anonymised eligibility and regression test matrix"
+        caption="Visual placeholder — positive, negative and regression coverage."
+        aspect="16/9"
+      />
+    </article>
+  </div>
+</section>
 
-[What I actually owned. Then, separately, what I did with others and what the team did.]
+<section className="editorial-section editorial-section--research">
+  <div className="editorial-section__intro flow">
+    <p className="editorial-eyebrow">05. Feature two — job profile visibility</p>
+    <h2 className="type-title">What looked like a dropdown problem was really a data ownership problem.</h2>
+    <p>Users could encounter job profiles belonging to other organisations during certain HR tasks. Besides making selection harder, this created the risk of choosing an irrelevant profile. Simply hiding items on one screen would not address the underlying issue.</p>
+    <p>The stronger solution was to establish which organisation owned each job profile, then use that relationship wherever the platform needed to determine visibility.</p>
+  </div>
+  <div className="research-visuals">
+    <Figure
+      src="/images/work/project-c-accenture/assets/JobProfileBeforeAfterPlaceholder.png"
+      alt="Placeholder for a before and after job profile selection mockup with fictional agencies"
+      caption="Visual placeholder — from mixed profiles to context-relevant choices; use fictional data."
+      aspect="16/9"
+    />
+  </div>
+  <div className="editorial-section__intro flow">
+    <h2 className="type-title">One ownership model, multiple downstream experiences.</h2>
+    <p>For newly created profiles, the organisation context could be captured during the request process. But existing profiles also needed to be mapped correctly. I analysed historical extracts, distinguished duplicate report rows from unique records, and helped prepare structured data for bulk updates.</p>
+    <p>The design also needed to account for shared-service users supporting more than one organisation, and for processes where existing visibility was intentionally preserved.</p>
+  </div>
+  <div className="research-visuals">
+    <Figure
+      src="/images/work/project-c-accenture/assets/DataOwnershipPlaceholder.png"
+      alt="Placeholder for diagram linking job profile creation, organisational ownership, historical data and downstream selection and reports"
+      caption="Visual placeholder — a consistent ownership attribute supports future creation, historical records, tasks and reporting."
+      aspect="16/9"
+    />
+  </div>
+  <div className="problem-cards">
+    <article className="card problem-card flow">
+      <span className="problem-card__number">01</span>
+      <h3 className="type-subtitle">Create clean data.</h3>
+      <p>Capture organisational context at the point of creation instead of relying on users to correct visibility later.</p>
+    </article>
+    <article className="card problem-card flow">
+      <span className="problem-card__number">02</span>
+      <h3 className="type-subtitle">Respect existing records.</h3>
+      <p>Map historical profiles by a stable identifier, verify ownership and avoid brittle row-by-row assumptions.</p>
+    </article>
+    <article className="card problem-card flow">
+      <span className="problem-card__number">03</span>
+      <h3 className="type-subtitle">Preserve valid exceptions.</h3>
+      <p>Different organisational roles and tasks may require different visibility. Consistency does not mean applying one rule everywhere.</p>
+    </article>
+  </div>
+</section>
 
-</Section>
-
-<Section label="Problem">
-
-[What was not working, and for whom? Concrete: what did the person try to do, and what happened?]
-
-<Cards>
-<Card title="[First problem]">
-[One or two sentences.]
-</Card>
-<Card title="[Second problem]">
-[One or two sentences.]
-</Card>
-<Card title="[Third problem]">
-[One or two sentences.]
-</Card>
-</Cards>
-
-</Section>
-
-<Section label="Understanding the problem">
-
-[How I found out: interviews, observation, tickets, usability tests, data. Only what really happened.]
-
-<Figure caption="[Artefact to add: research notes, affinity map, workflow diagram ...]" aspect="16/9" />
-
-</Section>
-
-<Section label="What I did">
-
-[The important decisions and why I made them.]
-
-<Split>
-<div>
-
-### [A decision]
-
-[What the options were and why I chose one.]
-
-</div>
-<Callout label="[Metric or insight]">
-[Only a number I can evidence. Keep any uncertainty in the wording.]
-</Callout>
-</Split>
-
-<Figure caption="[Artefact to add: wireframes, screens, before and after ...]" aspect="16/9" />
-
-{/* <Video src="/media/your-file.mp4" label="What the video shows" caption="..." /> */}
-
-</Section>
-
-<Section label="Iteration">
-
-[What changed after feedback from users, stakeholders or engineers, and who was involved.]
-
-</Section>
-
-<Section label="Outcome">
-
-[What happened after the work. If there is no measured result, say what is known.]
-
-</Section>
-
-<Section label="Reflection">
-
-[What this taught me, especially about product and UX.]
-
-</Section>
+<section className="editorial-section editorial-section--outcome">
+  <div className="editorial-section__intro editorial-section__intro--storyboards flow">
+    <p className="editorial-eyebrow">06. Outcome &amp; reflections</p>
+    <h2 className="type-title">Designing for data made the changes more coherent.</h2>
+    <p>Across both enhancements, my contribution was to connect a user-facing requirement to the underlying workflows, organisational rules, historical records and testing needed to support it. The reference-check work particularly challenged me to take ownership of an incomplete handover, navigate stakeholder frustration and collaborate closely with the client team under tight capacity constraints.</p>
+    <p>This case study describes the solution design and delivery work I contributed to, not independently verified post-launch improvements. I do not have a reliable basis to claim measured reductions in processing time, errors or user effort.</p>
+  </div>
+  <div className="editorial-section__intro editorial-section__intro--storyboards flow">
+    <h2 className="type-title">What I took away.</h2>
+    <p>In academic projects, I often had the freedom to take an idea from zero to one. In enterprise work, I learned to start from what already existed: inherited decisions, imperfect documentation, live data, organisational constraints and people who needed answers quickly.</p>
+    <p>One limitation of this work was that I could not conduct direct user research with agency users. The pain points and requirements came through the central client team, which meant I had to distinguish stakeholder-reported needs from behaviour I had personally observed. Given another iteration, I would prioritise direct observation and usability validation with the people carrying out these tasks.</p>
+    <blockquote className="editorial-quote">
+      <em>
+        Good enterprise product design is not just what users see. It is how
+        clearly the data, rules and exceptions behind that experience are
+        designed for the next person who has to maintain them.
+      </em>
+    </blockquote>
+  </div>
+  <div className="research-visuals">
+    <Figure
+      src="/images/work/project-c-accenture/assets/ReflectionPlaceholder.png"
+      alt="Placeholder for a closing diagram comparing visible experience with underlying data, rules and maintenance"
+      caption="Visual placeholder — the interface is only the visible layer of a maintainable product."
+      aspect="16/9"
+    />
+  </div>
+</section>

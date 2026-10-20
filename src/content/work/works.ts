@@ -47,9 +47,10 @@ export const works: readonly Work[] = [
 		slug: "project-c-accenture",
 		title: "Enterprise Human Capital Management Platform",
 		summary:
-			"Improving HR processes for a large-scale Cloud-based ERP within the Health & Public Sector",
-		roles: ["Product Consultant | Accenture"],
+			"Improving recruitment workflows for an Enterprise Platform within the Public Sector",
+		roles: ["Product Analyst | Accenture"],
 		start: "2026-08",
+		end:"present",
 	},
 	{
 		slug: "checkmate",
