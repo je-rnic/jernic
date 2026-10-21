@@ -46,6 +46,7 @@
 		--toggle: light-dark(#e6e3db, #262623);
 		--divider: light-dark(#aeacaa, #404040);
 		--accent: light-dark(#5267b2, #a1b0f0);
+		--surface-muted: light-dark(#f0f0ee, #242422);
 
 		/* --- Families ------------------------------------------------------ */
 		--font-sans:
@@ -60,7 +61,7 @@
 
 		/* --- Type scale (fluid: phone ≈390 → tablet ≈810 → desktop ≥1200) --- */
 		--fs-display: clamp(2.25rem, 1.75rem + 2vw, 3.25rem); /* 36 → 44 → 52 */
-		--fs-statement: clamp(1.75rem, 1.25rem + 1.5vw, 2.75rem);
+		--fs-statement: clamp(1.75rem, 1.25rem + 1.5vw, 2.5rem);
 		--fs-title: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem); /* 20 → 22 → 24 */
 		--fs-subtitle: clamp(1.125rem, 1.05rem + 0.3vw, 1.25rem); /* 18 → 19 → 20 */
 		--fs-eyebrow: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem); /* 20 → 22 → 24 */
@@ -391,6 +392,11 @@
 		align-items: center;
 		justify-content: space-between;
 	}
+	.site-header__logo {
+		display: block;
+		inline-size: 1.5rem;
+		block-size: 1.5rem;
+	}
 	.site-header__actions {
 		display: flex;
 		align-items: center;
@@ -450,10 +456,24 @@
 	.site-footer__link {
 		display: inline-flex;
 		align-items: center;
-		min-block-size: 3rem;
-		padding-inline: var(--space-5);
+		justify-content: center;
+		inline-size: 3rem;
+		block-size: 3rem;
 		border: var(--rule-width) solid var(--divider);
 		border-radius: var(--radius-pill);
+	}
+	.site-footer__icon {
+		inline-size: 1.25rem;
+		block-size: 1.25rem;
+		fill: none;
+		stroke: currentColor;
+		stroke-width: 1.75;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+	}
+	.site-footer__icon--linkedin {
+		fill: currentColor;
+		stroke: none;
 	}
 	.site-footer__link:hover,
 	.site-footer__link:focus-visible {
@@ -476,7 +496,7 @@
 	.hero__placeholder {
 		position: absolute;
 		inset: 0;
-		background: var(--rule);
+		background: var(--paper);
 	}
 	.hero__media img {
 		width: 100%;
@@ -492,10 +512,6 @@
 		gap: var(--space-4);
 		padding-block: var(--space-5);
 		border-top: var(--rule-width) solid var(--divider);
-	}
-	.landing__bar-link {
-		display: inline-flex;
-		gap: var(--space-2);
 	}
 	.landing__ticker-window {
 		--ticker-inset: 0.2rem;
@@ -601,9 +617,17 @@
 	}
 	.arrow-link:hover,
 	.arrow-link:focus-visible {
+		text-decoration: none;
+	}
+	.arrow-link:hover .arrow-link__label,
+	.arrow-link:focus-visible .arrow-link__label {
 		text-decoration: underline;
 		text-decoration-thickness: 1px;
 		text-underline-offset: 0.25em;
+	}
+	.arrow-link:hover .arrow-link__arrow,
+	.arrow-link:focus-visible .arrow-link__arrow {
+		text-decoration: none;
 	}
 	@media (prefers-reduced-motion: no-preference) {
 		.arrow-link__arrow {
@@ -616,6 +640,10 @@
 		.arrow-link--back:hover .arrow-link__arrow,
 		.arrow-link--back:focus-visible .arrow-link__arrow {
 			transform: translateX(calc(-1 * var(--space-1)));
+		}
+		.arrow-link--down:hover .arrow-link__arrow,
+		.arrow-link--down:focus-visible .arrow-link__arrow {
+			transform: translateY(var(--space-1));
 		}
 	}
 
@@ -652,7 +680,7 @@
 		position: relative;
 		aspect-ratio: 16 / 9;
 		overflow: hidden;
-		background: var(--rule);
+		background: var(--paper);
 	}
 	.work-row__overview img {
 		object-fit: cover;
@@ -759,12 +787,16 @@
 	}
 
 	.statement__inner {
-		width: min(100% - 2 * var(--gutter), var(--content-max));
+		width: min(100% - 2 * var(--gutter), var(--editorial-max));
 		padding-block: clamp(5rem, 10vw, 9rem);
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-		text-align: center;
+		align-items: flex-start;
+		text-align: start;
+	}
+	.statement__content {
+		padding-inline-start: var(--space-5);
+		border-inline-start: 2px solid var(--accent);
 	}
 	.statement__text {
 		max-width: 60rem;
@@ -775,11 +807,8 @@
 		line-height: var(--lh-display);
 		letter-spacing: var(--ls-display);
 	}
-	.statement__label::before {
-		display: block;
-		width: 4rem;
-		margin: 0 auto var(--space-3);
-		content: "";
+	.statement__label {
+		margin-block-end: var(--space-4);
 	}
 	/* MDX paragraphs carry .type-body; inside these blocks they follow the block. */
 	.statement__text p,
@@ -790,27 +819,6 @@
 	.statement__text {
 		max-width: 60rem;
 	}
-	@media (min-width: 48rem) {
-		.statement__inner {
-			display: grid;
-			grid-template-columns: minmax(0, 3fr) minmax(0, 7fr);
-			gap: clamp(2rem, 6vw, 7rem);
-			align-items: stretch;
-		}
-		.statement__label {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			padding-inline-end: clamp(2rem, 4vw, 4rem);
-			border-inline-end: 2px solid var(--accent);
-			text-align: center;
-		}
-		.statement__text {
-			order: 0;
-			text-align: start;
-		}
-	}
-
 	.case-header__eyebrow,
 	.editorial-eyebrow {
 		color: var(--rule);
@@ -890,11 +898,73 @@
 		width: 100%;
 		max-width: none;
 	}
-	.editorial-section .figure__media {
-		box-shadow: none;
-	}
 	.editorial-section .figure__caption {
 		max-width: 34rem;
+	}
+	.workflow-comparison {
+		display: grid;
+		gap: var(--space-5);
+		width: 100%;
+		margin: 0;
+	}
+	.workflow-comparison__panel {
+		display: grid;
+		gap: var(--space-5);
+		padding: var(--space-5);
+		border: var(--rule-width) solid var(--divider);
+		border-radius: var(--radius-card);
+		background: var(--surface-muted);
+		color: var(--ink);
+	}
+	.workflow-comparison__title {
+		text-align: center;
+	}
+	.workflow-comparison__flow {
+		display: grid;
+		gap: var(--space-2);
+	}
+	.workflow-comparison__step {
+		display: grid;
+		place-items: center;
+		min-block-size: 4rem;
+		padding: var(--space-3);
+		border: var(--rule-width) solid var(--divider);
+		border-radius: var(--radius-card);
+		background: var(--paper);
+		text-align: center;
+	}
+	.workflow-comparison__step--emphasis {
+		border-color: var(--accent);
+		background: color-mix(in srgb, var(--accent) 16%, var(--paper));
+	}
+	.workflow-comparison__parallel {
+		display: grid;
+		gap: var(--space-2);
+	}
+	.workflow-comparison__arrow {
+		display: block;
+		color: var(--rule);
+		font-size: var(--fs-eyebrow);
+		line-height: var(--lh-small);
+		text-align: center;
+	}
+	.workflow-comparison__caption {
+		max-width: 34rem;
+		color: var(--rule);
+	}
+	@media (min-width: 48rem) {
+		.workflow-comparison {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+		.workflow-comparison__panel {
+			padding: var(--space-6);
+		}
+		.workflow-comparison__parallel {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+		.workflow-comparison__caption {
+			grid-column: 1 / -1;
+		}
 	}
 	.problem-cards {
 		display: grid;
@@ -1155,7 +1225,7 @@
 	.figure__media {
 		position: relative;
 		overflow: hidden;
-		background: var(--rule);
+		background: var(--paper);
 		border-radius: var(--radius-media);
 		box-shadow: var(--shadow-media);
 	}

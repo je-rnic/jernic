@@ -12,8 +12,8 @@ export default function CaseStudyHeader({ work }: { work: Work }) {
           <BackButton />
         </div>
 
-        <p className="case-header__eyebrow type-meta">
-          UX CASE STUDY · {yearOf(work)}
+        <p className="case-header__eyebrow">
+          {work.productType ?? "Case Study"} · {yearOf(work)}
         </p>
         <h1 className="type-display">{work.title}</h1>
         <p className="case-header__summary type-subtitle">{work.summary}</p>

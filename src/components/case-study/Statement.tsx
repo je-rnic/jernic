@@ -15,9 +15,11 @@ export default function Statement({
 }) {
   return (
     <section className={`statement statement--${tone}`}>
-      <div className="statement__inner split container">
-        <h2 className="statement__label type-eyebrow">{label}</h2>
-        <div className="statement__text type-statement flow">{children}</div>
+      <div className="statement__inner container">
+        <div className="statement__content">
+          <h2 className="statement__label type-eyebrow">{label}</h2>
+          <div className="statement__text type-statement flow">{children}</div>
+        </div>
       </div>
     </section>
   );

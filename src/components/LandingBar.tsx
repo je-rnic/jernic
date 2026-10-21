@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import ArrowLink from "./ArrowLink";
 
 const roles = [
   "Barista",
@@ -86,9 +87,9 @@ export default function LandingBar() {
           </span>
         </span>
       </p>
-      <a className="landing__bar-link type-body" href="#work">
-        my works <span aria-hidden="true">↓</span>
-      </a>
+      <ArrowLink href="#work" direction="down">
+        my works
+      </ArrowLink>
     </div>
   );
 }

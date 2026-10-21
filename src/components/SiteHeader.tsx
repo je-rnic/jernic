@@ -7,7 +7,7 @@ export default function SiteHeader() {
     <header className="site-header">
       <div className="site-header__inner container">
         <Link href="/" className="type-eyebrow">
-          <span aria-hidden="true">{site.logo}</span>
+          <img src={site.logo} alt="" className="site-header__logo" />
           <span className="visually-hidden">{site.name} — home</span>
         </Link>
 

@@ -8,7 +8,7 @@ export const site = {
 	name: "Jernic Yeo",
 	title: "Jernic Yeo — Product Designer",
 	description: "",
-	logo: "home",
+	logo: "/favicon.ico",
 	nav: [
 		{ label: "Work", href: "#work" },
 		{ label: "About", href: "#about" },

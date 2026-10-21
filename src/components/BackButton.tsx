@@ -24,7 +24,7 @@ export default function BackButton() {
       <span className="arrow-link__arrow" aria-hidden="true">
         ←
       </span>
-      <span>back</span>
+      <span className="arrow-link__label">back</span>
     </button>
   );
 }

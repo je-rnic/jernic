@@ -5,6 +5,7 @@ import Section from "./Section";
 import Split from "./Split";
 import Statement from "./Statement";
 import Video from "./Video";
+import WorkflowComparison from "./WorkflowComparison";
 
 /**
  * Everything an .mdx case study can use without importing.
@@ -19,4 +20,5 @@ export const caseStudyComponents = {
   Split,
   Statement,
   Video,
+  WorkflowComparison,
 };

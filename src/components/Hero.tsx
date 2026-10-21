@@ -9,7 +9,7 @@ export default function Hero() {
 
         <h1 className="hero__title">
           <span className="type-subtitle">
-            a <em>&lt;business analyst&gt;</em> turned product designer that builds
+            a <em>&lt;software engineer&gt;</em> turned product designer that builds
           </span>
           <span className="type-display">intuitive user experiences</span>
           <span className="type-subtitle">

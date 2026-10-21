@@ -1,5 +1,3 @@
-
-
 {/* Portfolio note: Use generic actors and sample data for all diagrams. Do not publish client screenshots, agency names, system IDs, or internal documents. */}
 
 <Statement label="the challenge" tone="dark">
@@ -9,67 +7,35 @@
 <section className="editorial-section editorial-section--overview">
   <div className="editorial-section__intro flow">
     <p className="editorial-eyebrow">01. Overview</p>
-    <h2 className="type-title">Designing improvements within a live HR ecosystem.</h2>
-    <p>At Accenture, I worked on change requests for an enterprise HR platform serving multiple public-sector organisations. Unlike an academic project, this was not a product I could design from scratch. Every improvement had to coexist with established workflows, existing records and different user groups.</p>
-    <p>Two enhancements shaped how I think about product design: enabling reference checks to progress alongside another screening process, and ensuring users see only the job profiles relevant to their organisation.</p>
-    <p><strong>My role:</strong> investigating requirements and existing behaviour, translating needs into functional solutions, coordinating with client and technical stakeholders, and designing positive, negative and regression test coverage.</p>
+    <h2 className="type-title">Designing improvements within a live HR ecosystem</h2>
+    <p>At Accenture, I worked on change requests for an established HR platform. Unlike an academic project, this was not a product I could design from scratch. Every improvement had to coexist with established workflows, existing records and different user groups.</p>
+    <p><strong>Two</strong> enhancements made this particularly clear: creating a parallel reference-check journey that could run alongside existing screening, and making job-profile choices relevant to a user's organisation.</p>
+   
   </div>
   <div className="editorial-section__visual">
     <Figure
-      src="/images/work/project-c-accenture/assets/EnterpriseEcosystemPlaceholder.png"
-      alt="Placeholder for an anonymised diagram of users, workflows, organisational data and reporting within an enterprise HR platform"
-      caption="Visual placeholder — a simplified ecosystem showing how one user-facing change touches multiple layers."
+      src="/images/work/project-c-accenture/CaseStudyDisclaimer.png"
       aspect="16/9"
     />
   </div>
 </section>
 
-<section className="editorial-section editorial-section--research">
-  <div className="editorial-section__intro flow">
-    <p className="editorial-eyebrow">02. My approach</p>
-    <h2 className="type-title">The visible problem was rarely the whole problem.</h2>
-    <p>Across both requests, I worked backwards from the experience users needed to the data and rules that made that experience possible. The goal was not only to deliver the immediate change, but to keep the solution understandable and maintainable for the teams inheriting it.</p>
-  </div>
-  <div className="research-visuals">
-    <Figure
-      src="/images/work/project-c-accenture/assets/DesignForDataPlaceholder.png"
-      alt="Placeholder for a five-stage diagram from user need to data and rules, dependencies, exceptions and validation"
-      caption="Visual placeholder — User need → Data and rules → Dependencies → Edge cases → Validation."
-      aspect="16/9"
-    />
-  </div>
-  <div className="editorial-section__intro flow">
-    <h2 className="type-title">Designing for data meant thinking beyond delivery.</h2>
-    <p>I looked for reusable logic rather than one-off fixes, considered how existing records would behave after a change, and made exceptions explicit so that future maintainers could understand why different users followed different paths.</p>
-  </div>
-</section>
 
 <section className="editorial-section editorial-section--research-evidence">
   <div className="editorial-section__intro flow">
-    <p className="editorial-eyebrow">03. Feature one — parallel reference checks</p>
+    <p className="editorial-eyebrow">02. Feature one — parallel reference checks</p>
     <h2 className="type-title">Turning a fragmented screening process into a coordinated workflow.</h2>
-    <p>Recruiters could collect referee details in the platform, but the reference-check process still relied heavily on manual outreach and separate records. Meanwhile, a related screening activity could take place independently. The opportunity was to make reference checks easier to initiate, track and complete without forcing the two activities into a single sequence.</p>
+    <p>Previously, recruiters could collect referee details inside the platform, but much of the follow-up still happened through manual channels. The revised experience enabled a dedicated reference-check process to progress alongside another screening activity, rather than waiting for that activity to finish.</p>
   </div>
   <div className="research-evidence">
-    <div className="research-evidence__primary">
-      <Figure
-        src="/images/work/project-c-accenture/assets/ReferenceBeforePlaceholder.png"
-        alt="Placeholder for a simplified before diagram showing manual reference outreach outside the HR platform"
-        caption="Before — referee information existed in the system, while follow-up work happened elsewhere."
-        aspect="16/9"
-      />
-      <Figure
-        src="/images/work/project-c-accenture/assets/ReferenceAfterPlaceholder.png"
-        alt="Placeholder for a simplified after diagram showing two screening activities proceeding in parallel"
-        caption="After — an eligible reference check could run alongside the other screening activity."
-        aspect="16/9"
-      />
-    </div>
+    <WorkflowComparison />
   </div>
   <div className="editorial-section__intro flow">
     <h2 className="type-title">The harder part was inheriting the work.</h2>
-    <p>I took over this enhancement from a senior team member with the understanding that the solution was largely complete and could be used as a reference. As I investigated, I found that important parts still needed to be worked through. I had to reconstruct the intended behaviour from the documentation available, establish what was actually ready, and help move the work forward.</p>
-    <p>That gap between expectations and reality created difficult stakeholder conversations. Working as an almost individual contributor within a lean, stretched team, I partnered closely with an HRIS analyst on the client side to revisit the requirements and rebuild a workable solution.</p>
+    <p>Taking over the feature change from an aging request meant that most of the previously agreed-on solution design proposed might have been outdated by now.</p>
+    <p>Together with a client-side HRIS analyst, we reconstructed the intended behaviour from the documentation available, established what was actually ready, and helped move the work forward.</p>
+    
+    <p>That gap between expectations and reality created difficult stakeholder conversations. </p>
     <blockquote className="editorial-quote">
       <em>
         In an established product, taking ownership can mean first untangling

@@ -51,16 +51,25 @@ export type Work = {
 export const works: readonly Work[] = [
 	{
 		slug: "project-c-accenture",
-		title: "Enterprise Human Capital Management Platform",
+		title: "project-c*",
 		summary:
-			"Improving recruitment workflows for an Enterprise Platform within the Public Sector",
+			"Designing for an Enterprise Human Capital Management platform. User experience improvement for recruitment workflows within the Public Sector",
 		roles: ["Product Analyst | Accenture"],
 		accent: {
-			light: "#A100FF",
-			dark: "#C875FF",
+			light: "#59376f",
+			dark: "#ab58db",
 		},
 		start: "2026-08",
 		end:"present",
+		overview: {
+			src: "/images/work/project-c-accenture/Hero.png",
+			alt: "Enterprise HR platform ecosystem diagram",
+		},
+		cover: {
+			src: "/images/work/project-c-accenture/Hero.png",
+			alt: "Enterprise HR platform ecosystem diagram",
+		},
+		productType: "Shipped"
 	},
 	{
 		slug: "checkmate",
@@ -73,9 +82,9 @@ export const works: readonly Work[] = [
 	},
 	{
 		slug: "project-m-accenture",
-		title: "Real Estate Management System",
+		title: "project-m*",
 		summary:
-			"Optimising the User Experience for Search Feature Enhancements on a low-code REMS within the Public Service",
+			"Optimising the User Experience for Search Feature Enhancements on a low-code REMS within the Public Sector",
 		roles: ["Software Engineer Intern | Accenture"],
 		start: "2024-05",
 		end: "2024-08",
