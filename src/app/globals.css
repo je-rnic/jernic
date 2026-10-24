@@ -849,6 +849,9 @@
 	.editorial-section__intro p:not(.editorial-eyebrow) {
 		max-width: 34rem;
 	}
+	.editorial-section__intro .stats {
+		margin-top: var(--space-7);
+	}
 	.research-task-list {
 		max-width: 34rem;
 		margin-top: var(--space-3);

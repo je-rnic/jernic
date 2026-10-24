@@ -17,11 +17,11 @@ export default function CaseStudyHeader({ work }: { work: Work }) {
         </p>
         <h1 className="type-display">{work.title}</h1>
         <p className="case-header__summary type-subtitle">{work.summary}</p>
-
+        
         <dl className="case-meta">
           <div>
-            <dt className="type-body">Role</dt>
-            <dd className="type-meta">
+            <dt className="type-title">Role</dt>
+            <dd className="type-body">
               <ul>
                 {work.roles.map((role) => (
                   <li key={role}>{role}</li>
@@ -30,22 +30,22 @@ export default function CaseStudyHeader({ work }: { work: Work }) {
             </dd>
           </div>
           <div>
-            <dt className="type-body">Timeline</dt>
-            <dd className="type-meta">{formatPeriod(work)}</dd>
+            <dt className="type-title">Timeline</dt>
+            <dd className="type-body">{formatPeriod(work)}</dd>
           </div>
-          {work.scope && (
+        </dl>
+
+        {/* Uncomment this block to enable the work stats on the heading page
+        <dl className="case-meta">
+          {work.stat && (
             <div>
-              <dt className="type-body">Scope</dt>
-              <dd className="type-meta">
-                <ul>
-                  {work.scope.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </dd>
+              <dt className="type-subtitle">{work.stat.label}</dt>
+              <dd className="type-body">{work.stat.value}</dd>
             </div>
           )}
         </dl>
+        */}
+
       </div>
 
       <div className="hero__media">

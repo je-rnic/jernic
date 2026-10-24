@@ -30,8 +30,6 @@ export type Work = {
 	roles: readonly string[];
 	/** Optional bullet list of activities (research, wireframing, handoff ...). */
 	productType?: string;
-	/** Optional adjective describing whether it's a concept or a shipped product. */
-	scope?: readonly string[];
 	start: YearMonth;
 	/** Omit for a single-month project. "present" for ongoing work. */
 	end?: YearMonth | "present";
@@ -39,6 +37,8 @@ export type Work = {
 	cover?: { src: string; alt: string };
 	/** Optional preview shown on work-list rows. */
 	overview?: { src: string; alt: string };
+	/** Optional metric shown in the case-study hero metadata. */
+	stat?: { label: string; value: string };
 	/** Light and dark accent colours used by the case-study editorial styling. */
 	accent?: Accent;
 };
@@ -53,7 +53,7 @@ export const works: readonly Work[] = [
 		slug: "project-c-accenture",
 		title: "project-c*",
 		summary:
-			"Designing for an Enterprise Human Capital Management platform. User experience improvement for recruitment workflows within the Public Sector",
+			"Designing for an Enterprise Human Capital Management Platform to improve user experience for recruitment workflows.",
 		roles: ["Product Analyst | Accenture"],
 		accent: {
 			light: "#59376f",
@@ -69,7 +69,11 @@ export const works: readonly Work[] = [
 			src: "/images/work/project-c-accenture/Hero.png",
 			alt: "Enterprise HR platform ecosystem diagram",
 		},
-		productType: "Shipped"
+		productType: "Live",
+		stat: {
+			label: "Product Reach",
+			value: "~2,270 Monthly Active Users",
+		},
 	},
 	{
 		slug: "checkmate",

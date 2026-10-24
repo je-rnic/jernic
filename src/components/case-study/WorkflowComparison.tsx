@@ -10,7 +10,7 @@ const beforeSteps: WorkflowStep[] = [
 ];
 
 const afterSteps: WorkflowStep[][] = [
-  [{ label: "Eligible candidate enters screening" }],
+  [{ label: "Candidate provides referee details" }],
   [
     { label: "Existing screening activity" },
     { label: "Reference check", emphasis: true },

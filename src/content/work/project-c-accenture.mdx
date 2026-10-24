@@ -7,11 +7,20 @@
 <section className="editorial-section editorial-section--overview">
   <div className="editorial-section__intro flow">
     <p className="editorial-eyebrow">01. Overview</p>
-    <h2 className="type-title">Designing improvements within a live HR ecosystem</h2>
-    <p>At Accenture, I worked on change requests for an established HR platform. Unlike an academic project, this was not a product I could design from scratch. Every improvement had to coexist with established workflows, existing records and different user groups.</p>
-    <p><strong>Two</strong> enhancements made this particularly clear: creating a parallel reference-check journey that could run alongside existing screening, and making job-profile choices relevant to a user's organisation.</p>
-   
-  </div>
+    <h2 className="type-title">Within a live HR ecosystem</h2>
+    <p>At Accenture, I worked on change requests for an established HR platform in the health and public sector. Unlike an academic project, this was not a product I could design from scratch. Every improvement had to coexist with established workflows, existing records and different user groups.</p>
+    <p><em>One</em> such feature made this particularly clear: a <strong>parallel reference-check</strong> enhancement that could run alongside existing screening processes.</p>
+
+    <div className="stats">
+      <p className="type-eyebrow">*product reach:</p>
+      <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.5rem' }}>
+        <p className="type-display">~2,270</p>
+        <p className="type-subtitle">monthly average users</p>
+      </div>
+        <p><em>- based on project estimations.</em></p>
+    </div>
+  </div>    
+
   <div className="editorial-section__visual">
     <Figure
       src="/images/work/project-c-accenture/CaseStudyDisclaimer.png"
@@ -23,9 +32,20 @@
 
 <section className="editorial-section editorial-section--research-evidence">
   <div className="editorial-section__intro flow">
-    <p className="editorial-eyebrow">02. Feature one — parallel reference checks</p>
-    <h2 className="type-title">previously,</h2>
-    <p>recruiters collected details for references manually via external channels (email, telephone etc). The revised feature then gave recruiters a parallel alternative – the system can send out questionnaires to the nominated referees automatically upon collection of candidates' details, rather than having them reach out on their own accord. </p>
+    <p className="editorial-eyebrow">02. parallel reference checks - the as-is</p>
+    <h2 className="type-title">Previously,</h2>
+    <p>Recruiters had to reach out to referees of candidates manually via external channels (email, telephone etc). The proposed alternative:</p>
+    
+    <p>Upon collection of candidates' details during the job application, recruiters can review the referees' details and <strong>"Initiate Parallel Reference Check"</strong>, which sends the emails to referees automatically and minimises most administrative effort from the recruiter's end.</p>
+  </div>
+    
+  <div className="research-visuals">
+    <Figure
+      src="/images/work/project-c-accenture/UIParallelReferenceCheck.png"
+      alt="User Interface for Recruiters initiaiting the Parallel Reference Check"
+      caption="User Interface for Recruiters initiaiting the Parallel Reference Check"
+      aspect="16/9"
+    />
   </div>
   <div className="research-evidence">
     <WorkflowComparison />
@@ -33,84 +53,65 @@
   <div className="editorial-section__intro flow">
     <h2 className="type-title">The harder part however was inheriting the work.</h2>
     <p>Taking over the feature change from an aging request meant that most of the signed-off solution design would have been outdated by now.</p>
+    <p>That gap between mismatched expectations and reality created difficult stakeholder conversations. </p>
+
     <p>Together with a client-side HRIS analyst, we reconstructed the intended behaviour from the documentation available, established what was actually ready, and helped move the work forward.</p>
-    
-    <p>That gap between expectations and reality created difficult stakeholder conversations. </p>
+
     <blockquote className="editorial-quote">
       <em>
         In an established product, taking ownership can mean first untangling
         what has already been promised, built and assumed.
       </em>
     </blockquote>
-  </div>
-  <div className="research-visuals">
-    <Figure
-      src="/images/work/project-c-accenture/assets/RecoveryProcessPlaceholder.png"
-      alt="Placeholder for an ownership and recovery timeline from handover through investigation, redesign and validation"
-      caption="Visual placeholder — Handover → Gap assessment → Client collaboration → Revised solution → Testing."
-      aspect="16/9"
-    />
-  </div>
-  <div className="editorial-section__intro flow">
-    <h2 className="type-title">How we crunched a 7-month aging feature down into a 2-month deployment </h2>
-    <p>write about what worked for the revised timeline 
-1. waterfall > agile
-current processes were not moving because the development lifecycle still followed a legacy waterfall protocol. it 
 
- </p>
   </div>
 
 </section>
 
-<section className="editorial-section editorial-section--solutions">
-  <div className="editorial-section__intro flow">
-    <p className="editorial-eyebrow">04. Feature one — design decisions</p>
-    <h2 className="type-title">A process that could move independently, without losing control.</h2>
-    <p>The solution was more than an online form. It had to coordinate several actors, maintain the right candidate record and make progress visible to recruiters.</p>
-  </div>
-  <div className="solution-list">
-    <article className="solution">
-      <div className="solution__copy flow">
-        <p className="editorial-eyebrow">Decision 01</p>
-        <h3 className="type-title">Separate the workflows, preserve their relationship.</h3>
-        <p>Reference checks could begin while another screening process was still underway. Completing one should not accidentally complete or interrupt the other.</p>
+<section className="editorial-section">
+
+<div className="editorial-section__intro flow">
+  <p className="editorial-eyebrow">03. Approach</p>
+    <div className="stats">
+      <p className="type-title">How we crunched a </p>
+      <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.5rem' }}>
+        <p><strong>7-month</strong></p>
+        <p className="type-body">aging request down into a</p>
       </div>
-      <Figure
-        src="/images/work/project-c-accenture/assets/ParallelFlowPlaceholder.png"
-        alt="Placeholder for parallel screening workflow diagram"
-        caption="Visual placeholder — parallel states and independent completion."
-        aspect="16/9"
-      />
+      <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.5rem' }}>
+        <p className="type-display">2-month</p>
+        <p className="type-body">deployment</p>
+      </div>
+    </div>
+
+
+  <p>write about what worked for the revised timeline 1. waterfall -> agile current processes were not moving because the development lifecycle still followed a legacy waterfall protocol. meaning scope creep kept happening, users could not decide on the questionnaires to be posted to referees up until the last moment </p>
+  
+    <div className="problem-cards">
+    <article className="card problem-card flow">
+      <span className="problem-card__number">01</span>
+      <h3 className="type-subtitle">Create clean data.</h3>
+      <p>Capture organisational context at the point of creation instead of relying on users to correct visibility later.</p>
     </article>
-    <article className="solution solution--reverse">
-      <div className="solution__copy flow">
-        <p className="editorial-eyebrow">Decision 02</p>
-        <h3 className="type-title">Design for people outside the system.</h3>
-        <p>External referees needed a low-friction way to respond. Direct questionnaire access reduced dependence on account creation, while recruiter review preserved oversight before requests were sent.</p>
-      </div>
-      <Figure
-        src="/images/work/project-c-accenture/assets/ActorJourneyPlaceholder.png"
-        alt="Placeholder for candidate, recruiter and referee interaction diagram"
-        caption="Visual placeholder — candidate → recruiter → referee → recorded response."
-        aspect="16/9"
-      />
+    <article className="card problem-card flow">
+      <span className="problem-card__number">02</span>
+      <h3 className="type-subtitle">Respect existing records.</h3>
+      <p>Map historical profiles by a stable identifier, verify ownership and avoid brittle row-by-row assumptions.</p>
     </article>
-    <article className="solution">
-      <div className="solution__copy flow">
-        <p className="editorial-eyebrow">Decision 03</p>
-        <h3 className="type-title">Test who should not see the feature.</h3>
-        <p>I designed scenarios for eligible and ineligible users, notifications, missing responses and existing screening behaviour. A conditional feature is only correct when its exclusions work too.</p>
-      </div>
-      <Figure
-        src="/images/work/project-c-accenture/assets/EligibilityMatrixPlaceholder.png"
-        alt="Placeholder for anonymised eligibility and regression test matrix"
-        caption="Visual placeholder — positive, negative and regression coverage."
-        aspect="16/9"
-      />
+    <article className="card problem-card flow">
+      <span className="problem-card__number">03</span>
+      <h3 className="type-subtitle">Preserve valid exceptions.</h3>
+      <p>Different organisational roles and tasks may require different visibility. Consistency does not mean applying one rule everywhere.</p>
     </article>
   </div>
+  
+  
+  
+  </div>
+
 </section>
 
+  
 <section className="editorial-section editorial-section--research">
   <div className="editorial-section__intro flow">
     <p className="editorial-eyebrow">05. Feature two — job profile visibility</p>
