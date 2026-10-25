@@ -32,7 +32,7 @@
 
 <section className="editorial-section editorial-section--research-evidence">
   <div className="editorial-section__intro flow">
-    <p className="editorial-eyebrow">02. parallel reference checks - the as-is</p>
+    <p className="editorial-eyebrow">02. as-is</p>
     <h2 className="type-title">Previously,</h2>
     <p>Recruiters had to reach out to referees of candidates manually via external channels (email, telephone etc). The proposed alternative:</p>
     
@@ -42,15 +42,15 @@
   <div className="research-visuals">
     <Figure
       src="/images/work/project-c-accenture/UIParallelReferenceCheck.png"
-      alt="User Interface for Recruiters initiaiting the Parallel Reference Check"
-      caption="User Interface for Recruiters initiaiting the Parallel Reference Check"
+      alt="UI for Recruiters initiaiting the Parallel Reference Check"
+      caption="Proposed UI for Recruiters initiaiting the Parallel Reference Check"
       aspect="16/9"
     />
   </div>
   <div className="research-evidence">
     <WorkflowComparison />
   </div>
-  <div className="editorial-section__intro flow">
+  <div className="flow">
     <h2 className="type-title">The harder part however was inheriting the work.</h2>
     <p>Taking over the feature change from an aging request meant that most of the signed-off solution design would have been outdated by now.</p>
     <p>That gap between mismatched expectations and reality created difficult stakeholder conversations. </p>
@@ -71,7 +71,7 @@
 <section className="editorial-section">
 
 <div className="editorial-section__intro flow">
-  <p className="editorial-eyebrow">03. Approach</p>
+  <p className="editorial-eyebrow">03. Process</p>
     <div className="stats">
       <p className="type-title">How we crunched a </p>
       <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.5rem' }}>
@@ -85,91 +85,50 @@
     </div>
 
 
-  <p>write about what worked for the revised timeline 1. waterfall -> agile current processes were not moving because the development lifecycle still followed a legacy waterfall protocol. meaning scope creep kept happening, users could not decide on the questionnaires to be posted to referees up until the last moment </p>
+  <p>write about what worked for the revised timeline 1. waterfall -> agile current processes were not moving because the development lifecycle still followed a legacy waterfall protocol. meaning scope creep kept happening, users could not decide on the questionnaires to be posted to referees up until the last moment -> 2. by locking design requirements early, we could move on to concurrent development and iterative testing, detect gaps early rather than waiting till the end 3. a robust test case coverage, i pushed for positive negative and regression test cases to cover all branches (the prior designed test suite was simply an overarching simple coverage of the positive path) </p>
   
-    <div className="problem-cards">
-    <article className="card problem-card flow">
-      <span className="problem-card__number">01</span>
-      <h3 className="type-subtitle">Create clean data.</h3>
-      <p>Capture organisational context at the point of creation instead of relying on users to correct visibility later.</p>
-    </article>
-    <article className="card problem-card flow">
-      <span className="problem-card__number">02</span>
-      <h3 className="type-subtitle">Respect existing records.</h3>
-      <p>Map historical profiles by a stable identifier, verify ownership and avoid brittle row-by-row assumptions.</p>
-    </article>
-    <article className="card problem-card flow">
-      <span className="problem-card__number">03</span>
-      <h3 className="type-subtitle">Preserve valid exceptions.</h3>
-      <p>Different organisational roles and tasks may require different visibility. Consistency does not mean applying one rule everywhere.</p>
-    </article>
   </div>
-  
-  
-  
+
+  <div className="editorial-section__visual">
+    <div className="problem-cards">
+      <article className="card problem-card flow">
+        <span className="problem-card__number">01</span>
+        <h3 className="type-subtitle">Title</h3>
+        <p>Lorem Ipsum</p>
+      </article>
+      <article className="card problem-card flow">
+        <span className="problem-card__number">01</span>
+        <h3 className="type-subtitle">Title</h3>
+        <p>Lorem Ipsum</p>
+      </article>
+    </div>
   </div>
 
 </section>
 
-  
 <section className="editorial-section editorial-section--research">
   <div className="editorial-section__intro flow">
-    <p className="editorial-eyebrow">05. Feature two — job profile visibility</p>
-    <h2 className="type-title">What looked like a dropdown problem was really a data ownership problem.</h2>
-    <p>Users could encounter job profiles belonging to other organisations during certain HR tasks. Besides making selection harder, this created the risk of choosing an irrelevant profile. Simply hiding items on one screen would not address the underlying issue.</p>
-    <p>The stronger solution was to establish which organisation owned each job profile, then use that relationship wherever the platform needed to determine visibility.</p>
+    <p className="editorial-eyebrow">04. Outcomes</p>
+    <h2 className="type-title">SIT/UAT Improvement: reached > 99%</h2>
+    <p>Pushing for a bigger test coverage, despite the bigger initial work load, was the better idea because it helped to raise bugs earlier on, rather than leaving it till deployment to be found. this was evident from the 1% failed test case during UAT, where there was a system limitation raised and needed external expertise for a follow up on the case </p>
+
+    <p>Regression testing was especially important as the recruiting workflow reached 20 different agencies. Each of this had their own localised flow that differed, such as where the generation of documents occured, where the asssement takes place etc. More than just ensuring the new feature worked, it was even more important to ensure that existing workflows for ineligible cases do not get impacted negatively. </p>
+
   </div>
-  <div className="research-visuals">
-    <Figure
-      src="/images/work/project-c-accenture/assets/JobProfileBeforeAfterPlaceholder.png"
-      alt="Placeholder for a before and after job profile selection mockup with fictional agencies"
-      caption="Visual placeholder — from mixed profiles to context-relevant choices; use fictional data."
-      aspect="16/9"
-    />
-  </div>
-  <div className="editorial-section__intro flow">
-    <h2 className="type-title">One ownership model, multiple downstream experiences.</h2>
-    <p>For newly created profiles, the organisation context could be captured during the request process. But existing profiles also needed to be mapped correctly. I analysed historical extracts, distinguished duplicate report rows from unique records, and helped prepare structured data for bulk updates.</p>
-    <p>The design also needed to account for shared-service users supporting more than one organisation, and for processes where existing visibility was intentionally preserved.</p>
-  </div>
-  <div className="research-visuals">
-    <Figure
-      src="/images/work/project-c-accenture/assets/DataOwnershipPlaceholder.png"
-      alt="Placeholder for diagram linking job profile creation, organisational ownership, historical data and downstream selection and reports"
-      caption="Visual placeholder — a consistent ownership attribute supports future creation, historical records, tasks and reporting."
-      aspect="16/9"
-    />
-  </div>
-  <div className="problem-cards">
-    <article className="card problem-card flow">
-      <span className="problem-card__number">01</span>
-      <h3 className="type-subtitle">Create clean data.</h3>
-      <p>Capture organisational context at the point of creation instead of relying on users to correct visibility later.</p>
-    </article>
-    <article className="card problem-card flow">
-      <span className="problem-card__number">02</span>
-      <h3 className="type-subtitle">Respect existing records.</h3>
-      <p>Map historical profiles by a stable identifier, verify ownership and avoid brittle row-by-row assumptions.</p>
-    </article>
-    <article className="card problem-card flow">
-      <span className="problem-card__number">03</span>
-      <h3 className="type-subtitle">Preserve valid exceptions.</h3>
-      <p>Different organisational roles and tasks may require different visibility. Consistency does not mean applying one rule everywhere.</p>
-    </article>
-  </div>
+  
 </section>
 
 <section className="editorial-section editorial-section--outcome">
   <div className="editorial-section__intro editorial-section__intro--storyboards flow">
-    <p className="editorial-eyebrow">06. Outcome &amp; reflections</p>
-    <h2 className="type-title">Designing for data made the changes more coherent.</h2>
-    <p>Across both enhancements, my contribution was to connect a user-facing requirement to the underlying workflows, organisational rules, historical records and testing needed to support it. The reference-check work particularly challenged me to take ownership of an incomplete handover, navigate stakeholder frustration and collaborate closely with the client team under tight capacity constraints.</p>
-    <p>This case study describes the solution design and delivery work I contributed to, not independently verified post-launch improvements. I do not have a reliable basis to claim measured reductions in processing time, errors or user effort.</p>
+    <p className="editorial-eyebrow">06. Takeaways</p>
+    <h2 className="type-title">Designing for data</h2>
+    <p>Across my enhancements, my contribution often involved connecting a user-facing requirement to the underlying workflows, organisational rules, and testing needed to support it. The reference-check work particularly challenged me to take ownership of an incomplete handover, navigate stakeholder communications and collaborate closely with the client team under tight capacity constraints.</p>
+
   </div>
   <div className="editorial-section__intro editorial-section__intro--storyboards flow">
     <h2 className="type-title">What I took away.</h2>
-    <p>In academic projects, I often had the freedom to take an idea from zero to one. In enterprise work, I learned to start from what already existed: inherited decisions, imperfect documentation, live data, organisational constraints and people who needed answers quickly.</p>
-    <p>One limitation of this work was that I could not conduct direct user research with agency users. The pain points and requirements came through the central client team, which meant I had to distinguish stakeholder-reported needs from behaviour I had personally observed. Given another iteration, I would prioritise direct observation and usability validation with the people carrying out these tasks.</p>
+    <p>In academic projects, I often had the freedom to take an idea from zero to one. In enterprise work, I learned to start from what already existed: inherited decisions, policy constraints and live data.</p>
+    <p>One limitation of this work was that I could not conduct direct user research with agency users. The pain points and requirements came through the clientele, which meant I had to distinguish stakeholder-reported needs from behaviour I had personally observed. Given another iteration, I would prioritise direct observation and usability validation with the people carrying out these tasks to get a first-person validation of the user experience.</p>
     <blockquote className="editorial-quote">
       <em>
         Good enterprise product design is not just what users see. It is how
@@ -177,13 +136,5 @@
         designed for the next person who has to maintain them.
       </em>
     </blockquote>
-  </div>
-  <div className="research-visuals">
-    <Figure
-      src="/images/work/project-c-accenture/assets/ReflectionPlaceholder.png"
-      alt="Placeholder for a closing diagram comparing visible experience with underlying data, rules and maintenance"
-      caption="Visual placeholder — the interface is only the visible layer of a maintainable product."
-      aspect="16/9"
-    />
   </div>
 </section>

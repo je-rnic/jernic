@@ -51,7 +51,7 @@ export type Work = {
 export const works: readonly Work[] = [
 	{
 		slug: "project-c-accenture",
-		title: "project-c*",
+		title: "project-a*",
 		summary:
 			"Designing for an Enterprise Human Capital Management Platform to improve user experience for recruitment workflows.",
 		roles: ["Product Analyst | Accenture"],
