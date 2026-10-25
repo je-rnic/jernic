@@ -1,181 +1,136 @@
 {/* Portfolio note: Use generic actors and sample data for all diagrams. Do not publish client screenshots, agency names, system IDs, or internal documents. */}
 
-<Statement label="the challenge" tone="dark">
+<Statement label="The challenge" tone="dark">
   How do you improve an existing enterprise <strong>product</strong> without disrupting the <strong>people, data and processes</strong> already relying on it?
 </Statement>
 
-<section className="editorial-section editorial-section--overview">
+<section className="editorial-section editorial-section--overview" aria-labelledby="overview-title">
   <div className="editorial-section__intro flow">
     <p className="editorial-eyebrow">01. Overview</p>
-    <h2 className="type-title">Within a live HR ecosystem</h2>
-    <p>At Accenture, I worked on change requests for an established HR platform in the health and public sector. Unlike an academic project, this was not a product I could design from scratch. Every improvement had to coexist with established workflows, existing records and different user groups.</p>
-    <p><em>One</em> such feature made this particularly clear: a <strong>parallel reference-check</strong> enhancement that could run alongside existing screening processes.</p>
+    <h2 id="overview-title" className="type-title">Improving a live HR platform</h2>
+    <p>At Accenture, I worked on enhancements to an established HR platform in the health and public sector. Every change had to coexist with live records, established workflows and the needs of different user groups.</p>
+    <p>This case study focuses on a <strong>parallel reference-check</strong> enhancement, designed to let recruiters initiate reference checks alongside existing screening activities.</p>
+    <p>Working with a client-side HR information systems (HRIS) analyst, I helped clarify inherited requirements, align stakeholder expectations and expand test coverage to support delivery.</p>
 
     <div className="stats">
-      <p className="type-eyebrow">*product reach:</p>
-      <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.5rem' }}>
+      <p className="type-eyebrow">Estimated platform reach</p>
+      <div>
         <p className="type-display">~2,270</p>
-        <p className="type-subtitle">monthly average users</p>
+        <p className="type-subtitle">average monthly users</p>
       </div>
-      <p><em>- based on project estimations.</em></p>
+      <p className="type-meta">Project estimate for the wider platform.</p>
     </div>
-  </div>    
+  </div>
 
   <div className="editorial-section__visual">
     <Figure
       src="/images/work/project-c-accenture/CaseStudyDisclaimer.png"
+      alt="Confidentiality note: visuals are recreated and anonymised to protect project information, based on original work and public documentation where applicable."
       aspect="16/9"
     />
   </div>
 </section>
 
-
-<section className="editorial-section editorial-section--research-evidence">
+<section className="editorial-section editorial-section--research-evidence" aria-labelledby="context-title">
   <div className="editorial-section__intro flow">
-    <p className="editorial-eyebrow">02. as-is</p>
-    <h2 className="type-title">Previously,</h2>
-    <p>Recruiters had to reach out to referees of candidates manually via external channels (email, telephone etc). The proposed alternative:</p>
-    
-    <p>Upon collection of candidates' details during the job application, recruiters can review the referees' details and <strong>"Initiate Parallel Reference Check"</strong>, which sends the emails to referees automatically and minimises most administrative effort from the recruiter's end.</p>
+    <p className="editorial-eyebrow">02. Context</p>
+    <h2 id="context-title" className="type-title">Bringing reference checks into the workflow</h2>
+    <p>Recruiters contacted candidates' referees manually through email, telephone and other external channels. The proposed enhancement brought the initiation step into the HR platform.</p>
+    <p>Once a candidate supplied referee details during their application, a recruiter could review those details and select <strong>“Initiate Parallel Reference Check”</strong>. The platform would send the reference-request emails automatically, reducing manual outreach while other screening activities continued.</p>
   </div>
-    
+
   <div className="research-visuals">
     <Figure
       src="/images/work/project-c-accenture/UIParallelReferenceCheck.png"
-      alt="UI for Recruiters initiaiting the Parallel Reference Check"
-      caption="Proposed UI for Recruiters initiaiting the Parallel Reference Check"
+      alt="Recreated recruiter interface for initiating a parallel reference check."
+      caption="Proposed interaction for initiating a parallel reference check."
       aspect="16/9"
     />
   </div>
+
   <div className="research-evidence">
     <WorkflowComparison />
   </div>
+
   <div className="flow">
-    <h2 className="type-title">The harder part however was inheriting the work.</h2>
-    <p>Taking over the feature change from an aging request meant that most of the signed-off solution design would have been outdated by now.</p>
-    <p>That gap between mismatched expectations and reality created difficult stakeholder conversations. </p>
-
-    <p>Together with a client-side HRIS analyst, we reconstructed the intended behaviour from the documentation available, established what was actually ready, and helped move the work forward.</p>
-
+    <h3 className="type-title">The first challenge was the handover</h3>
+    <p>By the time I took over, the request had been open for seven months. The signed-off design no longer gave us a reliable picture of the current implementation, creating a gap between stakeholder expectations and what was ready.</p>
+    <p>Together with the client-side HRIS analyst, I reconstructed the intended behaviour from the available documentation and clarified what still needed to be delivered.</p>
     <blockquote className="editorial-quote">
-      <em>
-        In an established product, taking ownership can mean first untangling
-        what has already been promised, built and assumed.
-      </em>
+      <p><em>Taking ownership began with untangling what had been promised, built and assumed.</em></p>
     </blockquote>
-
   </div>
-
 </section>
 
-<section className="editorial-section editorial-section--process">
+<section className="editorial-section editorial-section--process" aria-labelledby="process-title">
   <div className="editorial-section__intro flow">
     <p className="editorial-eyebrow">03. Process</p>
+    <h2 id="process-title" className="type-title">Creating a clearer path to delivery</h2>
+    <p>The request had already been open for seven months. After taking over, we moved it through a two-month delivery period by agreeing on key requirements earlier and testing alongside development.</p>
 
     <div className="stats">
-      <p className="type-title">
-        How we turned a
-      </p>
-
+      <p className="type-eyebrow">Delivery after handover</p>
       <div>
-        <p><strong>7-month</strong></p>
-        <p className="type-body">aging request into a</p>
+        <p className="type-display">2 months</p>
       </div>
-
-      <div>
-        <p className="type-display">2-month</p>
-        <p className="type-body">deployment</p>
-      </div>
+      <p className="type-meta">Following seven months as an open request.</p>
     </div>
   </div>
 
   <div className="editorial-section__visual">
     <div className="problem-cards">
       <article className="card problem-card flow">
-        <span className="problem-card__number">01</span>
-
-        <p className="type-title">
-          <strong>Moving to an Iterative Approach</strong>
-        </p>
-
-        <p>
-          Previously, late changes to questionnaire
-          requirements created repeated revisions
-          and delayed development.
-        </p>
-
-        <p>
-          By agreeing on key design requirements
-          upfront, we could reduce uncertainty and
-          move towards concurrent development and
-          shorter feedback cycles, rather than
-          relying entirely on sequential handoffs.
-        </p>
+        <span className="problem-card__number" aria-hidden="true">01</span>
+        <h3 className="type-subtitle">Agree on requirements, then iterate</h3>
+        <p>Late changes to the referee questionnaire had created repeated revisions and delayed development. Sequential handoffs made each change harder to absorb.</p>
+        <p>We agreed on the key design requirements upfront so development could proceed alongside shorter feedback and testing cycles. This gave the team a clearer basis for implementation while allowing gaps to surface earlier.</p>
       </article>
 
       <article className="card problem-card flow">
-        <span className="problem-card__number">02</span>
-
-        <p className="type-title">
-          <strong>Testing beyond the happy path</strong>
-        </p>
-
-        <p>
-          The original test suite focused largely
-          on the intended user flow, leaving
-          alternative scenarios less thoroughly covered.
-        </p>
-
-        <p>
-          I pushed for positive, negative, and
-          regression test cases to cover different
-          branches of the workflow. Testing alongside
-          development helped us identify gaps earlier,
-          rather than discovering them at the end.
-        </p>
+        <span className="problem-card__number" aria-hidden="true">02</span>
+        <h3 className="type-subtitle">Test the exceptions as well as the intended flow</h3>
+        <p>The inherited test suite concentrated on the intended user journey. It offered less coverage of invalid inputs, alternative paths and effects on existing workflows.</p>
+        <p>I pushed to expand the suite with positive, negative and regression cases. Testing alongside development helped us identify gaps while there was still time to address them.</p>
       </article>
     </div>
   </div>
 </section>
 
-
-<section className="editorial-section editorial-section--research">
+<section className="editorial-section editorial-section--research" aria-labelledby="outcomes-title">
   <div className="editorial-section__intro flow">
     <p className="editorial-eyebrow">04. Outcomes</p>
-    <h2 className="type-title">SIT/UAT Improvement: reached > 99%</h2>
-    <p>Pushing for a bigger test coverage, despite the bigger initial work load, was the better idea because it helped to raise bugs earlier on, rather than leaving it till deployment to be found. this was evident from the 1% failed test case during UAT, where there was a system limitation raised and needed external expertise for a follow up on the case </p>
-
-    <p>Regression testing was especially important as the recruiting workflow reached 20 different agencies. Each of this had their own localised flow that differed, such as where the generation of documents occured, where the asssement takes place etc. More than just ensuring the new feature worked, it was even more important to ensure that existing workflows for ineligible cases do not get impacted negatively. </p>
-
+    <h2 id="outcomes-title" className="type-title">99% of test cases passed</h2>
+    <p>Across system integration testing (SIT) and user acceptance testing (UAT), the test suite recorded a 99% pass rate. The remaining 1% exposed a system limitation that required specialist follow-up through a separate investigation.</p>
+    <p>Broader coverage helped us surface issues before deployment. The unresolved case also showed why a high pass rate still needed to be read alongside the exceptions.</p>
+    <p>Regression testing mattered because the recruitment workflow served <strong>20 agencies</strong>, with local differences in document generation and assessment stages. We checked both the new reference-check flow and existing paths, including cases ineligible for the enhancement.</p>
+    <p>These results describe delivery validation. They do not establish how much time recruiters saved or how usable the new flow was in day-to-day work.</p>
   </div>
-  
+
   <div className="research-visuals">
     <Figure
       src="/images/work/project-c-accenture/TestingStatstics.png"
-      alt="Test Suite Overview"
-      caption="Test Suite Overview"
+      alt="Illustrative testing summary: 99% of cases passed; the remaining 1% exposed a system limitation. Coverage included intended paths, invalid data and regression checks."
+      caption="Illustrative summary of test results and coverage, rather than individual test records."
       aspect="16/9"
     />
   </div>
 </section>
 
-<section className="editorial-section editorial-section--outcome">
+<section className="editorial-section editorial-section--outcome" aria-labelledby="takeaways-title">
   <div className="editorial-section__intro editorial-section__intro--storyboards flow">
-    <p className="editorial-eyebrow">5. Takeaways</p>
-    <h2 className="type-title">Designing for data</h2>
-    <p>Across my enhancements, my contribution often involved connecting a user-facing requirement to the underlying workflows, organisational rules, and testing needed to support it. The reference-check work particularly challenged me to take ownership of an incomplete handover, navigate stakeholder communications and collaborate closely with the client team under tight capacity constraints.</p>
-
-  </div>
-  <div className="editorial-section__intro editorial-section__intro--storyboards flow">
-    <h2 className="type-title">What I took away.</h2>
-    <p>In academic projects, I often had the freedom to take an idea from zero to one. In enterprise work, I learned to start from what already existed: inherited decisions, policy constraints and live data.</p>
-    <p>One limitation of this work was that I could not conduct direct user research with agency users. The pain points and requirements came through the clientele, which meant I had to distinguish stakeholder-reported needs from behaviour I had personally observed. Given another iteration, I would prioritise direct observation and usability validation with the people carrying out these tasks to get a first-person validation of the user experience.</p>
+    <p className="editorial-eyebrow">05. Takeaways</p>
+    <h2 id="takeaways-title" className="type-title">Designing for continuity</h2>
+    <p>This work taught me to treat inherited decisions, live data and organisational rules as part of the design problem. An improvement had to make sense within the workflows people already depended on.</p>
+    <p>My contribution was to connect the user-facing requirement with the behaviour and testing needed to support it. That meant clarifying an incomplete handover, navigating stakeholder conversations and working closely with the client team under tight capacity constraints.</p>
     <blockquote className="editorial-quote">
-      <em>
-        Good enterprise product design is not just what users see. It is how
-        clearly the data, rules and exceptions behind that experience are
-        designed for the next person who has to maintain them.
-      </em>
+      <p><em>In an established product, design quality includes how confidently a team can introduce change and maintain what comes next.</em></p>
     </blockquote>
+  </div>
+
+  <div className="editorial-section__intro editorial-section__intro--storyboards flow">
+    <h3 className="type-title">What I would validate next</h3>
+    <p>I could not conduct direct research with agency users. Requirements and pain points came through client stakeholders, so my understanding of the experience relied on reported needs.</p>
+    <p>In another iteration, I would observe recruiters carrying out reference checks and test the flow with them, focusing on whether they understand when to initiate a check and what happens afterwards.</p>
+    <p>I would also measure time spent initiating checks and the need for manual follow-up. Those measures would help establish whether the enhancement reduced administrative effort in practice.</p>
   </div>
 </section>
