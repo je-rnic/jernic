@@ -17,7 +17,7 @@
         <p className="type-display">~2,270</p>
         <p className="type-subtitle">monthly average users</p>
       </div>
-        <p><em>- based on project estimations.</em></p>
+      <p><em>- based on project estimations.</em></p>
     </div>
   </div>    
 
@@ -68,43 +68,76 @@
 
 </section>
 
-<section className="editorial-section">
+<section className="editorial-section editorial-section--process">
+  <div className="editorial-section__intro flow">
+    <p className="editorial-eyebrow">03. Process</p>
 
-<div className="editorial-section__intro flow">
-  <p className="editorial-eyebrow">03. Process</p>
     <div className="stats">
-      <p className="type-title">How we crunched a </p>
-      <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.5rem' }}>
+      <p className="type-title">
+        How we turned a
+      </p>
+
+      <div>
         <p><strong>7-month</strong></p>
-        <p className="type-body">aging request down into a</p>
+        <p className="type-body">aging request into a</p>
       </div>
-      <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.5rem' }}>
+
+      <div>
         <p className="type-display">2-month</p>
         <p className="type-body">deployment</p>
       </div>
     </div>
-
-
-  <p>write about what worked for the revised timeline 1. waterfall -> agile current processes were not moving because the development lifecycle still followed a legacy waterfall protocol. meaning scope creep kept happening, users could not decide on the questionnaires to be posted to referees up until the last moment -> 2. by locking design requirements early, we could move on to concurrent development and iterative testing, detect gaps early rather than waiting till the end 3. a robust test case coverage, i pushed for positive negative and regression test cases to cover all branches (the prior designed test suite was simply an overarching simple coverage of the positive path) </p>
-  
   </div>
 
   <div className="editorial-section__visual">
     <div className="problem-cards">
       <article className="card problem-card flow">
         <span className="problem-card__number">01</span>
-        <h3 className="type-subtitle">Title</h3>
-        <p>Lorem Ipsum</p>
+
+        <p className="type-title">
+          <strong>Moving to an Iterative Approach</strong>
+        </p>
+
+        <p>
+          Previously, late changes to questionnaire
+          requirements created repeated revisions
+          and delayed development.
+        </p>
+
+        <p>
+          By agreeing on key design requirements
+          upfront, we could reduce uncertainty and
+          move towards concurrent development and
+          shorter feedback cycles, rather than
+          relying entirely on sequential handoffs.
+        </p>
       </article>
+
       <article className="card problem-card flow">
-        <span className="problem-card__number">01</span>
-        <h3 className="type-subtitle">Title</h3>
-        <p>Lorem Ipsum</p>
+        <span className="problem-card__number">02</span>
+
+        <p className="type-title">
+          <strong>Testing beyond the happy path</strong>
+        </p>
+
+        <p>
+          The original test suite focused largely
+          on the intended user flow, leaving
+          alternative scenarios less thoroughly covered.
+        </p>
+
+        <p>
+          I pushed for positive, negative, and
+          regression test cases to cover different
+          branches of the workflow. Testing alongside
+          development helped us identify gaps earlier,
+          rather than discovering them at the end.
+        </p>
       </article>
     </div>
   </div>
-
 </section>
+
 
 <section className="editorial-section editorial-section--research">
   <div className="editorial-section__intro flow">
@@ -116,6 +149,14 @@
 
   </div>
   
+  <div className="research-visuals">
+    <Figure
+      src="/images/work/project-c-accenture/TestingStatstics.png"
+      alt="Test Suite Overview"
+      caption="Test Suite Overview"
+      aspect="16/9"
+    />
+  </div>
 </section>
 
 <section className="editorial-section editorial-section--outcome">

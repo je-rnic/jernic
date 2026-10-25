@@ -852,6 +852,15 @@
 	.editorial-section__intro .stats {
 		margin-top: var(--space-7);
 	}
+	.stats {
+		display: grid;
+		gap: var(--space-2);
+	}
+	.stats > div {
+		display: flex;
+		align-items: baseline;
+		gap: var(--space-2);
+	}
 	.research-task-list {
 		max-width: 34rem;
 		margin-top: var(--space-3);
@@ -1064,6 +1073,26 @@
 			grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
 			gap: clamp(3rem, 8vw, 8rem);
 			align-items: start;
+		}
+		.editorial-section--process {
+			grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+		}
+		.editorial-section--process .editorial-section__intro {
+			grid-column: 2;
+			grid-row: 1;
+		}
+		.editorial-section--process .editorial-section__visual {
+			grid-column: 1;
+			grid-row: 1;
+			margin-top: 0;
+		}
+		.editorial-section--process .problem-cards {
+			margin-top: 0;
+			grid-template-columns: 1fr;
+			gap: var(--space-5);
+		}
+		.editorial-section--process .problem-card {
+			min-height: 0;
 		}
 		.editorial-section__visual,
 		.problem-cards,
