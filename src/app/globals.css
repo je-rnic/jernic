@@ -898,6 +898,9 @@
 	.research-evidence .editorial-quote {
 		margin-top: 0;
 	}
+	.editorial-section__follow-up {
+		margin-top: var(--space-7);
+	}
 	.research-evidence__primary {
 		display: grid;
 		gap: var(--space-5);
@@ -1101,6 +1104,9 @@
 		.research-visuals,
 		.research-evidence,
 		.requirements-list {
+			margin-top: 0;
+		}
+		.editorial-section__follow-up {
 			margin-top: 0;
 		}
 		.editorial-section--research .research-visuals {

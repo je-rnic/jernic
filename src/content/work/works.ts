@@ -53,7 +53,7 @@ export const works: readonly Work[] = [
 		slug: "project-c-accenture",
 		title: "project-a*",
 		summary:
-			"Designing for an Enterprise Human Capital Management Platform to improve user experience for recruitment workflows.",
+			"Designing for an Enterprise Human Capital Management Platform to improve user experience across recruitment workflows.",
 		roles: ["Product Analyst | Accenture"],
 		accent: {
 			light: "#59376f",
