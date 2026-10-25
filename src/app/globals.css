@@ -900,6 +900,27 @@
 	.research-evidence .editorial-quote {
 		margin-top: 0;
 	}
+	.research-evidence .card {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		min-height: 15rem;
+	}
+	.research-card__icon {
+		width: 2.75rem;
+		height: 2.75rem;
+		margin-bottom: var(--space-4);
+		color: var(--accent);
+		fill: none;
+		stroke: currentColor;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		stroke-width: 1.5;
+	}
+	.research-evidence .card__title {
+		font-size: var(--fs-display);
+		line-height: var(--lh-display);
+	}
 	.editorial-section__follow-up {
 		margin-top: var(--space-7);
 	}

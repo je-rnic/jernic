@@ -7,13 +7,16 @@ export function Cards({ children }: { children: ReactNode }) {
 
 export function Card({
   title,
+  icon,
   children,
 }: {
   title: string;
+  icon?: ReactNode;
   children?: ReactNode;
 }) {
   return (
     <div className="card flow">
+      {icon}
       <p className="card__title type-title">{title}</p>
       {children}
     </div>

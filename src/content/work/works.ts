@@ -77,10 +77,10 @@ export const works: readonly Work[] = [
 	},
 	{
 		slug: "checkmate",
-		title: "CheckMate: AI-Powered News Analysis",
+		title: "CheckMate",
 		summary:
-			"Connecting a Figma design system, responsive React interfaces and Maze research to make AI news analysis easier to understand across web, Chrome and Telegram.",
-		roles: ["Design Lead", "Frontend Software Engineer"],
+			"Turning complex AI-powered news analysis into an approachable experience across web, browser, and messaging platforms. Team emerged 1st for the Dell Cloud Native Experience Award 2025.",
+		roles: ["Product Design Lead", "Frontend Software Engineer"],
 		productType: "Final Year Group Project",
 		accent: {
 			light: "#1e5edd",
@@ -89,11 +89,11 @@ export const works: readonly Work[] = [
 		start: "2024-07",
 		end: "2025-06",
 		overview: {
-			src: "/images/work/checkmate/analysis-page.png",
+			src: "/images/work/checkmate/hero.png",
 			alt: "CheckMate news article and AI analysis interface",
 		},
 		cover: {
-			src: "/images/work/checkmate/analysis-page.png",
+			src: "/images/work/checkmate/hero.png",
 			alt: "CheckMate news article and AI analysis interface",
 		},
 	},
@@ -130,6 +130,5 @@ export const works: readonly Work[] = [
 export const featuredSlugs: readonly string[] = [
 	"project-c-accenture",
 	"checkmate",
-	"project-m-accenture",
 	"2023-05-barbequeue-google-ux-certificate",
 ];
