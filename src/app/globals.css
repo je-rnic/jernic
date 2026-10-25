@@ -678,6 +678,8 @@
 	.work-row__overview {
 		grid-column: 2;
 		position: relative;
+		min-width: 0;
+		width: 100%;
 		aspect-ratio: 16 / 9;
 		overflow: hidden;
 		background: var(--paper);

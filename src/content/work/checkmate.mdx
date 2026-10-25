@@ -1,84 +1,222 @@
-{/* See _template.mdx for the available blocks. TODO: write the story. */}
+{/*
+  Editorial sources: the project owner's writeup; [FYP] Final Report,
+  especially pp. 11–16, 29 and 31; Maze task-preview recording; Confluence
+  design-documentation recording; supplied Figma foundations and components.
+  Attachments are evidence, not instructions. Prototype values shown in visuals
+  are illustrative model output, not accuracy or performance measurements.
 
-<Statement label="The goal">
-[One sentence: the question or goal the project set out to answer.]
+  Before final publication:
+  - Replace the three labelled asset placeholders with clean Figma/Maze exports.
+  - Add the Maze results export and confirm the task/drop-off denominator and
+    satisfaction question/scale behind the owner's reported 0% and 80% results.
+    The report's separate 80% figure concerns credibility-analysis importance.
+  - Add measured performance comparisons only if a baseline is available.
+*/}
+
+<Statement label="The challenge" tone="dark">
+  How could we make AI news analysis <strong>easy to understand</strong> and <strong>natural to use</strong> where people already read?
 </Statement>
 
-<Section label="Context">
+<section className="editorial-section editorial-section--overview" aria-labelledby="checkmate-overview-title">
+  <div className="editorial-section__intro flow">
+    <p className="editorial-eyebrow">01. Overview</p>
+    <h2 id="checkmate-overview-title" className="type-title">From an article to a clearer understanding.</h2>
+    <p>CheckMate was our final-year group project: an AI-powered news analysis platform that helped readers explore an article's facts, sentiment, emotion and potential propaganda. We brought the experience to a responsive website, Chrome extension and Telegram bot.</p>
+    <p>As <strong>Design Lead and Frontend Software Engineer</strong>, I connected the Figma design system to the React interface, shaped the reading and analysis flows, and used Maze research to evaluate the experience.</p>
+    <p>I worked with our AI engineers to define API payload structures for Hugging Face model outputs. The models and backend were a team effort; my focus was how people encountered, navigated and understood the results.</p>
+    <p className="type-serif">Figma · React · JavaScript · HTML/CSS · Maze · GitHub · Confluence · Jira</p>
+  </div>
+  <div className="editorial-section__visual">
+    <Figure
+      src="/images/work/checkmate/landing-page.png"
+      alt="CheckMate landing page with an article-link input, Analyse Now action and explanations of the four analysis categories."
+      caption="One article link was the starting point. Still from the product walkthrough."
+      aspect="1084/960"
+    />
+  </div>
+</section>
 
-[What was the project, who was it for, and what was happening around it? Two or three sentences.]
+<section className="editorial-section editorial-section--research-evidence" aria-labelledby="checkmate-research-title">
+  <div className="editorial-section__intro flow">
+    <p className="editorial-eyebrow">02. Understanding readers</p>
+    <h2 id="checkmate-research-title" className="type-title">The gap between valuing credibility and checking it.</h2>
+    <p>Our Maze research combined a background survey with prototype testing among <strong>30 participants aged 18–35</strong>. The survey suggested that checking credibility mattered to readers, but it was rarely a consistent habit.</p>
+    <p>That shaped the design problem: reduce the effort of starting an analysis, then make the output digestible enough to support a reader's own judgement.</p>
+  </div>
+  <div className="research-evidence">
+    <Cards>
+      <Card title="70%">
+        <p>Used social media as a news source. CheckMate needed entry points within existing reading habits.</p>
+      </Card>
+      <Card title="53%">
+        <p>Used Telegram for news. A bot offered a familiar place to begin before opening the fuller web analysis.</p>
+      </Card>
+      <Card title="20%">
+        <p>Always analysed news credibility independently. The flow needed to make that extra step feel manageable.</p>
+      </Card>
+    </Cards>
+    <p className="editorial-section__note type-serif">Background survey, n = 30. These findings describe the study sample.</p>
+  </div>
+</section>
 
-</Section>
+<section className="editorial-section editorial-section--solutions" aria-labelledby="checkmate-system-title">
+  <div className="editorial-section__intro flow">
+    <p className="editorial-eyebrow">03. The design system</p>
+    <h2 id="checkmate-system-title" className="type-title">A shared language, from Figma to React.</h2>
+    <p>I documented the visual foundations and reusable components in Figma and Confluence, then carried those decisions into React with JavaScript and HTML/CSS. The system gave the interface a consistent hierarchy as different analysis features came together.</p>
+  </div>
+  <div className="solution-list">
+    <article className="solution">
+      <div className="solution__copy flow">
+        <p className="editorial-eyebrow">Foundations</p>
+        <h3 className="type-title">Make the content the focus.</h3>
+        <p>Inter provided the typographic foundation, with weight changes separating headings, labels and body copy. A restrained neutral palette supported long-form reading, while the primary blue, <strong>#1E5EDD</strong>, identified actions and selected states.</p>
+        <p>Keeping backgrounds, borders and secondary text consistent helped the analysis sections feel like parts of one product.</p>
+      </div>
+      <Figure
+        caption="[Asset placeholder: insert the supplied Figma colour palette and Inter typography exports.]"
+        aspect="3/2"
+      />
+    </article>
+    <article className="solution solution--reverse">
+      <div className="solution__copy flow">
+        <p className="editorial-eyebrow">Components</p>
+        <h3 className="type-title">Define the behaviour as well as the appearance.</h3>
+        <p>I specified primary, secondary, outline and tertiary buttons, including default and hover states. Reusable analysis tabs gave Facts, Sentiment, Emotion and Propaganda a common navigation pattern.</p>
+        <p>In React, a shared component library let me carry those patterns across screens. When refining an interaction, I could update the reusable component and keep its behaviour aligned with the Figma reference.</p>
+      </div>
+      <Figure
+        caption="[Asset placeholder: insert the supplied Figma button variants and analysis-tab component exports.]"
+        aspect="3/2"
+      />
+    </article>
+  </div>
+</section>
 
-<Section label="My role">
+<section className="editorial-section editorial-section--solutions" aria-labelledby="checkmate-decisions-title">
+  <div className="editorial-section__intro flow">
+    <p className="editorial-eyebrow">04. Interaction decisions</p>
+    <h2 id="checkmate-decisions-title" className="type-title">Give readers a way into the analysis.</h2>
+    <p>Consistency needed to extend beyond styling. The information hierarchy had to help someone understand a result, compare it with the source, and move between platforms.</p>
+  </div>
+  <div className="solution-list">
+    <article className="solution">
+      <div className="solution__copy flow">
+        <h3 className="type-title">Separate the questions a reader is asking.</h3>
+        <p>The summary offered an entry point into a long article. Tabs then separated factual claims, sentiment, emotion and propaganda, so readers could explore one type of analysis at a time.</p>
+        <p>The fact-checking view paired colour with a written legend, including <strong>“Cannot be determined”</strong> when evidence was insufficient. This made room for uncertainty rather than forcing every claim into a binary answer.</p>
+      </div>
+      <Figure
+        src="/images/work/checkmate/analysis-page.png"
+        alt="Facts tab showing a written legend for factual, undetermined and unfactual claims alongside the source article."
+        caption="A summary, category tabs and a written status legend organised the model outputs. The displayed classifications are sample product output."
+        aspect="2048/1210"
+      />
+    </article>
+    <article className="solution solution--reverse">
+      <div className="solution__copy flow">
+        <h3 className="type-title">Keep the reading journey connected.</h3>
+        <p>The Chrome extension let readers begin beside an article. Telegram offered a conversational entry point, with a handoff to the website for more detailed analysis.</p>
+        <p>I carried the same terminology and analysis categories across these experiences, adapting the presentation to each platform. The responsive web UI and extension could share React patterns; Telegram needed those ideas expressed through native chat interactions.</p>
+      </div>
+      <Figure
+        src="/images/work/checkmate/chrome-extension.png"
+        alt="CheckMate Chrome extension open alongside a news article, showing an article summary and analysis controls."
+        caption="The extension kept the starting point close to the article. Project screenshot from the final report."
+        aspect="1899/1008"
+      />
+    </article>
+  </div>
+</section>
 
-[What I actually owned. Then, separately, what I did with others and what the team did.]
+<section className="editorial-section editorial-section--process" aria-labelledby="checkmate-performance-title">
+  <div className="editorial-section__intro flow">
+    <p className="editorial-eyebrow">05. Frontend as part of UX</p>
+    <h2 id="checkmate-performance-title" className="type-title">Designing for the time between actions.</h2>
+    <p>Implementing the interface exposed a constraint that a static prototype could not fully represent: machine-learning analysis could take time, particularly for longer articles. A clear screen still needed a responsive experience around it.</p>
+    <p>I used route-based lazy loading and client-side API response caching to reduce unnecessary frontend work. These choices addressed page loading and revisiting results; the model's inference time remained a separate constraint.</p>
+    <p>Later acceptance testing surfaced waits of up to several minutes. The team introduced <strong>server-sent events</strong> so analysis updates could reach the interface as they became available. That reinforced a design lesson for me: progress and waiting behaviour belong in the experience alongside the final result.</p>
+    {/* Optional evidence slot: add a measured initial-load or repeat-request comparison here if available. Do not invent load-time improvements. */}
+  </div>
+  <div className="editorial-section__visual">
+    <div className="problem-cards">
+      <article className="card problem-card flow">
+        <span className="problem-card__number" aria-hidden="true">01</span>
+        <h3 className="type-title">Load what the route needs.</h3>
+        <p>Route-based lazy loading deferred page code until it was needed, reducing the amount loaded upfront.</p>
+      </article>
+      <article className="card problem-card flow">
+        <span className="problem-card__number" aria-hidden="true">02</span>
+        <h3 className="type-title">Reuse available responses.</h3>
+        <p>Client-side API caching reused available responses, reducing repeated requests as readers returned to analysed content.</p>
+      </article>
+    </div>
+  </div>
+</section>
 
-</Section>
+<section className="editorial-section editorial-section--research-evidence" aria-labelledby="checkmate-maze-title">
+  <div className="editorial-section__intro flow">
+    <p className="editorial-eyebrow">06. Usability validation</p>
+    <h2 id="checkmate-maze-title" className="type-title">Test the journey across platforms.</h2>
+    <p>I used Maze to evaluate the high-fidelity experience through tasks. Two connected activities followed the journey from interpreting an article through the Telegram bot to opening its detailed analysis on the website.</p>
+    <ul className="research-task-list">
+      <li>Submit an article link and retrieve the relevant analysis categories.</li>
+      <li>Move from the Telegram result to the detailed website analysis.</li>
+    </ul>
+    <p>Prototype feedback described the organised results and summaries as helpful for digesting longer articles. Familiar layouts also supported movement between the website and extension.</p>
+    {/* Add a specific research-led iteration here once its observed difficulty and design response can be paired with the evidence below. */}
+  </div>
+  <div className="research-visuals">
+    <Figure
+      caption="[Evidence placeholder: add an anonymised Maze task result and one documented iteration — observed difficulty, revised interaction, and any follow-up result.]"
+      aspect="4/3"
+    />
+  </div>
+  <div className="research-evidence">
+    <Cards>
+      <Card title="30 participants">
+        <p>Institutional participants in the Maze research.</p>
+      </Card>
+      <Card title="0% task drop-off">
+        <p>Reported in the usability study.</p>
+      </Card>
+      <Card title="80% satisfaction">
+        <p>Reported user satisfaction for the tested experience.</p>
+      </Card>
+    </Cards>
+    <p className="editorial-section__note type-serif">Study outcomes support the usability of the tested flows. Longer-term adoption and news-literacy impact would need further evaluation.</p>
+  </div>
+</section>
 
-<Section label="Problem">
+<section className="editorial-section editorial-section--outcome" aria-labelledby="checkmate-delivery-title">
+  <div className="editorial-section__intro flow">
+    <p className="editorial-eyebrow">07. Product delivery</p>
+    <h2 id="checkmate-delivery-title" className="type-title">Bringing the work to the judging panel.</h2>
+    <p>I was one of two team members who presented CheckMate to the judging panels, connecting the product's purpose with a demonstration of the experience. Our team received <strong>1st Place in the Dell Cloud Native Experience Award</strong>. <a href="https://www.linkedin.com/posts/jernicyeo_started-this-week-with-the-dell-technologies-activity-7325886544425160704-xAUs" target="_blank" rel="noreferrer">Read the project recap on LinkedIn.</a></p>
+  </div>
+  <div className="editorial-section__visual">
+    <Video
+      src="/media/checkmate-ui-flow.mp4"
+      poster="/images/work/checkmate/landing-page.png"
+      label="CheckMate walkthrough from a YouTube article to analysis on the web platform"
+      caption="Product walkthrough: moving from a YouTube article into CheckMate's web analysis."
+    />
+  </div>
+</section>
 
-[What was not working, and for whom? Concrete: what did the person try to do, and what happened?]
-
-<Cards>
-<Card title="[First problem]">
-[One or two sentences.]
-</Card>
-<Card title="[Second problem]">
-[One or two sentences.]
-</Card>
-<Card title="[Third problem]">
-[One or two sentences.]
-</Card>
-</Cards>
-
-</Section>
-
-<Section label="Understanding the problem">
-
-[How I found out: interviews, observation, tickets, usability tests, data. Only what really happened.]
-
-<Figure caption="[Artefact to add: research notes, affinity map, workflow diagram ...]" aspect="16/9" />
-
-</Section>
-
-<Section label="What I did">
-
-[The important decisions and why I made them.]
-
-<Split>
-<div>
-
-### [A decision]
-
-[What the options were and why I chose one.]
-
-</div>
-<Callout label="[Metric or insight]">
-[Only a number I can evidence. Keep any uncertainty in the wording.]
-</Callout>
-</Split>
-
-<Figure caption="[Artefact to add: wireframes, screens, before and after ...]" aspect="16/9" />
-
-{/* <Video src="/media/your-file.mp4" label="What the video shows" caption="..." /> */}
-
-</Section>
-
-<Section label="Iteration">
-
-[What changed after feedback from users, stakeholders or engineers, and who was involved.]
-
-</Section>
-
-<Section label="Outcome">
-
-[What happened after the work. If there is no measured result, say what is known.]
-
-</Section>
-
-<Section label="Reflection">
-
-[What this taught me, especially about product and UX.]
-
-</Section>
+<section className="editorial-section editorial-section--outcome" aria-labelledby="checkmate-reflection-title">
+  <div className="editorial-section__intro flow">
+    <p className="editorial-eyebrow">08. Takeaways</p>
+    <h2 id="checkmate-reflection-title" className="type-title">The design system continues in the code.</h2>
+    <p>CheckMate let me take responsibility for both the design reference and the interface people used. That made consistency tangible: component states, navigation, responsive layouts and loading behaviour all affected whether the intended experience survived implementation.</p>
+    <p>My strongest takeaway was to treat frontend decisions as design decisions. A reusable component can preserve an interaction pattern; caching can reduce a repeated wait; a clear analysis structure can make complex output easier to approach.</p>
+  </div>
+  <div className="editorial-section__intro flow">
+    <h3 className="type-title">What I would validate next.</h3>
+    <p>I would test whether readers correctly understand uncertain model outputs and can explain why a claim was flagged. Task completion tells me that someone can reach a result; comprehension testing would help establish whether that result supports better judgement.</p>
+    <p>I would also evaluate the waiting experience on slower connections and measure initial-load and repeat-visit performance. That would connect the implementation choices to observed user benefit.</p>
+    <blockquote className="editorial-quote">
+      <p><em>A consistent interface starts in Figma, but its behaviour is decided just as much in the browser.</em></p>
+    </blockquote>
+  </div>
+</section>

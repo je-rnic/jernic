@@ -77,12 +77,25 @@ export const works: readonly Work[] = [
 	},
 	{
 		slug: "checkmate",
-		title: "CheckMate: AI-Powered News Platform",
+		title: "CheckMate: AI-Powered News Analysis",
 		summary:
-			"A capstone project on making news literacy more accessible and educational for our youth today. Team emerged 1st for the Dell Cloud Native Experience Award 2025",
-		roles: ["UI/UX Designer", "Frontend Engineer"],
-		start: "2024-06",
+			"Connecting a Figma design system, responsive React interfaces and Maze research to make AI news analysis easier to understand across web, Chrome and Telegram.",
+		roles: ["Design Lead", "Frontend Software Engineer"],
+		productType: "Final Year Group Project",
+		accent: {
+			light: "#1e5edd",
+			dark: "#8eafff",
+		},
+		start: "2024-07",
 		end: "2025-06",
+		overview: {
+			src: "/images/work/checkmate/analysis-page.png",
+			alt: "CheckMate news article and AI analysis interface",
+		},
+		cover: {
+			src: "/images/work/checkmate/analysis-page.png",
+			alt: "CheckMate news article and AI analysis interface",
+		},
 	},
 	{
 		slug: "project-m-accenture",
