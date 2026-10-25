@@ -66,7 +66,7 @@
 		--fs-subtitle: clamp(1.125rem, 1.05rem + 0.3vw, 1.25rem); /* 18 → 19 → 20 */
 		--fs-eyebrow: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem); /* 20 → 22 → 24 */
 		--fs-body: 1rem; /* 16, never smaller */
-		--fs-meta: 1rem;
+		--fs-serif: 1rem;
 		--fs-label: 0.75rem;
 
 		--lh-display: 1.05;
@@ -81,7 +81,7 @@
 		--ls-subtitle: -0.015em;
 		--ls-eyebrow: -0.02em;
 		--ls-body: -0.01em;
-		--ls-meta: 0;
+		--ls-serif: 0;
 		--ls-label: 0.08em;
 
 		/* --- Spacing: 4px base, rem so it scales with user font size -------- */
@@ -265,12 +265,12 @@
 		line-height: var(--lh-body);
 		letter-spacing: var(--ls-body);
 	}
-	.type-meta {
+	.type-serif {
 		font-family: var(--font-serif);
-		font-size: var(--fs-meta);
+		font-size: var(--fs-serif);
 		font-weight: var(--fw-regular);
 		line-height: var(--lh-small);
-		letter-spacing: var(--ls-meta);
+		letter-spacing: var(--ls-serif);
 		color: var(--ink);
 	}
 }
@@ -737,7 +737,7 @@
 		margin-top: var(--space-5);
 		max-width: var(--measure);
 	}
-	.case-meta {
+	.case-serif {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
 		gap: var(--space-5) var(--space-6);
@@ -745,19 +745,19 @@
 		padding-top: var(--space-5);
 		border-top: var(--rule-width) solid var(--divider);
 	}
-	.case-meta dt {
+	.case-serif dt {
 		font-weight: var(--fw-medium);
 		margin-bottom: var(--space-2);
 	}
-	.case-meta dd {
+	.case-serif dd {
 		margin: 0;
 	}
-	.case-meta ul {
+	.case-serif ul {
 		list-style: none;
 		padding: 0;
 	}
 	@media (min-width: 48rem) {
-		.case-meta > div + div {
+		.case-serif > div + div {
 			padding-inline-start: var(--space-5);
 			border-inline-start: var(--rule-width) solid var(--divider);
 		}

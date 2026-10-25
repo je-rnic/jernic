@@ -31,7 +31,7 @@ export default function WorkRow({
         <span className="work-row__body">
           <Heading className="work-row__title type-title">{work.title}</Heading>
           <span className="work-row__summary type-subtitle">{work.summary}</span>
-          <span className="work-row__roles type-meta">
+          <span className="work-row__roles type-serif">
             <span className="visually-hidden">Role: </span>
             {work.roles.join(", ")}
           </span>

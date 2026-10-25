@@ -18,7 +18,7 @@ export default function CaseStudyHeader({ work }: { work: Work }) {
         <h1 className="type-display">{work.title}</h1>
         <p className="case-header__summary type-subtitle">{work.summary}</p>
         
-        <dl className="case-meta">
+        <dl className="case-serif">
           <div>
             <dt className="type-title">Role</dt>
             <dd className="type-body">
@@ -36,7 +36,7 @@ export default function CaseStudyHeader({ work }: { work: Work }) {
         </dl>
 
         {/* Uncomment this block to enable the work stats on the heading page
-        <dl className="case-meta">
+        <dl className="case-serif">
           {work.stat && (
             <div>
               <dt className="type-subtitle">{work.stat.label}</dt>
