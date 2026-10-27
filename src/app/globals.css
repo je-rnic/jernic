@@ -34,6 +34,39 @@
    TOKENS
    ========================================================================== */
 @layer tokens {
+	/* Animate the palette once. Every consumer inherits the same interpolated
+     colour instead of starting another transition deeper in the DOM. */
+	@property --paper {
+		syntax: "<color>";
+		inherits: true;
+		initial-value: #fafafa;
+	}
+	@property --ink {
+		syntax: "<color>";
+		inherits: true;
+		initial-value: #1b1b19;
+	}
+	@property --toggle {
+		syntax: "<color>";
+		inherits: true;
+		initial-value: #e6e3db;
+	}
+	@property --divider {
+		syntax: "<color>";
+		inherits: true;
+		initial-value: #aeacaa;
+	}
+	@property --accent {
+		syntax: "<color>";
+		inherits: true;
+		initial-value: #5267b2;
+	}
+	@property --surface-muted {
+		syntax: "<color>";
+		inherits: true;
+		initial-value: #f0f0ee;
+	}
+
 	:root {
 		/* Light follows the OS until the visitor picks a theme.
        The beforeInteractive theme-init.js script then pins data-theme on <html>. */
@@ -113,7 +146,7 @@
 		/* --- Theme toggle -------------------------------------------------- */
 		--toggle-size: 1.75rem; /* 28 */
 		--toggle-pad: 0.125rem; /*  2 */
-		--theme-fade: 500ms ease;
+		--theme-fade: 200ms ease-out;
 
 		/* --- Entrances: matched to the original landing page --------------- */
 		--entrance-ease: cubic-bezier(0.23, 1, 0.32, 1);
@@ -216,15 +249,21 @@
 			scroll-behavior: auto;
 		}
 
-		/* Colour fade on theme change. `theme-ready` is added after first paint
-       so the page doesn't animate in from the wrong theme on load. */
-		html.theme-ready *,
-		html.theme-ready *::before,
-		html.theme-ready *::after {
+		/* `theme-ready` prevents a fade from the wrong theme on first paint.
+       Transition tokens at their source, never inherited text/currentColor. */
+		html.theme-ready {
 			transition:
-				background-color var(--theme-fade),
-				color var(--theme-fade),
-				border-color var(--theme-fade);
+				--paper var(--theme-fade),
+				--ink var(--theme-fade),
+				--toggle var(--theme-fade),
+				--divider var(--theme-fade),
+				--accent var(--theme-fade),
+				--surface-muted var(--theme-fade);
+		}
+
+		/* Case studies define their own accent palette on the article. */
+		html.theme-ready .case-study {
+			transition: --accent var(--theme-fade);
 		}
 	}
 }
@@ -666,14 +705,11 @@
 
 	@media (prefers-reduced-motion: no-preference) {
 		.theme-toggle__knob {
-			transition:
-				transform 220ms ease,
-				background-color var(--theme-fade);
+			transition: transform var(--theme-fade);
 		}
 		.theme-toggle__icon {
-			transition:
-				opacity 220ms ease,
-				stroke var(--theme-fade);
+			/* currentColor already follows the button's colour fade. */
+			transition: opacity var(--theme-fade);
 		}
 	}
 

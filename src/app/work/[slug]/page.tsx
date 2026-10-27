@@ -47,7 +47,7 @@ export default async function CaseStudyPage({ params }: Props) {
 
   return (
     <main id="main">
-      <article style={caseStudyStyle}>
+      <article className="case-study" style={caseStudyStyle}>
         <CaseStudyHeader work={work} />
         <Story />
       </article>
