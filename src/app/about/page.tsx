@@ -10,7 +10,7 @@ export default function AboutPage() {
   return (
     <main id="main">
       <header className="page-header container">
-        <h1 className="type-display">{aboutPage.title}</h1>
+        <h1 className="type-display type-eyebrow">{aboutPage.title}</h1>
       </header>
 
       <div className="about container">

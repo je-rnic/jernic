@@ -22,11 +22,13 @@ export const allWorksPage = {
 } as const;
 
 export const aboutPage = {
-	title: "About",
+	title: "boy ah, this one how to use ah?",
 	paragraphs: [
-		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-		"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-		"Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Aenean lacinia bibendum nulla sed consectetur.",
+		"growing up, my parents often thought my studying of 'computing' somehow meant i could solve everything - from broken wifi connections, an email inbox out of storage, or how to navigate websites that simply had too much advertisements plastered over it.",
+		"somewhere along the way i realised that my passion for tech wasn't necessarily about how technically impressive something could be, but rather it was when i see someone skimming through it with ease, following hidden UI nudges, and actually coming back wanting to use it again.",
+		"being a creative from young (see Yeo, 2007) came with its own set of foibles: i've always been kaypoh (intrigued) by the visual touches that guide our environment and culture -> the yellow tactile pavements at our mrts that aid our visually handicapped, the sloped roofs that keep our heavy rains out, and the trumpet flowers that bloom every spring and autumn",
+		"a part of me likes to think that the beauty in design is the beauty of our people. and it's why design and AI cannot coexist without first understanding the people needed beneath it. i'm particularly drawn to products that serve to use AI as a form of supplement rather than one that overwrites it.",
+		"outside of my regular rigour, i dwelve back into my retirement hobbies and you can find me sipping on a hot oat latte people-watching by a window seat. "
 	],
 } as const;
 
