@@ -57,6 +57,10 @@ export default function SiteFooter() {
             ))}
           </ul>
         </nav>
+        <div className="site-footer__details type-label">
+          <p>Based in Singapore</p>
+          <p>© 2026 Copyright. All rights reserved.</p>
+        </div>
       </div>
     </footer>
   );

@@ -323,6 +323,14 @@
 		letter-spacing: var(--ls-serif);
 		color: var(--ink);
 	}
+	.type-label {
+		font-family: var(--font-sans);
+		font-size: var(--fs-label);
+		font-weight: var(--fw-medium);
+		line-height: var(--lh-small);
+		letter-spacing: var(--ls-label);
+		text-transform: uppercase;
+	}
 }
 
 /* ==========================================================================
@@ -598,6 +606,12 @@
 		flex-wrap: wrap;
 		gap: var(--space-3);
 		margin-top: var(--space-6);
+	}
+	.site-footer__details {
+		display: grid;
+		gap: var(--space-3);
+		margin-top: var(--space-6);
+		color: color-mix(in srgb, var(--ink) 65%, var(--paper));
 	}
 	.site-footer__link {
 		display: inline-flex;
