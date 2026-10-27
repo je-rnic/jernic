@@ -401,12 +401,51 @@
 		margin-top: var(--space-4);
 		max-width: var(--measure);
 	}
+
+	.about {
+		display: grid;
+		gap: var(--space-7);
+		align-items: start;
+		padding-bottom: var(--space-9);
+	}
+	.about__copy {
+		max-width: var(--measure);
+	}
+	@media (min-width: 48rem) {
+		.about {
+			grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+			gap: var(--space-9);
+		}
+	}
 }
 
 /* ==========================================================================
    COMPONENTS
    ========================================================================== */
 @layer components {
+	/* --- About --------------------------------------------------------- */
+	.about__portrait {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: var(--space-3);
+		width: 100%;
+		aspect-ratio: 4 / 5;
+		background: var(--surface-muted);
+		border: var(--rule-width) dashed var(--divider);
+		border-radius: var(--radius-media);
+	}
+	.about__portrait-icon {
+		width: var(--space-7);
+		height: var(--space-7);
+		fill: none;
+		stroke: currentColor;
+		stroke-width: 1.5;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+	}
+
 	/* Animate after load, including images already cached before hydration. */
 	.fade-image {
 		opacity: 0;
