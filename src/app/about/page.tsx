@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { aboutPage } from "@/content/site";
+import FadeImage from "@/components/FadeImage";
 
 export const metadata: Metadata = {
   title: aboutPage.title,
@@ -21,21 +22,13 @@ export default function AboutPage() {
           ))}
         </div>
 
-        <div
-          className="about__portrait"
-          role="img"
-          aria-label="Portrait photo placeholder"
-        >
-          <svg
-            className="about__portrait-icon"
-            viewBox="0 0 48 48"
-            aria-hidden="true"
-          >
-            <rect x="5" y="5" width="38" height="38" rx="4" />
-            <circle cx="18" cy="18" r="4" />
-            <path d="m5 34 11-10 9 8 8-7 10 9" />
-          </svg>
-          <span className="type-serif" aria-hidden="true">Photo placeholder</span>
+        <div className="about__portrait">
+          <FadeImage
+            src="/images/background-cropped.jpg"
+            alt="Portrait of Jernic outdoors"
+            fill
+            sizes="(min-width: 768px) 40vw, 100vw"
+          />
         </div>
       </div>
     </main>

@@ -433,27 +433,16 @@
 @layer components {
 	/* --- About --------------------------------------------------------- */
 	.about__portrait {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		gap: var(--space-3);
+		position: relative;
 		width: 100%;
 		aspect-ratio: 4 / 5;
 		background: var(--surface-muted);
-		border: var(--rule-width) dashed var(--divider);
 		border-radius: var(--radius-media);
+		overflow: hidden;
 	}
-	.about__portrait-icon {
-		width: var(--space-7);
-		height: var(--space-7);
-		fill: none;
-		stroke: currentColor;
-		stroke-width: 1.5;
-		stroke-linecap: round;
-		stroke-linejoin: round;
+	.about__portrait img {
+		object-fit: cover;
 	}
-
 	/* Animate after load, including images already cached before hydration. */
 	.fade-image {
 		opacity: 0;

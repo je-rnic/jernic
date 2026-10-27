@@ -97,6 +97,7 @@ export const works: readonly Work[] = [
 			alt: "CheckMate news article and AI analysis interface",
 		},
 	},
+	/*
 	{
 		slug: "project-m-accenture",
 		title: "project-m*",
@@ -106,10 +107,11 @@ export const works: readonly Work[] = [
 		start: "2024-05",
 		end: "2024-08",
 	},
+	*/
 	{
-		slug: "2023-05-barbequeue-google-ux-certificate",
+		slug: "barbequeue-google-ux-certificate",
 		storyPath:
-			"2023-05-barbequeue-google-ux-certificate/2023-05-barbequeue-google-ux-certificate",
+			"barbequeue-google-ux-certificate/barbequeue-google-ux-certificate",
 		title: "BarbeQueue",
 		summary:
 			"A mobile UX case study for simplifying BBQ food ordering.",
@@ -121,8 +123,8 @@ export const works: readonly Work[] = [
 		},
 		start: "2023-05",
 		end: "2023-08",
-		overview: { src: "/images/work/2023-05-barbequeue-google-ux-certificate/assets/Hero.png", alt: "BarbeQueue application concept" },
-		cover: { src: "/images/work/2023-05-barbequeue-google-ux-certificate/assets/Hero.png", alt: "BarbeQueue application concept" },
+		overview: { src: "/images/work/barbequeue-google-ux-certificate/assets/Hero.png", alt: "BarbeQueue application concept" },
+		cover: { src: "/images/work/barbequeue-google-ux-certificate/assets/Hero.png", alt: "BarbeQueue application concept" },
 	},
 ];
 
@@ -130,5 +132,5 @@ export const works: readonly Work[] = [
 export const featuredSlugs: readonly string[] = [
 	"project-c-accenture",
 	"checkmate",
-	"2023-05-barbequeue-google-ux-certificate",
+	"barbequeue-google-ux-certificate",
 ];
