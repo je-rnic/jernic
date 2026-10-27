@@ -1,4 +1,4 @@
-import Image from "next/image";
+import FadeImage from "./FadeImage";
 import { heroImage } from "@/content/site";
 
 export default function Hero() {
@@ -21,7 +21,7 @@ export default function Hero() {
 
       <div className="hero__media">
         {heroImage ? (
-          <Image
+          <FadeImage
             src={heroImage.src}
             alt={heroImage.alt}
             width={heroImage.width}

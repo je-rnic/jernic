@@ -1,4 +1,4 @@
-import Image from "next/image";
+import FadeImage from "../FadeImage";
 import type { Work } from "@/content/work/works";
 import { formatPeriod, yearOf } from "@/content/work/queries";
 import BackButton from "../BackButton";
@@ -50,7 +50,7 @@ export default function CaseStudyHeader({ work }: { work: Work }) {
 
       <div className="hero__media">
         {work.cover ? (
-          <Image
+          <FadeImage
             src={work.cover.src}
             alt={work.cover.alt}
             fill

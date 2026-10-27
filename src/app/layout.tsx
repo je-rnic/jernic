@@ -3,6 +3,7 @@ import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import SmoothScrollInitializer from "@/components/SmoothScrollInitializer";
 import { site } from "@/content/site";
 
 import "./globals.css";
@@ -21,6 +22,9 @@ export default function RootLayout({
 		<html lang="en" suppressHydrationWarning>
 			<head>
 				<Script src="/theme-init.js" strategy="beforeInteractive" />
+				<noscript>
+					<style>{".fade-image { opacity: 1 !important; }"}</style>
+				</noscript>
 				<link
 					rel="preload"
 					href="/fonts/Inter-latin-wght-normal.woff2"
@@ -37,6 +41,7 @@ export default function RootLayout({
 				/>
 			</head>
 			<body>
+				<SmoothScrollInitializer />
 				<a className="skip-link" href="#main">
 					Skip to content
 				</a>

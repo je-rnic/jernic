@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import FadeImage from "./FadeImage";
 import type { Work } from "@/content/work/works";
 
 /**
@@ -38,7 +38,7 @@ export default function WorkRow({
         </span>
         <span className="work-row__overview">
           {work.overview ? (
-            <Image
+            <FadeImage
               src={work.overview.src}
               alt={work.overview.alt}
               fill

@@ -114,6 +114,12 @@
 		--toggle-size: 1.75rem; /* 28 */
 		--toggle-pad: 0.125rem; /*  2 */
 		--theme-fade: 500ms ease;
+
+		/* --- Entrances: matched to the original landing page --------------- */
+		--entrance-ease: cubic-bezier(0.23, 1, 0.32, 1);
+		--entrance-duration: 700ms;
+		--entrance-delay: 80ms;
+		--image-fade-duration: 900ms;
 	}
 
 	:root[data-theme="light"] {
@@ -203,6 +209,11 @@
 	@media (prefers-reduced-motion: no-preference) {
 		html {
 			scroll-behavior: smooth;
+		}
+
+		/* Locomotive owns smoothing while active; CSS is the native fallback. */
+		html.lenis {
+			scroll-behavior: auto;
 		}
 
 		/* Colour fade on theme change. `theme-ready` is added after first paint
@@ -357,6 +368,63 @@
    COMPONENTS
    ========================================================================== */
 @layer components {
+	/* Animate after load, including images already cached before hydration. */
+	.fade-image {
+		opacity: 0;
+	}
+	.fade-image[data-fade-ready] {
+		opacity: 1;
+	}
+	@media (prefers-reduced-motion: no-preference) {
+		.fade-image[data-fade-ready] {
+			animation: image-in var(--image-fade-duration) var(--entrance-ease) backwards;
+		}
+
+		.landing .hero__text,
+		.landing__bar > p,
+		.landing__bar > .arrow-link {
+			--entrance-offset: 22px;
+			animation: landing-in var(--entrance-duration) var(--entrance-ease)
+				var(--entrance-delay) backwards;
+		}
+		.landing__bar > p {
+			animation-delay: calc(var(--entrance-delay) + 260ms);
+		}
+		.landing__bar > .arrow-link {
+			--entrance-offset: 10px;
+			animation-delay: calc(var(--entrance-delay) + 450ms);
+		}
+		/* Keyboard focus must never wait for an entrance animation. */
+		.landing__bar > .arrow-link:focus-visible {
+			opacity: 1 !important;
+			transform: none !important;
+		}
+	}
+	@media (prefers-reduced-motion: reduce) {
+		.fade-image {
+			opacity: 1;
+			transition: none;
+		}
+	}
+	@keyframes landing-in {
+		from {
+			opacity: 0;
+			transform: translate3d(0, var(--entrance-offset), 0);
+		}
+		to {
+			opacity: 1;
+			transform: translate3d(0, 0, 0);
+		}
+	}
+	@keyframes image-in {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
 	.visually-hidden {
 		position: absolute;
 		width: 1px;

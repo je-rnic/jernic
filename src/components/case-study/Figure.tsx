@@ -1,4 +1,4 @@
-import Image from "next/image";
+import FadeImage from "../FadeImage";
 
 /**
  * Image with caption. No pixel size needed: give an `aspect` ("16/9", "4/3")
@@ -25,7 +25,7 @@ export default function Figure({
     <figure className="figure">
       <div className="figure__media" style={{ aspectRatio: aspect }}>
         {src ? (
-          <Image
+          <FadeImage
             src={src}
             alt={alt}
             fill
