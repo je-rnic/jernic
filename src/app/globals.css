@@ -983,7 +983,7 @@
 		padding-block: clamp(5rem, 8vw, 8rem);
 	}
 	.editorial-section:not(.editorial-section--overview) {
-		border-top: 2px solid var(--accent);
+		border-top: 2px solid var(--divider);
 	}
 	.editorial-section__intro {
 		max-width: 30rem;
@@ -1168,7 +1168,7 @@
 	.problem-card__number {
 		display: block;
 		margin-bottom: var(--space-7);
-		color: var(--rule);
+		color: var(--ink);
 		font-family: var(--font-serif);
 	}
 	.problem-card h3 {
