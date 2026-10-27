@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main id="main">
-      <header className="page-header container">
-        <h1 className="type-display type-eyebrow">{aboutPage.title}</h1>
+      <header className="page-header about-header container">
+        <h1 className="type-eyebrow about-header__title">{aboutPage.title}</h1>
       </header>
 
       <div className="about container">
@@ -24,10 +24,10 @@ export default function AboutPage() {
 
         <div className="about__portrait">
           <FadeImage
-            src="/images/background-cropped.jpg"
+            src="/images/background.jpg"
             alt="Portrait of Jernic outdoors"
             fill
-            sizes="(min-width: 768px) 40vw, 100vw"
+            sizes="(min-width: 90rem) 39rem, (min-width: 48rem) 45vw, 100vw"
           />
         </div>
       </div>
