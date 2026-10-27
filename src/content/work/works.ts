@@ -84,7 +84,7 @@ export const works: readonly Work[] = [
 		productType: "Final Year Group Project",
 		accent: {
 			light: "#1e5edd",
-			dark: "#8eafff",
+			dark: "#538cf9",
 		},
 		start: "2024-07",
 		end: "2025-06",

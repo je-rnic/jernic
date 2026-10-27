@@ -41,7 +41,10 @@ function parts(value: YearMonth): { year: number; month: string } {
 }
 
 export function yearOf(work: Work): string {
-  return String(parts(work.start).year);
+  if (!work.end || work.end === "present") {
+    return String(parts(work.start).year);
+  }
+  return String(parts(work.end).year);
 }
 
 /** "Nov 2023", "Nov – Dec 2023", "Nov 2023 – Mar 2024", "Nov 2023 – Present". */
