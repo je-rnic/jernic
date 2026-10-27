@@ -24,11 +24,11 @@ export const allWorksPage = {
 export const aboutPage = {
 	title: "boy ah, this one how to use ah?",
 	paragraphs: [
-		"growing up, my parents often thought my studying of 'computing' somehow meant i could solve everything - from broken wifi connections, an email inbox out of storage, or how to navigate websites that simply had too much advertisements plastered over it.",
+		"growing up, my parents often thought my studying of 'computing' somehow meant i could solve everything - from broken wifi connections, an email inbox out of storage, to navigating websites that simply had too much advertisements plastered over it.",
 		"somewhere along the way i realised that my passion for tech wasn't necessarily about how technically impressive something could be, but rather it was when i see someone skimming through it with ease, following hidden UI nudges, and actually coming back wanting to use it again.",
 		"being a creative from young (see Yeo, 2007) came with its own set of foibles: i've always been kaypoh (intrigued) by the visual touches that guide our environment and culture -> the yellow tactile pavements at our mrts that aid our visually handicapped, the sloped roofs that keep our heavy rains out, and the trumpet flowers that bloom every spring and autumn",
 		"a part of me likes to think that the beauty in design is the beauty of our people. and it's why design and AI cannot coexist without first understanding the people needed beneath it. i'm particularly drawn to products that serve to use AI as a form of supplement rather than one that overwrites it.",
-		"outside of my regular rigour, i dwelve back into my retirement hobbies and you can find me sipping on a hot oat latte people-watching by a window seat. "
+		"outside of my regular rigour, i dwelve back into my retirement hobbies and you can find me sipping on a hot oat latte people-watching by the window seat."
 	],
 } as const;
 
@@ -37,9 +37,11 @@ export const heroImage: {
 	alt: string;
 	width: number;
 	height: number;
+	loading: string;
 } = {
 	src: "/images/background.jpg",
 	alt: "Background image",
 	width: 3024,
 	height: 2005,
+	loading: "eager"
 };
