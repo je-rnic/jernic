@@ -426,7 +426,6 @@
 		--flow-space: clamp(var(--space-5), 2.5vw, var(--space-6));
 		max-width: var(--measure);
 		min-width: 0;
-		padding-block: var(--space-2);
 	}
 	@media (min-width: 48rem) {
 		.about {
@@ -442,7 +441,7 @@
 @layer components {
 	/* --- About --------------------------------------------------------- */
 	.about-header__title {
-		font-size: var(--fs-display);
+		font-size: var(--fs-title);
 		text-wrap: balance;
 	}
 	.about__copy > p {
@@ -450,14 +449,19 @@
 	}
 	.about__portrait {
 		position: relative;
+		order: -1;
 		width: 100%;
-		aspect-ratio: 5 / 4;
-		background: var(--surface-muted);
+		aspect-ratio: 3 / 2;
 		border-radius: var(--radius-media);
 		overflow: hidden;
 	}
 	.about__portrait img {
 		object-fit: cover;
+	}
+	@media (min-width: 48rem) {
+		.about__portrait {
+			order: initial;
+		}
 	}
 	/* Animate after load, including images already cached before hydration. */
 	.fade-image {
@@ -637,6 +641,10 @@
 		stroke-linejoin: round;
 	}
 	.site-footer__icon--linkedin {
+		fill: currentColor;
+		stroke: none;
+	}
+	.site-footer__icon--substack {
 		fill: currentColor;
 		stroke: none;
 	}

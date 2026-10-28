@@ -15,6 +15,7 @@ export default function AboutPage() {
 
       <div className="about container">
         <div className="about__copy flow">
+          <h2 className="type-display">a little about me</h2>
           {aboutPage.paragraphs.map((paragraph, index) => (
             <p key={paragraph} className="type-body">
               {paragraph}
