@@ -20,10 +20,10 @@
 <section className="editorial-section editorial-section--overview" aria-labelledby="checkmate-overview-title">
   <div className="editorial-section__intro flow">
     <p className="editorial-eyebrow">01. Overview</p>
-    <h2 id="checkmate-overview-title" className="type-title">From an article to a clearer understanding.</h2>
-    <p>CheckMate was our final-year group project: an AI-powered news analysis platform that helped readers explore an article's facts, sentiment, emotion and potential propaganda. We brought the experience to a responsive website, Chrome extension and Telegram bot.</p>
-    <p>As the <strong>Design Lead and Frontend Software Engineer</strong> on the team, I worked mostly on connecting the Figma design system to the React interface, shaping reading and analysis flows, and utilising Maze-structured research to evaluate the experience.</p>
-    <p>I also worked with our AI engineers to define API payload structures for Hugging Face model outputs. The models and backend were a team effort; my focus was how people encountered, navigated and understood the results.</p>
+    <h2 id="checkmate-overview-title" className="type-title">From an article to a clearer understanding</h2>
+    <p>CheckMate was my final-year group project: an AI-powered news analysis tool that helped readers judge an article's facts, sentiment, emotion and potential propaganda techniques being used. We then expanded this flow across a web app, Chrome extension and Telegram bot.</p>
+    <p>As the <strong>Design Lead and Frontend Software Engineer</strong> on the team, I worked mostly on building up the Figma design system together with the React interface, shaping reading and analysis flows, and utilising Maze-structured research to evaluate the experience.</p>
+    <p>I also worked with our AI engineers to define API payload structures for Hugging Face model outputs. The models and backend were then a shared effort; my focus mainly was how people encountered, navigated and understood the results.</p>
     <div className="stats">
       <p className="type-eyebrow">| tools:</p>
       <p className="type-serif">Figma · React · JavaScript · HTML/CSS · Maze · GitHub · Confluence · Jira</p>
@@ -35,6 +35,7 @@
       src="/media/checkmate-ui-flow.mp4"
       label="CheckMate walkthrough from a YouTube article to analysis on the web platform"
       caption="Product walkthrough: moving from a YouTube article into CheckMate's web analysis."
+      autoPlay
     />
   </div>
 
@@ -43,14 +44,50 @@
 <section className="editorial-section editorial-section--research-evidence" aria-labelledby="checkmate-research-title">
   <div className="editorial-section__intro flow">
     <p className="editorial-eyebrow">02. Understanding readers</p>
-    <h2 id="checkmate-research-title" className="type-title">The gap between valuing credibility and checking it. add the visual from our canva slide to here to show background research</h2>
-    <p>Our initial Maze research combined a background survey with prototype testing among <strong>30 participants aged 18–35</strong>. The survey suggested that checking credibility mattered to readers, but it was rarely a consistent habit.</p>
+    <h2 id="checkmate-research-title" className="type-title">The gap between valuing credibility and checking it.</h2>
+
+    <p>Our initial Maze research combined a background survey with prototype testing among <strong>31 participants aged 18–35</strong>. The survey suggested that checking credibility mattered to readers, but it was rarely a consistent habit.</p>
     <p>That shaped the design problem: reduce the effort of starting an analysis, then make the output digestible enough to support a reader's own judgement.</p>
   </div>
+
+    <Figure
+      src="/images/work/checkmate/UserResearchHowOften.png"
+      alt="Background survey results showing how often 31 participants read news articles online"
+      caption="Background survey: Frequency of online news reading among 31 participants."
+      aspect="16/9"
+    />
+    
+
   <div className="research-evidence">
+    <Card
+      title="68%"
+      icon={
+        <svg className="research-card__icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" />
+          <path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" />
+        </svg>
+      }
+    >
+      <p>got their daily headlines from <strong>Social Media</strong>. CheckMate needed entry points within existing reading habits.</p>
+    </Card>
+    <Figure
+      src="/images/work/checkmate/UserResearchHowOften.png"
+      alt="Background survey results showing how often 31 participants read news articles online"
+      caption="Background survey: Frequency of online news reading among 31 participants."
+      aspect="16/9"
+    />
+    
     <Cards>
       <Card
-        title="70%"
+        title="68%"
         icon={
           <svg className="research-card__icon"
             viewBox="0 0 24 24"
@@ -66,8 +103,9 @@
           </svg>
         }
       >
-        <p>got their daily headlines from <strong>social media</strong>. CheckMate needed entry points within existing reading habits.</p>
+        <p>got their daily headlines from <strong>Social Media</strong>. CheckMate needed entry points within existing reading habits.</p>
       </Card>
+      
       <Card
         title="53%"
         icon={
@@ -229,7 +267,7 @@
   </div>
   <div className="research-evidence">
     <Cards>
-      <Card title="30 participants">
+      <Card title="31 participants">
         <p>Institutional participants in the Maze research.</p>
       </Card>
       <Card title="0% task drop-off">
