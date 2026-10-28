@@ -79,7 +79,7 @@ export const works: readonly Work[] = [
 		slug: "checkmate",
 		title: "CheckMate",
 		summary:
-			"Turning complex AI-powered news analysis into an approachable experience across web, browser, and messaging platforms. Team emerged 1st for the Dell Cloud Native Experience Award 2025.",
+			"Turning complex AI-powered news analysis into an approachable experience. Built for browser, web-extension and messaging platforms. Team emerged 1st for the Dell Cloud Native Experience Award 2025.",
 		roles: ["Product Design Lead", "Frontend Software Engineer"],
 		productType: "Final Year Group Project",
 		accent: {
