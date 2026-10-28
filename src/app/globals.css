@@ -1076,6 +1076,24 @@
 		align-items: flex-start;
 		min-height: 15rem;
 	}
+	.research-evidence--paired {
+		gap: var(--space-7);
+	}
+	.research-evidence__row {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr);
+		gap: var(--space-5);
+		align-items: center;
+	}
+	.research-evidence__row > * {
+		min-width: 0;
+	}
+	@media (min-width: 48rem) {
+		.research-evidence__row {
+			grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+			gap: var(--space-6);
+		}
+	}
 	.research-card__icon {
 		width: 2.75rem;
 		height: 2.75rem;

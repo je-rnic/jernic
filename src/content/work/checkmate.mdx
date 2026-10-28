@@ -50,42 +50,8 @@
     <p>That shaped the design problem: reduce the effort of starting an analysis, then make the output digestible enough to support a reader's own judgement.</p>
   </div>
 
-    <Figure
-      src="/images/work/checkmate/UserResearchHowOften.png"
-      alt="Background survey results showing how often 31 participants read news articles online"
-      caption="Background survey: Frequency of online news reading among 31 participants."
-      aspect="16/9"
-    />
-    
-
-  <div className="research-evidence">
-    <Card
-      title="68%"
-      icon={
-        <svg className="research-card__icon"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          aria-hidden="true"
-        >
-          <path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" />
-          <path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" />
-        </svg>
-      }
-    >
-      <p>got their daily headlines from <strong>Social Media</strong>. CheckMate needed entry points within existing reading habits.</p>
-    </Card>
-    <Figure
-      src="/images/work/checkmate/UserResearchHowOften.png"
-      alt="Background survey results showing how often 31 participants read news articles online"
-      caption="Background survey: Frequency of online news reading among 31 participants."
-      aspect="16/9"
-    />
-    
-    <Cards>
+  <div className="research-evidence research-evidence--paired">
+    <div className="research-evidence__row">
       <Card
         title="68%"
         icon={
@@ -103,11 +69,16 @@
           </svg>
         }
       >
-        <p>got their daily headlines from <strong>Social Media</strong>. CheckMate needed entry points within existing reading habits.</p>
+        <p>used <strong>social media</strong> to consume news. CheckMate needed entry points within existing reading habits.</p>
       </Card>
-      
+      <Figure
+        caption="[Research visual placeholder: What online platforms do you use to consume news?]"
+        aspect="16/9"
+      />
+    </div>
+    <div className="research-evidence__row">
       <Card
-        title="53%"
+        title="77%"
         icon={
           <svg
             className="research-card__icon"
@@ -119,14 +90,21 @@
             strokeLinejoin="round"
             aria-hidden="true"
           >
-            <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
+            <path d="M12 3l8 3v6c0 5 -8 9 -8 9s-8 -4 -8 -9v-6l8 -3" />
+            <path d="M9 12l2 2l4 -4" />
           </svg>
         }
       >
-        <p>Used messaging platforms like <strong>Telegram</strong> to share and communicate news. A bot offered a familiar place to begin before opening the fuller web analysis.</p>
+        <p>considered it <strong>important to understand news articles for credibility and underlying meanings</strong> (42% + 35%). CheckMate needed to make those deeper layers easier to understand.</p>
       </Card>
+      <Figure
+        caption="[Research visual placeholder: How important do you think it is to understand news articles for credibility and underlying meanings?]"
+        aspect="16/9"
+      />
+    </div>
+    <div className="research-evidence__row">
       <Card
-        title="20%"
+        title="19%"
         icon={
           <svg
             className="research-card__icon"
@@ -145,9 +123,13 @@
           </svg>
         }
       >
-        <p>A small minority however analysed news credibility independently. The flow of CheckMate needed to make the analysis step accessible for the general user.</p>
+        <p><strong>always analysed the credibility or underlying sentiment and emotions</strong> of the news they consumed. CheckMate needed to make that analysis an accessible part of everyday reading.</p>
       </Card>
-    </Cards>
+      <Figure
+        caption="[Research visual placeholder: Do you usually analyse the credibility or underlying sentiment/emotions of news articles?]"
+        aspect="16/9"
+      />
+    </div>
     <p className="editorial-section__note type-serif">Background survey, n = 30. These findings describe the study sample.</p>
   </div>
 </section>
