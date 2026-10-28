@@ -1091,7 +1091,7 @@
 	@media (min-width: 48rem) {
 		.research-evidence__row {
 			grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
-			gap: var(--space-6);
+			column-gap: clamp(var(--space-6), 5vw, var(--space-9));
 		}
 	}
 	.research-card__icon {
@@ -1481,12 +1481,12 @@
 	.figure__video {
 		width: 100%;
 		height: auto;
-		background: var(--rule);
+		background: var(--paper);
 		border-radius: var(--radius-media);
+		box-shadow: var(--shadow-media);
 	}
 	.figure__caption {
 		margin: var(--space-3) auto 0;
-		max-width: var(--measure);
 		text-align: center;
 		font-style: italic;
 	}
