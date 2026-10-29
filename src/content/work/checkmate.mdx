@@ -145,7 +145,7 @@
     <article className="solution">
       <div className="solution__copy flow">
         <p className="editorial-eyebrow">Foundations</p>
-        <h3 className="type-title">Make the content the focus.</h3>
+        <h3 className="type-title">Typescale, Colour</h3>
         <p>Inter provided the typographic foundation, with weight changes separating headings, labels and body copy. A restrained neutral palette supported long-form reading, while the primary blue, <strong>#1E5EDD</strong>, identified actions and selected states.</p>
         <p>Keeping backgrounds, borders and secondary text consistent helped the analysis sections feel like parts of one product.</p>
       </div>
@@ -157,7 +157,7 @@
     <article className="solution solution--reverse">
       <div className="solution__copy flow">
         <p className="editorial-eyebrow">Components</p>
-        <h3 className="type-title">Define the behaviour as well as the appearance.</h3>
+        <h3 className="type-title">Interactive Elements</h3>
         <p>I specified primary, secondary, outline and tertiary buttons, including default and hover states. Reusable analysis tabs gave Facts, Sentiment, Emotion and Propaganda a common navigation pattern.</p>
         <p>In React, a shared component library let me carry those patterns across screens. When refining an interaction, I could update the reusable component and keep its behaviour aligned with the Figma reference.</p>
       </div>
@@ -166,6 +166,17 @@
         aspect="3/2"
       />
     </article>
+		<article className="solution">
+	      <div className="solution__copy flow">
+	        <p className="editorial-eyebrow">Foundations</p>
+	        <h3 className="type-title">Structure & Layouts</h3>
+	        <p>Add content here</p>
+	      </div>
+	      <Figure
+	        caption="[Asset placeholder: Tabs]"
+	        aspect="3/2"
+	      />
+	    </article>
   </div>
 </section>
 
@@ -205,9 +216,11 @@
   </div>
 </section>
 
+<p>change 04 to be on prototype testing instead w maze screenrecording </p>
+
 <section className="editorial-section editorial-section--process" aria-labelledby="checkmate-performance-title">
   <div className="editorial-section__intro flow">
-    <p className="editorial-eyebrow">05. Frontend as part of UX</p>
+    <p className="editorial-eyebrow">05. Handling server loads: Frontend decisions that supported the UX</p>
     <h2 id="checkmate-performance-title" className="type-title">Designing for the time between actions.</h2>
     <p>Implementing the interface exposed a constraint that a static prototype could not fully represent: machine-learning analysis could take time, particularly for longer articles. A clear screen still needed a responsive experience around it.</p>
     <p>I used route-based lazy loading and client-side API response caching to reduce unnecessary frontend work. These choices addressed page loading and revisiting results; the model's inference time remained a separate constraint.</p>
