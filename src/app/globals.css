@@ -1094,9 +1094,14 @@
 			column-gap: clamp(var(--space-6), 5vw, var(--space-9));
 		}
 	}
-	/* Prototype evidence uses the full editorial width, with copy beside media. */
+	/* Keep the page-width rule, with desktop content inset from its edges. */
 	.editorial-section.editorial-section--prototype-testing {
 		row-gap: var(--space-7);
+	}
+	@media (min-width: 64rem) {
+		.editorial-section--prototype-testing {
+			padding-inline: clamp(var(--space-6), 5vw, var(--space-8));
+		}
 	}
 	.editorial-section--prototype-testing .editorial-section__intro {
 		grid-column: 1 / -1;
