@@ -46,7 +46,7 @@
     <p className="editorial-eyebrow">02. Understanding readers</p>
     <h2 id="checkmate-research-title" className="type-title">The gap between valuing credibility and checking it</h2>
 
-    <p>Our initial Maze research combined a background survey with prototype testing among <strong>31 participants aged 18–35</strong>. The survey suggested that checking credibility mattered to readers, but it was rarely a consistent habit.</p>
+    <p>Our initial research started with a background survey among <strong>31 participants aged 18–35</strong>. The survey suggested that checking credibility mattered to readers, but it was rarely a consistent habit.</p>
     
   </div>
 
@@ -69,7 +69,8 @@
           </svg>
         }
         >
-        <p>got their daily headlines from <strong>Social Media</strong>platforms. CheckMate needed entry points within these existing reading habits.</p>
+        <p>got their daily headlines from <strong>Social Media</strong> platforms </p>
+        <p>CheckMate needed <em>entry points</em> within these existing reading habits.</p>
       </Card>
       <Figure
         src="/images/work/checkmate/UserResearchWhatPlatform.png"
@@ -95,7 +96,8 @@
           </svg>
         }
       >
-        <p>considered it <strong>important to understand news articles for credibility and underlying meanings</strong> (42% + 35%). CheckMate needed to make those deeper layers easier to understand.</p>
+        <p>considered it <strong>important to understand news articles</strong> for credibility and underlying meanings.</p>
+        <p>CheckMate needed to make the <em>deeper layers</em> easier to understand.</p>
       </Card>
       <Figure
         src="/images/work/checkmate/UserResearchHowImportant.png"
@@ -123,7 +125,8 @@
           </svg>
         }
       >
-        <p>yet only a <strong>small minority</strong> analysed the credibility of the news on a regular basis. CheckMate needed to make that analysis an accessible part of everyday reading.</p>
+        <p>Yet only a <strong>small minority</strong> analysed the credibility of the news on a regular basis. </p> 
+        <p>Complex,d wordy analysis was making news literacy an <em>inconvenience</em> for most.</p>
       </Card>
       <Figure
         src="/images/work/checkmate/UserResearchActuallyAnalyse.png"
@@ -132,121 +135,128 @@
     </div>
   </div>
 
-  <p>These shaped the design outline moving forward: Reduce the effort of starting an analysis, then make the output digestible enough to support a reader's own judgement.</p>
+  <p></p>
+
+  <div className="stats">
+    <p className="type-eyebrow">| scope:</p>
+    <p className="type-serif">These shaped the design outline moving forward: <strong>Reduce </strong>the effort of starting an analysis, then make the output <strong>digestible</strong> enough to support a reader's own judgement.</p> 
+  </div>
 </section>
 
 <section className="editorial-section editorial-section--solutions" aria-labelledby="checkmate-system-title">
   <div className="editorial-section__intro flow">
     <p className="editorial-eyebrow">03. The design system</p>
     <h2 id="checkmate-system-title" className="type-title">A shared visual language</h2>
-    <p>While the engineers moved on to the solution architecture, I documented and started on the visual foundations and reusable components in Figma, before building those designs into React with JavaScript and HTML/CSS. The system had to have a consistent visual hierarchy, given that the platform was to tie in 3 systems on 3 different channels.</p>
+    <p>While the engineers moved on to the solution architecture, I documented and started on the visual foundations. This meant drafting up reusable components in Figma, maintaining design documentation in Confluence, before building those designs into React with JavaScript and HTML/CSS.</p>
   </div>
   <div className="solution-list">
     <article className="solution">
       <div className="solution__copy flow">
         <p className="editorial-eyebrow">Foundations</p>
-        <h3 className="type-title">Typescale, Colour</h3>
+        <h3 className="type-title">Typography, Colours</h3>
         <p>Inter provided the typographic foundation, with weight changes separating headings, labels and body copy. A restrained neutral palette supported long-form reading, while the primary blue, <strong>#1E5EDD</strong>, identified actions and selected states.</p>
-        <p>Keeping backgrounds, borders and secondary text consistent helped the analysis sections feel like parts of one product.</p>
+        
       </div>
       <Figure
-        caption="[Asset placeholder: insert the supplied Figma colour palette and Inter typography exports.]"
-        aspect="3/2"
+        src="/images/work/checkmate/designsystem-foundations.jpg"
+        aspect="16/9"
       />
     </article>
     <article className="solution solution--reverse">
       <div className="solution__copy flow">
         <p className="editorial-eyebrow">Components</p>
-        <h3 className="type-title">Interactive Elements</h3>
-        <p>I specified primary, secondary, outline and tertiary buttons, including default and hover states. Reusable analysis tabs gave Facts, Sentiment, Emotion and Propaganda a common navigation pattern.</p>
-        <p>In React, a shared component library let me carry those patterns across screens. When refining an interaction, I could update the reusable component and keep its behaviour aligned with the Figma reference.</p>
+        <h3 className="type-title">Structure & Layouts</h3>
+        <p>Our solution consisted of 4 major classifications of outputs: Fact-Checking, Emotion Analysis, Sentiment Analysis, and Propaganda Technique Analysis.</p>
+        <p>To crowd it all on one page would have negatively impacted readbility. I made use of component libraries to design an output shaped by tab-selection. Light pastel hues were used to group information that had contextual meaning. </p> 
+        <p>This ensured deep reading could be done at the user's own pace through an interactive manner.</p>
       </div>
       <Figure
-        caption="[Asset placeholder: insert the supplied Figma button variants and analysis-tab component exports.]"
-        aspect="3/2"
+        src="/images/work/checkmate/designsystem-structure.jpg"
+        aspect="16/9"
       />
     </article>
 		<article className="solution">
 	      <div className="solution__copy flow">
-	        <p className="editorial-eyebrow">Foundations</p>
-	        <h3 className="type-title">Structure & Layouts</h3>
-	        <p>Add content here</p>
+	        <p className="editorial-eyebrow">Relationship</p>
+	        <h3 className="type-title">Harmonised templates</h3>
+	        <p>Keeping backgrounds, borders and secondary text consistent helped the analysis sections feel like parts of one product. The system had to have a consistent visual hierarchy, given that the platform was to tie in 3 systems on 3 different channels;</p>
+          <div className="stats">
+            <p className="type-eyebrow">| website, browser extension and a telegram bot.</p>
+          </div>
+          
 	      </div>
 	      <Figure
-	        caption="[Asset placeholder: Tabs]"
-	        aspect="3/2"
+          src="/images/work/checkmate/designsystem-screens.jpg"
+	        aspect="16/9"
 	      />
 	    </article>
   </div>
 </section>
 
-<section className="editorial-section editorial-section--solutions" aria-labelledby="checkmate-decisions-title">
+<section className="editorial-section editorial-section--research-evidence" aria-labelledby="checkmate-maze-title">
   <div className="editorial-section__intro flow">
-    <p className="editorial-eyebrow">04. Interaction decisions</p>
-    <h2 id="checkmate-decisions-title" className="type-title">Give readers a way into the analysis.</h2>
-    <p>Consistency needed to extend beyond styling. The information hierarchy had to help someone understand a result, compare it with the source, and move between platforms.</p>
-  </div>
-  <div className="solution-list">
-    <article className="solution">
-      <div className="solution__copy flow">
-        <h3 className="type-title">Separate the questions a reader is asking.</h3>
-        <p>The summary offered an entry point into a long article. Tabs then separated factual claims, sentiment, emotion and propaganda, so readers could explore one type of analysis at a time.</p>
-        <p>The fact-checking view paired colour with a written legend, including <strong>“Cannot be determined”</strong> when evidence was insufficient. This made room for uncertainty rather than forcing every claim into a binary answer.</p>
-      </div>
-      <Figure
-        src="/images/work/checkmate/analysis-page.png"
-        alt="Facts tab showing a written legend for factual, undetermined and unfactual claims alongside the source article."
-        caption="A summary, category tabs and a written status legend organised the model outputs. The displayed classifications are sample product output."
-        aspect="2048/1210"
+    <p className="editorial-eyebrow">04. Prototype Testing</p>
+    <h2 id="checkmate-maze-title" className="type-title">Putting the prototypes to the test</h2>
+
+    <p>One liner transition to move to prototype testing.</p>
+
+    <p>Add in a sample of the instructions given to participants, and explain the results shown. overall positive, show that Maze helped to identify the routes where users might have clicked out of usual, but because it's a tabbed selection that can go back and forth, the team agreed it was fine for users to click out of the 'usual path'</p>
+    <Figure
+        src="/images/work/checkmate/prototype-testingInstructions.jpg"
+        aspect="16/9"
       />
-    </article>
-    <article className="solution solution--reverse">
-      <div className="solution__copy flow">
-        <h3 className="type-title">Keep the reading journey connected.</h3>
-        <p>The Chrome extension let readers begin beside an article. Telegram offered a conversational entry point, with a handoff to the website for more detailed analysis.</p>
-        <p>I carried the same terminology and analysis categories across these experiences, adapting the presentation to each platform. The responsive web UI and extension could share React patterns; Telegram needed those ideas expressed through native chat interactions.</p>
-      </div>
-      <Figure
-        src="/images/work/checkmate/chrome-extension.png"
-        alt="CheckMate Chrome extension open alongside a news article, showing an article summary and analysis controls."
-        caption="The extension kept the starting point close to the article. Project screenshot from the final report."
-        aspect="1899/1008"
-      />
-    </article>
+
+    <p>add in example of one of the blocker raised: Our prototype for the telegram bot did not account for chat overflow and hence participants could not reach the article link at the bottom of the text.</p>
+    <Video
+      src="/media/prototype-testing-Issues.mp4"
+      label="First Iteration of Prototype Testing. Our prototype did not account for chat overflow and hence participants could not reach the article link at the bottom of the text."
+      caption="First Iteration of Prototype Testing."
+      autoPlay
+    />
+    
   </div>
+
 </section>
 
-<p>change 04 to be on prototype testing instead w maze screenrecording </p>
 
 <section className="editorial-section editorial-section--process" aria-labelledby="checkmate-performance-title">
   <div className="editorial-section__intro flow">
-    <p className="editorial-eyebrow">05. Handling server loads: Frontend decisions that supported the UX</p>
+    <p className="editorial-eyebrow">05. Frontend decisions that supported the UX</p>
     <h2 id="checkmate-performance-title" className="type-title">Designing for the time between actions.</h2>
-    <p>Implementing the interface exposed a constraint that a static prototype could not fully represent: machine-learning analysis could take time, particularly for longer articles. A clear screen still needed a responsive experience around it.</p>
-    <p>I used route-based lazy loading and client-side API response caching to reduce unnecessary frontend work. These choices addressed page loading and revisiting results; the model's inference time remained a separate constraint.</p>
-    <p>Later acceptance testing surfaced waits of up to several minutes. The team introduced <strong>server-sent events</strong> so analysis updates could reach the interface as they became available. That reinforced a design lesson for me: progress and waiting behaviour belong in the experience alongside the final result.</p>
-    {/* Optional evidence slot: add a measured initial-load or repeat-request comparison here if available. Do not invent load-time improvements. */}
+    <p>Implementing the interface exposed a constraint that a static prototype could not fully represent: Machine-learning analysis could take time, particularly for longer articles. A clear screen still needed a responsive experience around it.</p>
+    <p>Together with the team, we made use of <strong>route-based lazy loading</strong> and <strong>client-side API response caching</strong> to reduce unnecessary frontend work. These choices addressed page loading and revisiting results; the model's inference time remained a separate constraint.</p>
+
+
+    <div className="stats">
+      <p className="type-eyebrow">| design lesson:</p>
+      <p className="type-serif">Accounting for waiting behaviour and handling big chunks of data belong in designing for the overall UX too.</p> 
+    </div>
+
   </div>
   <div className="editorial-section__visual">
     <div className="problem-cards">
       <article className="card problem-card flow">
         <span className="problem-card__number" aria-hidden="true">01</span>
+          <svg width="64px" height="64px" viewBox="-2.4 -2.4 28.80 28.80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>route_line</title> <g id="页面-1" strokeWidth="0.00024000000000000003" fill="none" fillRule="evenodd"> <g id="Map" transform="translate(-288.000000, 0.000000)"> <g id="route_line" transform="translate(288.000000, 0.000000)"> <path d="M24,0 L24,24 L0,24 L0,0 L24,0 Z M12.5934901,23.257841 L12.5819402,23.2595131 L12.5108777,23.2950439 L12.4918791,23.2987469 L12.4918791,23.2987469 L12.4767152,23.2950439 L12.4056548,23.2595131 C12.3958229,23.2563662 12.3870493,23.2590235 12.3821421,23.2649074 L12.3780323,23.275831 L12.360941,23.7031097 L12.3658947,23.7234994 L12.3769048,23.7357139 L12.4804777,23.8096931 L12.4953491,23.8136134 L12.4953491,23.8136134 L12.5071152,23.8096931 L12.6106902,23.7357139 L12.6232938,23.7196733 L12.6232938,23.7196733 L12.6266527,23.7031097 L12.609561,23.275831 C12.6075724,23.2657013 12.6010112,23.2592993 12.5934901,23.257841 L12.5934901,23.257841 Z M12.8583906,23.1452862 L12.8445485,23.1473072 L12.6598443,23.2396597 L12.6498822,23.2499052 L12.6498822,23.2499052 L12.6471943,23.2611114 L12.6650943,23.6906389 L12.6699349,23.7034178 L12.6699349,23.7034178 L12.678386,23.7104931 L12.8793402,23.8032389 C12.8914285,23.8068999 12.9022333,23.8029875 12.9078286,23.7952264 L12.9118235,23.7811639 L12.8776777,23.1665331 C12.8752882,23.1545897 12.8674102,23.1470016 12.8583906,23.1452862 L12.8583906,23.1452862 Z M12.1430473,23.1473072 C12.1332178,23.1423925 12.1221763,23.1452606 12.1156365,23.1525954 L12.1099173,23.1665331 L12.0757714,23.7811639 C12.0751323,23.7926639 12.0828099,23.8018602 12.0926481,23.8045676 L12.108256,23.8032389 L12.3092106,23.7104931 L12.3186497,23.7024347 L12.3186497,23.7024347 L12.3225043,23.6906389 L12.340401,23.2611114 L12.337245,23.2485176 L12.337245,23.2485176 L12.3277531,23.2396597 L12.1430473,23.1473072 Z" id="MingCute" fillRule="nonzero"> </path> <path d="M18,16 C19.6569,16 21,17.3431 21,19 C21,20.6569 19.6569,22 18,22 C16.3431,22 15,20.6569 15,19 C15,17.3431 16.3431,16 18,16 Z M15.5,4 C17.9853,4 20,6.01472 20,8.5 C20,10.9853 17.9853,13 15.5,13 L8.5,13 C7.11929,13 6,14.1193 6,15.5 C6,16.8807 7.11929,18 8.5,18 L13,18 C13.5523,18 14,18.4477 14,19 C14,19.5523 13.5523,20 13,20 L8.5,20 C6.01472,20 4,17.9853 4,15.5 C4,13.0147 6.01472,11 8.5,11 L15.5,11 C16.8807,11 18,9.88071 18,8.5 C18,7.11929 16.8807,6 15.5,6 L11,6 C10.4477,6 10,5.55228 10,5 C10,4.44772 10.4477,4 11,4 L15.5,4 Z M18,18 C17.4477,18 17,18.4477 17,19 C17,19.5523 17.4477,20 18,20 C18.5523,20 19,19.5523 19,19 C19,18.4477 18.5523,18 18,18 Z M6,2 C7.65685,2 9,3.34315 9,5 C9,6.65685 7.65685,8 6,8 C4.34315,8 3,6.65685 3,5 C3,3.34315 4.34315,2 6,2 Z M6,4 C5.44772,4 5,4.44772 5,5 C5,5.55228 5.44772,6 6,6 C6.55228,6 7,5.55228 7,5 C7,4.44772 6.55228,4 6,4 Z" id="形状" fill="#09244B"> </path> </g> </g> </g> </g></svg>
         <h3 className="type-title">Load what the route needs.</h3>
+        
         <p>Route-based lazy loading deferred page code until it was needed, reducing the amount loaded upfront.</p>
       </article>
       <article className="card problem-card flow">
         <span className="problem-card__number" aria-hidden="true">02</span>
+        <svg fill="#000000" height="64px" width="64px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="-20.89 -20.89 273.84 273.84" xmlSpace="preserve"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M16.45,103.92c5.972-33.874,29.885-61.607,61.536-73.034L76.5,33.461c-2.072,3.587-0.844,8.174,2.743,10.246 c1.182,0.682,2.471,1.007,3.744,1.007c2.591,0,5.112-1.345,6.501-3.75l10.34-17.901c0.995-1.723,1.266-3.77,0.751-5.691 c-0.515-1.922-1.771-3.56-3.494-4.555L79.179,2.476c-3.59-2.072-8.175-0.842-10.246,2.744c-2.071,3.587-0.843,8.174,2.744,10.245 l1.868,1.079C36.59,29.628,8.631,61.879,1.679,101.315c-3.364,19.06-1.651,38.703,4.953,56.807c1.11,3.043,3.984,4.931,7.047,4.931 c0.853,0,1.722-0.147,2.569-0.456c3.892-1.42,5.896-5.725,4.476-9.616C15.022,137.352,13.544,120.388,16.45,103.92z"></path> <path d="M193.646,180.699c-3.172-2.666-7.902-2.256-10.567,0.915c-21.818,25.955-56.084,38.429-89.437,32.542 c-16.189-2.855-31.295-9.876-43.866-20.192h2.413c4.143,0,7.5-3.358,7.5-7.5c0-4.142-3.357-7.5-7.5-7.5H32.222 c-1.927-0.182-3.923,0.376-5.523,1.718c-1.56,1.308-2.449,3.116-2.639,4.993c-0.001,0.007-0.002,0.013-0.003,0.02 c0,0.002,0,0.004,0,0.006c-0.021,0.215-0.031,0.431-0.033,0.647c-0.001,0.038-0.006,0.074-0.006,0.112l-0.008,20.67 c-0.002,4.142,3.355,7.501,7.497,7.503h0.003c4.141,0,7.498-3.356,7.5-7.497l0.001-2.612c14.795,12.509,32.75,21.004,52.026,24.403 c6.326,1.116,12.679,1.662,18.994,1.662c32.221,0,63.415-14.205,84.53-39.323C197.227,188.096,196.817,183.364,193.646,180.699z"></path> <path d="M231.052,142.479c-2.07-3.587-6.659-4.816-10.245-2.745l-2.467,1.424c0.102-0.53,0.222-1.057,0.315-1.588 c5.109-28.982-1.372-58.216-18.25-82.32c-16.878-24.104-42.132-40.191-71.109-45.296c-4.08-0.718-7.97,2.006-8.687,6.085 c-0.719,4.079,2.005,7.969,6.084,8.688c25.031,4.41,46.847,18.306,61.426,39.128c14.55,20.779,20.153,45.973,15.791,70.958 l-1.099-1.903c-2.071-3.587-6.658-4.818-10.245-2.747c-3.588,2.07-4.817,6.657-2.747,10.245l10.336,17.909 c0.995,1.723,2.633,2.98,4.555,3.495c0.639,0.171,1.291,0.256,1.941,0.256c1.305,0,2.6-0.341,3.75-1.005l17.906-10.338 C231.894,150.653,233.123,146.066,231.052,142.479z"></path> </g> </g></svg>
         <h3 className="type-title">Reuse available responses.</h3>
         <p>Client-side API caching reused available responses, reducing repeated requests as readers returned to analysed content.</p>
       </article>
     </div>
+    
   </div>
 </section>
 
 <section className="editorial-section editorial-section--research-evidence" aria-labelledby="checkmate-maze-title">
   <div className="editorial-section__intro flow">
     <p className="editorial-eyebrow">06. Usability validation</p>
-    <h2 id="checkmate-maze-title" className="type-title">Test the journey across platforms.</h2>
+    <h2 id="checkmate-maze-title" className="type-title">Across platforms.</h2>
     <p>I used Maze to evaluate the high-fidelity experience through tasks. Two connected activities followed the journey from interpreting an article through the Telegram bot to opening its detailed analysis on the website.</p>
     <ul className="research-task-list">
       <li>Submit an article link and retrieve the relevant analysis categories.</li>
@@ -273,7 +283,6 @@
         <p>Reported user satisfaction for the tested experience.</p>
       </Card>
     </Cards>
-    <p className="editorial-section__note type-serif">Study outcomes support the usability of the tested flows. Longer-term adoption and news-literacy impact would need further evaluation.</p>
   </div>
 </section>
 

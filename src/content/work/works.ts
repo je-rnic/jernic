@@ -83,8 +83,8 @@ export const works: readonly Work[] = [
 		roles: ["Product Design Lead", "Frontend Software Engineer"],
 		productType: "Final Year Group Project",
 		accent: {
-			light: "#1e5edd",
-			dark: "#538cf9",
+			light: "#1E5EDD",
+			dark: "#3079FC",
 		},
 		start: "2024-07",
 		end: "2025-06",
