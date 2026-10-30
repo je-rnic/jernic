@@ -1094,6 +1094,17 @@
 			column-gap: clamp(var(--space-6), 5vw, var(--space-9));
 		}
 	}
+	/* Prototype evidence uses the full editorial width, with copy beside media. */
+	.editorial-section.editorial-section--prototype-testing {
+		row-gap: var(--space-7);
+	}
+	.editorial-section--prototype-testing .editorial-section__intro {
+		grid-column: 1 / -1;
+		max-width: 34rem;
+	}
+	.editorial-section--prototype-testing .research-evidence--paired {
+		gap: var(--space-8);
+	}
 	.research-card__icon {
 		width: 2.75rem;
 		height: 2.75rem;
