@@ -217,14 +217,23 @@
 
     <div className="research-evidence__row">
       <div className="flow">
-        <p>add in example of one of the blocker raised: Our prototype for the telegram bot did not account for chat overflow and hence participants could not reach the article link at the bottom of the text.</p>
+        <p>Testing also revealed a blocker in the Telegram bot prototype: <strong>long messages overflowed the chat area</strong>, leaving participants unable to reach the article link at the bottom.</p>
+        <p>This prevented the handoff to the website’s detailed analysis and showed where the prototype needed to account for longer chat content.</p>
       </div>
-      <Video
-        src="/media/prototype-testing-Issues.mp4"
-        label="First Iteration of Prototype Testing. Our prototype did not account for chat overflow and hence participants could not reach the article link at the bottom of the text."
-        caption="First Iteration of Prototype Testing."
-        autoPlay
-      />
+      <div className="flow">
+        <Video
+          src="/media/prototype-testing-Issues.mp4"
+          label="First prototype test showing a long Telegram bot message overflowing the chat area and leaving the article link out of reach."
+          caption="First iteration: chat overflow left the article link out of reach."
+          autoPlay
+        />
+        <Figure
+          src="/images/work/checkmate/prototype-testingTeleBot.jpg"
+          alt="Maze task instructions and navigation report for opening the website’s full article analysis from the Telegram bot."
+          caption="The Telegram task tested the handoff from the bot to the website’s full article analysis."
+          aspect="16/9"
+        />
+      </div>
     </div>
   </div>
 </section>
