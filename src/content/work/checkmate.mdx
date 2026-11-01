@@ -33,11 +33,11 @@
   <div className="editorial-section__intro flow">
     <p className="editorial-eyebrow">01. Overview</p>
     <h2 id="checkmate-overview-title" className="type-title">From an article to a clearer understanding</h2>
-    <p>CheckMate was my final-year group project: an AI-powered news analysis tool designed to help young readers examine an article's facts, sentiment, emotion and potential propaganda techniques. The experience connected a web app, Chrome extension and Telegram bot.</p>
+    <p>CheckMate was my final-year group project: an AI-powered news analysis tool designed to help young readers examine an article's facts, sentiment, emotion and potential propaganda techniques. The experience spanned across a Web App, Chrome extension and Telegram messaging interface.</p>
     <p>As the <strong>Design Lead and Frontend Software Engineer</strong>, I shaped the reading and analysis flows, built the Figma design system, implemented the React interface and used Maze to evaluate the prototypes.</p>
-    <p>I also worked with our AI engineers to define API payload structures for Hugging Face model outputs. The models and backend were a team effort; my focus was how people encountered, navigated and understood the results.</p>
+    <p>I also worked with our AI engineers to define API payload structures for Hugging Face model outputs. While the large language models and backend handling were a team effort; my focus was how people encountered, navigated and understood the results.</p>
     <div className="stats">
-      <p className="type-eyebrow">| tools</p>
+      <p className="type-eyebrow">| tools used</p>
       <p className="type-serif">Figma · React · JavaScript · HTML/CSS · Maze · GitHub · Confluence · Jira</p>
     </div>
   </div>
@@ -59,17 +59,17 @@
   </div>
   <div className="research-evidence research-evidence--paired">
     <div className="research-evidence__row">
-      <Card title="68%" icon={
+      <Card title="social media" icon={
         <svg className="research-card__icon" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" />
           <path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" />
         </svg>
       }>
-        <p><strong>21 of 31 respondents</strong> selected social media as a platform they used to consume news.</p>
+        <p>emerged as the main platform where youths consumed their news from.</p>
         <p><strong>17 of 31 (55%)</strong> also selected Telegram channels, giving us a direct reason to include a bot in the experience.</p>
       </Card>
       <Figure
-        src="/images/work/checkmate/UserResearchWhatPlatform.png"
+        src="/images/work/checkmate/backgroundsurvey-whatplatform.jpg"
         alt="News-platform survey results from 31 respondents: 21 selected social media and 17 selected Telegram channels."
         caption="Discovery survey: respondents could select multiple news platforms."
         aspect="16/9"
@@ -82,11 +82,11 @@
           <path d="M9 12l2 2l4 -4" />
         </svg>
       }>
-        <p><strong>24 of 31 respondents</strong> considered understanding news for credibility and underlying meanings important or extremely important.</p>
+        <p>out of 31 respondents considered <em>understanding news for credibility</em> <strong>important or extremely important</strong>.</p>
         <p>The design needed to make those deeper layers approachable.</p>
       </Card>
       <Figure
-        src="/images/work/checkmate/UserResearchHowImportant.png"
+        src="/images/work/checkmate/backgroundsurvey-howimportant.jpg"
         alt="Importance survey: 13 respondents selected extremely important and 11 selected important, out of 31 responses."
         caption="Discovery survey: perceived importance of understanding credibility and underlying meanings."
         aspect="16/9"
@@ -101,11 +101,11 @@
           <path d="M18.5 19.5l2.5 2.5" />
         </svg>
       }>
-        <p>Only <strong>6 of 31 respondents</strong> said they always analysed the credibility or underlying sentiment/emotions of news articles.</p>
-        <p>This showed a gap between perceived importance and reported behaviour. The survey did not establish what caused that gap.</p>
+        <p>Yet only a small minority said they would always analyse the credibility or underlying sentiment/emotions of news articles.</p>
+        <p>This showed a <strong>gap</strong> between <strong>perceived importance</strong> and <strong>reported behaviour.</strong></p>
       </Card>
       <Figure
-        src="/images/work/checkmate/UserResearchActuallyAnalyse.png"
+        src="/images/work/checkmate/backgroundsurvey-actuallyanalyse.jpg"
         alt="Analysis-habit survey: six respondents selected always, 17 sometimes and eight never, out of 31 responses."
         caption="Discovery survey: one question covered credibility, sentiment and emotions together."
         aspect="16/9"
@@ -119,7 +119,7 @@
   <div className="editorial-section__intro flow">
     <p className="editorial-eyebrow">03. Shaping the experience</p>
     <h2 id="checkmate-system-title" className="type-title">A reading journey across three channels</h2>
-    <p>I used the research to frame two design priorities: an accessible starting point and a manageable analysis view. I documented the flows and reusable components in Figma and Confluence, then carried those decisions into React.</p>
+    <p>I used the research to frame two design priorities: an <strong>accessible starting point</strong> and a <strong>manageable analysis view</strong>. I documented the flows and reusable components in Figma and Confluence, then carried those decisions into React.</p>
   </div>
   <div className="solution-list">
     <article className="solution">
@@ -130,7 +130,8 @@
         <p>The bot returned a summary with a link to the full analysis. That made access to the link a critical part of the journey, particularly when a response became long.</p>
       </div>
       <Figure
-        caption="Asset to add: a journey diagram using the existing screens. Show Telegram article submission → bot summary → detailed website analysis, with the Chrome extension as a second entry point into article analysis."
+        src="/images/work/checkmate/prototype-extensionoverlay.jpg"
+        caption="Chrome extension as an alternative entry point into article analysis."
         aspect="16/9"
       />
     </article>
@@ -144,7 +145,7 @@
       <Figure
         src="/images/work/checkmate/designsystem-structure.jpg"
         alt="CheckMate analysis components organised into separate categories and selectable tabs."
-        caption="Analysis structure: separate views for facts, emotion, sentiment and propaganda techniques."
+        caption="Separate views for facts, emotion, sentiment and propaganda techniques."
         aspect="16/9"
       />
     </article>
@@ -169,14 +170,14 @@
   <div className="editorial-section__intro flow">
     <p className="editorial-eyebrow">04. Prototype findings and iteration</p>
     <h2 id="checkmate-prototype-testing-title" className="type-title">Finding friction between the screens</h2>
-    <p>Maze prototype tasks examined navigation within the analysis and the handoff between Telegram and the website. They exposed both alternative routes through the tabs and a blocker in the bot mockup.</p>
+    <p>We used high-fidelity prototypes – set up on Maze – to examine navigation within the analysis and the handoff between Telegram and web platform.</p>
   </div>
   <div className="research-evidence research-evidence--paired">
     <div className="research-evidence__row">
       <div className="flow">
-        <h3 className="type-title">Reaching the sentiment results</h3>
+        <h3 className="type-title">a | Reaching the sentiment results</h3>
         <p>One task asked participants to open the Chrome extension, submit an article link and navigate to the <strong>Sentiment Analysis results tab</strong>.</p>
-        <p>Maze reported <strong>96.2% success</strong> and a <strong>41.3% misclick rate</strong> for this task. The path report included routes through other analysis tabs before reaching the destination.</p>
+        <p>Maze reported <strong>96.2% success</strong> <em>but</em> a <strong>41.3% misclick rate</strong> for this task. The path report had included routes taken by the user through other analysis tabs before reaching the destination. As it did not take the 'usual' path that other users took to get to the sentiment tab directly, </p>
         <p>The team retained the tabs to allow movement between categories. The paths alone could not establish whether the detours reflected exploration or confusion, so the success figure needed to be read alongside the navigation behaviour.</p>
       </div>
       <Figure
@@ -188,9 +189,9 @@
     </div>
     <div className="research-evidence__row">
       <div className="flow">
-        <h3 className="type-title">A long response blocked the handoff</h3>
-        <p>In the Telegram bot mockup, <strong>long messages overflowed the chat area</strong>. Participants could not reach the article link at the bottom to open the website's detailed analysis.</p>
-        <p>The team corrected the overflow in the mockup before the final high-fidelity prototype evaluation. This made the accessibility of the full response part of the iteration, alongside the visual layout.</p>
+        <h3 className="type-title">b | A long response blocked the handoff</h3>
+        <p>An example of an issue faced during prototype testing was that in our initial figma interface, <strong>long messages overflowed the chat area</strong>. Participants could not reach the article link at the bottom to open the website's detailed analysis.</p>
+
       </div>
       <div className="flow">
         <Video
@@ -209,7 +210,7 @@
     <div className="research-evidence__row">
       <div className="flow">
         <h3 className="type-title">Making the correction visible</h3>
-        <p>The revised mockup was then used for the final evaluation. The bot task reported below tested submitting an article and receiving its summary; subsequent client testing covered the implemented journey from end to end.</p>
+          <p>The team corrected the overflow in the mockup before the final high-fidelity prototype evaluation, though it was also noted that this wouldn't be a product-breaking problem, given that Telegram API's already accounted for overflow design in-app. This made the accessibility of the full response part of the iteration, alongside the visual layout.</p>
       </div>
       <Figure
         caption="Asset to add: before-and-after exports of the same long Telegram response. Show the original overflow beside the corrected mockup, with the detailed-analysis link visible. Annotate the actual change made in Figma."
@@ -304,8 +305,8 @@
     <p className="editorial-eyebrow">07. Product delivery</p>
     <h2 id="checkmate-delivery-title" className="type-title">Testing the implemented flow with the client</h2>
     <p>Following prototype evaluation, the team implemented the experience and <strong>successfully tested the end-to-end flow with the client</strong>. This provided functional confirmation of the implemented journey and is presented here as a qualitative delivery outcome.</p>
-    <p>I was also one of two team members who presented CheckMate to the judging panels, connecting the product's purpose with a demonstration of the experience.</p>
-    <p>Our team received <strong>1st Place in the Dell Cloud Native Experience Award</strong>. <a href="https://www.linkedin.com/posts/jernicyeo_started-this-week-with-the-dell-technologies-activity-7325886544425160704-xAUs" target="_blank" rel="noreferrer">Read the project recap on LinkedIn.</a></p>
+    <p>As part of our final-year roadshow evaluation, I started our team's presentation of CheckMate to the judging panels, connecting the product's purpose with a demonstration of the experience.</p>
+    <p>We moved on to the final closed door evaluation where we eventually clinched <strong>1st Place in the Dell Cloud Native Experience Award</strong>. Read the project recap on <a href="https://www.linkedin.com/posts/jernicyeo_started-this-week-with-the-dell-technologies-activity-7325886544425160704-xAUs" target="_blank" rel="noreferrer"><em>LinkedIn.</em></a></p>
   </div>
   <div className="editorial-section__visual">
     <Figure

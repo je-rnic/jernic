@@ -1096,7 +1096,7 @@
 	}
 	/* Keep the page-width rule, with desktop content inset from its edges. */
 	.editorial-section.editorial-section--prototype-testing {
-		row-gap: var(--space-7);
+		row-gap: clamp(3rem, 8vw, 8rem);
 	}
 	@media (min-width: 64rem) {
 		.editorial-section--prototype-testing {
@@ -1108,10 +1108,15 @@
 		max-width: 34rem;
 	}
 	.editorial-section--prototype-testing .research-evidence--paired {
-		gap: var(--space-8);
+		gap: clamp(5rem, 10vw, 9rem);
 	}
 	.editorial-section--prototype-testing .research-evidence__row {
 		align-items: start;
+	}
+	@media (max-width: 47.99rem) {
+		.editorial-section--prototype-testing .research-evidence--paired {
+			margin-top: clamp(4rem, 8vw, 7rem);
+		}
 	}
 	.research-card__icon {
 		width: 2.75rem;
