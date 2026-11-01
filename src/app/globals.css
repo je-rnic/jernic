@@ -1110,6 +1110,9 @@
 	.editorial-section--prototype-testing .research-evidence--paired {
 		gap: var(--space-8);
 	}
+	.editorial-section--prototype-testing .research-evidence__row {
+		align-items: start;
+	}
 	.research-card__icon {
 		width: 2.75rem;
 		height: 2.75rem;
