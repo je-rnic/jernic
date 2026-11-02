@@ -264,9 +264,9 @@
   <div className="editorial-section__intro flow">
     <p className="editorial-eyebrow">06. Implementing the experience</p>
     <h2 id="checkmate-performance-title" className="type-title">Designing for the time between actions</h2>
-    <p>Moving from the mockup into implementation exposed a constraint that a static prototype could not fully represent: machine-learning analysis could take time, particularly for longer articles.</p>
-    <p>Together with the team, I worked on <strong>route-based lazy loading</strong> and <strong>client-side API response caching</strong>. These choices addressed page loading and revisiting results; model inference time remained a separate constraint.</p>
-    <p>A measured before-and-after performance comparison is not available for this case study, so these implementation choices are described without a quantified speed improvement.</p>
+    <p>Moving into implementation, we had to additionally factor that machine-learning analysis takes time, especially for longer articles.</p>
+    <p>Together with the backend engineers, we worked on <strong>route-based lazy loading</strong> and <strong>client-side API response caching</strong>. These choices addressed page loading and revisiting results, ensuring that model inference time remained a separate constraint to be handled on its own.</p>
+    <p>We did not measure the performance time before implementation, hence a metric comparison was not written for this segment.</p>
     <div className="stats">
       <p className="type-eyebrow">| design lesson</p>
       <p className="type-serif">Loading behaviour and repeated waits are part of the reading experience too.</p>
@@ -302,14 +302,13 @@
     <h2 id="checkmate-delivery-title" className="type-title">Testing the implemented flow with the client</h2>
     <p>Following prototype evaluation, the team implemented the experience and <strong>successfully tested the end-to-end flow with the client</strong>. This provided functional confirmation of the implemented journey and is presented here as a qualitative delivery outcome.</p>
     <p>As part of our final-year roadshow evaluation, I started our team's presentation of CheckMate to the judging panels, connecting the product's purpose with a demonstration of the experience.</p>
-    <p>We moved on to the final closed door evaluation where we eventually clinched <strong>1st Place in the Dell Cloud Native Experience Award</strong>. Read the project recap on <a className="recap-link" href="https://www.linkedin.com/posts/jernicyeo_started-this-week-with-the-dell-technologies-activity-7325886544425160704-xAUs" target="_blank" rel="noreferrer"><em>LinkedIn.</em></a></p>
+    <p>We then moved on to the final closed door evaluation where we eventually clinched <strong>1st Place in the Dell Cloud Native Experience Award</strong>. Read the project recap on <a className="recap-link" href="https://www.linkedin.com/posts/jernicyeo_started-this-week-with-the-dell-technologies-activity-7325886544425160704-xAUs" target="_blank" rel="noreferrer"><em>LinkedIn.</em></a></p>
   </div>
   <div className="editorial-section__visual">
     <Figure
-      src="/images/work/checkmate/analysis-page.png"
-      alt="CheckMate website interface showing an article alongside its analysis."
-      caption="CheckMate's detailed analysis interface."
-      aspect="16/9"
+      src="/images/work/checkmate/productdelivery.jpg"
+      caption="CheckMate's final presentation"
+      aspect="4/3"
     />
   </div>
 </section>
