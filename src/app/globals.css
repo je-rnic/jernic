@@ -142,7 +142,7 @@
 		--radius-pill: 9999px;
 		--radius-card: 1rem;
 		--radius-media: 1rem;
-		--shadow-media: 0 0.5rem 1.5rem rgb(0 0 0 / 0.14);
+		--shadow-media: 0 0.5rem 1rem rgb(0 0 0 / 0.14);
 
 		/* --- Theme toggle -------------------------------------------------- */
 		--toggle-size: 1.75rem; /* 28 */
@@ -369,6 +369,7 @@
 		position: relative;
 		overflow: hidden;
 		border-radius: var(--radius-media);
+		box-shadow: var(--shadow-media);
 	}
 
 	@media (min-width: 48rem) {
@@ -576,6 +577,12 @@
 		color: var(--ink);
 	}
 	.nav-link:hover {
+		text-decoration: underline;
+		text-decoration-thickness: 1px;
+		text-underline-offset: 0.25em;
+	}
+	.recap-link:hover,
+	.recap-link:focus-visible {
 		text-decoration: underline;
 		text-decoration-thickness: 1px;
 		text-underline-offset: 0.25em;
@@ -853,6 +860,8 @@
 		aspect-ratio: 16 / 9;
 		overflow: hidden;
 		background: var(--paper);
+		border-radius: var(--radius-media);
+		box-shadow: var(--shadow-media);
 	}
 	.work-row__overview img {
 		object-fit: cover;
