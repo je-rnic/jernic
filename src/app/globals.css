@@ -609,7 +609,6 @@
 	}
 	.site-footer__eyebrow {
 		color: var(--rule);
-		opacity: 0.65;
 	}
 	.site-footer__title {
 		margin-top: var(--space-3);
