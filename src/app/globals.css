@@ -46,6 +46,11 @@
 		inherits: true;
 		initial-value: #1b1b19;
 	}
+	@property --rule {
+		syntax: "<color>";
+		inherits: true;
+		initial-value: #666666;
+	}
 	@property --toggle {
 		syntax: "<color>";
 		inherits: true;
@@ -75,7 +80,7 @@
 		/* --- Colour: light-dark(LIGHT, DARK) ------------------------------- */
 		--paper: light-dark(#fafafa, #111110);
 		--ink: light-dark(#1b1b19, #f2f0ea);
-		--rule: light-dark(#666666, #666666);
+		--rule: light-dark(#666666, #808080);
 		--toggle: light-dark(#e6e3db, #262623);
 		--divider: light-dark(#aeacaa, #404040);
 		--accent: light-dark(#5267b2, #a1b0f0);
