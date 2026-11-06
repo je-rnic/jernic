@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { aboutPage } from "@/content/site";
 import FadeImage from "@/components/FadeImage";
+import MediaFrame from "@/components/media/MediaFrame";
 
 export const metadata: Metadata = {
   title: "About"
@@ -23,7 +24,7 @@ export default function AboutPage() {
           ))}
         </div>
 
-        <div className="about__portrait">
+        <MediaFrame className="about__portrait" fit="cover">
           <FadeImage
             src="/images/background-about.jpeg"
             alt="Portrait of the author outdoors"
@@ -31,7 +32,7 @@ export default function AboutPage() {
             sizes="(min-width: 90rem) 39rem, (min-width: 48rem) 45vw, 100vw"
             loading="eager"
           />
-        </div>
+        </MediaFrame>
       </div>
     </main>
   );

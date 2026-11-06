@@ -52,8 +52,7 @@
 		--surface-muted: light-dark(#f0f0ee, #242422);
 
 		/* --- Families ------------------------------------------------------ */
-		--font-sans:
-			"Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+		--font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 		--font-serif: Georgia, "Times New Roman", Times, serif;
 		--font-hand: "Jn Font 175scaled", var(--font-sans);
 

@@ -1,21 +1,34 @@
 @layer components {
-
-	.figure__media {
+	.media-frame {
 		position: relative;
 		overflow: hidden;
-		background: var(--paper);
 		border-radius: var(--radius-media);
 		box-shadow: var(--shadow-media);
+	}
+	.media-frame--surface {
+		background: var(--paper);
+	}
+	.media-frame--cover > img {
+		object-fit: cover;
+	}
+	.media-frame--contain > img {
+		object-fit: contain;
+	}
+	.media-frame--fill > img {
+		width: 100%;
+		height: 100%;
+	}
+	.figure {
+		width: 100%;
+		max-width: none;
 	}
 	.figure__video {
 		width: 100%;
 		height: auto;
-		background: var(--paper);
-		border-radius: var(--radius-media);
-		box-shadow: var(--shadow-media);
 	}
 	.figure__caption {
 		margin: var(--space-3) auto 0;
+		max-width: 34rem;
 		text-align: center;
 		font-style: italic;
 	}

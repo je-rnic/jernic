@@ -7,9 +7,11 @@
  *
  * To add a project:
  *   1. add an entry below
- *   2. copy `_template.mdx` to `<slug>.mdx` and write the story
+ *   2. create `<slug>.mdx` using the shared layout and content blocks
  *   3. (optional) add the slug to `featuredSlugs` to show it on the home page
  */
+
+import type { ImageAsset } from "../types";
 
 /** "YYYY-MM". Used for sorting and for the "Nov – Dec 2023" display. */
 export type YearMonth = `${number}-${number}`;
@@ -28,26 +30,21 @@ export type Work = {
 	summary: string;
 	/** What I actually did on this project. Be exact; see ownership rules. */
 	roles: readonly string[];
-	/** Optional bullet list of activities (research, wireframing, handoff ...). */
-	productType?: string;
+	/** Display context, such as Live, Concept or Final Year Group Project. */
+	categoryLabel?: string;
 	start: YearMonth;
 	/** Omit for a single-month project. "present" for ongoing work. */
 	end?: YearMonth | "present";
 	/** Optional cover shown in the case-study header. No width/height needed. */
-	cover?: { src: string; alt: string };
+	cover?: ImageAsset;
 	/** Optional preview shown on work-list rows. */
-	overview?: { src: string; alt: string };
-	/** Optional metric shown in the case-study hero metadata. */
+	overview?: ImageAsset;
+	/** Optional project metric metadata; presentation belongs to the case study. */
 	stat?: { label: string; value: string };
 	/** Light and dark accent colours used by the case-study editorial styling. */
 	accent?: Accent;
 };
 
-/*
- * TODO(confirm): every `start`/`end` below is a deliberate placeholder
- * (Jan–Mar 2000) so nothing wrong can ship unnoticed. Replace with real dates.
- * Titles, summaries and roles are copied from the Framer design.
- */
 export const works: readonly Work[] = [
 	{
 		slug: "project-c-accenture",
@@ -69,7 +66,7 @@ export const works: readonly Work[] = [
 			src: "/images/work/project-c-accenture/Hero.png",
 			alt: "Enterprise HR platform ecosystem diagram",
 		},
-		productType: "Live",
+		categoryLabel: "Live",
 		stat: {
 			label: "Product Reach",
 			value: "~2,270 Monthly Active Users",
@@ -81,7 +78,7 @@ export const works: readonly Work[] = [
 		summary:
 			"Turning complex AI-powered news analysis into an approachable experience. Built for browser, web-extension and messaging platforms. Team emerged 1st for the Dell Cloud Native Experience Award 2025.",
 		roles: ["Product Design Lead", "Frontend Software Engineer"],
-		productType: "Final Year Group Project",
+		categoryLabel: "Final Year Group Project",
 		accent: {
 			light: "#1E5EDD",
 			dark: "#3079FC",
@@ -114,7 +111,7 @@ export const works: readonly Work[] = [
 		summary:
 			"A mobile UX case study for simplifying BBQ food ordering.",
 		roles: ["Solo Designer | Google UX Design Certification"],
-		productType: "Concept",
+		categoryLabel: "Concept",
 		accent: {
 			light: "#ed795d",
 			dark: "#FF947C",

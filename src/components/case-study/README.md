@@ -37,8 +37,9 @@ Use ordinary links in the body when an explicit destination is needed.
 
 - `Cards.layout`: `grid` (default) adapts to available container width; `stack`
   keeps one column. Cards in the same grid row stretch equally, without a fixed
-  minimum height. A grid placed directly in an editorial section spans its width;
-  wrap it in `editorial-section__visual` for the existing text/visual split.
+  minimum height. Use `column="full"` for full-width placement in a section,
+  or wrap the cards in `Column` for a text/supporting-content split.
+- `Cards` accepts the same explicit placement and spacing props as `Column`.
 - `Card.title`: required, rendered as an accessible heading.
 - `Card.headingLevel`: `3` (default) or `4` when nested beneath an h3.
 - `Card.variant`: `default` or `metric`. Section placement never changes it.
@@ -49,4 +50,5 @@ Use ordinary links in the body when an explicit destination is needed.
 
 Keep a blank line around Markdown inside JSX tags, or use explicit HTML tags.
 Keep longer explanations in the surrounding section rather than adding more
-slots or a page-specific card variant.
+slots or a page-specific card variant. See [shared authoring guidance](../README.md)
+for section layouts, media and verification.

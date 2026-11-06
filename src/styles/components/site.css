@@ -8,16 +8,9 @@
 		line-height: var(--lh-reading);
 	}
 	.about__portrait {
-		position: relative;
 		order: -1;
 		width: 100%;
 		aspect-ratio: 3 / 2;
-		border-radius: var(--radius-media);
-		box-shadow: var(--shadow-media);
-		overflow: hidden;
-	}
-	.about__portrait img {
-		object-fit: cover;
 	}
 	@media (min-width: 48rem) {
 		.about__portrait {
@@ -40,8 +33,8 @@
 		.landing__bar > p,
 		.landing__bar > .arrow-link {
 			--entrance-offset: 22px;
-			animation: landing-in var(--entrance-duration) var(--entrance-ease)
-				var(--entrance-delay) backwards;
+			animation: landing-in var(--entrance-duration) var(--entrance-ease) var(--entrance-delay)
+				backwards;
 		}
 		.landing__bar > p {
 			animation-delay: calc(var(--entrance-delay) + 260ms);
@@ -136,13 +129,13 @@
 		line-height: var(--lh-small);
 		color: var(--ink);
 	}
-	.nav-link:hover {
-		text-decoration: underline;
-		text-decoration-thickness: 1px;
-		text-underline-offset: 0.25em;
-	}
+	.nav-link:hover,
 	.recap-link:hover,
-	.recap-link:focus-visible {
+	.recap-link:focus-visible,
+	.arrow-link:hover .arrow-link__label,
+	.arrow-link:focus-visible .arrow-link__label,
+	.work-row:hover .work-row__title,
+	.work-row:focus-visible .work-row__title {
 		text-decoration: underline;
 		text-decoration-thickness: 1px;
 		text-underline-offset: 0.25em;
@@ -206,11 +199,7 @@
 		stroke-linecap: round;
 		stroke-linejoin: round;
 	}
-	.site-footer__icon--linkedin {
-		fill: currentColor;
-		stroke: none;
-	}
-	.site-footer__icon--substack {
+	.site-footer__icon--filled {
 		fill: currentColor;
 		stroke: none;
 	}
@@ -237,11 +226,6 @@
 		inset: 0;
 		background: var(--paper);
 	}
-	.hero__media img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
 
 	/* --- Bottom bar ---------------------------------------------------- */
 	.landing__bar {
@@ -254,9 +238,7 @@
 	}
 	.landing__ticker-window {
 		--ticker-inset: 0.2rem;
-		--ticker-step: calc(
-			var(--fs-eyebrow) * var(--lh-eyebrow) + 2 * var(--ticker-inset)
-		);
+		--ticker-step: calc(var(--fs-eyebrow) * var(--lh-eyebrow) + 2 * var(--ticker-inset));
 		display: inline-block;
 		overflow: hidden;
 		height: var(--ticker-step);
@@ -287,9 +269,7 @@
 
 	/* --- Theme toggle -------------------------------------------------- */
 	.theme-toggle {
-		--knob: calc(
-			var(--toggle-size) - 2 * (var(--toggle-pad) + var(--rule-width))
-		);
+		--knob: calc(var(--toggle-size) - 2 * (var(--toggle-pad) + var(--rule-width)));
 		position: relative;
 		display: inline-flex;
 		align-items: center;
@@ -355,12 +335,6 @@
 	.arrow-link:focus-visible {
 		text-decoration: none;
 	}
-	.arrow-link:hover .arrow-link__label,
-	.arrow-link:focus-visible .arrow-link__label {
-		text-decoration: underline;
-		text-decoration-thickness: 1px;
-		text-underline-offset: 0.25em;
-	}
 	.arrow-link:hover .arrow-link__arrow,
 	.arrow-link:focus-visible .arrow-link__arrow {
 		text-decoration: none;
@@ -413,23 +387,9 @@
 	}
 	.work-row__overview {
 		grid-column: 2;
-		position: relative;
 		min-width: 0;
 		width: 100%;
 		aspect-ratio: 16 / 9;
-		overflow: hidden;
-		background: var(--paper);
-		border-radius: var(--radius-media);
-		box-shadow: var(--shadow-media);
-	}
-	.work-row__overview img {
-		object-fit: cover;
-	}
-	.work-row:hover .work-row__title,
-	.work-row:focus-visible .work-row__title {
-		text-decoration: underline;
-		text-decoration-thickness: 1px;
-		text-underline-offset: 0.25em;
 	}
 	@media (min-width: 48rem) {
 		.work-row {

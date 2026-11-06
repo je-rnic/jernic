@@ -1,4 +1,6 @@
-const TYPES: Record<string, string> = {
+import Caption from "../media/Caption";
+
+const MIME_TYPES: Record<string, string> = {
 	mp4: "video/mp4",
 	webm: "video/webm",
 	mov: "video/quicktime",
@@ -27,7 +29,7 @@ export default function Video({
 	return (
 		<figure className="figure">
 			<video
-				className="figure__video"
+				className="figure__video media-frame media-frame--surface"
 				controls
 				playsInline
 				autoPlay={autoPlay}
@@ -36,14 +38,10 @@ export default function Video({
 				poster={poster}
 				aria-label={label}
 			>
-				<source src={src} type={TYPES[ext]} />
+				<source src={src} type={MIME_TYPES[ext]} />
 				Your browser can&apos;t play this video.
 			</video>
-			{caption && (
-				<figcaption className="figure__caption type-serif">
-					{caption}
-				</figcaption>
-			)}
+			{caption && <Caption>{caption}</Caption>}
 		</figure>
 	);
 }

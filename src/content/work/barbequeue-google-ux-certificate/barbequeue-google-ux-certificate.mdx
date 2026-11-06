@@ -1,53 +1,53 @@
 <Statement label="The Challenge">
 
-How could we make BBQ ordering <strong>seamless</strong> from discovery to checkout?
+How could we make BBQ ordering <strong className="type-display">seamless</strong> from discovery to checkout?
 
 </Statement>
 
-<section className="editorial-section editorial-section--overview">
-  <div className="editorial-section__intro flow">
-    <p className="editorial-eyebrow">01. Overview</p>
-    <h2 className="type-title">A mobile ordering experience designed for BBQ lovers.</h2>
+<Section divider={false}>
+  <TextBlock>
+    <p className="type-label text-muted">01. Overview</p>
+    <h2 className="type-title text-block__heading">A mobile ordering experience designed for BBQ lovers.</h2>
 
       BarbeQueue <i>(pun not intended)</i> was a concept that I thought of when ideating for the Google UX Design Course.
 
 	<p>The Goal: To bring BBQ restaurant discovery and ordering all into a single platform.</p>
-  </div>
-  <div className="editorial-section__visual">
+  </TextBlock>
+  <Column desktopSpaceBefore="none" spaceBefore="7" column={2}>
     <Figure
       src="/images/work/barbequeue-google-ux-certificate/assets/KeyScreens.png"
       alt="BarbeQueue restaurant discovery, ordering, and checkout screens"
 	  caption="Overview of Screens within BarbeQueue"
       aspect="16/9"
     />
-  </div>
-</section>
+  </Column>
+</Section>
 
-<section className="editorial-section editorial-section--research">
-  <div className="editorial-section__intro flow">
-    <p className="editorial-eyebrow">02. Research approach</p>
-    <h2 className="type-title">User Journey</h2>
+<Section>
+  <TextBlock>
+    <p className="type-label text-muted">02. Research approach</p>
+    <h2 className="type-title text-block__heading">User Journey</h2>
 
       I started by creating a user research plan centred around the tasks a
       customer would usually do:
 
-    <ul className="research-task-list">
+    <ul className="bullet-list">
       <li>Choosing a restaurant</li>
       <li>Customising food orders</li>
       <li>Checking out</li>
       <li>Selecting a payment method</li>
     </ul>
-  </div>
-  <div className="research-visuals">
+  </TextBlock>
+  <Stack desktopSpaceBefore="none" gap="7" spaceBefore="7" column={2}>
     <Figure
       src="/images/work/barbequeue-google-ux-certificate/assets/UserStudyResearchPlan.png"
       alt="BarbeQueue user study research plan"
       aspect="16/9"
     />
-  </div>
+  </Stack>
 
-  <div className="editorial-section__intro editorial-section__intro--storyboards flow">
-    <h2 className="type-title">Storyboards helped me think beyond individual screens</h2>
+  <TextBlock column={2} row={2}>
+    <h2 className="type-title text-block__heading">Storyboards helped me think beyond individual screens</h2>
 
       Alongside the initial research plan, I mapped a possible customer journey
       using a persona:
@@ -58,15 +58,15 @@ How could we make BBQ ordering <strong>seamless</strong> from discovery to check
       instead would allow him to skip waiting for the food given that he has a
       short lunch break of an hour only every day.
 
-    <blockquote className="editorial-quote">
+    <Quote>
       <em>
         The storyboarding helped frame the app as a complete service for me to build
         the research around, rather than simply a collection of screens.
       </em>
-    </blockquote>
-  </div>
+    </Quote>
+  </TextBlock>
 
-  <div className="research-visuals research-visuals--storyboards">
+  <Stack desktopSpaceBefore="none" gap="7" spaceBefore="7" column={1} row={2}>
     <Figure
       src="/images/work/barbequeue-google-ux-certificate/assets/Storyboard2.png"
       alt="Storyboard showing Jeff queuing at a BBQ restaurant"
@@ -81,9 +81,9 @@ How could we make BBQ ordering <strong>seamless</strong> from discovery to check
       aspect="16/9"
       fit="cover"
     />
-  </div>
+  </Stack>
 
-  <div className="editorial-section__follow-up flow">
+  <Column desktopSpaceBefore="none" className="flow" spaceBefore="7" column={1} row={3}>
     <h2 className="type-title">Remote usability study</h2>
 
       I then crafted out a low-fidelity Figma prototype over the next 1 week for
@@ -91,9 +91,9 @@ How could we make BBQ ordering <strong>seamless</strong> from discovery to check
       interface, I gave them guided tasks to complete so as to observe where the
       app-flow became unclear for users.
 
-  </div>
+  </Column>
 
-  <div className="research-visuals research-visuals--prototype">
+  <Stack desktopSpaceBefore="none" gap="7" spaceBefore="7" column={2} row={3}>
     <Figure
       src="/images/work/barbequeue-google-ux-certificate/assets/LofiPrototypeFlow.png"
       alt="BarbeQueue low-fidelity prototype flow"
@@ -101,21 +101,21 @@ How could we make BBQ ordering <strong>seamless</strong> from discovery to check
       aspect="16/9"
       fit="cover"
     />
-  </div>
-</section>
+  </Stack>
+</Section>
 
-<section className="editorial-section editorial-section--research-evidence">
-  <div className="editorial-section__intro flow">
-    <p className="editorial-eyebrow">03. Research Insights</p>
-    <h2 className="type-title">Observations</h2>
+<Section>
+  <TextBlock>
+    <p className="type-label text-muted">03. Research Insights</p>
+    <h2 className="type-title text-block__heading">Observations</h2>
 
       The prototype exposed assumptions within the wireframes. Participants did
       not always interpret the experience in the way I expected, and that helped
       paint a different perspective for me. For example:
 
-  </div>
-  <div className="research-evidence">
-    <div className="research-evidence__primary">
+  </TextBlock>
+  <Stack desktopSpaceBefore="none" gap="5" spaceBefore="7" column="full">
+    <Columns ratio="1:1" gap="5" align="start">
       <Figure
         src="/images/work/barbequeue-google-ux-certificate/assets/LofiPrototypeScreens.png"
         alt="BarbeQueue low-fidelity prototype screens"
@@ -128,31 +128,31 @@ How could we make BBQ ordering <strong>seamless</strong> from discovery to check
         caption="A participant questioned the meaning of the Catering and Dine-In labels on the Home page"
         aspect="16/9"
       />
-    </div>
-  </div>
-  <div className="research-evidence">
-    <div className="research-evidence__secondary">
+    </Columns>
+  </Stack>
+  <Stack desktopSpaceBefore="none" gap="5" spaceBefore="7" column="full">
+    <Columns ratio="1:1" gap="5" align="center">
       <Figure
         src="/images/work/barbequeue-google-ux-certificate/assets/ResearchPlan.png"
         alt="BarbeQueue research plan and participant response"
         caption="Response from a sole participant"
         aspect="16/9"
       />
-      <blockquote className="editorial-quote">
+      <Quote desktopSpaceBefore="none" spaceBefore="none">
         “I don't think I would know what these 2 labels would have meant, if I
         didn't have any context of the app beforehand.”
-      </blockquote>
-    </div>
-  </div>
+      </Quote>
+    </Columns>
+  </Stack>
 
-  <div className="editorial-section__intro flow">
-    <h2 className="type-title">What Repeated</h2>
+  <TextBlock>
+    <h2 className="type-title text-block__heading">What Repeated</h2>
 
       I then grouped the observations into <strong>three</strong> needs that kept
       recurring:
 
-  </div>
-  <Cards>
+  </TextBlock>
+  <Cards desktopSpaceBefore="none" column="full" spaceBefore="7">
     <Card title="Order quickly." number="01" icon={
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <circle cx="12" cy="12" r="8" />
@@ -180,83 +180,83 @@ How could we make BBQ ordering <strong>seamless</strong> from discovery to check
       <p>6 of 7 participants wanted cash on delivery, so checkout could not assume that online payment was the only route.</p>
     </Card>
   </Cards>
-</section>
+</Section>
 
 
-<section className="editorial-section editorial-section--solutions">
-  <div className="editorial-section__intro flow">
-    <p className="editorial-eyebrow">04. Design solutions</p>
-    <h2 className="type-title">Findings -&gt; Redesigns</h2>
+<Section>
+  <TextBlock column="full">
+    <p className="type-label text-muted">04. Design solutions</p>
+    <h2 className="type-title text-block__heading">Findings -&gt; Redesigns</h2>
     <p>Three focused design decisions thus translated the findings into a revised ordering experience.</p>
-  </div>
+  </TextBlock>
 
-  <div className="solution-list">
-    <article className="solution">
-      <div className="solution__copy flow">
-        <p className="editorial-eyebrow">Feature 01</p>
-        <div className="solution__heading">
-          <svg className="solution__icon" viewBox="0 0 24 24" aria-hidden="true">
+  <Stack desktopSpaceBefore="none" gap="fluid" spaceBefore="fluid" width="wide" column="full">
+    <Columns ratio="1:2" gap="6" align="center" minStart>
+      <TextBlock measure="compact">
+        <p className="type-label text-muted">Feature 01</p>
+        <div className="heading-with-icon">
+          <svg className="icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
             <circle cx="12" cy="12" r="8" />
             <path d="M12 7v5l3 2" />
           </svg>
-          <h3 className="type-title">A quicker route for returning customers.</h3>
+          <h3 className="type-title text-block__heading">A quicker route for returning customers.</h3>
         </div>
         <p>Saved restaurants help repeat customers return to familiar places without starting their search again. I made them accessible from the profile.</p>
-      </div>
+      </TextBlock>
       <Figure
         src="/images/work/barbequeue-google-ux-certificate/assets/RevisionSavedRestaurants.png"
         alt="BarbeQueue saved restaurants design"
         aspect="16/9"
       />
-    </article>
+    </Columns>
 
-    <article className="solution solution--reverse">
-      <div className="solution__copy flow">
-        <p className="editorial-eyebrow">Feature 02</p>
-        <div className="solution__heading">
-          <svg className="solution__icon" viewBox="0 0 24 24" aria-hidden="true">
+    <Columns ratio="2:1" gap="6" align="center" reverse minEnd>
+      <TextBlock measure="compact">
+        <p className="type-label text-muted">Feature 02</p>
+        <div className="heading-with-icon">
+          <svg className="icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M4 6h16M4 12h16M4 18h16" />
             <circle cx="9" cy="6" r="1" />
             <circle cx="15" cy="12" r="1" />
             <circle cx="11" cy="18" r="1" />
           </svg>
-          <h3 className="type-title">Making it easier to build an order.</h3>
+          <h3 className="type-title text-block__heading">Making it easier to build an order.</h3>
         </div>
         <p>An editable cart lets customers add and review multiple items before checking out, instead of treating each selection as a separate order.</p>
-      </div>
+      </TextBlock>
       <Figure
         src="/images/work/barbequeue-google-ux-certificate/assets/RevisionBuildingOrder.png"
         alt="Revised BarbeQueue ordering experience with an editable cart"
         aspect="16/9"
       />
-    </article>
+    </Columns>
 
-    <article className="solution">
-      <div className="solution__copy flow">
-        <p className="editorial-eyebrow">Feature 03</p>
-        <div className="solution__heading">
-          <svg className="solution__icon" viewBox="0 0 24 24" aria-hidden="true">
+    <Columns ratio="1:2" gap="6" align="center" minStart>
+      <TextBlock measure="compact">
+        <p className="type-label text-muted">Feature 03</p>
+        <div className="heading-with-icon">
+          <svg className="icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
             <rect x="3" y="5" width="18" height="14" rx="2" />
             <path d="M3 10h18M7 15h4" />
           </svg>
-          <h3 className="type-title">Payment options at checkout.</h3>
+          <h3 className="type-title text-block__heading">Payment options at checkout.</h3>
         </div>
         <p>Adding cash on delivery gave customers another way to complete their order without assuming an online payment method.</p>
-      </div>
+      </TextBlock>
       <Figure
         src="/images/work/barbequeue-google-ux-certificate/assets/RevisionCheckout.png"
         alt="Revised BarbeQueue checkout with cash on delivery"
         aspect="16/9"
       />
-    </article>
+    </Columns>
 
-  </div>
-</section>
+  </Stack>
+</Section>
 
-<section className="editorial-section editorial-section--outcome">
-  <div className="editorial-section__intro editorial-section__intro--storyboards flow">
-    <p className="editorial-eyebrow">05. Outcome &amp; Reflections</p>
-    <h2 className="type-title">A More Flexible Ordering Experience.</h2>
+<Section>
+  <TextBlock>
+    <p className="type-label text-muted">05. Outcome &amp; Reflections</p>
+    <h2 className="type-title text-block__heading">A More Flexible Ordering Experience.</h2>
 
       The revised concept responded to the usability feedback by addressing
       directly the insights pulled from the usability studies. It featured a
@@ -268,10 +268,10 @@ How could we make BBQ ordering <strong>seamless</strong> from discovery to check
       nevertheless still important in imparting the values of a good research
       approach.
 
-  </div>
+  </TextBlock>
 
-  <div className="editorial-section__intro editorial-section__intro--storyboards flow">
-    <h2 className="type-title">What I Took Away.</h2>
+  <TextBlock spaceBefore="8" desktopSpaceBefore="8">
+    <h2 className="type-title text-block__heading">What I Took Away.</h2>
 
       This project was my first experience taking a mobile app concept through
       research, prototyping, usability testing, and design iteration. It showed
@@ -279,5 +279,5 @@ How could we make BBQ ordering <strong>seamless</strong> from discovery to check
       could all point to one larger issue: the app was simply not following the unspoken order
       that people had expected. As such, it only goes to show how a good user experience is more than just the visuals; it is also all about understanding the demographic that it strives to serve.
 
-  </div>
-</section>
+  </TextBlock>
+</Section>

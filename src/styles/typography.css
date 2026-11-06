@@ -58,4 +58,11 @@
 		letter-spacing: var(--ls-label);
 		text-transform: uppercase;
 	}
+
+	.text-muted {
+		color: var(--rule);
+	}
+	.type-subheading {
+		font-weight: var(--fw-medium);
+	}
 }

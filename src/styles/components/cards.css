@@ -1,5 +1,4 @@
 @layer components {
-
 	/* Shared informational cards: layout and emphasis are explicit in MDX.
 	   Anatomy follows SGDS guidance; visual tokens remain the portfolio's. */
 	.cards {
@@ -10,10 +9,6 @@
 	}
 	.cards--stack {
 		grid-template-columns: minmax(0, 1fr);
-	}
-	.editorial-section > .cards {
-		grid-column: 1 / -1;
-		margin-top: var(--space-7);
 	}
 	.card {
 		display: flex;
@@ -69,10 +64,5 @@
 		--flow-space: var(--space-3);
 		min-inline-size: 0;
 		color: var(--rule);
-	}
-	@media (min-width: 48rem) {
-		.editorial-section > .cards {
-			margin-top: 0;
-		}
 	}
 }

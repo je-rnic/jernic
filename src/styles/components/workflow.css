@@ -1,0 +1,56 @@
+@layer components {
+	.workflow-comparison {
+		width: 100%;
+		margin: 0;
+	}
+	.workflow {
+		display: grid;
+		gap: var(--space-5);
+		padding: var(--space-5);
+		border: var(--rule-width) solid var(--divider);
+		border-radius: var(--radius-card);
+		background: var(--surface-muted);
+		color: var(--ink);
+	}
+	.workflow__title {
+		text-align: center;
+	}
+	.workflow__flow,
+	.workflow__parallel {
+		display: grid;
+		gap: var(--space-2);
+	}
+	.workflow__flow--ordered {
+		list-style: none;
+		padding: 0;
+	}
+	.workflow__step {
+		display: grid;
+		place-items: center;
+		min-block-size: 4rem;
+		padding: var(--space-3);
+		border: var(--rule-width) solid var(--divider);
+		border-radius: var(--radius-card);
+		background: var(--paper);
+		text-align: center;
+	}
+	.workflow__step--emphasis {
+		border-color: var(--accent);
+		background: color-mix(in srgb, var(--accent) 16%, var(--paper));
+	}
+	.workflow__arrow {
+		display: block;
+		color: var(--rule);
+		font-size: var(--fs-eyebrow);
+		line-height: var(--lh-small);
+		text-align: center;
+	}
+	@media (min-width: 48rem) {
+		.workflow {
+			padding: var(--space-6);
+		}
+		.workflow__parallel {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+}

@@ -20,19 +20,19 @@
 */}
 
 <Statement label="The challenge">
-  How could property search help people find the <strong>right place</strong> with an <strong>incomplete street name</strong>?
+  How could property search help people find the <strong className="type-display">right place</strong> with an <strong className="type-display">incomplete street name</strong>?
 </Statement>
 
-<section className="editorial-section editorial-section--overview" aria-labelledby="project-m-overview-title">
-  <div className="editorial-section__intro flow">
-    <p className="editorial-eyebrow">01. Overview</p>
-    <h2 id="project-m-overview-title" className="type-title">Making property search more forgiving</h2>
+<Section aria-labelledby="project-m-overview-title" divider={false}>
+  <TextBlock>
+    <p className="type-label text-muted">01. Overview</p>
+    <h2 id="project-m-overview-title" className="type-title text-block__heading">Making property search more forgiving</h2>
     <p>During my Accenture internship, I worked on search enhancements for a low-code real estate management system in the public sector. The work focused on helping people retrieve properties when the street name they entered was incomplete or truncated.</p>
     <p>My role connected stakeholder feedback, functional specifications and frontend implementation. I co-facilitated feedback sessions with agency track leads and a cross-functional team, defined partial-string search behaviour, and implemented client-side input debouncing.</p>
     <p>We broke the overall search improvement into separate design requirements that could be scoped across <strong>roughly three to four sprints</strong> during my summer internship.</p>
     <p>From a UX perspective, the work involved two connected questions: <strong>what should the search accept, and when should it respond?</strong></p>
-  </div>
-  <div className="editorial-section__visual">
+  </TextBlock>
+  <Column desktopSpaceBefore="none" spaceBefore="7" column={2}>
     <Cards>
       <Card title="5 agency track leads">
         <p>Contributed stakeholder feedback alongside a cross-functional team.</p>
@@ -41,152 +41,141 @@
         <p>Broken into separate design requirements to fit the internship's sprint cycles.</p>
       </Card>
     </Cards>
-  </div>
-</section>
+  </Column>
+</Section>
 
-<section className="editorial-section editorial-section--research" aria-labelledby="project-m-feedback-title">
-  <div className="editorial-section__intro flow">
-    <p className="editorial-eyebrow">02. Understanding the problem</p>
-    <h2 id="project-m-feedback-title" className="type-title">Turning reported friction into search behaviour</h2>
+<Section aria-labelledby="project-m-feedback-title">
+  <TextBlock>
+    <p className="type-label text-muted">02. Understanding the problem</p>
+    <h2 id="project-m-feedback-title" className="type-title text-block__heading">Turning reported friction into search behaviour</h2>
     <p>I co-facilitated the stakeholder sessions to identify property-search pain points and help translate the findings into requirements for improving the search function.</p>
     <p>For partial-string search, the user need was concrete: someone should be able to retrieve a property using an incomplete street name. That shifted the design question towards the information a person could provide at the start of a search.</p>
     <p>The sessions provided stakeholder-reported needs that informed the scope. Breaking the improvement into separate requirements made it possible to plan the work within the internship's sprint cycles.</p>
-  </div>
-  <div className="editorial-section__visual flow">
+  </TextBlock>
+  <Column desktopSpaceBefore="none" className="flow" spaceBefore="7">
     <h3 className="type-title">Two parts of the same interaction</h3>
-    <ol className="numbered-list">
+    <ol className="numbered-list space-before-7 desktop-space-before-none">
       <li>
-        <span aria-hidden="true">01</span>
+        <span aria-hidden="true" className="numbered-list__index">01</span>
         <div className="flow">
           <h4 className="type-subtitle">The information entered</h4>
           <p>Partial-string handling lets an incomplete or truncated street name become a useful starting point for retrieval.</p>
         </div>
       </li>
       <li>
-        <span aria-hidden="true">02</span>
+        <span aria-hidden="true" className="numbered-list__index">02</span>
         <div className="flow">
           <h4 className="type-subtitle">The timing of the response</h4>
           <p>Input debouncing changes when a request is sent as a person types, connecting perceived responsiveness with endpoint demand.</p>
         </div>
       </li>
     </ol>
-  </div>
-</section>
+  </Column>
+</Section>
 
-<section className="editorial-section editorial-section--solutions" aria-labelledby="project-m-decisions-title">
-  <div className="editorial-section__intro flow">
-    <p className="editorial-eyebrow">03. Design decisions</p>
-    <h2 id="project-m-decisions-title" className="type-title">Designing what happens between typing and finding</h2>
+<Section aria-labelledby="project-m-decisions-title">
+  <TextBlock column="full">
+    <p className="type-label text-muted">03. Design decisions</p>
+    <h2 id="project-m-decisions-title" className="type-title text-block__heading">Designing what happens between typing and finding</h2>
     <p>The changes addressed the behaviour behind the search field. One made the input more flexible; the other controlled the timing of requests.</p>
-  </div>
-  <div className="solution-list">
-    <article className="solution">
-      <div className="solution__copy flow">
-        <p className="editorial-eyebrow">Decision 01 · Query handling</p>
-        <h3 className="type-title">Let part of a street name be enough to start</h3>
+  </TextBlock>
+  <Stack desktopSpaceBefore="none" gap="fluid" spaceBefore="fluid" width="wide" column="full">
+    <Columns ratio="1:2" gap="6" align="center" minStart>
+      <TextBlock measure="compact">
+        <p className="type-label text-muted">Decision 01 · Query handling</p>
+        <h3 className="type-title text-block__heading">Let part of a street name be enough to start</h3>
         <p>I defined the functional specifications for retrieving properties from incomplete or truncated street names. The design intent was to reduce how much of the name a person needed to enter before the search could help them.</p>
         <p>The trade-off is <strong>flexibility versus specificity</strong>: a shorter string can correspond to more than one street. Retrieving a match therefore answers only part of the UX question; the person still needs to recognise the intended property.</p>
         <p>The scope described here is partial-string retrieval. Whether the broader results are easy to distinguish remains an important question for further usability validation.</p>
-      </div>
+      </TextBlock>
       <figure className="figure flow">
-        <div className="workflow-comparison__panel">
-          <p className="workflow-comparison__title type-eyebrow">Illustrative partial-string search</p>
-          <ol className="workflow-comparison__flow" style={{ listStyle: 'none', padding: 0 }}>
-            <li>
-              <div className="workflow-comparison__step">Enter part of a street name: “Cedar”</div>
-              <span className="workflow-comparison__arrow" aria-hidden="true">↓</span>
-            </li>
-            <li>
-              <div className="workflow-comparison__step workflow-comparison__step--emphasis">Retrieve matching properties</div>
-              <span className="workflow-comparison__arrow" aria-hidden="true">↓</span>
-            </li>
-            <li>
-              <div className="workflow-comparison__step">A property on “Cedar Avenue” can be found</div>
-            </li>
-          </ol>
-        </div>
-        <figcaption className="figure__caption type-body">Conceptual flow using a fictional street name. This illustrates the intended behaviour, rather than a production screen or a recorded search result.</figcaption>
+        <Workflow title="Illustrative partial-string search" heading="label" ordered stages={[
+  {
+    "kind": "step",
+    "label": "Enter part of a street name: “Cedar”"
+  },
+  {
+    "kind": "step",
+    "label": "Retrieve matching properties",
+    "emphasis": true
+  },
+  {
+    "kind": "step",
+    "label": "A property on “Cedar Avenue” can be found"
+  }
+]} />
+        <Caption tone="body">Conceptual flow using a fictional street name. This illustrates the intended behaviour, rather than a production screen or a recorded search result.</Caption>
       </figure>
-    </article>
+    </Columns>
 
-    <article className="solution solution--reverse">
-      <div className="solution__copy flow">
-        <p className="editorial-eyebrow">Decision 02 · Interaction timing</p>
-        <h3 className="type-title">Wait for a pause in typing</h3>
+    <Columns ratio="2:1" gap="6" align="center" reverse minEnd>
+      <TextBlock measure="compact">
+        <p className="type-label text-muted">Decision 02 · Interaction timing</p>
+        <h3 className="type-title text-block__heading">Wait for a pause in typing</h3>
         <p>I implemented client-side input debouncing so search requests could wait for a pause in input. Further typing resets that wait, grouping closely spaced keystrokes into fewer requests.</p>
         <p>The trade-off is <strong>request volume versus response delay</strong>. A longer wait can suppress more intermediate requests, but can also make the interface feel slow. Sending a request for every keystroke responds sooner to each edit, while generating more endpoint activity.</p>
         <p>The aim was to avoid unnecessary intermediate requests while keeping the search responsive enough to support the task.</p>
-      </div>
+      </TextBlock>
       <figure className="figure flow">
-        <div className="workflow-comparison__panel">
-          <p className="workflow-comparison__title type-eyebrow">Illustrative debounced interaction</p>
-          <ol className="workflow-comparison__flow" style={{ listStyle: 'none', padding: 0 }}>
-            <li>
-              <div className="workflow-comparison__step">Type or edit the street name</div>
-              <span className="workflow-comparison__arrow" aria-hidden="true">↓</span>
-            </li>
-            <li>
-              <div className="workflow-comparison__step">Pause in typing · further input restarts the wait</div>
-              <span className="workflow-comparison__arrow" aria-hidden="true">↓</span>
-            </li>
-            <li>
-              <div className="workflow-comparison__step workflow-comparison__step--emphasis">Send a request for the current input</div>
-            </li>
-          </ol>
-        </div>
-        <figcaption className="figure__caption type-body">Conceptual request sequence. The spacing does not represent a measured debounce interval or response time.</figcaption>
+        <Workflow title="Illustrative debounced interaction" heading="label" ordered stages={[
+  {
+    "kind": "step",
+    "label": "Type or edit the street name"
+  },
+  {
+    "kind": "step",
+    "label": "Pause in typing · further input restarts the wait"
+  },
+  {
+    "kind": "step",
+    "label": "Send a request for the current input",
+    "emphasis": true
+  }
+]} />
+        <Caption tone="body">Conceptual request sequence. The spacing does not represent a measured debounce interval or response time.</Caption>
       </figure>
-    </article>
-  </div>
-</section>
+    </Columns>
+  </Stack>
+</Section>
 
-<section className="editorial-section editorial-section--process" aria-labelledby="project-m-specifications-title">
-  <div className="editorial-section__intro flow">
-    <p className="editorial-eyebrow">04. From intent to specification</p>
-    <h2 id="project-m-specifications-title" className="type-title">One improvement, scoped into smaller requirements</h2>
+<Section aria-labelledby="project-m-specifications-title" ratio="3:2" reverse>
+  <TextBlock>
+    <p className="type-label text-muted">04. From intent to specification</p>
+    <h2 id="project-m-specifications-title" className="type-title text-block__heading">One improvement, scoped into smaller requirements</h2>
     <p>The separate requirements gave the team a way to scope the overall search improvement within the internship's sprint cycles. Input handling and request timing could be described individually while contributing to the same search experience.</p>
     <p>I owned the functional specifications for partial-string handling and the client-side debounce implementation. Identifying the pain points and shaping the scope was collaborative work with the agency track leads and cross-functional team.</p>
-  </div>
-  <div className="editorial-section__visual flow">
-    <div className="stats">
-      <p className="type-eyebrow">| summer internship</p>
-      <p className="type-display">3–4 sprints</p>
-      <p className="type-subtitle">Approximate duration of the scoped work.</p>
-    </div>
-    <blockquote className="editorial-quote">
+  </TextBlock>
+  <Column desktopSpaceBefore="none" className="flow" spaceBefore="7">
+    <Metric value="3–4 sprints" label="| summer internship" description="Approximate duration of the scoped work." />
+    <Quote>
       <p><em>The interaction depends on both the input the system understands and the moment it chooses to respond.</em></p>
-    </blockquote>
-  </div>
-</section>
+    </Quote>
+  </Column>
+</Section>
 
-<section className="editorial-section editorial-section--outcome" aria-labelledby="project-m-outcomes-title">
-  <div className="editorial-section__intro flow">
-    <p className="editorial-eyebrow">05. Outcomes</p>
-    <h2 id="project-m-outcomes-title" className="type-title">Fewer requests, with a more useful search</h2>
+<Section aria-labelledby="project-m-outcomes-title">
+  <TextBlock>
+    <p className="type-label text-muted">05. Outcomes</p>
+    <h2 id="project-m-outcomes-title" className="type-title text-block__heading">Fewer requests, with a more useful search</h2>
     <p>Partial-string handling enabled property retrieval from incomplete or truncated street names. Input debouncing reduced search-endpoint requests by approximately 30% in internal testing.</p>
     <p>Responsiveness also improved. Without the original test protocol or timing measurements, I treat that as a qualitative outcome; the 30% figure refers specifically to request load.</p>
-  </div>
-  <div className="editorial-section__visual flow">
-    <div className="stats">
-      <p className="type-eyebrow">| internal testing</p>
-      <p className="type-display">~30%</p>
-      <p className="type-subtitle">fewer search-endpoint requests</p>
-      <p className="type-serif">Observed with client-side input debouncing.</p>
-    </div>
-    <p className="editorial-section__note">This result describes internal test conditions. It does not establish production-wide impact or how easily agency users selected the intended property.</p>
-  </div>
-</section>
+  </TextBlock>
+  <Column desktopSpaceBefore="none" className="flow" spaceBefore="7">
+    <Metric value="~30%" label="| internal testing" description="fewer search-endpoint requests" note="Observed with client-side input debouncing." />
+    <p className="text-muted">This result describes internal test conditions. It does not establish production-wide impact or how easily agency users selected the intended property.</p>
+  </Column>
+</Section>
 
-<section className="editorial-section editorial-section--outcome" aria-labelledby="project-m-reflection-title">
-  <div className="editorial-section__intro editorial-section__intro--storyboards flow">
-    <p className="editorial-eyebrow">06. Takeaways</p>
-    <h2 id="project-m-reflection-title" className="type-title">Search quality includes the moments before a result</h2>
+<Section aria-labelledby="project-m-reflection-title">
+  <TextBlock>
+    <p className="type-label text-muted">06. Takeaways</p>
+    <h2 id="project-m-reflection-title" className="type-title text-block__heading">Search quality includes the moments before a result</h2>
     <p>This work showed me how functional specifications and frontend behaviour shape the user experience. Supporting an incomplete street name reduces the information someone needs to supply; controlling request timing changes how the system responds while they enter it.</p>
     <p>Working across stakeholder feedback, specifications and implementation helped me connect a reported pain point to the behaviour behind the interface.</p>
-  </div>
-  <div className="editorial-section__intro editorial-section__intro--storyboards flow">
+  </TextBlock>
+  <TextBlock spaceBefore="8" desktopSpaceBefore="8">
     <h3 className="type-title">What I would validate next</h3>
     <p>I would test the search with agency users using full, partial and ambiguous street names. I would observe whether they could recognise the intended property, how often they reformulated a query, and whether the pause before results felt responsive.</p>
     <p>I would also retain a repeatable before-and-after benchmark for request count and time to the first relevant result, using the same queries and typing sequences. That would help assess the debounce trade-off across different input patterns and separate endpoint efficiency from successful property selection.</p>
-  </div>
-</section>
+  </TextBlock>
+</Section>

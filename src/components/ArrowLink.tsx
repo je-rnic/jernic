@@ -7,29 +7,29 @@ import type { ReactNode } from "react";
  * `direction="down"` puts a down arrow after the label.
  */
 export default function ArrowLink({
-  href,
-  children,
-  direction = "forward",
+	href,
+	children,
+	direction = "forward",
 }: {
-  href: string;
-  children: ReactNode;
-  direction?: "forward" | "back" | "down";
+	href: string;
+	children: ReactNode;
+	direction?: "forward" | "back" | "down";
 }) {
-  const back = direction === "back";
-  const down = direction === "down";
-  const arrow = (
-    <span className="arrow-link__arrow" aria-hidden="true">
-      {back ? "←" : down ? "↓" : "→"}
-    </span>
-  );
-  return (
-    <Link
-      href={href}
-      className={`arrow-link type-body${back ? " arrow-link--back" : ""}${down ? " arrow-link--down" : ""}`}
-    >
-      {back && arrow}
-      <span className="arrow-link__label">{children}</span>
-      {!back && arrow}
-    </Link>
-  );
+	const back = direction === "back";
+	const down = direction === "down";
+	const arrow = (
+		<span className="arrow-link__arrow" aria-hidden="true">
+			{back ? "←" : down ? "↓" : "→"}
+		</span>
+	);
+	return (
+		<Link
+			href={href}
+			className={`arrow-link type-body${back ? " arrow-link--back" : ""}${down ? " arrow-link--down" : ""}`}
+		>
+			{back && arrow}
+			<span className="arrow-link__label">{children}</span>
+			{!back && arrow}
+		</Link>
+	);
 }

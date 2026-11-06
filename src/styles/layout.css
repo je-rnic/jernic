@@ -27,10 +27,6 @@
 	.hero__media {
 		width: 100%;
 		aspect-ratio: 3 / 2;
-		position: relative;
-		overflow: hidden;
-		border-radius: var(--radius-media);
-		box-shadow: var(--shadow-media);
 	}
 
 	@media (min-width: 48rem) {
@@ -55,15 +51,6 @@
 	}
 
 	/* Label on the left, content on the right; stacked on phones. */
-	.split {
-		display: grid;
-		gap: var(--space-4) var(--space-6);
-	}
-	@media (min-width: 48rem) {
-		.split {
-			grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
-		}
-	}
 
 	/* Title block of non-home pages (Works). */
 	.page-header {

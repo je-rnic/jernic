@@ -26,39 +26,39 @@
 */}
 
 <Statement label="// The challenge">
-  How could we make AI news analysis <strong>easy to understand</strong> and <strong>natural to use</strong> where people already read?
+  How could we make AI news analysis <strong className="type-display">easy to understand</strong> and <strong className="type-display">natural to use</strong> where people already read?
 </Statement>
 
-<section className="editorial-section editorial-section--overview" aria-labelledby="checkmate-overview-title">
-  <div className="editorial-section__intro flow">
-    <p className="editorial-eyebrow">01. Overview</p>
-    <h2 id="checkmate-overview-title" className="type-title">From an article to a clearer understanding</h2>
+<Section aria-labelledby="checkmate-overview-title" divider={false}>
+  <TextBlock>
+    <p className="type-label text-muted">01. Overview</p>
+    <h2 id="checkmate-overview-title" className="type-title text-block__heading">From an article to a clearer understanding</h2>
     <p>CheckMate was my final-year group project: an AI-powered news analysis tool designed to help young readers examine an article's facts, sentiment, emotion and potential propaganda techniques. The experience spanned across a Web App, Chrome extension and Telegram messaging interface.</p>
     <p>As the <strong>Design Lead and Frontend Software Engineer</strong>, I shaped the reading and analysis flows, built the Figma design system, implemented the React interface and used Maze to evaluate the prototypes.</p>
     <p>While the large language models and backend handling were a team effort, my focus stayed largley on how people encountered, navigated and understood the results.</p>
-    <div className="stats">
+    <Stack desktopSpaceBefore="7" gap="2" spaceBefore="7">
       <p className="type-eyebrow">| tools used</p>
       <p className="type-serif">Figma · React · JavaScript · HTML/CSS · Maze · GitHub · Confluence · Jira</p>
-    </div>
-  </div>
-  <div className="editorial-section__visual">
+    </Stack>
+  </TextBlock>
+  <Column desktopSpaceBefore="none" spaceBefore="7" column={2}>
     <Video
       src="/media/checkmate-ui-flow.mp4"
       label="CheckMate product walkthrough from a YouTube article to analysis on the web platform"
       caption="Product walkthrough: moving from a YouTube article into CheckMate's web analysis."
       autoPlay
     />
-  </div>
-</section>
+  </Column>
+</Section>
 
-<section className="editorial-section editorial-section--research-evidence" aria-labelledby="checkmate-research-title">
-  <div className="editorial-section__intro flow">
-    <p className="editorial-eyebrow">02. Understanding readers</p>
-    <h2 id="checkmate-research-title" className="type-title">The gap between valuing analysis and making it a habit</h2>
+<Section aria-labelledby="checkmate-research-title">
+  <TextBlock>
+    <p className="type-label text-muted">02. Understanding readers</p>
+    <h2 id="checkmate-research-title" className="type-title text-block__heading">The gap between valuing analysis and making it a habit</h2>
     <p>Our discovery research began with a background survey of <strong>31 participants aged 18–35</strong>. Their self-reported habits suggested an opportunity to bring analysis into the places where they already consumed news.</p>
-  </div>
-  <div className="research-evidence research-evidence--paired">
-    <div className="research-evidence__row">
+  </TextBlock>
+  <Stack desktopSpaceBefore="none" gap="7" spaceBefore="7" column="full">
+    <Columns ratio="1:2" gap="responsive" align="center">
       <Card title="social media" icon={
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" />
@@ -73,8 +73,8 @@
         alt="News-platform survey results from 31 respondents: 21 selected social media and 17 selected Telegram channels."
         aspect="16/9"
       />
-    </div>
-    <div className="research-evidence__row">
+    </Columns>
+    <Columns ratio="1:2" gap="responsive" align="center">
       <Card title="77%" variant="metric" icon={
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12 3l8 3v6c0 5 -8 9 -8 9s-8 -4 -8 -9v-6l8 -3" />
@@ -88,8 +88,8 @@
         alt="Importance survey: 13 respondents selected extremely important and 11 selected important, out of 31 responses."
         aspect="16/9"
       />
-    </div>
-    <div className="research-evidence__row">
+    </Columns>
+    <Columns ratio="1:2" gap="responsive" align="center">
       <Card title="19%" variant="metric" icon={
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M14 3v4a1 1 0 0 0 1 1h4" />
@@ -106,70 +106,66 @@
         alt="Analysis-habit survey: six respondents selected always, 17 sometimes and eight never, out of 31 responses."
         aspect="16/9"
       />
-    </div>
-  </div>
+    </Columns>
+  </Stack>
 
-</section>
+</Section>
 
-<section className="editorial-section editorial-section--solutions" aria-labelledby="checkmate-system-title">
-  <div className="editorial-section__intro flow">
-    <p className="editorial-eyebrow">03. Shaping the experience</p>
-    <h2 id="checkmate-system-title" className="type-title">A reading journey across three channels</h2>
+<Section aria-labelledby="checkmate-system-title">
+  <TextBlock column="full">
+    <p className="type-label text-muted">03. Shaping the experience</p>
+    <h2 id="checkmate-system-title" className="type-title text-block__heading">A reading journey across three channels</h2>
     <p>I used the research to frame two design priorities: an <strong>accessible starting point</strong> and a <strong>manageable analysis view</strong>. I documented the flows and reusable components in Figma and Confluence, then carried those decisions into React.</p>
-  </div>
-  <div className="solution-list">
-    <article className="solution">
-      <div className="solution__copy flow">
-        <p className="editorial-eyebrow">Entry points</p>
-        <h3 className="type-title">Start close to the article</h3>
+  </TextBlock>
+  <Stack desktopSpaceBefore="none" gap="fluid" spaceBefore="fluid" width="wide" column="full">
+    <Columns ratio="1:2" gap="6" align="center" minStart>
+      <TextBlock measure="compact">
+        <p className="type-label text-muted">Entry points</p>
+        <h3 className="type-title text-block__heading">Start close to the article</h3>
         <p>The Chrome extension and Telegram bot gave readers ways to submit an article within their existing browsing and messaging habits. The website provided space for the detailed analysis.</p>
         <p>The bot returned a summary with a link to the full analysis. That made access to the link a critical part of the journey, particularly when a response became long.</p>
-      </div>
-      <Figure
-        src="/images/work/checkmate/prototype-extensionoverlay.jpg"
-        caption="Chrome extension as an alternative entry point into article analysis."
-        aspect="16/9"
-      />
-    </article>
-    <article className="solution solution--reverse">
-      <div className="solution__copy flow">
-        <p className="editorial-eyebrow">Information hierarchy</p>
-        <h3 className="type-title">Give each analysis room to be read</h3>
+      </TextBlock>
+      <Figure src="/images/work/checkmate/prototype-extensionoverlay.jpg" caption="Chrome extension as an alternative entry point into article analysis." aspect="16/9" alt="Chrome extension as an alternative entry point into article analysis." />
+    </Columns>
+    <Columns ratio="2:1" gap="6" align="center" reverse minEnd>
+      <TextBlock measure="compact">
+        <p className="type-label text-muted">Information hierarchy</p>
+        <h3 className="type-title text-block__heading">Give each analysis room to be read</h3>
         <p>The output covered four categories: fact-checking, emotion, sentiment and propaganda techniques. I organised them into selectable tabs so readers could focus on one category at a time.</p>
         <p>The trade-off was that comparing categories required switching views. Prototype testing therefore needed to examine how people found a result and moved between tabs.</p>
-      </div>
+      </TextBlock>
       <Figure
         src="/images/work/checkmate/designsystem-structure.jpg"
         alt="CheckMate analysis components organised into separate categories and selectable tabs."
         caption="Separate views for facts, emotion, sentiment and propaganda techniques."
         aspect="16/9"
       />
-    </article>
-    <article className="solution">
-      <div className="solution__copy flow">
-        <p className="editorial-eyebrow">Design system</p>
-        <h3 className="type-title">Carry the hierarchy into the interface</h3>
+    </Columns>
+    <Columns ratio="1:2" gap="6" align="center" minStart>
+      <TextBlock measure="compact">
+        <p className="type-label text-muted">Design system</p>
+        <h3 className="type-title text-block__heading">Carry the hierarchy into the interface</h3>
         <p>I defined reusable typography, colour and component treatments to keep the analysis views consistent. Inter separated headings, labels and body copy through weight; primary blue identified actions and selected states.</p>
         <p>Building the React interface alongside the Figma reference let me carry that hierarchy into component states and navigation behaviour.</p>
-      </div>
+      </TextBlock>
       <Figure
         src="/images/work/checkmate/designsystem-foundations.jpg"
         alt="CheckMate Figma foundations showing typography, colour and reusable interface components."
         caption="Figma foundations for a consistent reading and interaction hierarchy."
         aspect="16/9"
       />
-    </article>
-  </div>
-</section>
+    </Columns>
+  </Stack>
+</Section>
 
-<section className="editorial-section editorial-section--research-evidence editorial-section--prototype-testing" aria-labelledby="checkmate-prototype-testing-title">
-  <div className="editorial-section__intro flow">
-    <p className="editorial-eyebrow">04. Prototype findings and iteration</p>
-    <h2 id="checkmate-prototype-testing-title" className="type-title">Finding friction between the screens</h2>
+<Section aria-labelledby="checkmate-prototype-testing-title" inset>
+  <TextBlock measure="wide" column="full">
+    <p className="type-label text-muted">04. Prototype findings and iteration</p>
+    <h2 id="checkmate-prototype-testing-title" className="type-title text-block__heading">Finding friction between the screens</h2>
     <p>We set up assigned taks on Maze to participants to examine navigation within the analysis and the handoff between Telegram and web platform.</p>
-  </div>
-  <div className="research-evidence research-evidence--paired">
-    <div className="research-evidence__row">
+  </TextBlock>
+  <Stack desktopSpaceBefore="none" gap="fluid" spaceBefore="fluid" column="full">
+    <Columns ratio="1:2" gap="responsive" align="start">
       <div className="flow">
         <h3 className="type-title">a | Reaching the sentiment results</h3>
         <p>One task asked participants to open the Chrome extension, submit an article link and navigate to the <strong>Sentiment Analysis results tab</strong>.</p>
@@ -182,8 +178,8 @@
         caption="Extension navigation task."
         aspect="16/9"
       />
-    </div>
-    <div className="research-evidence__row">
+    </Columns>
+    <Columns ratio="1:2" gap="responsive" align="start">
       <div className="flow">
         <h3 className="type-title">b | A long response blocked the handoff</h3>
         <p>Another issue faced during prototype testing was that in our initial figma interface, <strong>long messages overflowed the chat area</strong>. Participants could not reach the article link at the bottom to open the website's detailed analysis.</p>
@@ -203,37 +199,29 @@
           aspect="16/9"
         />
       </div>
-    </div>
-    <div className="research-evidence__row">
+    </Columns>
+    <Columns ratio="1:2" gap="responsive" align="start">
       <div className="flow">
         <h3 className="type-title">Making the correction visible</h3>
           <p>Before the final high-fidelity prototype evaluation, we corrected the mockup’s overflow. While Telegram’s in-app design would have accommodated this in production, the issue reinforced the importance of making the full response accessible, not just visually well-structured.</p>
       </div>
-      <Figure
-        src="/images/work/checkmate/prototype-telegrambot.jpg" 
-        caption=""
-        aspect="16/9"
-      />
-    </div>
-  </div>
-</section>
+      <Figure src="/images/work/checkmate/prototype-telegrambot.jpg" caption="" aspect="16/9" alt="prototype telegrambot" />
+    </Columns>
+  </Stack>
+</Section>
 
-<section className="editorial-section editorial-section--research-evidence" aria-labelledby="checkmate-maze-title">
-  <div className="editorial-section__intro flow">
-    <p className="editorial-eyebrow">05. Final prototype evaluation</p>
-    <h2 id="checkmate-maze-title" className="type-title">Evaluating the revised experience</h2>
+<Section aria-labelledby="checkmate-maze-title">
+  <TextBlock>
+    <p className="type-label text-muted">05. Final prototype evaluation</p>
+    <h2 id="checkmate-maze-title" className="type-title text-block__heading">Evaluating the revised experience</h2>
     <p>After the overflow correction, we evaluated the revised <strong>high-fidelity prototype in Maze</strong>. This stage focused on participants' overall perception of the UI, and their ease in navigation across all 3 platforms.</p>
     <p>One of the goal-based tasks assigned was a repeat of the previous blocker during intial prototype testing: we asked participants to paste an article link into the Telegram message bar and receive a summarised analysis from the bot again. This time, Maze recorded <strong>0% drop-off</strong>.</p>
     
-  </div>
-  <div className="research-visuals">
-    <Figure
-      src="/images/work/checkmate/prototype-telegrambotFinal.jpg"
-      caption="Final Prototype: Results"
-      aspect="16/9"
-    />
-  </div>
-  <div className="research-evidence">
+  </TextBlock>
+  <Stack desktopSpaceBefore="none" gap="5" spaceBefore="7" column={2}>
+    <Figure src="/images/work/checkmate/prototype-telegrambotFinal.jpg" caption="Final Prototype: Results" aspect="16/9" alt="Final Prototype: Results" />
+  </Stack>
+  <Stack desktopSpaceBefore="none" gap="5" spaceBefore="7" column="full">
     <Cards>
       <Card title="4.8/5" variant="metric">
         <p><strong>Average UI user-friendliness rating</strong>, as displayed by Maze, from 25 responses.</p>
@@ -245,34 +233,30 @@
         <p><strong>Drop-off on the final bot analysis task</strong>, which asked participants to submit an article and receive its summary.</p>
       </Card>
     </Cards>
-    <div className="research-evidence__row">
+    <Columns ratio="1:2" gap="responsive" align="center">
       <div className="flow">
         <h3 className="type-title">How participants rated the interface</h3>
         <p>The question asked: <strong>“How would you rate the user-friendliness of the UI?”</strong> The scale ran from 1 (“Not Good”) to 5 (“Very Good”).</p>
         <p>Of the 25 responses, 20 selected 5, four selected 4 and one selected 3. Maze displayed an average of <strong>4.8/5</strong>. The 80% figure represents those who selected the highest rating.</p>
       </div>
-      <Figure
-        src="/images/work/checkmate/evaluation-overallUI.jpg"
-        caption="Final Evaluation: Overall UI Satisfaction"
-        aspect="16/9"
-      />
-    </div>
-  </div>
-</section>
+      <Figure src="/images/work/checkmate/evaluation-overallUI.jpg" caption="Final Evaluation: Overall UI Satisfaction" aspect="16/9" alt="Final Evaluation: Overall UI Satisfaction" />
+    </Columns>
+  </Stack>
+</Section>
 
-<section className="editorial-section editorial-section--process" aria-labelledby="checkmate-performance-title">
-  <div className="editorial-section__intro flow">
-    <p className="editorial-eyebrow">06. Implementing the experience</p>
-    <h2 id="checkmate-performance-title" className="type-title">Designing for the time between actions</h2>
+<Section aria-labelledby="checkmate-performance-title" ratio="3:2" reverse>
+  <TextBlock>
+    <p className="type-label text-muted">06. Implementing the experience</p>
+    <h2 id="checkmate-performance-title" className="type-title text-block__heading">Designing for the time between actions</h2>
     <p>Moving into implementation, we had to additionally factor that machine-learning analysis takes time, especially for longer articles.</p>
     <p>Together with the backend engineers, we worked on <strong>route-based lazy loading</strong> and <strong>client-side API response caching</strong>. These choices addressed page loading and revisiting results, ensuring that model inference time remained a separate constraint to be handled on its own.</p>
     <p>We did not measure the performance time before implementation, hence a metric comparison was not written for this segment.</p>
-    <div className="stats">
+    <Stack desktopSpaceBefore="7" gap="2" spaceBefore="7">
       <p className="type-eyebrow">| design lesson</p>
       <p className="type-serif">Loading behaviour and repeated waits are part of the reading experience too.</p>
-    </div>
-  </div>
-  <div className="editorial-section__visual">
+    </Stack>
+  </TextBlock>
+  <Column desktopSpaceBefore="none" spaceBefore="7">
     <Cards layout="stack">
       <Card title="Load what the route needs" number="01" icon={
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -291,41 +275,37 @@
         <p>Client-side API caching reused available responses, reducing repeated requests as readers returned to analysed content.</p>
       </Card>
     </Cards>
-  </div>
-</section>
+  </Column>
+</Section>
 
-<section className="editorial-section editorial-section--outcome" aria-labelledby="checkmate-delivery-title">
-  <div className="editorial-section__intro flow">
-    <p className="editorial-eyebrow">07. Product delivery</p>
-    <h2 id="checkmate-delivery-title" className="type-title">Testing the implemented flow with the client</h2>
+<Section aria-labelledby="checkmate-delivery-title">
+  <TextBlock>
+    <p className="type-label text-muted">07. Product delivery</p>
+    <h2 id="checkmate-delivery-title" className="type-title text-block__heading">Testing the implemented flow with the client</h2>
     <p>Following prototype evaluation, the team implemented the experience and <strong>successfully tested the end-to-end flow with the client</strong>. This provided functional confirmation of the implemented journey and is presented here as a qualitative delivery outcome.</p>
     <p>As part of our final-year roadshow evaluation, I started our team's presentation of CheckMate to the judging panels, connecting the product's purpose with a demonstration of the experience.</p>
     <p>We then moved on to the final closed door evaluation where we eventually clinched <strong>1st Place in the Dell Cloud Native Experience Award</strong>. Read the project recap on <a className="recap-link" href="https://www.linkedin.com/posts/jernicyeo_started-this-week-with-the-dell-technologies-activity-7325886544425160704-xAUs" target="_blank" rel="noreferrer"><em>LinkedIn.</em></a></p>
-  </div>
-  <div className="editorial-section__visual">
-    <Figure
-      src="/images/work/checkmate/productdelivery.jpg"
-      caption="CheckMate's final presentation"
-      aspect="4/3"
-    />
-  </div>
-</section>
+  </TextBlock>
+  <Column desktopSpaceBefore="none" spaceBefore="7">
+    <Figure src="/images/work/checkmate/productdelivery.jpg" caption="CheckMate's final presentation" aspect="4/3" alt="CheckMate's final presentation" />
+  </Column>
+</Section>
 
 
-<section className="editorial-section editorial-section--outcome" aria-labelledby="checkmate-reflection-title">
-  <div className="editorial-section__intro editorial-section__intro--storyboards flow">
-    <p className="editorial-eyebrow">08. Takeaways</p>
-    <h2 id="checkmate-reflection-title" className="type-title">The design system continues in the code</h2>
+<Section aria-labelledby="checkmate-reflection-title">
+  <TextBlock>
+    <p className="type-label text-muted">08. Takeaways</p>
+    <h2 id="checkmate-reflection-title" className="type-title text-block__heading">The design system continues in the code</h2>
     <p>Owning both the design reference and the React interface made consistency tangible. Component states, navigation, responsive layouts and loading behaviour all affected how the intended experience survived implementation.</p>
     <p>The Telegram issue reinforced the need to follow a journey beyond an individual screen: a readable summary still depended on an accessible link to the next step. Evaluating the revised mockup and then testing the implemented flow with the client addressed different stages of that journey.</p>
-  </div>
+  </TextBlock>
 
-  <div className="editorial-section__intro editorial-section__intro--storyboards flow">
+  <TextBlock spaceBefore="8" desktopSpaceBefore="8">
     <h3 className="type-title">What I would validate next</h3>
     <p>I would test whether readers correctly understand uncertain model outputs, distinguish sentiment from factual accuracy and explain why a claim was flagged. That would connect the goal of approachable analysis with evidence of comprehension and better-informed judgement.</p>
     <p>I would also evaluate the waiting experience on slower connections and measure initial-load and repeat-visit performance to establish the user benefit of the implementation choices.</p>
-    <blockquote className="editorial-quote">
+    <Quote>
       <p><em>A consistent interface starts in Figma, but its behaviour is decided just as much in the browser.</em></p>
-    </blockquote>
-  </div>
-</section>
+    </Quote>
+  </TextBlock>
+</Section>
