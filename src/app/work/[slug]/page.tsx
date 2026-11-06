@@ -39,11 +39,9 @@ export default async function CaseStudyPage({ params }: Props) {
   }
 
   const next = getNextWork(slug);
-  const caseStudyStyle: CaseStudyStyle = {
-    ["--accent"]: `light-dark(${work.accent?.light ?? "#5267b2"}, ${
-      work.accent?.dark ?? "#a1b0f0"
-    })`,
-  };
+  const caseStudyStyle: CaseStudyStyle | undefined = work.accent
+    ? { "--accent": `light-dark(${work.accent.light}, ${work.accent.dark})` }
+    : undefined;
 
   return (
     <main id="main">

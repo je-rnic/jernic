@@ -1,0 +1,61 @@
+@layer type {
+	.type-display {
+		font-family: var(--font-sans);
+		font-size: var(--fs-display);
+		font-weight: var(--fw-bold);
+		line-height: var(--lh-display);
+		letter-spacing: var(--ls-display);
+	}
+	.type-statement {
+		font-family: var(--font-sans);
+		font-size: var(--fs-statement);
+		font-weight: var(--fw-regular);
+		line-height: var(--lh-title);
+		letter-spacing: var(--ls-title);
+	}
+	.type-title {
+		font-family: var(--font-sans);
+		font-size: var(--fs-title);
+		font-weight: var(--fw-medium);
+		line-height: var(--lh-title);
+		letter-spacing: var(--ls-title);
+	}
+	.type-subtitle {
+		font-family: var(--font-sans);
+		font-size: var(--fs-subtitle);
+		font-weight: var(--fw-regular);
+		line-height: var(--lh-subtitle);
+		letter-spacing: var(--ls-subtitle);
+	}
+	.type-eyebrow {
+		font-family: var(--font-hand);
+		font-size: var(--fs-eyebrow);
+		font-weight: var(--fw-regular);
+		line-height: var(--lh-eyebrow);
+		letter-spacing: var(--ls-eyebrow);
+		font-synthesis: none;
+	}
+	.type-body {
+		font-family: var(--font-sans);
+		font-size: var(--fs-body);
+		font-weight: var(--fw-regular);
+		line-height: var(--lh-body);
+		letter-spacing: var(--ls-body);
+	}
+	.type-serif {
+		font-family: var(--font-serif);
+		font-size: var(--fs-serif);
+		font-weight: var(--fw-regular);
+		line-height: var(--lh-small);
+		letter-spacing: var(--ls-serif);
+		color: var(--ink);
+	}
+	.type-label {
+		font-family: var(--font-sans);
+		font-size: var(--fs-label);
+		font-weight: var(--fw-medium);
+		line-height: var(--lh-small);
+		letter-spacing: var(--ls-label);
+		text-transform: uppercase;
+	}
+}

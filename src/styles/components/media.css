@@ -1,0 +1,22 @@
+@layer components {
+
+	.figure__media {
+		position: relative;
+		overflow: hidden;
+		background: var(--paper);
+		border-radius: var(--radius-media);
+		box-shadow: var(--shadow-media);
+	}
+	.figure__video {
+		width: 100%;
+		height: auto;
+		background: var(--paper);
+		border-radius: var(--radius-media);
+		box-shadow: var(--shadow-media);
+	}
+	.figure__caption {
+		margin: var(--space-3) auto 0;
+		text-align: center;
+		font-style: italic;
+	}
+}

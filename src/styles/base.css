@@ -1,0 +1,59 @@
+@layer base {
+	body {
+		min-height: 100vh;
+		min-height: 100svh;
+		background: var(--paper);
+		color: var(--ink);
+		font-family: var(--font-sans);
+		font-size: var(--fs-body);
+		font-weight: var(--fw-regular);
+		line-height: var(--lh-body);
+		letter-spacing: var(--ls-body);
+		-webkit-font-smoothing: antialiased;
+		text-rendering: optimizeLegibility;
+	}
+
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+	strong {
+		font-weight: var(--fw-bold);
+	}
+	em {
+		font-style: italic;
+	}
+
+	:focus-visible {
+		outline: 2px solid currentColor;
+		outline-offset: 3px;
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		html {
+			scroll-behavior: smooth;
+		}
+
+		/* Locomotive owns smoothing while active; CSS is the native fallback. */
+		html.lenis {
+			scroll-behavior: auto;
+		}
+
+		/* `theme-ready` prevents a fade from the wrong theme on first paint.
+       Transition tokens at their source, never inherited text/currentColor. */
+		html.theme-ready {
+			transition:
+				--paper var(--theme-fade),
+				--ink var(--theme-fade),
+				--toggle var(--theme-fade),
+				--divider var(--theme-fade),
+				--accent var(--theme-fade),
+				--surface-muted var(--theme-fade);
+		}
+
+		/* Case studies define their own accent palette on the article. */
+		html.theme-ready .case-study {
+			transition: --accent var(--theme-fade);
+		}
+	}
+}

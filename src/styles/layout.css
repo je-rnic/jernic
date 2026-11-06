@@ -1,0 +1,98 @@
+@layer layout {
+	.container {
+		width: min(100% - 2 * var(--gutter), var(--content-max));
+		margin-inline: auto;
+	}
+
+	/* First screen: hero centred between the header and the bottom bar. */
+	.landing {
+		min-height: calc(100vh - var(--header-h));
+		min-height: calc(100svh - var(--header-h));
+		display: flex;
+		flex-direction: column;
+	}
+	.landing > .hero {
+		margin-block: auto;
+	}
+
+	.hero {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-7);
+		padding-block: var(--space-7);
+	}
+	.hero__text {
+		min-width: 0;
+	}
+	.hero__media {
+		width: 100%;
+		aspect-ratio: 3 / 2;
+		position: relative;
+		overflow: hidden;
+		border-radius: var(--radius-media);
+		box-shadow: var(--shadow-media);
+	}
+
+	@media (min-width: 48rem) {
+		.hero {
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			gap: var(--space-6);
+		}
+		.hero__text {
+			flex: 1 1 auto;
+		}
+		.hero__media {
+			flex: 0 0 var(--hero-media-width);
+			width: var(--hero-media-width);
+		}
+	}
+
+	/* Vertical rhythm: space between direct children. Override --flow-space per use. */
+	.flow > * + * {
+		margin-top: var(--flow-space, var(--space-4));
+	}
+
+	/* Label on the left, content on the right; stacked on phones. */
+	.split {
+		display: grid;
+		gap: var(--space-4) var(--space-6);
+	}
+	@media (min-width: 48rem) {
+		.split {
+			grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+		}
+	}
+
+	/* Title block of non-home pages (Works). */
+	.page-header {
+		padding-block: var(--space-7) var(--space-8);
+	}
+	.page-header__intro {
+		margin-top: var(--space-4);
+		max-width: var(--measure);
+	}
+
+	.about-header {
+		padding-block: clamp(var(--space-7), 6vw, var(--space-9))
+			clamp(var(--space-7), 5vw, var(--space-8));
+	}
+	.about {
+		display: grid;
+		gap: clamp(var(--space-7), 6vw, var(--space-9));
+		align-items: start;
+		padding-bottom: clamp(var(--space-9), 8vw, var(--space-10));
+	}
+	.about__copy {
+		--flow-space: clamp(var(--space-5), 2.5vw, var(--space-6));
+		max-width: var(--measure);
+		min-width: 0;
+	}
+	@media (min-width: 48rem) {
+		.about {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: clamp(var(--space-6), 6vw, var(--space-9));
+		}
+	}
+}
