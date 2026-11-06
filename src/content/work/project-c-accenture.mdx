@@ -86,30 +86,28 @@
   </div>
 
   <div className="editorial-section__visual">
-    <div className="problem-cards">
-      <article className="card problem-card flow">
-        <span className="problem-card__number" aria-hidden="true">01</span>
-        <svg className="problem-card__icon" viewBox="0 0 24 24" aria-hidden="true">
-        <circle cx="12" cy="12" r="8" />
-        <path d="M12 7v5l3 2" />
-      </svg>
-        <h3 className="type-title">Iterative Development</h3>
+    <Cards layout="stack">
+      <Card title="Iterative Development" number="01" icon={
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="8" />
+          <path d="M12 7v5l3 2" />
+        </svg>
+      }>
         <p>Late changes to the referee questionnaire had created repeated revisions and delayed development. Sequential handoffs made each change harder to absorb.</p>
         <p>We agreed on the key design requirements upfront so development could proceed alongside shorter feedback and testing cycles. This gave the team a clearer basis for implementation while allowing gaps to surface earlier.</p>
-      </article>
+      </Card>
 
-      <article className="card problem-card flow">
-        <span className="problem-card__number" aria-hidden="true">02</span>
-        <svg className="problem-card__icon" viewBox="0 0 24 24" aria-hidden="true">
-        <rect x="5" y="3.5" width="14" height="17" rx="2" />
-        <path d="M8 8h1.5M11.5 8H16M8 12h1.5M11.5 12H16M8 16l1.5 1.5L12 15M13.5 16H16" />
+      <Card title="Test Suite" number="02" icon={
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="5" y="3.5" width="14" height="17" rx="2" />
+          <path d="M8 8h1.5M11.5 8H16M8 12h1.5M11.5 12H16M8 16l1.5 1.5L12 15M13.5 16H16" />
         </svg>
-        <h3 className="type-title">Test Suite</h3>
+      }>
         <p>The inherited test suite concentrated on the intended user journey. It offered less coverage of invalid inputs, alternative paths and effects on existing workflows.</p>
         <p>I pushed to expand the suite with positive, negative and regression cases. Testing alongside development helped us identify gaps while there was still time to address them.</p>
-      </article>
+      </Card>
 
-    </div>
+    </Cards>
 
 
   </div>

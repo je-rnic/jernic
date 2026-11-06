@@ -60,7 +60,7 @@
   <div className="research-evidence research-evidence--paired">
     <div className="research-evidence__row">
       <Card title="social media" icon={
-        <svg className="research-card__icon" viewBox="0 0 24 24" aria-hidden="true">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" />
           <path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" />
         </svg>
@@ -75,8 +75,8 @@
       />
     </div>
     <div className="research-evidence__row">
-      <Card title="77%" icon={
-        <svg className="research-card__icon" viewBox="0 0 24 24" aria-hidden="true">
+      <Card title="77%" variant="metric" icon={
+        <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12 3l8 3v6c0 5 -8 9 -8 9s-8 -4 -8 -9v-6l8 -3" />
           <path d="M9 12l2 2l4 -4" />
         </svg>
@@ -90,8 +90,8 @@
       />
     </div>
     <div className="research-evidence__row">
-      <Card title="19%" icon={
-        <svg className="research-card__icon" viewBox="0 0 24 24" aria-hidden="true">
+      <Card title="19%" variant="metric" icon={
+        <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M14 3v4a1 1 0 0 0 1 1h4" />
           <path d="M12 21h-5a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v4.5" />
           <circle cx="16.5" cy="17.5" r="2.5" />
@@ -235,13 +235,13 @@
   </div>
   <div className="research-evidence">
     <Cards>
-      <Card title="4.8/5">
+      <Card title="4.8/5" variant="metric">
         <p><strong>Average UI user-friendliness rating</strong>, as displayed by Maze, from 25 responses.</p>
       </Card>
-      <Card title="80%">
+      <Card title="80%" variant="metric">
         <p><strong>20 of 25 respondents selected 5/5</strong>, the highest user-friendliness rating.</p>
       </Card>
-      <Card title="0%">
+      <Card title="0%" variant="metric">
         <p><strong>Drop-off on the final bot analysis task</strong>, which asked participants to submit an article and receive its summary.</p>
       </Card>
     </Cards>
@@ -273,26 +273,24 @@
     </div>
   </div>
   <div className="editorial-section__visual">
-    <div className="problem-cards">
-      <article className="card problem-card flow">
-        <span className="problem-card__number" aria-hidden="true">01</span>
-        <svg className="problem-card__icon" viewBox="0 0 24 24" aria-hidden="true">
+    <Cards layout="stack">
+      <Card title="Load what the route needs" number="01" icon={
+        <svg viewBox="0 0 24 24" aria-hidden="true">
           <circle cx="6" cy="5" r="2" />
           <circle cx="18" cy="19" r="2" />
           <path d="M10 5h5a4 4 0 0 1 0 8H9a3 3 0 0 0 0 6h5" />
         </svg>
-        <h3 className="type-title">Load what the route needs</h3>
+      }>
         <p>Route-based lazy loading deferred page code until it was needed, reducing the amount loaded upfront.</p>
-      </article>
-      <article className="card problem-card flow">
-        <span className="problem-card__number" aria-hidden="true">02</span>
-        <svg className="problem-card__icon" viewBox="0 0 24 24" aria-hidden="true">
+      </Card>
+      <Card title="Reuse available responses" number="02" icon={
+        <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M20 7a9 9 0 0 0 -15 -2L2 8M2 3v5h5M4 17a9 9 0 0 0 15 2l3 -3M22 21v-5h-5" />
         </svg>
-        <h3 className="type-title">Reuse available responses</h3>
+      }>
         <p>Client-side API caching reused available responses, reducing repeated requests as readers returned to analysed content.</p>
-      </article>
-    </div>
+      </Card>
+    </Cards>
   </div>
 </section>
 
@@ -331,4 +329,3 @@
     </blockquote>
   </div>
 </section>
-

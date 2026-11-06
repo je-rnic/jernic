@@ -1091,12 +1091,6 @@
 	.research-evidence .editorial-quote {
 		margin-top: 0;
 	}
-	.research-evidence .card {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		min-height: 15rem;
-	}
 	.research-evidence--paired {
 		gap: var(--space-7);
 	}
@@ -1138,21 +1132,6 @@
 		.editorial-section--prototype-testing .research-evidence--paired {
 			margin-top: clamp(4rem, 8vw, 7rem);
 		}
-	}
-	.research-card__icon {
-		width: 2.75rem;
-		height: 2.75rem;
-		margin-bottom: var(--space-4);
-		color: var(--accent);
-		fill: none;
-		stroke: currentColor;
-		stroke-linecap: round;
-		stroke-linejoin: round;
-		stroke-width: 1.5;
-	}
-	.research-evidence .card__title {
-		font-size: var(--fs-display);
-		line-height: var(--lh-display);
 	}
 	.editorial-section__follow-up {
 		margin-top: var(--space-7);
@@ -1237,37 +1216,6 @@
 			grid-column: 1 / -1;
 		}
 	}
-	.problem-cards {
-		display: grid;
-		gap: var(--space-3);
-		margin-top: var(--space-7);
-	}
-	.problem-card {
-		min-height: 12rem;
-	}
-	.problem-card__icon {
-		width: 2.5rem;
-		height: 2.5rem;
-		margin-bottom: var(--space-3);
-		fill: none;
-		stroke: currentColor;
-		stroke-linecap: round;
-		stroke-linejoin: round;
-		stroke-width: 1.5;
-	}
-	.problem-card__number {
-		display: block;
-		margin-bottom: var(--space-7);
-		color: var(--ink);
-		font-family: var(--font-serif);
-	}
-	.problem-card h3 {
-		max-width: 18rem;
-	}
-	.problem-card p {
-		margin-top: var(--space-3);
-		color: var(--rule);
-	}
 	.solution-list {
 		display: grid;
 		gap: clamp(5rem, 10vw, 9rem);
@@ -1294,9 +1242,15 @@
 		gap: var(--space-3);
 		align-items: center;
 	}
-	.solution__heading .problem-card__icon {
+	.solution__icon {
 		flex: 0 0 auto;
-		margin: 0;
+		width: 2.5rem;
+		height: 2.5rem;
+		fill: none;
+		stroke: currentColor;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		stroke-width: 1.5;
 	}
 	.solution .figure {
 		order: 2;
@@ -1345,16 +1299,7 @@
 			grid-row: 1;
 			margin-top: 0;
 		}
-		.editorial-section--process .problem-cards {
-			margin-top: 0;
-			grid-template-columns: 1fr;
-			gap: var(--space-5);
-		}
-		.editorial-section--process .problem-card {
-			min-height: 0;
-		}
 		.editorial-section__visual,
-		.problem-cards,
 		.solution-list,
 		.numbered-list,
 		.research-visuals,
@@ -1386,13 +1331,6 @@
 		}
 		.editorial-section--overview .editorial-section__visual {
 			grid-column: 2;
-		}
-		.problem-cards {
-			grid-template-columns: repeat(3, minmax(0, 1fr));
-			grid-column: 2;
-		}
-		.problem-card {
-			min-height: 20rem;
 		}
 		.solution-list {
 			grid-column: 2;
@@ -1504,16 +1442,80 @@
 		border: var(--rule-width) solid var(--ink);
 	}
 
+	/* Shared informational cards: layout and emphasis are explicit in MDX.
+	   Anatomy follows SGDS guidance; visual tokens remain the portfolio's. */
 	.cards {
 		display: grid;
-		gap: var(--space-4);
-		grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+		gap: var(--space-5);
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+		min-inline-size: 0;
+	}
+	.cards--stack {
+		grid-template-columns: minmax(0, 1fr);
+	}
+	.editorial-section > .cards {
+		grid-column: 1 / -1;
+		margin-top: var(--space-7);
 	}
 	.card {
-		--flow-space: var(--space-2);
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: var(--space-4);
+		min-inline-size: 0;
 		padding: var(--space-5);
 		border: var(--rule-width) solid var(--divider);
 		border-radius: var(--radius-card);
+		color: var(--ink);
+		overflow-wrap: anywhere;
+	}
+	.card__meta {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: var(--space-4);
+		width: 100%;
+	}
+	.card__icon {
+		display: block;
+		flex: 0 0 auto;
+		width: 2.5rem;
+		height: 2.5rem;
+		color: var(--accent);
+	}
+	.card__icon svg {
+		display: block;
+		width: 100%;
+		height: 100%;
+		fill: none;
+		stroke: currentColor;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		stroke-width: 1.5;
+	}
+	.card__number {
+		margin-inline-start: auto;
+		color: var(--rule);
+		font-family: var(--font-serif);
+	}
+	.card__title {
+		margin: 0;
+		max-inline-size: 100%;
+	}
+	.card--metric .card__title {
+		font-size: var(--fs-display);
+		line-height: var(--lh-display);
+		letter-spacing: var(--ls-display);
+	}
+	.card__body {
+		--flow-space: var(--space-3);
+		min-inline-size: 0;
+		color: var(--rule);
+	}
+	@media (min-width: 48rem) {
+		.editorial-section > .cards {
+			margin-top: 0;
+		}
 	}
 
 	.figure__media {
