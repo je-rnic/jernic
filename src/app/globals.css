@@ -459,6 +459,7 @@
 		width: 100%;
 		aspect-ratio: 3 / 2;
 		border-radius: var(--radius-media);
+		box-shadow: var(--shadow-media);
 		overflow: hidden;
 	}
 	.about__portrait img {
