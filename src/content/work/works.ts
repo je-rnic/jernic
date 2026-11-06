@@ -97,7 +97,6 @@ export const works: readonly Work[] = [
 			alt: "CheckMate news article and AI analysis interface",
 		},
 	},
-	/*
 	{
 		slug: "project-m-accenture",
 		title: "project-m*",
@@ -107,7 +106,6 @@ export const works: readonly Work[] = [
 		start: "2024-05",
 		end: "2024-08",
 	},
-	*/
 	{
 		slug: "barbequeue-google-ux-certificate",
 		storyPath:

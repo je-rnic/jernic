@@ -6,18 +6,16 @@ import type { ReactNode } from "react";
  */
 export default function Statement({
   label,
-  tone = "dark",
   children,
 }: {
   label: string;
-  tone?: "dark" | "light";
   children: ReactNode;
 }) {
   return (
-    <section className={`statement statement--${tone}`}>
+    <section className={`statement`}>
       <div className="statement__inner container">
         <div className="statement__content">
-          <h2 className="statement__label type-eyebrow">{label}</h2>
+          <h2 className="statement__label">{label}</h2>
           <div className="statement__text type-statement flow">{children}</div>
         </div>
       </div>
